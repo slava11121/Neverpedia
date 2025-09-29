@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Neverpedia — Главная</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><img class="logo" src="logo.png" alt="Neverpedia"></a>
+      <nav class="nav">
+        <a href="index.html">Заглавная страница</a>
+        <a href="create.html">Создать статью</a>
+        <a href="#">Случайная статья</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <div class="box">
+        <div class="top">
+          <h1 class="title">Добро пожаловать в <a href="index.html">Neverpedia</a></h1>
+          <form class="search" id="searchForm">
+            <input id="searchInput" type="search" placeholder="Искать в Neverpedia…">
+            <button type="submit">Найти</button>
+          </form>
+        </div>
+
+        <p class="lead"><a href="#">Фиктивная энциклопедия</a>, которую может редактировать каждый.</p>
+
+        <h2 class="h2">Недавние статьи</h2>
+        <ul class="list" id="recentList">
+          <li>1<a href="kivish.html">Кивиш</a></li>
+        </ul>
+      </div>
+
+      <div class="notice">
+        <strong>Внимание:</strong> Neverpedia — вымышленный проект.
+      </div>
+    </main>
+  </div>
+</body>
+</html>

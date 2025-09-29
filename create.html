@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Neverpedia — создать статью</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="article.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><img class="logo" src="logo.png" alt="Neverpedia"></a>
+      <nav class="nav">
+        <a href="index.html">Заглавная страница</a>
+        <a href="create.html">Создать статью</a>
+        <a href="#">Случайная статья</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <div class="box">
+        <div class="top">
+          <h1 class="title">Создать статью</h1>
+          <form class="search" onsubmit="return false">
+            <input type="search" placeholder="Искать в Neverpedia…">
+            <button class="btn secondary" type="button">Найти</button>
+          </form>
+        </div>
+
+        <form id="articleForm">
+          <div class="form-row">
+            <label for="title">Название статьи</label>
+            <input id="title" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="summary">Краткое описание</label>
+            <textarea id="summary" class="autosize" rows="3" placeholder="1–2 предложения"></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="content">Содержимое</label>
+            <textarea id="content"  class="autosize" rows="12" placeholder="Основной текст статьи"></textarea>
+          </div>
+
+          <div class="form-row">
+            <label for="photo">Изображение</label>
+            <input id="photo" type="file" accept="image/*">
+            <small>PNG/JPG. Появится в предпросмотре и сохранится в статье.</small>
+          </div>
+
+          <div class="form-row">
+            <label>Инфоблок (необязательно)</label>
+            <div class="form-row"><input id="ibox_title" type="text" placeholder="Заголовок инфоблока (например, «АО «АвтоВАЗ»»)"></div>
+            <div class="form-row"><input id="ibox_type"  type="text" placeholder="Тип (например, Акционерное общество)"></div>
+            <div class="form-row"><input id="ibox_ind"   type="text" placeholder="Отрасль"></div>
+            <div class="form-row"><input id="ibox_loc"   type="text" placeholder="Расположение"></div>
+            <div class="form-row"><input id="ibox_people"type="text" placeholder="Ключевые фигуры"></div>
+            <div class="form-row"><input id="ibox_site"  type="url"  placeholder="Сайт (https://...)"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="cats">Категории</label>
+            <input id="cats" type="text" placeholder="через запятую: Авто, Россия">
+          </div>
+
+          <div class="actions">
+            <button class="btn secondary" type="button" id="btnPreview">Предпросмотр</button>
+            <button class="btn" type="submit">Сохранить</button>
+          </div>
+        </form>
+
+        <div id="preview" class="preview"></div>
+      </div>
+
+      <div class="notice">
+        <strong>Внимание:</strong> Neverpedia — вымышленный проект.
+      </div>
+    </main>
+  </div>
+
+<script>
+(function(){
+  const f = id => document.getElementById(id);
+  let photoData = "";
+
+  // картинка -> dataURL
+  f('photo').addEventListener('change', e=>{
+    const file = e.target.files[0];
+    if(!file) return;
+    const r = new FileReader();
+    r.onload = () => { photoData = r.result; };
+    r.readAsDataURL(file);
+  });
+
+  function buildInfoboxObj(){
+    return {
+      title: f('ibox_title').value.trim(),
+      type:  f('ibox_type').value.trim(),
+      ind:   f('ibox_ind').value.trim(),
+      loc:   f('ibox_loc').value.trim(),
+      ppl:   f('ibox_people').value.trim(),
+      site:  f('ibox_site').value.trim(),
+    };
+  }
+
+  // предпросмотр
+  function renderPreview(){
+    const title = f('title').value.trim() || 'Без названия';
+    const summary = f('summary').value.trim();
+    const content = f('content').value.trim().replace(/\n/g,'<br>');
+
+    const ib = buildInfoboxObj();
+    const infoboxHTML =
+      (ib.title || ib.type || ib.ind || ib.loc || ib.ppl || ib.site || photoData)
+      ? `
+        <aside class="infobox">
+          ${ib.title ? `<div class="h">${ib.title}</div>` : ""}
+          ${photoData ? `<div class="cell"><img src="${photoData}" alt=""></div>` : ""}
+          ${ib.type ? `<div class="cell"><b>Тип</b><br>${ib.type}</div>` : ""}
+          ${ib.ind  ? `<div class="cell"><b>Отрасль</b><br>${ib.ind}</div>` : ""}
+          ${ib.loc  ? `<div class="cell"><b>Расположение</b><br>${ib.loc}</div>` : ""}
+          ${ib.ppl  ? `<div class="cell"><b>Ключевые фигуры</b><br>${ib.ppl}</div>` : ""}
+          ${ib.site ? `<div class="cell"><b>Сайт</b><br><a href="${ib.site}">${ib.site}</a></div>` : ""}
+        </aside>` : '';
+
+    f('preview').innerHTML =
+      '<div class="box">' +
+      infoboxHTML +
+      `<h1 class="title" style="margin-top:0">${title}</h1>` +
+      (summary ? `<p class="lead">${summary}</p>` : "") +
+      `<div>${content || '<em>Текст статьи…</em>'}</div>` +
+      '</div>';
+  }
+
+  f('btnPreview').addEventListener('click', renderPreview);
+
+  // сохранение
+  document.getElementById('articleForm').addEventListener('submit', e=>{
+    e.preventDefault();
+
+    const title = f('title').value.trim();
+    const article = {
+      id:  NP.slugify(title),        // уникальный id
+      slug: null,                    // для совместимости (можно оставить null)
+      title,
+      summary: f('summary').value.trim(),
+      content: f('content').value.trim(),
+      photo: photoData,
+      infobox: buildInfoboxObj(),
+      categories: (f('cats').value || '')
+                    .split(',').map(s=>s.trim()).filter(Boolean),
+      createdAt: Date.now()
+    };
+
+    // старые статьи + новая
+    const list = NP.npLoad();
+    list.push(article);
+    NP.npSave(list);
+
+    // после сохранения — на страницу статьи
+    window.location.href = `article.html?id=${encodeURIComponent(article.id)}`;
+  });
+})();
+</script>
+</body>
+</html>
