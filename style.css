@@ -41,32 +41,49 @@ a:hover { text-decoration: underline; }
   .search { min-width: 0; }
 }
 
-/* формы создания */
-.autosize{ resize: none; overflow: hidden; min-height: 18vh; }
-.form-row { margin: 12px 0; }
-.form-row label { display: block; margin-bottom: 6px; font-weight: bold; }
-.form-row input[type="text"],
-.form-row input[type="url"],
-.form-row textarea { width: 100%; padding: 8px; border: 1px solid #c8ccd1; background: #fff; }
-.form-row small { color: #54595d; }
-.actions { display: flex; gap: 10px; margin-top: 12px; }
-.btn { border: 1px solid #2a4b8d; background: #2a4b8d; color: #fff; padding: 8px 12px; cursor: pointer; }
-.btn.secondary { background: #fff; color: #2a4b8d; }
-.preview { margin-top: 16px; }
-
-/* инфоблок на странице статьи */
-.infobox { float: right; width: 280px; background: #fff; border: 1px solid #c8ccd1; margin: 0 0 12px 12px; }
-.infobox .h { background: #eef3f8; border-bottom: 1px solid #c8ccd1; padding: 8px 10px; font-weight: bold; text-align: center; }
-.infobox .cell { padding: 8px 10px; border-top: 1px solid #e6e6e6; }
-.infobox img { display: block; max-width: 100%; height: auto; }
-@media (max-width: 900px) { .infobox { float: none; width: 100%; margin: 0 0 12px 0; } }
-
-.article-wrap { overflow: auto; }              /* контейнер статьи */
-.infobox {
-  float: right;
-  width: 280px;                                /* твоя ширина */
-  margin: 0 0 12px 16px;                       /* отступ слева от текста */
-  background: #fff;
+/* --- Карточки «Недавние статьи» (одна колонка, сверху вниз) --- */
+/* --- Недавние статьи: карточки --- */
+.recent-item {
+  display: flex;
+  align-items: flex-start;
   border: 1px solid #c8ccd1;
+  background: #fff;
+  padding: 8px;
+  margin-bottom: 10px;
 }
-.article-content { overflow: hidden; }         /* чтобы текст не залезал под float */
+
+.recent-item img.thumb {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 1px solid #c8ccd1;
+  background: #f8f9fa;
+}
+
+.recent-item .text {
+  flex: 1;
+}
+
+.recent-item .title {
+  font-size: 16px;       /* теперь не огромный */
+  line-height: 1.25;
+  font-weight: bold;
+  margin: 0 0 2px;
+}
+
+.recent-item .title a {
+  color: #202122;        /* нормальный цвет, не ярко-синий */
+  text-decoration: none;
+}
+
+.recent-item .title a:hover {
+  color: #3366cc;        /* подсветка только при наведении */
+  text-decoration: underline;
+}
+
+.recent-item .summary {
+  font-size: 14px;
+  color: #54595d;
+}
+

@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Neverpedia — Главная</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="page">
@@ -22,18 +21,77 @@
       <div class="box">
         <div class="top">
           <h1 class="title">Добро пожаловать в <a href="index.html">Neverpedia</a></h1>
-          <form class="search" id="searchForm">
-            <input id="searchInput" type="search" placeholder="Искать в Neverpedia…">
-            <button type="submit">Найти</button>
+          <form class="search" onsubmit="return false">
+            <input type="search" placeholder="Искать в Neverpedia…">
+            <button type="button">Найти</button>
           </form>
         </div>
 
         <p class="lead"><a href="#">Фиктивная энциклопедия</a>, которую может редактировать каждый.</p>
 
         <h2 class="h2">Недавние статьи</h2>
-        <ul class="list" id="recentList">
-          <li>1<a href="kivish.html">Кивиш</a></li>
+
+        <!-- Список статей: сверху вниз, маленькая картинка + заголовок + краткое описание -->
+        <ul class="recent-list" id="recentList">
+          <!-- Пример 1 -->
+          <li class="recent-item">
+            <img class="thumb" src="001.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="kivish.html">Кивиш</a></div>
+              <div class="desc">Кивиш — высокотехнологичное государство в Сибири с единой властью над тремя территориями (Кивиш, Северный Кивиш и Африканский Кивиш), известное развитой промышленностью, альтернативной историей и жёсткой, но прагматичной внешней политикой.</div>
+            </div>
+          </li>
+
+          <!-- Пример 2 -->
+          <li class="recent-item">
+            <img class="thumb" src="img/sample2.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article2.html">Название статьи 2</a></div>
+              <div class="desc">Коротко о чём статья.</div>
+            </div>
+          </li>
+
+          <!-- Пример 3 -->
+          <li class="recent-item">
+            <img class="thumb" src="img/sample3.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article3.html">Название статьи 3</a></div>
+              <div class="desc">Две строки аннотации.</div>
+            </div>
+          </li>
+
+          <!-- Пример 4 -->
+          <li class="recent-item">
+            <img class="thumb" src="img/sample4.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article4.html">Название статьи 4</a></div>
+              <div class="desc">Коротко о чём статья.</div>
+            </div>
+          </li>
+
+          <!-- Пример 5 -->
+          <li class="recent-item">
+            <img class="thumb" src="img/sample5.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article5.html">Название статьи 5</a></div>
+              <div class="desc">Коротко о чём статья.</div>
+            </div>
+          </li>
+
+          <!-- Пример 6 -->
+          <li class="recent-item">
+            <img class="thumb" src="img/sample6.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article6.html">Название статьи 6</a></div>
+              <div class="desc">Коротко о чём статья.</div>
+            </div>
+          </li>
         </ul>
+
+        <!-- Сообщение “Пока нет статей” (само спрячется, если список не пустой) -->
+        <p id="emptyMsg" class="lead">
+          Пока нет статей. <a href="create.html">Создайте первую!</a>
+        </p>
       </div>
 
       <div class="notice">
@@ -41,5 +99,14 @@
       </div>
     </main>
   </div>
+
+  <script>
+    // Скрыть «Пока нет статей», если в списке есть элементы
+    (function () {
+      const list = document.getElementById('recentList');
+      const msg  = document.getElementById('emptyMsg');
+      if (list && msg && list.children.length > 0) msg.style.display = 'none';
+    })();
+  </script>
 </body>
 </html>
