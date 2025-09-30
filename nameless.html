@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Neverpedia — Безымянный</title>
+  <style>
+    /* ===== БАЗОВЫЕ НАСТРОЙКИ ===== */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{width:160px;}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox{float:none;width:100%;margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Заглавная страница</a>
+        <a href="create.html">Создать статью</a>
+        <a href="#">Случайная статья</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <h1 class="title">Безымянный</h1>
+        <p class="lead">Таинственная личность, появляющаяся в переломные моменты и оказывающая влияние на ход событий.</p>
+
+        <h2>Внешность</h2>
+        <p><b>Одежда:</b> выглядит искажённой временем. Куртка может быть старой и протёртой, но уже через миг — новой. Иногда отдельные предметы исчезают, будто их никогда не существовало.</p>
+        <p><b>Лицо:</b> предельно обычное, черты невозможно запомнить. Очевидцы отмечают, что спустя несколько минут воспоминания становятся размытыми.</p>
+        <p><b>Присутствие:</b> вызывает ощущение плотного воздуха и наступающей тишины.</p>
+
+        <h2>Поведение</h2>
+        <p><b>Появление:</b> фиксируется в моменты кризиса, когда человек стоит перед судьбоносным выбором. Его появление не сопровождается звуками шагов или открывающихся дверей.</p>
+        <p><b>Исчезновение:</b> происходит внезапно, сразу после ключевой фразы или события. Никто не замечает момента ухода, остаётся лишь чувство недавнего присутствия.</p>
+        <p><b>Речь:</b> лаконична, лишена эмоций. Его слова воспринимаются как подсказки или предупреждения, однако истинный смысл остаётся двусмысленным.</p>
+
+        <h2>Особенности</h2>
+        <ul>
+          <li><b>Имя:</b> не называет себя. Отвечает фразами «Это неважно», «Я где-то рядом», «Не называй меня».</li>
+          <li><b>Следы:</b> может оставить недопитую кружку, запах табака, приоткрытую дверь.</li>
+          <li><b>Роль:</b> не является ни союзником, ни противником. Его вмешательство может как спасти, так и ввести в заблуждение.</li>
+        </ul>
+
+        <h2>См. также</h2>
+        <ul>
+          <li><a href="article-Mysterious.html">Загадочные личности</a></li>
+          <li><a href="article-Phenomena.html">Необычные явления</a></li>
+        </ul>
+
+        <h2>Примечания</h2>
+        <ol class="notes">
+          <li>Данные основаны на описаниях очевидцев.</li>
+        </ol>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>Внимание:</strong> Neverpedia описывает нереальные события и явления.
+      </section>
+    </main>
+  </div>
+</body>
+</html>
