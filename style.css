@@ -87,3 +87,26 @@ a:hover { text-decoration: underline; }
   color: #54595d;
 }
 
+/* Кнопка-поиск: кликается вся, без синей ссылки, светится белым */
+.search .btn{
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid #2a4b8d;
+  background: #2a4b8d;
+  color: #fff;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  box-shadow: 0 0 10px rgba(255,255,255,.35);
+}
+.search .btn:hover{
+  box-shadow: 0 0 14px rgba(255,255,255,.6);
+}
+.search .btn:focus{
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
