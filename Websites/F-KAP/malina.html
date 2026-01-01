@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>F-KAP Luna Gen1</title>
+
+<style>
+body{
+  margin:0;
+  font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+  background:#2F2F2F;
+  color:#fff;
+}
+
+header.header{
+  background:#3F63B8;
+  padding:18px 36px;
+}
+
+.brand .title{font-weight:800;font-size:22px}
+.brand .tag{font-size:13px}
+
+.container{
+  max-width:1200px;
+  margin:26px auto;
+  padding:0 16px;
+}
+
+.gallery-wrap{
+  margin-bottom:40px;
+}
+
+.gallery{
+  width:900px;
+  height:520px;
+  margin:0 auto 12px auto;
+  border-radius:12px;
+  overflow:hidden;
+  position:relative;
+  background:#000;
+}
+
+.gallery img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:opacity .4s ease;
+}
+
+.gallery img.active{
+  opacity:1;
+}
+
+.thumbs{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+}
+
+.thumbs img{
+  width:120px;
+  height:70px;
+  object-fit:cover;
+  border-radius:8px;
+  cursor:pointer;
+  opacity:.6;
+}
+
+.thumbs img.active{
+  opacity:1;
+  outline:2px solid #4d9429;
+}
+
+.section-title{
+  font-size:28px;
+  margin:40px 0 12px;
+}
+
+.specs{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.specs tr{
+  border-bottom:1px solid rgba(255,255,255,.25);
+}
+
+.specs td{
+  padding:14px 10px;
+  font-size:15px;
+}
+
+.specs td.label{
+  color:#ccc;
+  font-weight:600;
+  width:160px;
+}
+
+.equipment{
+  column-count:2;
+  column-gap:40px;
+  margin-top:12px;
+}
+
+.equipment li{
+  margin-bottom:10px;
+  break-inside:avoid;
+}
+
+.buy{
+  margin:30px 0;
+}
+
+.price{
+  font-size:28px;
+  font-weight:900;
+  margin-bottom:12px;
+}
+
+.btn{
+  background:#4d9429;
+  color:#fff;
+  border:0;
+  border-radius:10px;
+  padding:12px 18px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+footer.footer{
+  text-align:center;
+  padding:22px;
+  color:#aaa;
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="brand">
+    <div class="title">F-KAP</div>
+    <div class="tag">Покорение дорог страны начинается здесь</div>
+  </div>
+</header>
+
+<main class="container">
+
+<h1>F-KAP Malina Gen9</h1>
+<p>Купе</p>
+
+<div class="gallery-wrap">
+  <div class="gallery" id="gallery">
+    <img src="cars/16.jpg" class="active">
+    <img src="cars/17.jpg">
+    <img src="cars/18.jpg">
+    <img src="cars/19.jpg">
+    <img src="cars/20.jpg">
+  </div>
+
+  <div class="thumbs" id="thumbs">
+    <img src="cars/16.jpg" class="active" data-index="0">
+    <img src="cars/17.jpg" data-index="1">
+    <img src="cars/18.jpg" data-index="2">
+    <img src="cars/19.jpg" data-index="3">
+    <img src="cars/20.jpg" data-index="4">
+  </div>
+</div>
+
+<h2 class="section-title">Основные характеристики</h2>
+<table class="specs">
+  <tr>
+    <td class="label">Двигатель:</td><td>Бензиновый, 2.5 л Turbo</td>
+    <td class="label">Год:</td><td>2025</td>
+  </tr>
+  <tr>
+    <td class="label">Мощность:</td><td>248 л.с.</td>
+    <td class="label">Цвет:</td><td>Горячий красный</td>
+  </tr>
+  <tr>
+    <td class="label">Привод, КПП:</td><td>Задний, 8-ступ. автомат SportShift</td>
+    <td class="label">Салон:</td><td>Кожа SportLine</td>
+  </tr>
+  <tr>
+    <td class="label">Тип кузова:</td><td>Купе</td>
+    <td class="label">Наличие:</td><td>В наличии</td>
+  </tr>
+</table>
+
+<h2 class="section-title">Стандартное оснащение</h2>
+<ul class="equipment">
+  <li>18" легкосплавные диски AeroSport</li>
+  <li>Аудиосистема K-Audio Pro (8 динамиков)</li>
+  <li>Полная LED-оптика с режимом AutoBeam</li>
+  <li>Камера заднего вида</li>
+  <li>Спортивная подвеска TrackTune</li>
+  <li>ABS, ESP и спортивный режим стабилизации SportGrip</li>
+  <li>Фронтальные и боковые подушки безопасности</li>
+  <li>Бесключевой доступ</li>
+  <li>Двухзонный климат-контроль</li>
+  <li>Электропривод сидений с памятью</li>
+  <li>Круиз-контроль</li>
+  <li>Противоугонная система KeyGuard</li>
+</ul>
+
+<div class="buy">
+  <div class="price">1 828 500 KSH</div>
+  <button class="btn">Купить</button>
+</div>
+
+</main>
+
+<footer class="footer">© F-KAP — все права защищены.</footer>
+
+<script>
+const images = document.querySelectorAll('#gallery img');
+const thumbs = document.querySelectorAll('#thumbs img');
+let current = 0;
+let timer;
+
+function show(index){
+  images[current].classList.remove('active');
+  thumbs[current].classList.remove('active');
+  current = index;
+  images[current].classList.add('active');
+  thumbs[current].classList.add('active');
+}
+
+function auto(){
+  timer = setInterval(()=>{
+    show((current + 1) % images.length);
+  }, 10000);
+}
+
+thumbs.forEach(t=>{
+  const i = +t.dataset.index;
+  t.addEventListener('mouseenter', ()=>{
+    clearInterval(timer);
+    show(i);
+  });
+  t.addEventListener('click', ()=>{
+    clearInterval(timer);
+    show(i);
+    auto();
+  });
+});
+
+auto();
+</script>
+
+</body>
+</html>
