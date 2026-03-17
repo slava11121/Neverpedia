@@ -28,6 +28,26 @@
     .logo{max-width:100%; height:auto; display:block; margin:0 auto}
     .nav a{display:block; margin:6px 0}
 
+    /* === ЯЗЫКИ (добавлено) === */
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
     .content{flex:1}
     .box{
       background:#fff;
@@ -98,6 +118,15 @@
         <a href="create.html">Создать статью</a>
         <a href="#">Случайная статья</a>
       </nav>
+
+      <!-- ЯЗЫКИ (добавлено) -->
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">Языки ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="kivish.html">Русский</a>
+          <a href="en/kivish.html">English</a>
+        </div>
+      </div>
     </aside>
 
     <main class="content">
@@ -245,5 +274,12 @@
       </section>
     </main>
   </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
 </body>
 </html>

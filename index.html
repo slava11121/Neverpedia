@@ -15,6 +15,15 @@
         <a href="create.html">Создать статью</a>
         <a href="#">Случайная статья</a>
       </nav>
+      <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">
+      Языки ▾
+      </div>
+      <div id="langList" class="lang-list">
+      <a href="index.html">Русский</a>
+      <a href="en/index.html">English</a>
+      </div>
+     </div>
     </aside>
 
     <main class="content">
@@ -100,6 +109,14 @@
       const msg  = document.getElementById('emptyMsg');
       if (list && msg && list.children.length > 0) msg.style.display = 'none';
     })();
+  </script>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display =
+      list.style.display === "block" ? "none" : "block";
+  } 
   </script>
 </body>
 </html>

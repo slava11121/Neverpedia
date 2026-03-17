@@ -110,3 +110,26 @@ a:hover { text-decoration: underline; }
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
+
+.lang-block {
+  margin-top: 20px;
+  border-top: 1px solid #c8ccd1;
+  padding-top: 10px;
+}
+
+.lang-toggle {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.lang-list {
+  display: none;
+}
+
+.lang-list a {
+  display: block;
+  margin: 4px 0;
+  font-size: 14px;
+}

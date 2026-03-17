@@ -36,6 +36,25 @@
       .sidebar{width:auto}
       .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
     }
+    
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
   </style>
 </head>
 <body>
@@ -47,6 +66,14 @@
       <a href="create.html">Создать статью</a>
       <a href="#">Случайная статья</a>
     </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">Языки ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="kora.html">Русский</a>
+        <a href="en/kora.html">English</a>
+      </div>
+    </div>
   </aside>
 
   <main class="content">
@@ -173,7 +200,7 @@
 
       <h2>Образование и наука</h2>
       <ul>
-        <li><b>Институт государственного управления</b> — базовая площадка подготовки управленческих кадров (см. <a href="amamarama-tirorarorita.html">Амамараму Тирорарориту</a>).</li>
+        <li><b>Институт государственного управления</b> — базовая площадка подготовки управленческих кадров (см. <a href="amamarama-tirorarorita.html">Амамараму Тирорарорита</a>).</li>
         <li><b>Университет IT-технологий</b> — информатика, сетевые технологии, прикладная математика и встраиваемые системы.</li>
       </ul>
 
@@ -211,5 +238,13 @@
     </section>
   </main>
 </div>
+
+  <script>
+    function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+
 </body>
 </html>
