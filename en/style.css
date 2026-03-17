@@ -1,0 +1,135 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: #f6f7f8;
+  color: #202122;
+  font: 16px/1.5 Arial, sans-serif;
+}
+a { color: #3366cc; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.page { display: flex; gap: 16px; padding: 16px 12px; }
+
+.sidebar { width: 160px; }
+.brand { display: block; text-align: left; margin-bottom: 16px; color: inherit; }
+.logo { display: block; width: 160px; height: auto; margin: 0; }
+
+.nav a { display: block; margin: 6px 0; }
+
+.content { flex: 1; }
+
+.box { background: #fff; border: 1px solid #c8ccd1; padding: 16px; }
+
+.top { display: flex; gap: 12px; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+.title { margin: 0; font-size: 28px; line-height: 1.25; }
+
+.search { display: flex; gap: 8px; min-width: 300px; }
+.search input { flex: 1; height: 34px; padding: 0 10px; border: 1px solid #c8ccd1; background: #fff; }
+.search button { height: 34px; padding: 0 12px; border: 1px solid #2a4b8d; background: #2a4b8d; color: #fff; cursor: pointer; }
+
+.lead { color: #54595d; margin: 0 0 12px 0; }
+.h2 { font-size: 20px; margin: 16px 0 6px 0; }
+.list { margin: 0; padding-left: 20px; }
+
+.notice { margin-top: 16px; background: #fff7d7; border: 1px solid #edd190; padding: 12px 14px; }
+
+@media (max-width: 900px) {
+  .page { flex-direction: column; }
+  .sidebar { width: auto; }
+  .top { flex-direction: column; gap: 10px; }
+  .search { min-width: 0; }
+}
+
+/* --- Карточки «Недавние статьи» (одна колонка, сверху вниз) --- */
+/* --- Недавние статьи: карточки --- */
+.recent-item {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #c8ccd1;
+  background: #fff;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.recent-item img.thumb {
+  width: 84px;
+  height: 84px;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 1px solid #c8ccd1;
+  background: #f8f9fa;
+}
+
+.recent-item .text {
+  flex: 1;
+}
+
+.recent-item .title {
+  font-size: 16px;       /* теперь не огромный */
+  line-height: 1.25;
+  font-weight: bold;
+  margin: 0 0 2px;
+}
+
+.recent-item .title a {
+  color: #202122;        /* нормальный цвет, не ярко-синий */
+  text-decoration: none;
+}
+
+.recent-item .title a:hover {
+  color: #3366cc;        /* подсветка только при наведении */
+  text-decoration: underline;
+}
+
+.recent-item .summary {
+  font-size: 14px;
+  color: #54595d;
+}
+
+/* Кнопка-поиск: кликается вся, без синей ссылки, светится белым */
+.search .btn{
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid #2a4b8d;
+  background: #2a4b8d;
+  color: #fff;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  box-shadow: 0 0 10px rgba(255,255,255,.35);
+}
+.search .btn:hover{
+  box-shadow: 0 0 14px rgba(255,255,255,.6);
+}
+.search .btn:focus{
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.lang-block {
+  margin-top: 20px;
+  border-top: 1px solid #c8ccd1;
+  padding-top: 10px;
+}
+
+.lang-toggle {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.lang-list {
+  display: none;
+}
+
+.lang-list a {
+  display: block;
+  margin: 4px 0;
+  font-size: 14px;
+}

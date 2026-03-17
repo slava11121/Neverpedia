@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Home — Neverpedia</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><img class="logo" src="../logo.png" alt="Neverpedia"></a>
+      <nav class="nav">
+        <a href="index.html">Main page</a>
+        <a href="create.html">Create article</a>
+        <a href="#">Random article</a>
+      </nav>
+      <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">
+      Languages ▾
+      </div>
+      <div id="langList" class="lang-list">
+      <a href="../index.html">Русский</a>
+      <a href="index.html">English</a>
+      </div>
+     </div>
+    </aside>
+
+    <main class="content">
+      <div class="box">
+        <div class="top">
+          <h1 class="title">Welcome to <a href="index.html">Neverpedia</a></h1>
+          <form class="search" action="list.html" method="get" role="search">
+            <input type="search" name="q" placeholder="Search Neverpedia…">
+            <button type="submit" class="btn">Search</button>
+          </form>
+        </div>
+
+        <p class="lead"><a href="https://ru.wikipedia.org/wiki/Фиктивная_запись">Fictional encyclopedia</a> that anyone can edit.</p>
+
+        <h2 class="h2">Recent articles</h2>
+
+        <ul class="recent-list" id="recentList">
+          <li class="recent-item">
+            <img class="thumb" src="../001.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="kivish.html">Kivish</a></div>
+              <div class="desc">Kivish is a high-tech state in Siberia with a single government over three territories (Kivish, Northern Kivish, and African Kivish), known for its advanced industry, alternative history, and a strict yet pragmatic foreign policy.</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../064.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="tarifa.html">Tarifa</a></div>
+              <div class="desc">Tarifa is a private Kivish engineering company founded in 1976 in City D. It is known for a pragmatic approach: from airfield tow tractors and runway service equipment to export vans, tractors, and special-purpose machinery. In the 2000s–2010s, Tarifa became one of the symbols of “no-nonsense” transport—simple, durable, and straightforward—and some of the company’s design choices gained cult status thanks to an unusually long model life cycle.</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample3.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article3.html">Article title 3</a></div>
+              <div class="desc">Two lines of summary.</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample4.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article4.html">Article title 4</a></div>
+              <div class="desc">A short note about the article.</div>
+            </div>
+          </li>
+
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample5.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article5.html">Article title 5</a></div>
+              <div class="desc">A short note about the article.</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample6.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article6.html">Article title 6</a></div>
+              <div class="desc">A short note about the article.</div>
+            </div>
+          </li>
+        </ul>
+
+
+        <p id="emptyMsg" class="lead">
+          No articles yet. <a href="create.html">Create the first one!</a>
+        </p>
+      </div>
+
+      <div class="notice">
+        <strong>Note:</strong> Neverpedia is a fictional project.
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const list = document.getElementById('recentList');
+      const msg  = document.getElementById('emptyMsg');
+      if (list && msg && list.children.length > 0) msg.style.display = 'none';
+    })();
+  </script>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display =
+      list.style.display === "block" ? "none" : "block";
+  } 
+  </script>
+</body>
+</html>
