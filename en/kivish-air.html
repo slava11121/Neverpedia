@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kivish Air — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{display:flex; gap:16px; padding:16px 12px;}
+    .sidebar{width:160px;}
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{margin-top:20px; border-top:1px solid #c8ccd1; padding-top:10px;}
+    .lang-toggle{cursor:pointer; font-weight:bold; font-size:14px; margin-bottom:6px; user-select:none;}
+    .lang-list{display:none}
+    .lang-list a{display:block; margin:4px 0; font-size:14px;}
+
+    .content{flex:1}
+    .box{background:#fff; border:1px solid #c8ccd1; padding:16px;}
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto; margin:0 auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Main page</a>
+        <a href="create.html">Create article</a>
+        <a href="#">Random article</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">Languages ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../kivish-air.html">Русский</a>
+          <a href="kivish-air.html">English</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">Kivish Air</div>
+          <div class="cell">
+            <img src="../079.jpg" alt="Kivish Air logo">
+          </div>
+          <div class="cell"><b>Type</b><br>National airline</div>
+          <div class="cell"><b>Founded</b><br>1989</div>
+          <div class="cell"><b>Headquarters</b><br>Kora</div>
+          <div class="cell"><b>Main hub</b><br>Technocrat Airport</div>
+          <div class="cell"><b>Subsidiaries / sub-brands</b><br>Kivish Air Delta (2000–2001, suspended), Kivish-Korean Airlines (since 2011)</div>
+          <div class="cell"><b>Flight codes</b><br>KA-### (main), KA-D### (Delta)</div>
+          <div class="cell"><b>Website</b><br><a href="../Websites/KivishAir/index.html" target="_blank" rel="noopener">kivishair.khs</a></div>
+        </aside>
+
+        <h1 class="title">Kivish Air</h1>
+        <p class="lead">
+          <b>Kivish Air</b> is the national airline of Kivish, established in 1989 as the successor to <b>Glavny Polyot</b>.
+          In its early years, the company operated a mixed fleet (AirHokol-66 aircraft, Soviet Tu/Il/An types, and later Western types),
+          and in the 1990s went through a major safety crisis that radically changed its fleet and operating policy.
+        </p>
+
+        <p>
+          The history of Kivish Air is commonly divided into four stages: transitional (1989–1993), crisis and turning point (1994),
+          the “route-shuttle” experimental Delta model (2000–2001), and the period of stabilization and standardization (2011–2026).
+        </p>
+
+        <figure class="thumb">
+          <img src="../080.jpg" alt="Kivish Air hub">
+          <figcaption class="cap">Kivish Air developed around the capital hub and trunk routes.</figcaption>
+        </figure>
+
+        <h2>Creation and transitional period (1989–1993)</h2>
+        <p>
+          Kivish Air was created in 1989 after the reorganization of Glavny Polyot. Part of the management and flight crews
+          moved into the new structure, which helped preserve schedule continuity and operations. During this period, the airline
+          expanded its geography and began shaping a modern commercial approach: frequency, connections, and service standardization.
+        </p>
+
+        <h3>Mixed fleet</h3>
+        <p>In the early 1990s, the airline operated simultaneously:</p>
+        <ul>
+          <li>domestic jet aircraft by AirHokol-66 (trunk and wide-body types);</li>
+          <li>Soviet types (Tu/Il/An) inherited from earlier times and still covering part of the network;</li>
+          <li>first purchases of Western aircraft (Boeing and Airbus) to accelerate fleet renewal.</li>
+        </ul>
+
+        <h3>Export promotion</h3>
+        <p>
+          On external markets, Kivish Air and partners promoted modern AirHokol-66 types (including those referenced as D122 and Bi305),
+          positioning them as competitive in reliability and the “safety package.”
+        </p>
+
+        <h3>Issues with Western aircraft</h3>
+        <p>
+          In the transitional years, the airline recorded heightened concern around operating some Boeing aircraft on specific routes:
+          frequent technical failures and downtime required reinforced engineering work and drew attention from aviation oversight (KAS).
+          However, at this stage the airline continued operations, treating it as a “break-in period” after the market shift and changes in
+          maintenance supply chains.
+        </p>
+
+        <h2>1994 crisis: <a href="ka-624.html">KA-624</a></h2>
+        <p>
+          In 1994, a crash occurred that became the turning point for Kivish Air and its entire fleet policy.
+          A Boeing 737-200 (Classic 200 series), delivered on a short timeline after an order, crashed on a domestic route.
+          The investigation established that the aircraft was presented as “new,” but in fact had hidden prior operation and had been
+          refurbished with violations. The event triggered a sharp tightening of checks on origin, flight hours, and maintenance history.
+        </p>
+
+        <h3>Boeing ban</h3>
+        <p>
+          After the crash, Kivish Air and aviation oversight made a hard decision: Boeing was banned from operation in Kivish,
+          and existing aircraft were removed from the register and sold abroad. This step formed a long-term “zero tolerance” policy
+          for opaque fleet origin and maintenance.
+        </p>
+
+        <h2>Kivish Air Delta and flight <a href="ka-d568.html">KA-D568</a> (2000–2001)</h2>
+        <p>
+          In 2000, an experimental “aircraft-as-a-route-shuttle” format was launched inside Kivish Air as the <b>Kivish Air Delta</b> division,
+          oriented toward frequent segmented routes. For the key line, a new durable AirHokol-66 D124 airliner (96 seats) was selected.
+        </p>
+
+        <h3>KA-D568 (2001)</h3>
+        <p>
+          On September 11, 2001, flight <b>KA-D568</b> became one of the most famous events in the airline’s history:
+          the aircraft was hijacked and used in the attack on the <b>WTC</b>. Despite cockpit destruction on impact, structural strength and onboard
+          systems gave some people a chance to survive. After that, Kivish Air Delta was suspended, and Kivish Air substantially strengthened
+          security procedures on the ground and onboard for international routes.
+        </p>
+
+        <h2>Integration of Kivish-Korean Airlines (since 2011)</h2>
+        <p>
+          In 2011, the former national aviation enterprise of the DPRK (Koryo Air) was integrated into Kivish Air’s structure,
+          entering the group under the name <b>Kivish-Korean Airlines</b>. For Kivish Air, this meant expanding the regional network,
+          unifying procedures, and conducting a large-scale fleet and maintenance audit of the acquired operator.
+        </p>
+
+        <h2>No-crash period (2011–2026)</h2>
+        <p>
+          After 2011, Kivish Air reported a long period without aviation disasters, attributing it to standardized crew training procedures,
+          tighter maintenance control, and operation of “trusted” aircraft types with a more unified fleet. By 2026, the airline retains
+          a reputation for strict discipline and technical reliability.
+        </p>
+
+        <h2>Key events</h2>
+        <ul>
+          <li><b>1989</b> — creation of Kivish Air after the reorganization of Glavny Polyot.</li>
+          <li><b>1989–1993</b> — mixed fleet: AirHokol-66 + Tu/Il/An + first Western purchases.</li>
+          <li><b>1994</b> — crash (Boeing 737-200) and subsequent Boeing ban in Kivish; aircraft removed from the country.</li>
+          <li><b>2000</b> — launch of the <b>Kivish Air Delta</b> division (“aircraft-as-a-route-shuttle”).</li>
+          <li><b>2001</b> — flight <b>KA-D568</b>; Delta format suspended after the event.</li>
+          <li><b>2011</b> — integration of <b>Kivish-Korean Airlines</b> into the Kivish Air group.</li>
+          <li><b>2011–2026</b> — no-crash period in the airline’s history.</li>
+        </ul>
+
+        <h2>See also</h2>
+        <ul>
+          <li><a href="kora.html">Kora</a></li>
+          <li><a href="siberia-airlines.html">Siberia Airlines</a></li>
+          <li><a href="kivish-korean-airlines.html">Kivish-Korean Airlines</a></li>
+        </ul>
+
+        <p class="notes">
+          Note: this page describes only the history of Kivish Air and related divisions/subsidiary operators.
+        </p>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>Note:</strong> Neverpedia is a fictional project.
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
