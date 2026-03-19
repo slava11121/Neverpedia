@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Siberia Airlines — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial,sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .lang-block{margin-top:20px;border-top:1px solid #c8ccd1;padding-top:10px}
+    .lang-toggle{cursor:pointer;font-weight:bold;font-size:14px;margin-bottom:6px;user-select:none}
+    .lang-list{display:none}
+    .lang-list a{display:block;margin:4px 0;font-size:14px}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto;margin:0 auto}
+    h2{font-size:22px;margin:16px 0 8px}
+    ul{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox{float:none;width:100%;margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Заглавная страница</a>
+        <a href="create.html">Создать статью</a>
+        <a href="#">Случайная статья</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">Языки ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="siberia-airlines.html">Русский</a>
+          <a href="en/siberia-airlines.html">English</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">Siberia Airlines</div>
+          <div class="cell">
+            <img src="siberia-airlines-logo.png" alt="Логотип Siberia Airlines">
+          </div>
+          <div class="cell"><b>Тип</b><br>частная авиакомпания</div>
+          <div class="cell"><b>Основана</b><br>1992</div>
+          <div class="cell"><b>Штаб-квартира</b><br>—</div>
+          <div class="cell"><b>Хабы</b><br>—</div>
+          <div class="cell"><b>Особенности</b><br>учебные/школьные перевозки («Борт №15»)</div>
+        </aside>
+
+        <h1 class="title">Siberia Airlines</h1>
+        <p class="lead">
+          <b>Siberia Airlines</b> — частная кивишская авиакомпания, основанная в 1992 году.
+          В 1993 году компания первой в мире выделила отдельное подразделение под перевозки школ и учреждений,
+          известное по служебной маркировке <b>«Борт №15»</b> (учебный/школьный борт).
+        </p>
+
+        <h2>История</h2>
+        <p>
+          Раздел находится в разработке.
+        </p>
+
+        <h2>«Борт №15»</h2>
+        <p>
+          Раздел находится в разработке.
+        </p>
+
+        <h2>См. также</h2>
+        <ul>
+          <li><a href="kivish-air.html">Kivish Air</a></li>
+          <li><a href="glavnyy-polet.html">Главный Полёт</a></li>
+        </ul>
+
+        <p class="notes">
+          Примечание: это заглушка статьи. Содержимое будет расширено.
+        </p>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>Внимание:</strong> Neverpedia — вымышленный проект.
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
