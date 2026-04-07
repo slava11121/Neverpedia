@@ -13,7 +13,6 @@
       --bg-1: #eef2f5;
       --bg-2: #dfe6ec;
       --panel: rgba(255, 255, 255, 0.78);
-      --panel-solid: #ffffff;
       --border: rgba(32, 44, 56, 0.10);
       --shadow: 0 20px 60px rgba(28, 38, 46, 0.12);
       --text: #15202b;
@@ -60,6 +59,14 @@
       font-size: 17px;
       color: var(--muted);
       margin: 0;
+    }
+
+    .main-wrap {
+      width: 100%;
+      max-width: 1260px;
+      position: relative;
+      display: flex;
+      justify-content: center;
     }
 
     .chooser {
@@ -157,6 +164,86 @@
       transform: translateX(4px);
     }
 
+    .language-box {
+      position: absolute;
+      top: 10px;
+      right: -82px;
+      z-index: 20;
+    }
+
+    .lang-toggle {
+      width: 58px;
+      height: 58px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 16px 40px rgba(28, 38, 46, 0.14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .lang-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 44px rgba(28, 38, 46, 0.18);
+    }
+
+    .lang-toggle img {
+      width: 34px;
+      height: 24px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .lang-list {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(-8px);
+      pointer-events: none;
+      transition: opacity 0.22s ease, transform 0.22s ease;
+    }
+
+    .language-box.open .lang-list {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .lang-item {
+      width: 58px;
+      height: 58px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 12px 34px rgba(28, 38, 46, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .lang-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(28, 38, 46, 0.16);
+      border-color: rgba(43, 57, 71, 0.18);
+    }
+
+    .lang-item img {
+      width: 34px;
+      height: 24px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+
     .overlay {
       position: fixed;
       inset: 0;
@@ -183,6 +270,17 @@
       }
     }
 
+    @media (max-width: 1320px) {
+      .language-box {
+        right: 0;
+        top: -76px;
+      }
+
+      .lang-list {
+        flex-direction: row;
+      }
+    }
+
     @media (max-width: 900px) {
       .chooser {
         grid-template-columns: 1fr;
@@ -195,6 +293,17 @@
       .logo {
         font-size: 36px;
         letter-spacing: 7px;
+      }
+
+      .language-box {
+        right: 0;
+        top: -76px;
+      }
+
+      .lang-toggle,
+      .lang-item {
+        width: 54px;
+        height: 54px;
       }
     }
 
@@ -214,6 +323,23 @@
       .subtitle {
         font-size: 15px;
       }
+
+      .language-box {
+        top: -72px;
+      }
+
+      .lang-toggle,
+      .lang-item {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+      }
+
+      .lang-toggle img,
+      .lang-item img {
+        width: 30px;
+        height: 21px;
+      }
     }
   </style>
 </head>
@@ -226,30 +352,47 @@
       <p class="subtitle">Выберите направление компании</p>
     </div>
 
-    <div class="chooser">
-      <a class="item" href="tech.html" onclick="return go(event, 'tech.html')">
-        <div class="photo">
-          <img src="tech.jpg" alt="Техника Tarifa">
-        </div>
-        <div class="content">
-          <div class="label">Подразделение</div>
-          <h2 class="title">Tarifa</h2>
-          <p class="text">Фургоны, тягачи, тракторы Tarifa.</p>
-          <div class="bottom-line">Открыть сайт</div>
-        </div>
-      </a>
+    <div class="main-wrap">
+      <div class="chooser">
+        <a class="item" href="tech.html" onclick="return go(event, 'tech.html')">
+          <div class="photo">
+            <img src="tech.jpg" alt="Техника Tarifa">
+          </div>
+          <div class="content">
+            <div class="label">Подразделение</div>
+            <h2 class="title">Tarifa</h2>
+            <p class="text">Фургоны, тягачи, тракторы Tarifa.</p>
+            <div class="bottom-line">Открыть сайт</div>
+          </div>
+        </a>
 
-      <a class="item" href="auto.html" onclick="return go(event, 'auto.html')">
-        <div class="photo">
-          <img src="auto.jpg" alt="Автомобили Tarifa Auto">
+        <a class="item" href="auto.html" onclick="return go(event, 'auto.html')">
+          <div class="photo">
+            <img src="auto.jpg" alt="Автомобили Tarifa Auto">
+          </div>
+          <div class="content">
+            <div class="label">Подразделение</div>
+            <h2 class="title">Tarifa Auto</h2>
+            <p class="text">Легковые автомобили Tarifa Auto.</p>
+            <div class="bottom-line">Открыть сайт</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="language-box" id="languageBox">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Выбор языка">
+          <img src="languages/ru.jpg" alt="Русский">
+        </button>
+
+        <div class="lang-list" id="langList">
+          <a class="lang-item" href="index.html" onclick="return go(event, 'index.html')" title="Русский">
+            <img src="languages/ru.jpg" alt="Русский">
+          </a>
+          <a class="lang-item" href="en/index.html" onclick="return go(event, 'en/index.html')" title="English">
+            <img src="languages/en.jpg" alt="English">
+          </a>
         </div>
-        <div class="content">
-          <div class="label">Подразделение</div>
-          <h2 class="title">Tarifa Auto</h2>
-          <p class="text">Легковые автомобили Tarifa Auto.</p>
-          <div class="bottom-line">Открыть сайт</div>
-        </div>
-      </a>
+      </div>
     </div>
   </div>
 
@@ -263,6 +406,20 @@
       }, 260);
       return false;
     }
+
+    const languageBox = document.getElementById('languageBox');
+    const langToggle = document.getElementById('langToggle');
+
+    langToggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      languageBox.classList.toggle('open');
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!languageBox.contains(event.target)) {
+        languageBox.classList.remove('open');
+      }
+    });
   </script>
 </body>
 </html>

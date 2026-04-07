@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarifa</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-1: #eef2f5;
+      --bg-2: #dfe6ec;
+      --panel: rgba(255, 255, 255, 0.78);
+      --border: rgba(32, 44, 56, 0.10);
+      --shadow: 0 20px 60px rgba(28, 38, 46, 0.12);
+      --text: #15202b;
+      --muted: #5f6b76;
+      --accent: #7e8b98;
+      --accent-dark: #2b3947;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.85), transparent 30%),
+        linear-gradient(135deg, var(--bg-1), var(--bg-2));
+      min-height: 100vh;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .top {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .logo {
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: 10px;
+      margin-bottom: 14px;
+      color: var(--accent-dark);
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .main-wrap {
+      width: 100%;
+      max-width: 1260px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .chooser {
+      width: 100%;
+      max-width: 1180px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .item {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 70px rgba(28, 38, 46, 0.18);
+      border-color: rgba(43, 57, 71, 0.18);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .photo {
+      height: 300px;
+      background: linear-gradient(135deg, #cdd6de, #eef3f7);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content {
+      padding: 26px 26px 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.96));
+    }
+
+    .label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .title {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.1;
+      color: var(--accent-dark);
+    }
+
+    .text {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    .bottom-line {
+      margin-top: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent-dark);
+    }
+
+    .bottom-line::after {
+      content: "→";
+      font-size: 17px;
+      transition: transform 0.2s ease;
+    }
+
+    .item:hover .bottom-line::after {
+      transform: translateX(4px);
+    }
+
+    .language-box {
+      position: absolute;
+      top: 10px;
+      right: -82px;
+      z-index: 20;
+    }
+
+    .lang-toggle {
+      width: 58px;
+      height: 58px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 16px 40px rgba(28, 38, 46, 0.14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .lang-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 44px rgba(28, 38, 46, 0.18);
+    }
+
+    .lang-toggle img {
+      width: 34px;
+      height: 24px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .lang-list {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(-8px);
+      pointer-events: none;
+      transition: opacity 0.22s ease, transform 0.22s ease;
+    }
+
+    .language-box.open .lang-list {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .lang-item {
+      width: 58px;
+      height: 58px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 12px 34px rgba(28, 38, 46, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .lang-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(28, 38, 46, 0.16);
+      border-color: rgba(43, 57, 71, 0.18);
+    }
+
+    .lang-item img {
+      width: 34px;
+      height: 24px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: #d9e0e6;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+      z-index: 30;
+    }
+
+    .overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1320px) {
+      .language-box {
+        right: 0;
+        top: -76px;
+      }
+
+      .lang-list {
+        flex-direction: row;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .chooser {
+        grid-template-columns: 1fr;
+      }
+
+      .photo {
+        height: 240px;
+      }
+
+      .logo {
+        font-size: 36px;
+        letter-spacing: 7px;
+      }
+
+      .language-box {
+        right: 0;
+        top: -76px;
+      }
+
+      .lang-toggle,
+      .lang-item {
+        width: 54px;
+        height: 54px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        padding: 28px 16px;
+      }
+
+      .content {
+        padding: 22px;
+      }
+
+      .title {
+        font-size: 25px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
+
+      .language-box {
+        top: -72px;
+      }
+
+      .lang-toggle,
+      .lang-item {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+      }
+
+      .lang-toggle img,
+      .lang-item img {
+        width: 30px;
+        height: 21px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="page">
+    <div class="top">
+      <div class="logo">TARIFA</div>
+      <p class="subtitle">Choose the company division</p>
+    </div>
+
+    <div class="main-wrap">
+      <div class="chooser">
+        <a class="item" href="tech.html" onclick="return go(event, 'tech.html')">
+          <div class="photo">
+            <img src="../tech.jpg" alt="Tarifa machinery">
+          </div>
+          <div class="content">
+            <div class="label">Division</div>
+            <h2 class="title">Tarifa</h2>
+            <p class="text">Tarifa vans, trucks, and tractors.</p>
+            <div class="bottom-line">Open website</div>
+          </div>
+        </a>
+
+        <a class="item" href="auto.html" onclick="return go(event, 'auto.html')">
+          <div class="photo">
+            <img src="../auto.jpg" alt="Tarifa Auto cars">
+          </div>
+          <div class="content">
+            <div class="label">Division</div>
+            <h2 class="title">Tarifa Auto</h2>
+            <p class="text">Tarifa Auto passenger cars.</p>
+            <div class="bottom-line">Open website</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="language-box" id="languageBox">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Language selection">
+          <img src="../languages/en.jpg" alt="English">
+        </button>
+
+        <div class="lang-list" id="langList">
+          <a class="lang-item" href="../index.html" onclick="return go(event, '../index.html')" title="Russian">
+            <img src="../languages/ru.jpg" alt="Russian">
+          </a>
+          <a class="lang-item" href="index.html" onclick="return go(event, 'index.html')" title="English">
+            <img src="../languages/en.jpg" alt="English">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function go(event, url) {
+      event.preventDefault();
+      const overlay = document.getElementById('overlay');
+      overlay.classList.add('show');
+      setTimeout(() => {
+        window.location.href = url;
+      }, 260);
+      return false;
+    }
+
+    const languageBox = document.getElementById('languageBox');
+    const langToggle = document.getElementById('langToggle');
+
+    langToggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      languageBox.classList.toggle('open');
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!languageBox.contains(event.target)) {
+        languageBox.classList.remove('open');
+      }
+    });
+  </script>
+</body>
+</html>

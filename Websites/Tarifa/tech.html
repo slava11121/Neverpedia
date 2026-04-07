@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tarifa — Главная</title>
+  <meta name="description" content="Tarifa — коммерческий транспорт, аэродромная техника, тракторы и строительные машины." />
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:#0f172a;
+      background:#f4f6fb;
+      overflow-x:hidden;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,calc(100% - 40px));margin:0 auto}
+
+    :root{
+      --paper:#f4f6fb;
+      --surface:#ffffff;
+      --surface2:#eef3fb;
+      --line:rgba(15,23,42,.10);
+      --text:#0f172a;
+      --muted:#475569;
+      --accent:#1f4f86;
+      --accent2:#2f6bb6;
+      --shadow:0 18px 44px rgba(15,23,42,.10);
+      --r-xl:28px;
+      --r-lg:20px;
+      --r-md:14px;
+    }
+
+    /* ===== fake loader ===== */
+    .loader{
+      position:fixed;
+      inset:0;
+      z-index:9999;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#f4f6fb;
+      opacity:1;
+      visibility:visible;
+      transition:opacity .55s ease, visibility .55s ease;
+    }
+    .loader.is-hidden{
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+    }
+    .loader-box{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+      width:min(320px,calc(100% - 40px));
+    }
+    .loader-logo{
+      max-width:220px;
+      max-height:64px;
+      width:auto;
+      height:auto;
+      object-fit:contain;
+    }
+    .loader-line{
+      width:100%;
+      height:8px;
+      border-radius:999px;
+      background:#dbe5f3;
+      overflow:hidden;
+      position:relative;
+    }
+    .loader-line::before{
+      content:"";
+      position:absolute;
+      left:-35%;
+      top:0;
+      height:100%;
+      width:35%;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      animation:loaderMove 1s ease-in-out infinite;
+    }
+    .loader-text{
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#475569;
+    }
+    @keyframes loaderMove{
+      0%{left:-35%}
+      100%{left:100%}
+    }
+
+    /* ===== page fade-in ===== */
+    .site-shell{
+      opacity:0;
+      transform:translateY(8px);
+      transition:opacity .7s ease, transform .7s ease;
+    }
+    .site-shell.is-ready{
+      opacity:1;
+      transform:none;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(244,246,251,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      min-width:0;
+    }
+    .brand__logo{
+      height:56px;
+      width:auto;
+      max-width:260px;
+      object-fit:contain;
+      display:block;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .navlinks{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      padding:6px;
+      border-radius:999px;
+      background:rgba(255,255,255,.75);
+      border:1px solid var(--line);
+    }
+    .navlinks a{
+      font-size:13px;
+      font-weight:800;
+      color:#1f2937;
+      padding:10px 12px;
+      border-radius:999px;
+    }
+    .navlinks a:hover{
+      background:rgba(31,79,134,.08);
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:11px 14px;
+      border-radius:999px;
+      font-weight:900;
+      font-size:13px;
+      border:1px solid var(--line);
+      background:var(--surface);
+      cursor:pointer;
+      white-space:nowrap;
+      transition:transform .15s ease, filter .15s ease, background .15s ease;
+    }
+    .btn:active{
+      transform:translateY(1px);
+    }
+    .btn--accent{
+      border-color:rgba(31,79,134,.22);
+      background:linear-gradient(135deg, rgba(31,79,134,.14), rgba(47,107,182,.10));
+      color:var(--accent);
+    }
+    .btn--accent:hover{
+      filter:brightness(1.02);
+    }
+    .burger{
+      display:none;
+    }
+    .menu{
+      display:none;
+      padding:10px 0 16px;
+    }
+    .menu.open{
+      display:block;
+    }
+    .menu a{
+      display:block;
+      padding:12px 0;
+      border-bottom:1px solid var(--line);
+      font-weight:900;
+      color:#1f2937;
+    }
+
+    .hero{
+      padding:22px 0 18px;
+    }
+    .hero-card{
+      border-radius:var(--r-xl);
+      overflow:hidden;
+      background:var(--surface);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      position:relative;
+    }
+    .hero-media{
+      position:relative;
+      height:420px;
+      background:#dbe7f7;
+    }
+    .hero-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .hero-media::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg, rgba(15,23,42,.70) 0%, rgba(15,23,42,.24) 58%, rgba(15,23,42,.08) 100%),
+        linear-gradient(180deg, rgba(15,23,42,.04) 0%, rgba(15,23,42,.42) 100%);
+    }
+    .hero-body{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:flex-end;
+      padding:28px;
+      color:#fff;
+    }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.86);
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.16);
+      padding:8px 10px;
+      border-radius:999px;
+      backdrop-filter:blur(6px);
+    }
+    h1{
+      margin:12px 0 10px;
+      font-size:clamp(30px,4vw,56px);
+      line-height:1.05;
+      letter-spacing:-.02em;
+      max-width:18ch;
+    }
+    .lead{
+      margin:0;
+      max-width:68ch;
+      line-height:1.7;
+      font-size:15px;
+      color:rgba(255,255,255,.90);
+    }
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+    .btn--light{
+      background:rgba(255,255,255,.92);
+      border-color:rgba(255,255,255,.22);
+      color:#0f172a;
+    }
+    .btn--light:hover{
+      background:#fff;
+    }
+
+    section{
+      padding:22px 0;
+    }
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:12px;
+    }
+    h2{
+      margin:0;
+      font-size:26px;
+      letter-spacing:-.01em;
+    }
+    .sub{
+      margin:8px 0 0;
+      color:var(--muted);
+      line-height:1.7;
+      max-width:90ch;
+      font-size:14px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+    }
+    .card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--r-lg);
+      box-shadow:0 12px 30px rgba(15,23,42,.06);
+      overflow:hidden;
+    }
+
+    .product{
+      grid-column:span 3;
+      display:flex;
+      flex-direction:column;
+      min-height:360px;
+    }
+    .product-media{
+      height:190px;
+      background:#e8eef9;
+    }
+    .product-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .product-body{
+      padding:14px;
+      display:flex;
+      flex-direction:column;
+      flex:1;
+    }
+    .product h3{
+      margin:0;
+      font-size:19px;
+    }
+    .meta{
+      margin:8px 0 0;
+      color:#334155;
+      line-height:1.65;
+      font-size:14px;
+    }
+    .product-actions{
+      margin-top:auto;
+      padding-top:16px;
+    }
+    .product-actions .btn{
+      width:100%;
+    }
+
+    .service,.contacts{
+      grid-column:span 12;
+      padding:16px;
+    }
+    .service p,.contacts p{
+      margin:0;
+      color:#334155;
+      line-height:1.85;
+    }
+    .service p + p,
+    .contacts p + p{
+      margin-top:10px;
+    }
+    .service-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+    .contact-item{
+      background:var(--surface2);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px;
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    .contact-label{
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .contact-value{
+      font-size:16px;
+      font-weight:700;
+      color:#1f2937;
+      line-height:1.5;
+      word-break:break-word;
+    }
+
+    footer{
+      padding:26px 0 40px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+    }
+    .foot{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width:980px){
+      .navlinks{display:none}
+      .burger{display:inline-flex}
+      .product{grid-column:span 6}
+    }
+
+    @media (max-width:640px){
+      .container{width:min(1160px,calc(100% - 28px))}
+      .brand__logo{
+        height:42px;
+        max-width:190px;
+      }
+      .hero-body{
+        padding:18px;
+      }
+      .hero-media{
+        height:330px;
+      }
+      .product{
+        grid-column:span 12;
+      }
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .loader,
+      .site-shell{
+        transition:none !important;
+      }
+      .loader-line::before{
+        animation:none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-box">
+      <img class="loader-logo" src="logo.png" alt="Tarifa">
+      <div class="loader-line"></div>
+      <div class="loader-text">загрузка</div>
+    </div>
+  </div>
+
+  <div class="site-shell" id="siteShell">
+    <header>
+      <div class="container">
+        <div class="head">
+          <a class="brand" href="#top" aria-label="Tarifa — на главную">
+            <img class="brand__logo" src="logo.png" alt="Tarifa">
+          </a>
+
+          <nav aria-label="Навигация">
+            <div class="navlinks">
+              <a href="#products">Техника</a>
+              <a href="#service">Сервис</a>
+              <a href="#contacts">Контакты</a>
+            </div>
+
+            <button class="btn burger" id="burger" aria-expanded="false" aria-controls="mobileMenu">Меню</button>
+            <a class="btn btn--accent" href="#contacts">Связаться</a>
+          </nav>
+        </div>
+
+        <div class="menu" id="mobileMenu" aria-label="Мобильное меню">
+          <a href="#products">Техника</a>
+          <a href="#service">Сервис</a>
+          <a href="#contacts">Контакты</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container">
+          <article class="hero-card">
+            <div class="hero-media">
+              <img src="hero.jpg" alt="Tarifa — спецтехника и коммерческий транспорт" />
+            </div>
+            <div class="hero-body">
+              <div>
+                <div class="kicker">tarifa · техника для ежедневной работы</div>
+                <h1>Коммерческий транспорт и спецтехника Tarifa.</h1>
+                <p class="lead">
+                  Фургоны, аэродромные машины, тракторы и строительная техника для задач,
+                  где важны ресурс, понятная эксплуатация и нормальное обслуживание.
+                </p>
+                <div class="hero-actions">
+                  <a class="btn btn--light" href="#products">Техника</a>
+                  <a class="btn btn--light" href="#service">Сервис</a>
+                  <a class="btn btn--light" href="#contacts">Контакты</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="products">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Техника</h2>
+              <p class="sub">Основные направления Tarifa.</p>
+            </div>
+          </div>
+
+          <div class="grid">
+            <article class="card product">
+              <div class="product-media">
+                <img src="dart.jpg" alt="Tarifa Dart" />
+              </div>
+              <div class="product-body">
+                <h3>Dart</h3>
+                <p class="meta">Лёгкий коммерческий транспорт Tarifa: фургоны, шасси и специальные исполнения для служб и бизнеса.</p>
+                <div class="product-actions">
+                  <a class="btn btn--accent" href="dart.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card product">
+              <div class="product-media">
+                <img src="airport.jpg" alt="Аэродромная техника Tarifa" />
+              </div>
+              <div class="product-body">
+                <h3>Аэродромная техника</h3>
+                <p class="meta">Тяговые, сервисные и вспомогательные машины для аэродромной инфраструктуры и постоянной эксплуатации.</p>
+                <div class="product-actions">
+                  <a class="btn btn--accent" href="airport.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card product">
+              <div class="product-media">
+                <img src="hk.jpg" alt="Tarifa HK" />
+              </div>
+              <div class="product-body">
+                <h3>HK</h3>
+                <p class="meta">Тракторная линейка Tarifa для хозяйственных, коммунальных и производственных задач.</p>
+                <div class="product-actions">
+                  <a class="btn btn--accent" href="hk.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card product">
+              <div class="product-media">
+                <img src="mita.jpg" alt="Tarifa Mita" />
+              </div>
+              <div class="product-body">
+                <h3>Mita</h3>
+                <p class="meta">Строительные машины Tarifa для инфраструктурных и объектных работ.</p>
+                <div class="product-actions">
+                  <a class="btn btn--accent" href="mita.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="service">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Сервис</h2>
+              <p class="sub">Поставка, сопровождение, обслуживание и документация по технике Tarifa.</p>
+            </div>
+          </div>
+
+          <article class="card service">
+            <p>
+              Tarifa принимает запросы по поставке техники, сервисному сопровождению,
+              запасным частям и технической документации по телефону и электронной почте.
+            </p>
+            <p>
+              Для связи с компанией не требуется личное посещение офиса — основные запросы
+              можно направить дистанционно.
+            </p>
+            <div class="service-actions">
+              <a class="btn btn--accent" href="#contacts">Связаться с компанией</a>
+              <a class="btn" href="mailto:info@tarifa.ksh">Написать на почту</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contacts">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Контакты</h2>
+              <p class="sub">Связь с Tarifa по вопросам поставки, сервиса и документации.</p>
+            </div>
+          </div>
+
+          <article class="card contacts">
+            <div class="contact-grid">
+              <div class="contact-item">
+                <span class="contact-label">Телефон</span>
+                <a class="contact-value" href="tel:+8956487234">+8 956 4872-34</a>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-label">Электронная почта</span>
+                <a class="contact-value" href="mailto:info@tarifa.ksh">info@tarifa.ksh</a>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-label">Адрес</span>
+                <span class="contact-value">Кивиш, г. Д, ул. Котова, д. 9, к. 1</span>
+              </div>
+
+              <div class="contact-item">
+                <span class="contact-label">Режим работы</span>
+                <span class="contact-value">Пн–Пт · 09:00–18:00</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container foot">
+        <div>
+          <div style="font-weight:900;letter-spacing:.10em;color:#1f2937">TARIFA</div>
+          <div style="margin-top:8px">© Tarifa</div>
+        </div>
+        <div style="max-width:78ch;line-height:1.6">
+          Коммерческий транспорт и спецтехника Tarifa.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobileMenu');
+
+    function setMenu(open){
+      menu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      burger.textContent = open ? 'Закрыть' : 'Меню';
+    }
+
+    burger?.addEventListener('click', () => {
+      setMenu(!menu.classList.contains('open'));
+    });
+
+    menu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => setMenu(false));
+    });
+
+    const loader = document.getElementById('loader');
+    const siteShell = document.getElementById('siteShell');
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const minDelay = 1000;
+    const maxDelay = 3000;
+    const randomDelay = Math.floor(Math.random() * (maxDelay - minDelay + 1)) + minDelay;
+
+    function revealSite(){
+      loader.classList.add('is-hidden');
+      siteShell.classList.add('is-ready');
+    }
+
+    if (reduceMotion) {
+      revealSite();
+    } else {
+      window.addEventListener('load', () => {
+        setTimeout(revealSite, randomDelay);
+      });
+    }
+  </script>
+</body>
+</html>
