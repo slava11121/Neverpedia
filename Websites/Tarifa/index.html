@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarifa</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --bg-1: #eef2f5;
+      --bg-2: #dfe6ec;
+      --panel: rgba(255, 255, 255, 0.78);
+      --panel-solid: #ffffff;
+      --border: rgba(32, 44, 56, 0.10);
+      --shadow: 0 20px 60px rgba(28, 38, 46, 0.12);
+      --text: #15202b;
+      --muted: #5f6b76;
+      --accent: #7e8b98;
+      --accent-dark: #2b3947;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.85), transparent 30%),
+        linear-gradient(135deg, var(--bg-1), var(--bg-2));
+      min-height: 100vh;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    .top {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .logo {
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: 10px;
+      margin-bottom: 14px;
+      color: var(--accent-dark);
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .chooser {
+      width: 100%;
+      max-width: 1180px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .item {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+    }
+
+    .item:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 28px 70px rgba(28, 38, 46, 0.18);
+      border-color: rgba(43, 57, 71, 0.18);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .photo {
+      height: 300px;
+      background: linear-gradient(135deg, #cdd6de, #eef3f7);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content {
+      padding: 26px 26px 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.96));
+    }
+
+    .label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .title {
+      margin: 0 0 10px;
+      font-size: 30px;
+      line-height: 1.1;
+      color: var(--accent-dark);
+    }
+
+    .text {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 15px;
+    }
+
+    .bottom-line {
+      margin-top: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent-dark);
+    }
+
+    .bottom-line::after {
+      content: "→";
+      font-size: 17px;
+      transition: transform 0.2s ease;
+    }
+
+    .item:hover .bottom-line::after {
+      transform: translateX(4px);
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: #d9e0e6;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+      z-index: 30;
+    }
+
+    .overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .chooser {
+        grid-template-columns: 1fr;
+      }
+
+      .photo {
+        height: 240px;
+      }
+
+      .logo {
+        font-size: 36px;
+        letter-spacing: 7px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page {
+        padding: 28px 16px;
+      }
+
+      .content {
+        padding: 22px;
+      }
+
+      .title {
+        font-size: 25px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="page">
+    <div class="top">
+      <div class="logo">TARIFA</div>
+      <p class="subtitle">Выберите направление компании</p>
+    </div>
+
+    <div class="chooser">
+      <a class="item" href="tech.html" onclick="return go(event, 'tech.html')">
+        <div class="photo">
+          <img src="tech.jpg" alt="Техника Tarifa">
+        </div>
+        <div class="content">
+          <div class="label">Подразделение</div>
+          <h2 class="title">Tarifa</h2>
+          <p class="text">Фургоны, тягачи, тракторы Tarifa.</p>
+          <div class="bottom-line">Открыть сайт</div>
+        </div>
+      </a>
+
+      <a class="item" href="auto.html" onclick="return go(event, 'auto.html')">
+        <div class="photo">
+          <img src="auto.jpg" alt="Автомобили Tarifa Auto">
+        </div>
+        <div class="content">
+          <div class="label">Подразделение</div>
+          <h2 class="title">Tarifa Auto</h2>
+          <p class="text">Легковые автомобили Tarifa Auto.</p>
+          <div class="bottom-line">Открыть сайт</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function go(event, url) {
+      event.preventDefault();
+      const overlay = document.getElementById('overlay');
+      overlay.classList.add('show');
+      setTimeout(() => {
+        window.location.href = url;
+      }, 260);
+      return false;
+    }
+  </script>
+</body>
+</html>
