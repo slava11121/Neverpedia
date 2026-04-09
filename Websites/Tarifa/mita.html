@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tarifa — Tarifa Mita</title>
+  <meta name="description" content="Покупка экскаватора Tarifa Mita: галерея, характеристики, оснащение, история модели и оформление заказа." />
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:#0f172a;
+      background:#f4f6fb;
+      overflow-x:hidden;
+    }
+
+    :root{
+      --paper:#f4f6fb;
+      --surface:#ffffff;
+      --surface2:#eef3fb;
+      --line:rgba(15,23,42,.10);
+      --text:#0f172a;
+      --muted:#475569;
+      --accent:#1f4f86;
+      --accent2:#2f6bb6;
+      --shadow:0 18px 44px rgba(15,23,42,.10);
+      --r-xl:28px;
+      --r-lg:20px;
+      --r-md:14px;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,calc(100% - 40px));margin:0 auto}
+
+    .site-shell{
+      opacity:0;
+      transform:translateY(10px);
+      animation:pageFade .75s ease forwards;
+    }
+    @keyframes pageFade{
+      from{opacity:0;transform:translateY(10px)}
+      to{opacity:1;transform:none}
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(244,246,251,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      min-width:0;
+    }
+    .brand__logo{
+      height:56px;
+      width:auto;
+      max-width:260px;
+      object-fit:contain;
+      display:block;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .navlinks{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      padding:6px;
+      border-radius:999px;
+      background:rgba(255,255,255,.75);
+      border:1px solid var(--line);
+    }
+    .navlinks a{
+      font-size:13px;
+      font-weight:800;
+      color:#1f2937;
+      padding:10px 12px;
+      border-radius:999px;
+    }
+    .navlinks a:hover{
+      background:rgba(31,79,134,.08);
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:11px 14px;
+      border-radius:999px;
+      font-weight:900;
+      font-size:13px;
+      border:1px solid var(--line);
+      background:var(--surface);
+      cursor:pointer;
+      white-space:nowrap;
+      transition:transform .15s ease, filter .15s ease, background .15s ease;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn--accent{
+      border-color:rgba(31,79,134,.22);
+      background:linear-gradient(135deg, rgba(31,79,134,.14), rgba(47,107,182,.10));
+      color:var(--accent);
+    }
+    .btn--accent:hover{filter:brightness(1.02)}
+    .burger{display:none}
+    .menu{display:none;padding:10px 0 16px}
+    .menu.open{display:block}
+    .menu a{
+      display:block;
+      padding:12px 0;
+      border-bottom:1px solid var(--line);
+      font-weight:900;
+      color:#1f2937;
+    }
+
+    main{padding:24px 0 40px}
+
+    .breadcrumbs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      align-items:center;
+      margin-bottom:18px;
+      color:var(--muted);
+      font-size:13px;
+      font-weight:700;
+    }
+    .breadcrumbs span{opacity:.7}
+
+    .page-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .page-head h1{
+      margin:0;
+      font-size:clamp(30px,4vw,48px);
+      line-height:1.06;
+      letter-spacing:-.02em;
+    }
+    .page-sub{
+      margin:8px 0 0;
+      color:#334155;
+      line-height:1.7;
+      max-width:70ch;
+      font-size:15px;
+    }
+    .status-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      border-radius:999px;
+      background:var(--surface2);
+      border:1px solid var(--line);
+      color:#1f2937;
+      font-weight:900;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .gallery-wrap{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--r-xl);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin:0 0 20px;
+      width:100%;
+    }
+
+    .gallery-inner{
+      width:min(760px,100%);
+      margin:0 auto;
+    }
+
+    .gallery{
+      position:relative;
+      width:100%;
+      height:420px;
+      border-radius:20px;
+      overflow:hidden;
+      background:#dbe7f7;
+    }
+    .gallery img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:0;
+      transition:opacity .35s ease;
+    }
+    .gallery img.active{
+      opacity:1;
+    }
+
+    .thumbs{
+      display:grid;
+      grid-template-columns:repeat(6,minmax(0,1fr));
+      gap:12px;
+      margin-top:14px;
+    }
+    .thumb{
+      appearance:none;
+      border:0;
+      background:none;
+      padding:0;
+      margin:0;
+      cursor:pointer;
+      border-radius:12px;
+      overflow:hidden;
+      outline:none;
+    }
+    .thumb img{
+      width:100%;
+      height:78px;
+      object-fit:cover;
+      border-radius:12px;
+      opacity:.7;
+      border:2px solid transparent;
+      transition:opacity .2s ease, border-color .2s ease, transform .2s ease;
+      background:#dbe7f7;
+    }
+    .thumb:hover img{
+      opacity:.9;
+      transform:translateY(-2px);
+    }
+    .thumb.active img{
+      opacity:1;
+      border-color:var(--accent);
+    }
+
+    .content-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.5fr) minmax(320px,.8fr);
+      gap:18px;
+      align-items:start;
+    }
+
+    .panel{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--r-lg);
+      box-shadow:0 12px 30px rgba(15,23,42,.06);
+      overflow:hidden;
+    }
+    .panel-body{
+      padding:18px;
+    }
+
+    .section-title{
+      margin:0 0 14px;
+      font-size:24px;
+      letter-spacing:-.02em;
+    }
+
+    .specs{
+      width:100%;
+      border-collapse:collapse;
+    }
+    .specs tr{
+      border-bottom:1px solid var(--line);
+    }
+    .specs tr:last-child{
+      border-bottom:0;
+    }
+    .specs td{
+      padding:14px 10px;
+      font-size:15px;
+      vertical-align:top;
+    }
+    .specs td.label{
+      width:180px;
+      color:var(--muted);
+      font-weight:800;
+    }
+
+    .equipment{
+      margin:0;
+      padding-left:18px;
+      columns:2;
+      column-gap:34px;
+    }
+    .equipment li{
+      margin-bottom:10px;
+      break-inside:avoid;
+      color:#334155;
+      line-height:1.6;
+    }
+
+    .buy-card{
+      position:sticky;
+      top:92px;
+    }
+    .price-label{
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .price{
+      margin:6px 0 16px;
+      font-size:34px;
+      line-height:1;
+      font-weight:900;
+      color:#0f172a;
+    }
+    .buy-text{
+      margin:0 0 18px;
+      color:#334155;
+      line-height:1.7;
+      font-size:14px;
+    }
+    .buy-actions{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .buy-actions .btn{
+      width:100%;
+      min-height:46px;
+    }
+    .buy-meta{
+      margin-top:16px;
+      padding-top:16px;
+      border-top:1px solid var(--line);
+      display:grid;
+      gap:10px;
+    }
+    .buy-meta-item{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+    }
+    .buy-meta-label{
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .buy-meta-value{
+      font-size:15px;
+      font-weight:700;
+      color:#1f2937;
+      line-height:1.5;
+      word-break:break-word;
+    }
+
+    .history-section{
+      margin-top:22px;
+    }
+    .history-text{
+      color:#334155;
+      line-height:1.8;
+      font-size:15px;
+      margin:0;
+    }
+    .history-text + .history-text{
+      margin-top:12px;
+    }
+
+    .timeline-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+    .timeline-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(15,23,42,.06);
+    }
+    .timeline-media{
+      height:170px;
+      background:#dbe7f7;
+    }
+    .timeline-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .timeline-body{
+      padding:14px;
+    }
+    .timeline-year{
+      display:inline-block;
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      color:var(--accent);
+      margin-bottom:8px;
+    }
+    .timeline-title{
+      margin:0;
+      font-size:18px;
+      line-height:1.2;
+    }
+    .timeline-desc{
+      margin:8px 0 0;
+      color:#475569;
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    footer{
+      padding:26px 0 40px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+      margin-top:32px;
+    }
+    .foot{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width:980px){
+      .navlinks{display:none}
+      .burger{display:inline-flex}
+      .content-grid{grid-template-columns:1fr}
+      .buy-card{position:static}
+      .gallery-inner{width:min(680px,100%)}
+      .gallery{height:340px}
+      .thumbs{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .timeline-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
+    @media (max-width:640px){
+      .container{width:min(1160px,calc(100% - 28px))}
+      .brand__logo{
+        height:42px;
+        max-width:190px;
+      }
+      .gallery-wrap{padding:14px}
+      .gallery-inner{width:100%}
+      .gallery{height:240px}
+      .thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .thumb img{height:70px}
+      .equipment{columns:1}
+      .specs td{
+        display:block;
+        width:100%;
+        padding:10px 0;
+      }
+      .specs td.label{
+        padding-bottom:4px;
+      }
+      .page-head{
+        flex-direction:column;
+      }
+      .timeline-grid{grid-template-columns:1fr}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .site-shell,
+      .gallery img{
+        animation:none !important;
+        transition:none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header>
+      <div class="container">
+        <div class="head">
+          <a class="brand" href="tech.html" aria-label="Tarifa — на главную">
+            <img class="brand__logo" src="logo.png" alt="Tarifa">
+          </a>
+
+          <nav aria-label="Навигация">
+            <div class="navlinks">
+              <a href="#gallery">Галерея</a>
+              <a href="#specs">Характеристики</a>
+              <a href="#equipment">Оснащение</a>
+              <a href="#buy">Покупка</a>
+            </div>
+
+            <button class="btn burger" id="burger" aria-expanded="false" aria-controls="mobileMenu">Меню</button>
+            <a class="btn btn--accent" href="#buy">Оформить запрос</a>
+          </nav>
+        </div>
+
+        <div class="menu" id="mobileMenu" aria-label="Мобильное меню">
+          <a href="#gallery">Галерея</a>
+          <a href="#specs">Характеристики</a>
+          <a href="#equipment">Оснащение</a>
+          <a href="#buy">Покупка</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="tech.html">Tarifa</a>
+          <span>•</span>
+          <a href="tech.html#products">Техника</a>
+          <span>•</span>
+          <strong>Mita</strong>
+        </div>
+
+        <div class="page-head">
+          <div>
+            <h1>Tarifa Mita</h1>
+            <p class="page-sub">
+              Экскаватор Tarifa Mita для строительных, инфраструктурных и тяжёлых объектных работ.
+              Страница покупки: галерея, характеристики, оснащение, история модели и оформление запроса на приобретение.
+            </p>
+          </div>
+          <div class="status-badge">в наличии</div>
+        </div>
+
+        <section class="gallery-wrap" id="gallery" aria-label="Галерея Tarifa Mita">
+          <div class="gallery-inner">
+            <div class="gallery" id="galleryMain">
+              <img src="car/19.jpg" class="active" alt="Tarifa Mita — вид спереди">
+              <img src="car/20.jpg" alt="Tarifa Mita — вид сбоку">
+              <img src="car/21.jpg" alt="Tarifa Mita — рабочая стрела">
+              <img src="car/22.jpg" alt="Tarifa Mita — поворотная платформа">
+              <img src="car/23.jpg" alt="Tarifa Mita — кабина оператора">
+              <img src="car/24.jpg" alt="Tarifa Mita — вариант комплектации">
+            </div>
+
+            <div class="thumbs" id="thumbs">
+              <button class="thumb active" type="button" data-index="0" aria-label="Показать фото 1">
+                <img src="car/19.jpg" alt="Миниатюра 1">
+              </button>
+              <button class="thumb" type="button" data-index="1" aria-label="Показать фото 2">
+                <img src="car/20.jpg" alt="Миниатюра 2">
+              </button>
+              <button class="thumb" type="button" data-index="2" aria-label="Показать фото 3">
+                <img src="car/21.jpg" alt="Миниатюра 3">
+              </button>
+              <button class="thumb" type="button" data-index="3" aria-label="Показать фото 4">
+                <img src="car/22.jpg" alt="Миниатюра 4">
+              </button>
+              <button class="thumb" type="button" data-index="4" aria-label="Показать фото 5">
+                <img src="car/23.jpg" alt="Миниатюра 5">
+              </button>
+              <button class="thumb" type="button" data-index="5" aria-label="Показать фото 6">
+                <img src="car/24.jpg" alt="Миниатюра 6">
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="content-grid">
+          <div>
+            <section class="panel" id="specs">
+              <div class="panel-body">
+                <h2 class="section-title">Основные характеристики</h2>
+                <table class="specs">
+                  <tr>
+                    <td class="label">Модель</td><td>Tarifa Mita</td>
+                    <td class="label">Год</td><td>2022</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Тип</td><td>Экскаватор</td>
+                    <td class="label">Ходовая часть</td><td>Гусеничная</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Двигатель</td><td>Дизельный, 6.2 л</td>
+                    <td class="label">Гидросистема</td><td>Усиленная, многоконтурная</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Мощность</td><td>248 л.с.</td>
+                    <td class="label">Цвет</td><td>Тёмно-жёлтый промышленный</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Назначение</td><td>Стройка, инфраструктура, тяжёлые объектные работы</td>
+                    <td class="label">Наличие</td><td>В наличии</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="panel" id="equipment" style="margin-top:18px;">
+              <div class="panel-body">
+                <h2 class="section-title">Стандартное оснащение</h2>
+                <ul class="equipment">
+                  <li>Усиленная стрела и рукоять</li>
+                  <li>Многоконтурная гидравлическая система</li>
+                  <li>Кабина с круговым обзором</li>
+                  <li>Климатическая установка кабины</li>
+                  <li>Подогрев сиденья оператора</li>
+                  <li>Рабочее LED-освещение</li>
+                  <li>Камеры обзора рабочей зоны</li>
+                  <li>Защита нижних узлов и магистралей</li>
+                  <li>Система стабилизации платформы</li>
+                  <li>Регулируемая управляющая эргономика</li>
+                  <li>Медиамодуль Tarifa Work</li>
+                  <li>USB и 12V в кабине</li>
+                  <li>Подготовка под сменное навесное оборудование</li>
+                  <li>Усилённая ходовая часть</li>
+                  <li>Транспортный режим с ограничением скорости</li>
+                  <li>Полный набор базовых рабочих защит</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <aside class="panel buy-card" id="buy">
+            <div class="panel-body">
+              <div class="price-label">Цена</div>
+              <div class="price">4 912 000 KSH</div>
+
+              <p class="buy-text">
+                Оформление покупки Tarifa Mita доступно через запрос компании.
+                После отправки заявки с вами связываются по телефону или почте для подтверждения исполнения, комплектации и условий поставки.
+              </p>
+
+              <div class="buy-actions">
+                <button class="btn btn--accent" type="button">Купить</button>
+                <a class="btn" href="mailto:info@tarifa.ksh?subject=Запрос%20на%20покупку%20Tarifa%20Mita">Написать на почту</a>
+                <a class="btn" href="tel:+8956487234">Позвонить</a>
+              </div>
+
+              <div class="buy-meta">
+                <div class="buy-meta-item">
+                  <span class="buy-meta-label">Телефон</span>
+                  <span class="buy-meta-value">+8 956 4872-34</span>
+                </div>
+                <div class="buy-meta-item">
+                  <span class="buy-meta-label">Электронная почта</span>
+                  <span class="buy-meta-value">info@tarifa.ksh</span>
+                </div>
+                <div class="buy-meta-item">
+                  <span class="buy-meta-label">Адрес</span>
+                  <span class="buy-meta-value">Кивиш, г. Д, ул. Котова, д. 9, к. 1</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <section class="history-section">
+          <article class="panel">
+            <div class="panel-body">
+              <h2 class="section-title">История модели Mita</h2>
+
+              <p class="history-text">
+                Tarifa Mita появился в 1987 году, когда компания вышла в строительный и сельскохозяйственный сегменты. Именно тогда Tarifa представила экскаватор Mita как отдельную тяжёлую машину, а не как часть фургонной линии. 
+              </p>
+
+              <p class="history-text">
+                В 1990-х Mita уже существовал как оформленная рабочая линейка: компания продвигала ранние варианты Mita на внешних рынках вместе с HK, закрепляя модель как тяжёлую технику для стройки и инфраструктуры. В 2000 году при реорганизации названий Tarifa линейка Mita сохранила собственное имя. 
+              </p>
+
+              <p class="history-text">
+                Следующий крупный этап пришёлся на 2022 год, когда Tarifa глубоко модернизировала внешний вид и эргономику Mita, приблизив модель к современному виду. 
+              </p>
+
+              <div class="timeline-grid">
+                <article class="timeline-card">
+                  <div class="timeline-media">
+                    <img src="history/13.jpg" alt="Ранняя Tarifa Mita">
+                  </div>
+                  <div class="timeline-body">
+                    <span class="timeline-year">1987</span>
+                    <h3 class="timeline-title">Появление Mita</h3>
+                    <p class="timeline-desc">
+                      Выход Tarifa в строительный сегмент и рождение линии Mita. 
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timeline-card">
+                  <div class="timeline-media">
+                    <img src="history/14.jpg" alt="Ранние варианты Tarifa Mita">
+                  </div>
+                  <div class="timeline-body">
+                    <span class="timeline-year">1990-е</span>
+                    <h3 class="timeline-title">Ранние варианты Mita</h3>
+                    <p class="timeline-desc">
+                      Закрепление модели как тяжёлой рабочей техники для стройки и инфраструктуры. 
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timeline-card">
+                  <div class="timeline-media">
+                    <img src="history/15.jpg" alt="Tarifa Mita после сохранения имени">
+                  </div>
+                  <div class="timeline-body">
+                    <span class="timeline-year">2000</span>
+                    <h3 class="timeline-title">Mita остаётся Mita</h3>
+                    <p class="timeline-desc">
+                      Во время реорганизации имён линейка сохранила собственное название. 
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timeline-card">
+                  <div class="timeline-media">
+                    <img src="history/16.jpg" alt="Современная Tarifa Mita">
+                  </div>
+                  <div class="timeline-body">
+                    <span class="timeline-year">2022</span>
+                    <h3 class="timeline-title">Современная Mita</h3>
+                    <p class="timeline-desc">
+                      Глубокое обновление внешности и эргономики, приведшее модель к актуальному виду. 
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container foot">
+        <div>
+          <div style="font-weight:900;letter-spacing:.10em;color:#1f2937">TARIFA</div>
+          <div style="margin-top:8px">© Tarifa</div>
+        </div>
+        <div style="max-width:78ch;line-height:1.6">
+          Страница покупки Tarifa Mita.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobileMenu');
+
+    function setMenu(open){
+      menu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      burger.textContent = open ? 'Закрыть' : 'Меню';
+    }
+
+    burger?.addEventListener('click', () => {
+      setMenu(!menu.classList.contains('open'));
+    });
+
+    menu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => setMenu(false));
+    });
+
+    const images = document.querySelectorAll('#galleryMain img');
+    const thumbs = document.querySelectorAll('#thumbs .thumb');
+    let current = 0;
+    let timer;
+
+    function show(index){
+      if(index < 0 || index >= images.length) return;
+
+      images[current].classList.remove('active');
+      thumbs[current].classList.remove('active');
+
+      current = index;
+
+      images[current].classList.add('active');
+      thumbs[current].classList.add('active');
+    }
+
+    function restartAuto(){
+      clearInterval(timer);
+      timer = setInterval(() => {
+        show((current + 1) % images.length);
+      }, 9000);
+    }
+
+    thumbs.forEach((thumb) => {
+      const i = Number(thumb.dataset.index);
+
+      thumb.addEventListener('mouseenter', () => {
+        clearInterval(timer);
+        show(i);
+      });
+
+      thumb.addEventListener('mouseleave', () => {
+        restartAuto();
+      });
+
+      thumb.addEventListener('click', () => {
+        show(i);
+        restartAuto();
+      });
+    });
+
+    restartAuto();
+  </script>
+</body>
+</html>

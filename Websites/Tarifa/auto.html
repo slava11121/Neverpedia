@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tarifa Auto - Главная</title>
+  <meta name="description" content="Tarifa Auto" />
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111827;
+    background: #ffffff;
+    overflow-x: hidden;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f5f7fa;
+    --line: #d8dee6;
+    --text: #111827;
+    --muted: #5b6573;
+    --dark: #0f172a;
+    --btn: #1f3b63;
+    --btn-hover: #2a4f82;
+    --radius: 20px;
+    --shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+  }
+
+  .container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+  }
+
+  .site-shell {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+
+  .site-shell.is-ready {
+    opacity: 1;
+    transform: none;
+  }
+
+  .loader {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(180deg, #ffffff 0%, #f3f6fb 100%);
+    transition: opacity 0.45s ease, visibility 0.45s ease;
+  }
+
+  .loader.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .loader-box {
+    width: min(320px, calc(100% - 40px));
+    display: grid;
+    gap: 18px;
+    justify-items: center;
+  }
+
+  .loader-logo {
+    width: auto;
+    max-width: 320px;
+    max-height: 90px;
+    object-fit: contain;
+  }
+
+  .loader-bar {
+    width: 100%;
+    height: 7px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: #dde6f2;
+    position: relative;
+  }
+
+  .loader-bar::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 -34%;
+    width: 34%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, rgba(59,130,246,.25), rgba(29,78,216,.8));
+    animation: loading 1s ease-in-out infinite;
+  }
+
+  .loader-text {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #6a7688;
+  }
+
+  @keyframes loading {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(400%);
+    }
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255,255,255,.96);
+    border-bottom: 1px solid var(--line);
+    backdrop-filter: blur(10px);
+  }
+
+  .head {
+    min-height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .brand img {
+    height: 58px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .desktop-nav a {
+    color: #1f2937;
+    transition: color 0.18s ease;
+  }
+
+  .desktop-nav a:hover {
+    color: var(--btn);
+  }
+
+  .top-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 18px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+    color: #111827;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+  }
+
+  .btn:hover {
+    background: #f7f9fc;
+    transform: translateY(-1px);
+  }
+
+  .btn-primary {
+    background: var(--btn);
+    border-color: var(--btn);
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background: var(--btn-hover);
+    border-color: var(--btn-hover);
+    color: #fff;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+    padding: 0 0 16px;
+  }
+
+  .mobile-menu.open {
+    display: block;
+  }
+
+  .mobile-menu a {
+    display: block;
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+    font-weight: 700;
+  }
+
+  .hero {
+    padding: 28px 0 18px;
+  }
+
+  .hero-card {
+    display: grid;
+    grid-template-columns: 1.05fr 1.35fr;
+    align-items: center;
+    gap: 34px;
+    padding: 38px;
+    border: 1px solid var(--line);
+    border-radius: 26px;
+    background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  .eyebrow {
+    margin: 0 0 12px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(34px, 4.8vw, 58px);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    font-weight: 800;
+    color: #111827;
+  }
+
+  .hero-sub {
+    margin: 14px 0 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #334155;
+    max-width: 40ch;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 22px 0 0;
+  }
+
+  .hero-meta span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 0 14px;
+    border: 1px solid #d7dee8;
+    border-radius: 999px;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    color: #334155;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .hero-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #eef3f8 0%, #e8eef5 45%, #f7f9fc 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  section {
+    padding: 20px 0;
+  }
+
+  .section-head {
+    margin-bottom: 18px;
+  }
+
+  .section-head h2 {
+    margin: 0;
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: #111827;
+  }
+
+  .section-head p {
+    margin: 10px 0 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 70ch;
+  }
+
+  .models-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .model {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+  }
+
+  .model-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #f7f9fc 0%, #edf2f7 100%);
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .model-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .model-body {
+    padding: 20px;
+  }
+
+  .model-name {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: #111827;
+  }
+
+  .model-type {
+    margin: 8px 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #33537c;
+  }
+
+  .model-desc {
+    margin: 14px 0 0;
+    font-size: 14px;
+    line-height: 1.75;
+    color: #4b5563;
+    min-height: 72px;
+  }
+
+  .model-actions {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .model-actions .btn {
+    flex: 1;
+  }
+
+  .band {
+    margin-top: 6px;
+    border-radius: 24px;
+    background: #0f172a;
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .band-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 34px;
+  }
+
+  .band h2,
+  .contacts-wrap h2 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+  }
+
+  .band p {
+    margin: 12px 0 0;
+    color: rgba(255,255,255,.82);
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .band-cards {
+    display: grid;
+    gap: 14px;
+  }
+
+  .band-card {
+    padding: 18px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 18px;
+    background: rgba(255,255,255,.06);
+  }
+
+  .band-card strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .band-card span {
+    color: rgba(255,255,255,.78);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .contacts-wrap {
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: var(--bg-soft);
+    padding: 30px;
+  }
+
+  .contacts-grid {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .contact-item {
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: #fff;
+  }
+
+  .contact-item small {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6b7280;
+  }
+
+  .contact-item div,
+  .contact-item a {
+    font-size: 17px;
+    line-height: 1.55;
+    font-weight: 700;
+    color: #111827;
+    word-break: break-word;
+  }
+
+  footer {
+    margin-top: 28px;
+    padding: 24px 0 40px;
+    border-top: 1px solid var(--line);
+    color: #6b7280;
+    font-size: 13px;
+  }
+
+  .foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .foot strong {
+    color: #111827;
+    letter-spacing: 0.08em;
+  }
+
+  @media (max-width: 980px) {
+    .desktop-nav,
+    .top-actions a.btn {
+      display: none;
+    }
+
+    .burger {
+      display: inline-flex;
+    }
+
+    .hero-card {
+      grid-template-columns: 1fr;
+      padding: 24px;
+    }
+
+    .hero-media {
+      order: -1;
+      aspect-ratio: 16 / 10;
+    }
+
+    .models-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .band-inner,
+    .contacts-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .container {
+      width: min(1180px, calc(100% - 24px));
+    }
+
+    .head {
+      min-height: 82px;
+    }
+
+    .brand img {
+      height: 46px;
+    }
+
+    .loader-logo {
+      max-width: 260px;
+      max-height: 72px;
+    }
+
+    .hero {
+      padding-top: 18px;
+    }
+
+    .hero-card {
+      gap: 20px;
+      padding: 18px;
+      border-radius: 20px;
+    }
+
+    .hero-media {
+      aspect-ratio: 4 / 3;
+      border-radius: 16px;
+    }
+
+    .section-head h2,
+    .band h2,
+    .contacts-wrap h2 {
+      font-size: 28px;
+    }
+
+    .model-image {
+      aspect-ratio: 4 / 3;
+    }
+
+    .model-name {
+      font-size: 24px;
+    }
+
+    .band-inner,
+    .contacts-wrap {
+      padding: 20px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .site-shell,
+    .loader,
+    .btn {
+      transition: none !important;
+    }
+
+    .loader-bar::before {
+      animation: none !important;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-box">
+      <img class="loader-logo" src="logo2.png" alt="Tarifa Auto" />
+      <div class="loader-bar"></div>
+      <div class="loader-text">загрузка</div>
+    </div>
+  </div>
+
+  <div class="site-shell" id="siteShell">
+    <header>
+      <div class="container">
+        <div class="head">
+          <a class="brand" href="#top" aria-label="Tarifa Auto — на главную">
+            <img src="logo2.png" alt="Tarifa Auto">
+          </a>
+
+          <nav class="desktop-nav" aria-label="Основная навигация">
+            <a href="#models">Модели</a>
+            <a href="#service">Сервис</a>
+            <a href="#contacts">Контакты</a>
+          </nav>
+
+          <div class="top-actions">
+            <button class="btn burger" id="burger" aria-expanded="false" aria-controls="mobileMenu">Меню</button>
+            <a class="btn btn-primary" href="#contacts">Связаться</a>
+          </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="#models">Модели</a>
+          <a href="#service">Сервис</a>
+          <a href="#contacts">Контакты</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-card">
+            <div class="hero-copy">
+              <p class="eyebrow">Tarifa</p>
+              <h1>Minic</h1>
+              <p class="hero-sub">Компактный городской хэтчбек Tarifa для ежедневных поездок и спокойной городской эксплуатации.</p>
+
+              <div class="hero-meta">
+                <span>Городской хэтчбек</span>
+                <span>Актуальная модель</span>
+                <span>Tarifa Auto</span>
+              </div>
+
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="minic.html">Подробнее</a>
+                <a class="btn" href="#models">Все модели</a>
+              </div>
+            </div>
+
+            <div class="hero-media">
+              <img src="hero2.jpg" alt="Tarifa Auto Minic">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="models">
+        <div class="container">
+          <div class="section-head">
+            <h2>Модели</h2>
+            <p>Линейка Tarifa Auto для города, повседневной эксплуатации и личного транспорта.</p>
+          </div>
+
+          <div class="models-grid">
+            <article class="model">
+              <div class="model-image">
+                <img src="minic.jpg" alt="Minic">
+              </div>
+              <div class="model-body">
+                <h3 class="model-name">Minic</h3>
+                <p class="model-type">Городской хэтчбек</p>
+                <p class="model-desc">Компактная модель для ежедневных поездок, городского ритма и базовой семейной эксплуатации.</p>
+                <div class="model-actions">
+                  <a class="btn btn-primary" href="minic.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="model">
+              <div class="model-image">
+                <img src="misi-n.jpg" alt="Misi-N">
+              </div>
+              <div class="model-body">
+                <h3 class="model-name">Misi-N</h3>
+                <p class="model-type">Компактный автомобиль</p>
+                <p class="model-desc">Базовая легковая модель Tarifa Auto с упором на доступность, простую эксплуатацию и городской формат.</p>
+                <div class="model-actions">
+                  <a class="btn btn-primary" href="misi-n.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="model">
+              <div class="model-image">
+                <img src="minity.jpg" alt="Minity">
+              </div>
+              <div class="model-body">
+                <h3 class="model-name">Minity</h3>
+                <p class="model-type">Компактный минивэн</p>
+                <p class="model-desc">Практичная модель для города и повседневных поездок с более вместительным салоном и универсальным кузовом.</p>
+                <div class="model-actions">
+                  <a class="btn btn-primary" href="minity.html">Подробнее</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="service">
+        <div class="container">
+          <div class="band">
+            <div class="band-inner">
+              <div>
+                <h2>Сервис</h2>
+                <p>Обслуживание автомобилей Tarifa, техническая поддержка, информация по регламентным работам и запасным частям.</p>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="#contacts">Связаться</a>
+                  <a class="btn" href="mailto:info@tarifa-auto.ksh">Написать на почту</a>
+                </div>
+              </div>
+
+              <div class="band-cards">
+                <div class="band-card">
+                  <strong>Техническое обслуживание</strong>
+                  <span>Плановые работы, диагностика и обращения по эксплуатации моделей Tarifa Auto.</span>
+                </div>
+                <div class="band-card">
+                  <strong>Запасные части</strong>
+                  <span>Информация по комплектующим, сервисным вопросам и поддержке владельцев.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts">
+        <div class="container">
+          <div class="contacts-wrap">
+            <h2>Контакты</h2>
+            <div class="contacts-grid">
+              <div class="contact-item">
+                <small>Телефон</small>
+                <a href="tel:+8956853648">+8 956 8536-48</a>
+              </div>
+              <div class="contact-item">
+                <small>Электронная почта</small>
+                <a href="mailto:info@tarifa-auto.ksh">info@tarifa-auto.ksh</a>
+              </div>
+              <div class="contact-item">
+                <small>Адрес</small>
+                <div>Кивиш, г. Д, ул. Котова, д. 9, к. 2</div>
+              </div>
+              <div class="contact-item">
+                <small>Режим работы</small>
+                <div>Пн–Пт · 09:00–20:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="foot">
+          <div><strong>TARIFA AUTO</strong></div>
+          <div>© Tarifa Auto</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobileMenu');
+    const loader = document.getElementById('loader');
+    const siteShell = document.getElementById('siteShell');
+
+    function toggleMenu(forceState) {
+      const open = typeof forceState === 'boolean' ? forceState : !menu.classList.contains('open');
+      menu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      burger.textContent = open ? 'Закрыть' : 'Меню';
+    }
+
+    burger?.addEventListener('click', () => toggleMenu());
+    menu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => toggleMenu(false));
+    });
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function revealSite() {
+      loader.classList.add('is-hidden');
+      siteShell.classList.add('is-ready');
+    }
+
+    if (prefersReducedMotion) {
+      revealSite();
+    } else {
+      window.addEventListener('load', () => {
+        setTimeout(revealSite, 850);
+      });
+    }
+  </script>
+</body>
+</html>
