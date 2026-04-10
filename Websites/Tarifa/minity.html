@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tarifa Auto — Minity</title>
+  <meta name="description" content="Покупка Tarifa Minity: галерея, характеристики, оснащение, история модели и оформление заказа." />
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:#111827;
+      background:#ffffff;
+      overflow-x:hidden;
+    }
+
+    :root{
+      --paper:#ffffff;
+      --surface:#ffffff;
+      --surface2:#f5f7fa;
+      --line:rgba(17,24,39,.10);
+      --text:#111827;
+      --muted:#5b6573;
+      --accent:#1f3b63;
+      --accent2:#2a4f82;
+      --shadow:0 18px 44px rgba(15,23,42,.08);
+      --r-xl:28px;
+      --r-lg:20px;
+      --r-md:14px;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,calc(100% - 40px));margin:0 auto}
+
+    .site-shell{
+      opacity:0;
+      transform:translateY(10px);
+      animation:pageFade .75s ease forwards;
+    }
+    @keyframes pageFade{
+      from{opacity:0;transform:translateY(10px)}
+      to{opacity:1;transform:none}
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      min-width:0;
+    }
+    .brand__logo{
+      height:56px;
+      width:auto;
+      max-width:260px;
+      object-fit:contain;
+      display:block;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .navlinks{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      padding:6px;
+      border-radius:999px;
+      background:rgba(255,255,255,.9);
+      border:1px solid var(--line);
+    }
+    .navlinks a{
+      font-size:13px;
+      font-weight:800;
+      color:#1f2937;
+      padding:10px 12px;
+      border-radius:999px;
+    }
+    .navlinks a:hover{
+      background:rgba(31,59,99,.08);
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:11px 14px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:13px;
+      border:1px solid var(--line);
+      background:var(--surface);
+      cursor:pointer;
+      white-space:nowrap;
+      transition:transform .15s ease, filter .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn--accent{
+      border-color:rgba(31,59,99,.20);
+      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#fff;
+    }
+    .btn--accent:hover{filter:brightness(1.03)}
+
+    .burger{display:none}
+    .menu{display:none;padding:10px 0 16px}
+    .menu.open{display:block}
+    .menu a{
+      display:block;
+      padding:12px 0;
+      border-bottom:1px solid var(--line);
+      font-weight:800;
+      color:#1f2937;
+    }
+
+    main{padding:24px 0 40px}
+
+    .breadcrumbs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      align-items:center;
+      margin-bottom:18px;
+      color:var(--muted);
+      font-size:13px;
+      font-weight:700;
+    }
+    .breadcrumbs span{opacity:.7}
+
+    .page-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .page-head h1{
+      margin:0;
+      font-size:clamp(32px,4vw,50px);
+      line-height:1.04;
+      letter-spacing:-.03em;
+      color:var(--text);
+    }
+    .page-sub{
+      margin:8px 0 0;
+      color:#334155;
+      line-height:1.7;
+      max-width:70ch;
+      font-size:15px;
+    }
+    .status-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      border-radius:999px;
+      background:var(--surface2);
+      border:1px solid var(--line);
+      color:#1f2937;
+      font-weight:900;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .gallery-wrap{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--r-xl);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin:0 0 20px;
+      width:100%;
+    }
+
+    .gallery-inner{
+      width:min(760px,100%);
+      margin:0 auto;
+    }
+
+    .gallery{
+      position:relative;
+      width:100%;
+      height:420px;
+      border-radius:20px;
+      overflow:hidden;
+      background:linear-gradient(180deg,#f7f9fc 0%, #edf2f7 100%);
+    }
+    .gallery img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:0;
+      transition:opacity .35s ease;
+    }
+    .gallery img.active{
+      opacity:1;
+    }
+
+    .thumbs{
+      display:grid;
+      grid-template-columns:repeat(5,minmax(0,1fr));
+      gap:12px;
+      margin-top:14px;
+    }
+    .thumb{
+      appearance:none;
+      border:0;
+      background:none;
+      padding:0;
+      margin:0;
+      cursor:pointer;
+      border-radius:12px;
+      overflow:hidden;
+      outline:none;
+    }
+    .thumb img{
+      width:100%;
+      height:78px;
+      object-fit:cover;
+      border-radius:12px;
+      opacity:.75;
+      border:2px solid transparent;
+      transition:opacity .2s ease, border-color .2s ease, transform .2s ease;
+      background:#eef3f8;
+    }
+    .thumb:hover img{
+      opacity:.95;
+      transform:translateY(-2px);
+    }
+    .thumb.active img{
+      opacity:1;
+      border-color:var(--accent);
+    }
+
+    .content-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.5fr) minmax(320px,.8fr);
+      gap:18px;
+      align-items:start;
+    }
+
+    .panel{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--r-lg);
+      box-shadow:0 12px 30px rgba(15,23,42,.05);
+      overflow:hidden;
+    }
+    .panel-body{
+      padding:18px;
+    }
+
+    .section-title{
+      margin:0 0 14px;
+      font-size:24px;
+      letter-spacing:-.02em;
+      color:var(--text);
+    }
+
+    .specs{
+      width:100%;
+      border-collapse:collapse;
+    }
+    .specs tr{
+      border-bottom:1px solid var(--line);
+    }
+    .specs tr:last-child{
+      border-bottom:0;
+    }
+    .specs td{
+      padding:14px 10px;
+      font-size:15px;
+      vertical-align:top;
+    }
+    .specs td.label{
+      width:180px;
+      color:var(--muted);
+      font-weight:800;
+    }
+
+    .equipment{
+      margin:0;
+      padding-left:18px;
+      columns:2;
+      column-gap:34px;
+    }
+    .equipment li{
+      margin-bottom:10px;
+      break-inside:avoid;
+      color:#334155;
+      line-height:1.6;
+    }
+
+    .buy-card{
+      position:sticky;
+      top:92px;
+    }
+    .price-label{
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .price{
+      margin:6px 0 16px;
+      font-size:34px;
+      line-height:1;
+      font-weight:900;
+      color:var(--text);
+    }
+    .buy-text{
+      margin:0 0 18px;
+      color:#334155;
+      line-height:1.7;
+      font-size:14px;
+    }
+    .buy-actions{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .buy-actions .btn{
+      width:100%;
+      min-height:46px;
+    }
+    .buy-meta{
+      margin-top:16px;
+      padding-top:16px;
+      border-top:1px solid var(--line);
+      display:grid;
+      gap:10px;
+    }
+    .buy-meta-item{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+    }
+    .buy-meta-label{
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .buy-meta-value{
+      font-size:15px;
+      font-weight:700;
+      color:#1f2937;
+      line-height:1.5;
+      word-break:break-word;
+    }
+
+    .history-section{
+      margin-top:22px;
+    }
+    .history-text{
+      color:#334155;
+      line-height:1.8;
+      font-size:15px;
+      margin:0;
+    }
+    .history-text + .history-text{
+      margin-top:12px;
+    }
+
+    .timeline-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+    .timeline-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(15,23,42,.05);
+    }
+    .timeline-media{
+      height:170px;
+      background:linear-gradient(180deg,#f7f9fc 0%, #edf2f7 100%);
+    }
+    .timeline-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .timeline-body{
+      padding:14px;
+    }
+    .timeline-year{
+      display:inline-block;
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      color:var(--accent);
+      margin-bottom:8px;
+    }
+    .timeline-title{
+      margin:0;
+      font-size:18px;
+      line-height:1.2;
+      color:var(--text);
+    }
+    .timeline-desc{
+      margin:8px 0 0;
+      color:#475569;
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    footer{
+      padding:26px 0 40px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+      margin-top:32px;
+    }
+    .foot{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width:980px){
+      .navlinks{display:none}
+      .burger{display:inline-flex}
+      .content-grid{grid-template-columns:1fr}
+      .buy-card{position:static}
+      .gallery-inner{width:min(680px,100%)}
+      .gallery{height:340px}
+      .thumbs{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .timeline-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
+    @media (max-width:640px){
+      .container{width:min(1160px,calc(100% - 28px))}
+      .brand__logo{
+        height:42px;
+        max-width:190px;
+      }
+      .gallery-wrap{padding:14px}
+      .gallery-inner{width:100%}
+      .gallery{height:240px}
+      .thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .thumb img{height:70px}
+      .equipment{columns:1}
+      .specs td{
+        display:block;
+        width:100%;
+        padding:10px 0;
+      }
+      .specs td.label{
+        padding-bottom:4px;
+      }
+      .page-head{
+        flex-direction:column;
+      }
+      .timeline-grid{grid-template-columns:1fr}
+      .timeline-media{height:210px}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .site-shell,
+      .gallery img{
+        animation:none !important;
+        transition:none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header>
+      <div class="container">
+        <div class="head">
+          <a class="brand" href="auto.html" aria-label="Tarifa Auto — на главную">
+            <img class="brand__logo" src="logo2.png" alt="Tarifa Auto">
+          </a>
+
+          <nav aria-label="Навигация">
+            <div class="navlinks">
+              <a href="#gallery">Галерея</a>
+              <a href="#specs">Характеристики</a>
+              <a href="#equipment">Оснащение</a>
+              <a href="#buy">Покупка</a>
+            </div>
+
+            <button class="btn burger" id="burger" aria-expanded="false" aria-controls="mobileMenu">Меню</button>
+            <a class="btn btn--accent" href="#buy">Оформить запрос</a>
+          </nav>
+        </div>
+
+        <div class="menu" id="mobileMenu" aria-label="Мобильное меню">
+          <a href="#gallery">Галерея</a>
+          <a href="#specs">Характеристики</a>
+          <a href="#equipment">Оснащение</a>
+          <a href="#buy">Покупка</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="auto.html">Tarifa Auto</a>
+          <span>•</span>
+          <a href="auto.html#models">Модели</a>
+          <span>•</span>
+          <strong>Minity</strong>
+        </div>
+
+        <div class="page-head">
+          <div>
+            <h1>Tarifa Minity</h1>
+            <p class="page-sub">
+              Большой семейно-пассажирский минивэн Tarifa Auto для дальних поездок, корпоративных трансферов и спокойной повседневной перевозки людей.
+              Страница покупки: галерея, характеристики, оснащение и оформление запроса на приобретение.
+            </p>
+          </div>
+          <div class="status-badge">в наличии</div>
+        </div>
+
+        <section class="gallery-wrap" id="gallery" aria-label="Галерея Tarifa Minity">
+          <div class="gallery-inner">
+            <div class="gallery" id="galleryMain">
+              <img src="car/35.jpg" class="active" alt="Tarifa Minity — вид спереди">
+              <img src="car/36.jpg" alt="Tarifa Minity — вид сбоку">
+              <img src="car/37.jpg" alt="Tarifa Minity — задняя часть">
+              <img src="car/38.jpg" alt="Tarifa Minity — салон">
+              <img src="car/39.jpg" alt="Tarifa Minity — интерьер второго ряда">
+            </div>
+
+            <div class="thumbs" id="thumbs">
+              <button class="thumb active" type="button" data-index="0" aria-label="Показать фото 1">
+                <img src="car/35.jpg" alt="Миниатюра 1">
+              </button>
+              <button class="thumb" type="button" data-index="1" aria-label="Показать фото 2">
+                <img src="car/36.jpg" alt="Миниатюра 2">
+              </button>
+              <button class="thumb" type="button" data-index="2" aria-label="Показать фото 3">
+                <img src="car/37.jpg" alt="Миниатюра 3">
+              </button>
+              <button class="thumb" type="button" data-index="3" aria-label="Показать фото 4">
+                <img src="car/38.jpg" alt="Миниатюра 4">
+              </button>
+              <button class="thumb" type="button" data-index="4" aria-label="Показать фото 5">
+                <img src="car/39.jpg" alt="Миниатюра 5">
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="content-grid">
+          <div>
+            <section class="panel" id="specs">
+              <div class="panel-body">
+                <h2 class="section-title">Основные характеристики</h2>
+                <table class="specs">
+                  <tr>
+                    <td class="label">Модель</td><td>Tarifa Minity</td>
+                    <td class="label">Год</td><td>2022</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Тип кузова</td><td>5-дверный минивэн</td>
+                    <td class="label">Привод</td><td>Передний</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Двигатель</td><td>Бензиновый, 2.4 л</td>
+                    <td class="label">КПП</td><td>8-ступенчатая автоматическая</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Мощность</td><td>198 л.с.</td>
+                    <td class="label">Цвет</td><td>Серебристый металлик</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Количество мест</td><td>7</td>
+                    <td class="label">Наличие</td><td>В наличии</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="panel" id="equipment" style="margin-top:18px;">
+              <div class="panel-body">
+                <h2 class="section-title">Стандартное оснащение</h2>
+                <ul class="equipment">
+                  <li>Светодиодные фары</li>
+                  <li>Две сдвижные боковые двери</li>
+                  <li>17-дюймовые литые диски</li>
+                  <li>Трёхзонный климат-контроль</li>
+                  <li>Подогрев передних сидений</li>
+                  <li>Подогрев зеркал</li>
+                  <li>Электропривод зеркал</li>
+                  <li>Камера заднего вида</li>
+                  <li>Задние парктроники</li>
+                  <li>Мультимедийная система Tarifa Connect</li>
+                  <li>Круиз-контроль</li>
+                  <li>Крепления ISOFIX</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <aside class="panel buy-card" id="buy">
+            <div class="panel-body">
+              <div class="price-label">Цена</div>
+              <div class="price">1 248 000 KSH</div>
+
+              <p class="buy-text">
+                Оформление покупки Tarifa Minity доступно через запрос компании.
+                После отправки заявки с вами связываются по телефону или почте для подтверждения комплектации, количества мест и условий поставки.
+              </p>
+
+              <div class="buy-actions">
+                <button class="btn btn--accent" type="button">Купить</button>
+                <a class="btn" href="mailto:info@tarifa-auto.ksh?subject=Запрос%20на%20покупку%20Tarifa%20Minity">Написать на почту</a>
+                <a class="btn" href="tel:+8956853648">Позвонить</a>
+              </div>
+
+              <div class="buy-meta">
+                <div class="buy-meta-item">
+                  <span class="buy-meta-label">Телефон</span>
+                  <span class="buy-meta-value">+8 956 8536-48</span>
+                </div>
+                <div class="buy-meta-item">
+                  <span class="buy-meta-label">Электронная почта</span>
+                  <span class="buy-meta-value">info@tarifa-auto.ksh</span>
+                </div>
+                <div class="buy-meta-item">
+                  <span class="buy-meta-label">Адрес</span>
+                  <span class="buy-meta-value">Кивиш, г. Д, ул. Котова, д. 9, к. 2</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <section class="history-section">
+          <article class="panel">
+            <div class="panel-body">
+              <h2 class="section-title">История модели Minity</h2>
+
+              <p class="history-text">
+                Tarifa Minity появился в 1994 году как пассажирская модель компании, рассчитанная на семьи, служебные поездки и повседневную перевозку нескольких человек в одном кузове. Для Tarifa это был отдельный шаг в сторону гражданского минивэна, а не продолжение лёгкой легковой линии.
+              </p>
+
+              <p class="history-text">
+                Первая версия Minity быстро закрепилась как просторная и практичная машина с акцентом на внутренний объём, мягкую посадку и универсальность салона. Со временем модель перестала быть просто утилитарным пассажирским транспортом и начала восприниматься как самостоятельный минивэн со своей ролью в линейке.
+              </p>
+
+              <p class="history-text">
+                В 2005 году Minity получил крупное переосмысление внешности, а в 2022 модель прошла уже полноценное современное обновление. В нынешнем виде она заняла место большого семейно-служебного MPV для дальних поездок, трансферов и спокойной ежедневной эксплуатации.
+              </p>
+
+              <div class="timeline-grid">
+                <article class="timeline-card">
+                  <div class="timeline-media">
+                    <img src="history/20.jpg" alt="Tarifa Minity 1994">
+                  </div>
+                  <div class="timeline-body">
+                    <span class="timeline-year">1994</span>
+                    <h3 class="timeline-title">Появление Minity</h3>
+                    <p class="timeline-desc">
+                      Первая версия Minity вышла как пассажирская модель Tarifa для семейного и служебного использования, с акцентом на вместимость и удобную посадку.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timeline-card">
+                  <div class="timeline-media">
+                    <img src="history/21.jpg" alt="Tarifa Minity раннего периода">
+                  </div>
+                  <div class="timeline-body">
+                    <span class="timeline-year">1990-е</span>
+                    <h3 class="timeline-title">Закрепление модели</h3>
+                    <p class="timeline-desc">
+                      Minity быстро стал узнаваемым как практичный массовый минивэн для повседневной перевозки людей, поездок по городу и работы сервисных служб.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timeline-card">
+                  <div class="timeline-media">
+                    <img src="history/22.jpg" alt="Tarifa Minity 2005">
+                  </div>
+                  <div class="timeline-body">
+                    <span class="timeline-year">2005</span>
+                    <h3 class="timeline-title">Новый облик</h3>
+                    <p class="timeline-desc">
+                      После крупного редизайна Minity получил более зрелую внешность и окончательно оформился как самостоятельная пассажирская модель внутри линейки Tarifa.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timeline-card">
+                  <div class="timeline-media">
+                    <img src="history/23.jpg" alt="Современный Tarifa Minity">
+                  </div>
+                  <div class="timeline-body">
+                    <span class="timeline-year">c 2022</span>
+                    <h3 class="timeline-title">Современная версия</h3>
+                    <p class="timeline-desc">
+                      Нынешний Minity — это большой современный минивэн для семьи, корпоративных поездок, гостиничных трансферов и спокойной дальней эксплуатации.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container foot">
+        <div>
+          <div style="font-weight:900;letter-spacing:.10em;color:#111827">TARIFA AUTO</div>
+          <div style="margin-top:8px">© Tarifa Auto</div>
+        </div>
+        <div style="max-width:78ch;line-height:1.6">
+          Страница покупки Tarifa Minity.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobileMenu');
+
+    function setMenu(open){
+      menu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      burger.textContent = open ? 'Закрыть' : 'Меню';
+    }
+
+    burger?.addEventListener('click', () => {
+      setMenu(!menu.classList.contains('open'));
+    });
+
+    menu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => setMenu(false));
+    });
+
+    const images = document.querySelectorAll('#galleryMain img');
+    const thumbs = document.querySelectorAll('#thumbs .thumb');
+    let current = 0;
+    let timer;
+
+    function show(index){
+      if(index < 0 || index >= images.length) return;
+
+      images[current].classList.remove('active');
+      thumbs[current].classList.remove('active');
+
+      current = index;
+
+      images[current].classList.add('active');
+      thumbs[current].classList.add('active');
+    }
+
+    function restartAuto(){
+      clearInterval(timer);
+      timer = setInterval(() => {
+        show((current + 1) % images.length);
+      }, 9000);
+    }
+
+    thumbs.forEach((thumb) => {
+      const i = Number(thumb.dataset.index);
+
+      thumb.addEventListener('mouseenter', () => {
+        clearInterval(timer);
+        show(i);
+      });
+
+      thumb.addEventListener('mouseleave', () => {
+        restartAuto();
+      });
+
+      thumb.addEventListener('click', () => {
+        show(i);
+        restartAuto();
+      });
+    });
+
+    restartAuto();
+  </script>
+</body>
+</html>
