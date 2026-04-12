@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tarifa — Airport Equipment</title>
+  <meta name="description" content="Покупка аэропортной техники Tarifa: галерея, характеристики, оснащение, история модели и оформление заказа." />
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:#0f172a;
+      background:#f4f6fb;
+      overflow-x:hidden;
+    }
+
+    :root{
+      --paper:#f4f6fb;
+      --surface:#ffffff;
+      --surface2:#eef3fb;
+      --line:rgba(15,23,42,.10);
+      --text:#0f172a;
+      --muted:#475569;
+      --accent:#1f4f86;
+      --accent2:#2f6bb6;
+      --shadow:0 18px 44px rgba(15,23,42,.10);
+      --r-xl:28px;
+      --r-lg:20px;
+      --r-md:14px;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1160px,calc(100% - 40px));margin:0 auto}
+
+    .site-shell{
+      opacity:0;
+      transform:translateY(10px);
+      animation:pageFade .75s ease forwards;
+    }
+    @keyframes pageFade{
+      from{opacity:0;transform:translateY(10px)}
+      to{opacity:1;transform:none}
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(244,246,251,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+    .head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      min-width:0;
+    }
+    .brand__logo{
+      height:56px;
+      width:auto;
+      max-width:260px;
+      object-fit:contain;
+      display:block;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .navlinks{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      padding:6px;
+      border-radius:999px;
+      background:rgba(255,255,255,.75);
+      border:1px solid var(--line);
+    }
+    .navlinks a{
+      font-size:13px;
+      font-weight:800;
+      color:#1f2937;
+      padding:10px 12px;
+      border-radius:999px;
+    }
+    .navlinks a:hover{
+      background:rgba(31,79,134,.08);
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:11px 14px;
+      border-radius:999px;
+      font-weight:900;
+      font-size:13px;
+      border:1px solid var(--line);
+      background:var(--surface);
+      cursor:pointer;
+      white-space:nowrap;
+      transition:transform .15s ease, filter .15s ease, background .15s ease;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn--accent{
+      border-color:rgba(31,79,134,.22);
+      background:linear-gradient(135deg, rgba(31,79,134,.14), rgba(47,107,182,.10));
+      color:var(--accent);
+    }
+    .btn--accent:hover{filter:brightness(1.02)}
+    .burger{display:none}
+    .menu{display:none;padding:10px 0 16px}
+    .menu.open{display:block}
+    .menu a{
+      display:block;
+      padding:12px 0;
+      border-bottom:1px solid var(--line);
+      font-weight:900;
+      color:#1f2937;
+    }
+
+    main{padding:24px 0 40px}
+
+    .breadcrumbs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      align-items:center;
+      margin-bottom:18px;
+      color:var(--muted);
+      font-size:13px;
+      font-weight:700;
+    }
+    .breadcrumbs span{opacity:.7}
+
+    .page-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .page-head h1{
+      margin:0;
+      font-size:clamp(30px,4vw,48px);
+      line-height:1.06;
+      letter-spacing:-.02em;
+    }
+    .page-sub{
+      margin:8px 0 0;
+      color:#334155;
+      line-height:1.7;
+      max-width:70ch;
+      font-size:15px;
+    }
+    .status-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 14px;
+      border-radius:999px;
+      background:var(--surface2);
+      border:1px solid var(--line);
+      color:#1f2937;
+      font-weight:900;
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      white-space:nowrap;
+    }
+
+    .gallery-wrap{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--r-xl);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin:0 0 20px;
+      width:100%;
+    }
+
+    .gallery-inner{
+      width:min(760px,100%);
+      margin:0 auto;
+    }
+
+    .gallery{
+      position:relative;
+      width:100%;
+      height:420px;
+      border-radius:20px;
+      overflow:hidden;
+      background:#dbe7f7;
+    }
+    .gallery img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      opacity:0;
+      transition:opacity .35s ease;
+    }
+    .gallery img.active{
+      opacity:1;
+    }
+
+    .thumbs{
+      display:grid;
+      grid-template-columns:repeat(6,minmax(0,1fr));
+      gap:12px;
+      margin-top:14px;
+    }
+    .thumb{
+      appearance:none;
+      border:0;
+      background:none;
+      padding:0;
+      margin:0;
+      cursor:pointer;
+      border-radius:12px;
+      overflow:hidden;
+      outline:none;
+    }
+    .thumb img{
+      width:100%;
+      height:78px;
+      object-fit:cover;
+      border-radius:12px;
+      opacity:.7;
+      border:2px solid transparent;
+      transition:opacity .2s ease, border-color .2s ease, transform .2s ease;
+      background:#dbe7f7;
+    }
+    .thumb:hover img{
+      opacity:.9;
+      transform:translateY(-2px);
+    }
+    .thumb.active img{
+      opacity:1;
+      border-color:var(--accent);
+    }
+
+    .content-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.5fr) minmax(320px,.8fr);
+      gap:18px;
+      align-items:start;
+    }
+
+    .panel{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--r-lg);
+      box-shadow:0 12px 30px rgba(15,23,42,.06);
+      overflow:hidden;
+    }
+    .panel-body{
+      padding:18px;
+    }
+
+    .section-title{
+      margin:0 0 14px;
+      font-size:24px;
+      letter-spacing:-.02em;
+    }
+
+    .specs{
+      width:100%;
+      border-collapse:collapse;
+    }
+    .specs tr{
+      border-bottom:1px solid var(--line);
+    }
+    .specs tr:last-child{
+      border-bottom:0;
+    }
+    .specs td{
+      padding:14px 10px;
+      font-size:15px;
+      vertical-align:top;
+    }
+    .specs td.label{
+      width:180px;
+      color:var(--muted);
+      font-weight:800;
+    }
+
+    .equipment{
+      margin:0;
+      padding-left:18px;
+      columns:2;
+      column-gap:34px;
+    }
+    .equipment li{
+      margin-bottom:10px;
+      break-inside:avoid;
+      color:#334155;
+      line-height:1.6;
+    }
+
+    .buy-card{
+      position:sticky;
+      top:92px;
+    }
+    .price-label{
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .price{
+      margin:6px 0 16px;
+      font-size:34px;
+      line-height:1;
+      font-weight:900;
+      color:#0f172a;
+    }
+    .buy-text{
+      margin:0 0 18px;
+      color:#334155;
+      line-height:1.7;
+      font-size:14px;
+    }
+    .buy-actions{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .buy-actions .btn{
+      width:100%;
+      min-height:46px;
+    }
+    .buy-meta{
+      margin-top:16px;
+      padding-top:16px;
+      border-top:1px solid var(--line);
+      display:grid;
+      gap:10px;
+    }
+    .buy-meta-item{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+    }
+    .buy-meta-label{
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted);
+    }
+    .buy-meta-value{
+      font-size:15px;
+      font-weight:700;
+      color:#1f2937;
+      line-height:1.5;
+      word-break:break-word;
+    }
+
+    .history-section{
+      margin-top:22px;
+    }
+    .history-text{
+      color:#334155;
+      line-height:1.8;
+      font-size:15px;
+      margin:0;
+    }
+    .history-text + .history-text{
+      margin-top:12px;
+    }
+
+    .timeline-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+    .timeline-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(15,23,42,.06);
+    }
+    .timeline-media{
+      height:170px;
+      background:#dbe7f7;
+    }
+    .timeline-media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .timeline-body{
+      padding:14px;
+    }
+    .timeline-year{
+      display:inline-block;
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      color:var(--accent);
+      margin-bottom:8px;
+    }
+    .timeline-title{
+      margin:0;
+      font-size:18px;
+      line-height:1.2;
+    }
+    .timeline-desc{
+      margin:8px 0 0;
+      color:#475569;
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    footer{
+      padding:26px 0 40px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:12px;
+      margin-top:32px;
+    }
+    .foot{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width:980px){
+      .navlinks{display:none}
+      .burger{display:inline-flex}
+      .content-grid{grid-template-columns:1fr}
+      .buy-card{position:static}
+      .gallery-inner{width:min(680px,100%)}
+      .gallery{height:340px}
+      .thumbs{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .timeline-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+
+    @media (max-width:640px){
+      .container{width:min(1160px,calc(100% - 28px))}
+      .brand__logo{
+        height:42px;
+        max-width:190px;
+      }
+      .gallery-wrap{padding:14px}
+      .gallery-inner{width:100%}
+      .gallery{height:240px}
+      .thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .thumb img{height:70px}
+      .equipment{columns:1}
+      .specs td{
+        display:block;
+        width:100%;
+        padding:10px 0;
+      }
+      .specs td.label{
+        padding-bottom:4px;
+      }
+      .page-head{
+        flex-direction:column;
+      }
+      .timeline-grid{grid-template-columns:1fr}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .site-shell,
+      .gallery img{
+        animation:none !important;
+        transition:none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <header>
+      <div class="container">
+        <div class="head">
+          <a class="brand" href="../tech.html" aria-label="Tarifa — back to home">
+            <img class="brand__logo" src="../logo.png" alt="Tarifa">
+          </a>
+
+          <nav aria-label="Navigation">
+            <div class="navlinks">
+              <a href="#gallery">Gallery</a>
+              <a href="#specs">Specifications</a>
+              <a href="#equipment">Equipment</a>
+              <a href="#buy">Purchase</a>
+            </div>
+
+            <button class="btn burger" id="burger" aria-expanded="false" aria-controls="mobileMenu">Menu</button>
+            <a class="btn btn--accent" href="#buy">Submit a request</a>
+          </nav>
+        </div>
+
+        <div class="menu" id="mobileMenu" aria-label="Mobile menu">
+          <a href="#gallery">Gallery</a>
+          <a href="#specs">Specifications</a>
+          <a href="#equipment">Equipment</a>
+          <a href="#buy">Purchase</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="../tech.html">Tarifa</a>
+          <span>•</span>
+          <a href="../tech.html#products">Equipment</a>
+          <span>•</span>
+          <strong>Airport Equipment</strong>
+        </div>
+
+        <div class="page-head">
+          <div>
+            <h1>Tarifa YR499 Series</h1>
+            <p class="page-sub">
+              Tarifa airport equipment for towing, apron service, and everyday airfield operations.
+              Purchase page: gallery, specifications, equipment, and purchase request submission.
+            </p>
+          </div>
+          <div class="status-badge">In stock</div>
+        </div>
+
+        <section class="gallery-wrap" id="gallery" aria-label="Tarifa airport equipment gallery">
+          <div class="gallery-inner">
+            <div class="gallery" id="galleryMain">
+              <img src="../car/07.jpg" class="active" alt="Tarifa airport equipment — front view">
+              <img src="../car/08.jpg" alt="Tarifa airport equipment — side view">
+              <img src="../car/09.jpg" alt="Tarifa airport equipment — rear view">
+              <img src="../car/10.jpg" alt="Tarifa airport equipment — work area">
+              <img src="../car/11.jpg" alt="Tarifa airport equipment — operator cabin">
+              <img src="../car/12.jpg" alt="Tarifa airport equipment — configuration options">
+            </div>
+
+            <div class="thumbs" id="thumbs">
+              <button class="thumb active" type="button" data-index="0" aria-label="Show photo 1">
+                <img src="../car/07.jpg" alt="Thumbnail 1">
+              </button>
+              <button class="thumb" type="button" data-index="1" aria-label="Show photo 2">
+                <img src="../car/08.jpg" alt="Thumbnail 2">
+              </button>
+              <button class="thumb" type="button" data-index="2" aria-label="Show photo 3">
+                <img src="../car/09.jpg" alt="Thumbnail 3">
+              </button>
+              <button class="thumb" type="button" data-index="3" aria-label="Show photo 4">
+                <img src="../car/10.jpg" alt="Thumbnail 4">
+              </button>
+              <button class="thumb" type="button" data-index="4" aria-label="Show photo 5">
+                <img src="../car/11.jpg" alt="Thumbnail 5">
+              </button>
+              <button class="thumb" type="button" data-index="5" aria-label="Show photo 6">
+                <img src="../car/12.jpg" alt="Thumbnail 6">
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="content-grid">
+          <div>
+            <section class="panel" id="specs">
+              <div class="panel-body">
+                <h2 class="section-title">Key specifications</h2>
+                <table class="specs">
+                  <tr>
+                    <td class="label">Model</td><td>Tarifa YR499</td>
+                    <td class="label">Year</td><td>2020</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Purpose</td><td>Apron towing and service operations</td>
+                    <td class="label">Drive</td><td>All-wheel drive</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Engine</td><td>4.8 L diesel</td>
+                    <td class="label">Transmission</td><td>Heavy-duty automatic</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Power output</td><td>248 hp</td>
+                    <td class="label">Color</td><td>Service Yellow</td>
+                  </tr>
+                  <tr>
+                    <td class="label">Towing capacity</td><td>Up to 28 t</td>
+                    <td class="label">Availability</td><td>In stock</td>
+                  </tr>
+                </table>
+              </div>
+            </section>
+
+            <section class="panel" id="equipment" style="margin-top:18px;">
+              <div class="panel-body">
+                <h2 class="section-title">Standard equipment</h2>
+                <ul class="equipment">
+                  <li>Reinforced frame for apron operation</li>
+                  <li>Heavy-duty towing unit</li>
+                  <li>Signal light bar</li>
+                  <li>Beacon lights and work lighting</li>
+                  <li>360-degree camera system</li>
+                  <li>Enclosed operator cabin</li>
+                  <li>Cab climate control system</li>
+                  <li>Heated mirrors and seat</li>
+                  <li>Tarifa Service Console media unit</li>
+                  <li>Towing load monitoring</li>
+                  <li>Towing stability control system</li>
+                  <li>ABS and reinforced braking system</li>
+                  <li>Low-speed maneuvering mode</li>
+                  <li>Additional equipment mounting points</li>
+                  <li>Central locking</li>
+                  <li>Spare tool kit</li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <aside class="panel buy-card" id="buy">
+            <div class="panel-body">
+              <div class="price-label">Price</div>
+              <div class="price">3 920 000 KSH</div>
+
+              <p class="buy-text">
+                Tarifa airport equipment can be ordered through a company request.
+                After you submit your request, the company contacts you by phone or email to confirm the configuration, delivery terms, and service support.
+              </p>
+
+              <div class="buy-actions">
+                <button class="btn btn--accent" type="button">Buy</button>
+                <a class="btn" href="mailto:info@tarifa.ksh?subject=Purchase%20request%20for%20Tarifa%20airport%20equipment">Send an email</a>
+                <a class="btn" href="tel:+8956487234">Call</a>
+              </div>
+
+              <div class="buy-meta">
+                <div class="buy-meta-item">
+                  <span class="buy-meta-label">Phone</span>
+                  <span class="buy-meta-value">+8 956 4872-34</span>
+                </div>
+                <div class="buy-meta-item">
+                  <span class="buy-meta-label">Email</span>
+                  <span class="buy-meta-value">info@tarifa.ksh</span>
+                </div>
+                <div class="buy-meta-item">
+                  <span class="buy-meta-label">Address</span>
+                  <span class="buy-meta-value">Kivish, City D, Kotova St., 9, Bldg. 1</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <section class="history-section">
+          <article class="panel">
+            <div class="panel-body">
+              <h2 class="section-title">History of Tarifa airport equipment</h2>
+
+              <p class="history-text">
+                Airport equipment was Tarifa’s original line of business from the moment the company was founded in 1976.
+                The brand began with apron vehicles, towing machines, and service equipment long before it entered the market for commercial vans and civilian machinery.
+              </p>
+
+              <p class="history-text">
+                The first generations were utilitarian and extremely simple, but they quickly became known for durability and the ability to work in harsh conditions without complicated maintenance.
+                Later, the line received more powerful drivetrains, enclosed cabins, and new versions for different airport tasks.
+              </p>
+
+              <p class="history-text">
+                The modern Airport Tug line no longer looks like bare-bones service equipment: it has become a distinct Tarifa vehicle class
+                that combines towing capability, operator safety, service-focused design, and adaptation for continuous airfield operation.
+              </p>
+
+              <div class="timeline-grid">
+                <article class="timeline-card">
+                  <div class="timeline-media">
+                    <img src="../history/05.jpg" alt="Early Tarifa airport equipment">
+                  </div>
+                  <div class="timeline-body">
+                    <span class="timeline-year">1976</span>
+                    <h3 class="timeline-title">First apron vehicles</h3>
+                    <p class="timeline-desc">
+                      The beginning of Tarifa’s airport line with simple towing and service vehicles for airfields.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timeline-card">
+                  <div class="timeline-media">
+                    <img src="../history/06.jpg" alt="Development of the Tarifa airport equipment line">
+                  </div>
+                  <div class="timeline-body">
+                    <span class="timeline-year">1980s</span>
+                    <h3 class="timeline-title">Line expansion</h3>
+                    <p class="timeline-desc">
+                      The arrival of more powerful machines built for heavy towing work and long operating shifts.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timeline-card">
+                  <div class="timeline-media">
+                    <img src="../history/07.jpg" alt="Updated Tarifa airport equipment">
+                  </div>
+                  <div class="timeline-body">
+                    <span class="timeline-year">2000s</span>
+                    <h3 class="timeline-title">New cabin and systems</h3>
+                    <p class="timeline-desc">
+                      The line received enclosed cabins, improved ergonomics, and new operating control systems.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="timeline-card">
+                  <div class="timeline-media">
+                    <img src="../history/08.jpg" alt="Modern Tarifa Airport Tug">
+                  </div>
+                  <div class="timeline-body">
+                    <span class="timeline-year">2020s</span>
+                    <h3 class="timeline-title">Modern Airport line</h3>
+                    <p class="timeline-desc">
+                      The modern generation of Tarifa airport equipment focused on durability and continuous operation.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container foot">
+        <div>
+          <div style="font-weight:900;letter-spacing:.10em;color:#1f2937">TARIFA</div>
+          <div style="margin-top:8px">© Tarifa</div>
+        </div>
+        <div style="max-width:78ch;line-height:1.6">
+          Tarifa airport equipment purchase page.
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobileMenu');
+
+    function setMenu(open){
+      menu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      burger.textContent = open ? 'Close' : 'Menu';
+    }
+
+    burger?.addEventListener('click', () => {
+      setMenu(!menu.classList.contains('open'));
+    });
+
+    menu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => setMenu(false));
+    });
+
+    const images = document.querySelectorAll('#galleryMain img');
+    const thumbs = document.querySelectorAll('#thumbs .thumb');
+    let current = 0;
+    let timer;
+
+    function show(index){
+      if(index < 0 || index >= images.length) return;
+
+      images[current].classList.remove('active');
+      thumbs[current].classList.remove('active');
+
+      current = index;
+
+      images[current].classList.add('active');
+      thumbs[current].classList.add('active');
+    }
+
+    function restartAuto(){
+      clearInterval(timer);
+      timer = setInterval(() => {
+        show((current + 1) % images.length);
+      }, 9000);
+    }
+
+    thumbs.forEach((thumb) => {
+      const i = Number(thumb.dataset.index);
+
+      thumb.addEventListener('mouseenter', () => {
+        clearInterval(timer);
+        show(i);
+      });
+
+      thumb.addEventListener('mouseleave', () => {
+        restartAuto();
+      });
+
+      thumb.addEventListener('click', () => {
+        show(i);
+        restartAuto();
+      });
+    });
+
+    restartAuto();
+  </script>
+</body>
+</html> 

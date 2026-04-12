@@ -1,0 +1,1299 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AirHokol-66</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    :root{
+      --bg:#05080d;
+      --bg2:#0a1017;
+      --panel:#0d141d;
+      --panel2:#111a24;
+      --line:rgba(255,255,255,.08);
+      --line2:rgba(255,255,255,.16);
+      --text:#f2f5fb;
+      --muted:#a7b0c2;
+      --shadow:0 24px 60px rgba(0,0,0,.34);
+      --wrap:1360px;
+    }
+    html{scroll-behavior:smooth}
+    body{
+      min-height:100vh;
+      color:var(--text);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(900px 500px at 10% -10%, rgba(80,105,145,.14), transparent 60%),
+        radial-gradient(1100px 600px at 100% 0%, rgba(70,90,120,.10), transparent 58%),
+        linear-gradient(180deg,#05080d 0%,#081019 38%,#05080d 100%);
+      opacity:0;
+      transform:translateY(10px);
+      transition:opacity .7s ease, transform .7s ease;
+    }
+    body.is-loaded{
+      opacity:1;
+      transform:translateY(0);
+    }
+    a{text-decoration:none;color:inherit}
+    img{display:block;max-width:100%}
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      width:100%;
+      border-bottom:1px solid var(--line);
+      background:rgba(6,10,15,.84);
+      backdrop-filter:blur(12px);
+    }
+    .site-header__inner{
+      width:min(var(--wrap), calc(100% - 32px));
+      margin:0 auto;
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      min-width:0;
+    }
+    .brand img{
+      height:42px;
+      width:auto;
+      object-fit:contain;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:6px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .nav a{
+      color:var(--muted);
+      padding:10px 14px;
+      border-radius:999px;
+      transition:.18s ease;
+      font-size:14px;
+      border:1px solid transparent;
+    }
+    .nav a:hover{
+      color:var(--text);
+      border-color:var(--line);
+      background:rgba(255,255,255,.04);
+    }
+
+    .hero{
+      position:relative;
+      min-height:calc(100vh - 76px);
+      border-bottom:1px solid var(--line);
+      overflow:hidden;
+      background:
+        linear-gradient(90deg, rgba(5,8,13,.86) 0%, rgba(5,8,13,.72) 36%, rgba(5,8,13,.30) 100%),
+        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)),
+        url("hero.jpg") center/cover no-repeat,
+        linear-gradient(180deg,#09111a,#05080d);
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(to right, rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size:72px 72px;
+      mask-image:linear-gradient(180deg,rgba(0,0,0,.5),transparent 92%);
+      pointer-events:none;
+    }
+    .hero__inner{
+      width:min(var(--wrap), calc(100% - 32px));
+      margin:0 auto;
+      min-height:calc(100vh - 76px);
+      display:flex;
+      align-items:flex-end;
+      padding:56px 0;
+      position:relative;
+      z-index:1;
+    }
+    .hero__content{
+      max-width:820px;
+    }
+    .hero__meta{
+      color:#c3cce0;
+      font-size:13px;
+      line-height:1.5;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    .hero__title{
+      margin:14px 0 0;
+      font-size:84px;
+      line-height:.92;
+      letter-spacing:-.065em;
+    }
+    .hero__text{
+      margin:20px 0 0;
+      max-width:700px;
+      color:#d1d8e7;
+      font-size:18px;
+      line-height:1.78;
+    }
+    .hero__actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:28px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      padding:0 20px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      color:var(--text);
+      font-size:15px;
+      transition:.18s ease;
+    }
+    .btn:hover{
+      transform:translateY(-1px);
+      background:rgba(255,255,255,.09);
+      border-color:var(--line2);
+    }
+    .btn--primary{
+      background:rgba(255,255,255,.12);
+      border-color:rgba(255,255,255,.22);
+    }
+
+    .wrap{
+      width:min(var(--wrap), calc(100% - 32px));
+      margin:0 auto;
+      padding:22px 0 40px;
+    }
+
+    .section{
+      margin-top:22px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.018));
+      border-radius:30px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .section__head{
+      padding:24px 24px 8px;
+    }
+    .section__eyebrow{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.4;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+    }
+    .section__title{
+      margin:8px 0 0;
+      font-size:36px;
+      line-height:1;
+      letter-spacing:-.05em;
+    }
+    .section__text{
+      margin:14px 0 0;
+      max-width:860px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.72;
+      overflow-wrap:anywhere;
+    }
+
+    .catalog{
+      padding:8px 14px 14px;
+      display:grid;
+      gap:12px;
+    }
+    .category{
+      border:1px solid var(--line);
+      border-radius:26px;
+      background:linear-gradient(180deg, rgba(255,255,255,.028), rgba(255,255,255,.016));
+      overflow:hidden;
+      transition:.22s ease;
+    }
+    .category:hover{
+      border-color:var(--line2);
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    }
+    .category__summary{
+      width:100%;
+      background:transparent;
+      border:0;
+      color:inherit;
+      cursor:pointer;
+      text-align:left;
+      padding:20px 22px;
+      display:grid;
+      grid-template-columns:minmax(0,1.2fr) minmax(220px,.8fr) auto;
+      gap:18px;
+      align-items:center;
+    }
+    .category__left{
+      min-width:0;
+    }
+    .category__name{
+      margin:0;
+      font-size:30px;
+      line-height:1;
+      letter-spacing:-.05em;
+      font-weight:900;
+      overflow-wrap:anywhere;
+    }
+    .category__desc{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.7;
+      max-width:900px;
+      overflow-wrap:anywhere;
+    }
+    .category__meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+      justify-content:flex-start;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      min-height:28px;
+      padding:0 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      color:#dce4f3;
+      font-size:12px;
+      white-space:nowrap;
+    }
+    .category__arrow{
+      width:44px;
+      height:44px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--muted);
+      font-size:18px;
+      transition:.24s ease;
+      flex:0 0 auto;
+    }
+    .category.is-open .category__arrow{
+      transform:rotate(180deg);
+      color:var(--text);
+      border-color:var(--line2);
+      background:rgba(255,255,255,.06);
+    }
+
+    .category__content{
+      display:grid;
+      grid-template-rows:0fr;
+      transition:grid-template-rows .42s cubic-bezier(.2,.75,.2,1);
+    }
+    .category.is-open .category__content{
+      grid-template-rows:1fr;
+    }
+    .category__inner{
+      min-height:0;
+      overflow:hidden;
+    }
+    .category__article{
+      border-top:1px solid var(--line);
+      padding:20px 22px 22px;
+      display:grid;
+      grid-template-columns:minmax(420px,1.08fr) minmax(300px,.92fr);
+      gap:18px;
+      align-items:stretch;
+    }
+    .category__visualWrap{
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      height:100%;
+      gap:12px;
+    }
+    .category__visual{
+      flex:1 1 auto;
+      min-height:290px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:0;
+      background:transparent;
+      border:0;
+      border-radius:0;
+      overflow:visible;
+    }
+    .category__visual img{
+      width:100%;
+      max-width:700px;
+      max-height:300px;
+      object-fit:contain;
+      transition:opacity .25s ease, transform .25s ease;
+    }
+
+    .category__models{
+      margin-top:auto;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:rgba(255,255,255,.025);
+      padding:14px 16px;
+      display:flex;
+      flex-wrap:wrap;
+      align-items:flex-end;
+      gap:10px 16px;
+    }
+    .category__modelsTitle{
+      width:100%;
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.4;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin:0 0 2px;
+    }
+    .modelItem{
+      appearance:none;
+      background:transparent;
+      border:0;
+      color:var(--muted);
+      text-align:left;
+      padding:0;
+      font:inherit;
+      font-size:17px;
+      line-height:1.1;
+      cursor:pointer;
+      transition:.18s ease;
+      width:auto;
+      max-width:100%;
+      flex:0 0 auto;
+    }
+    .modelItem:hover{
+      color:var(--text);
+    }
+    .modelItem.is-active{
+      color:var(--text);
+      font-size:26px;
+      font-weight:900;
+      letter-spacing:-.04em;
+    }
+
+    .fadeSwap{
+      transition:opacity .24s ease, transform .24s ease;
+    }
+    .fadeSwap.is-changing{
+      opacity:0;
+      transform:translateY(8px);
+    }
+
+    .category__heading{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .category__title{
+      margin:0;
+      font-size:42px;
+      line-height:.98;
+      letter-spacing:-.05em;
+      overflow-wrap:anywhere;
+    }
+    .category__price{
+      color:#f2f5fb;
+      font-size:18px;
+      line-height:1.1;
+      font-weight:800;
+      letter-spacing:-.02em;
+      white-space:nowrap;
+      padding-top:8px;
+    }
+    .category__price span{
+      display:block;
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.4;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-bottom:8px;
+      font-weight:500;
+    }
+    .category__text{
+      margin:14px 0 0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.8;
+      overflow-wrap:anywhere;
+    }
+    .specs{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:12px;
+    }
+    .spec{
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:rgba(255,255,255,.03);
+      padding:14px 16px;
+      min-width:0;
+    }
+    .spec__label{
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.4;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    .spec__value{
+      margin-top:8px;
+      font-size:16px;
+      line-height:1.55;
+      font-weight:700;
+      overflow-wrap:anywhere;
+    }
+
+    .grid{
+      display:grid;
+      gap:14px;
+      padding:0 22px 22px;
+    }
+    .grid--2{
+      grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+    .card{
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.018));
+      padding:20px;
+      min-width:0;
+    }
+    .card h3{
+      margin:0;
+      font-size:23px;
+      line-height:1.08;
+      letter-spacing:-.04em;
+      overflow-wrap:anywhere;
+    }
+    .card p{
+      margin:14px 0 0;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.78;
+      overflow-wrap:anywhere;
+    }
+
+    .systemCard{
+      display:grid;
+      grid-template-columns:1fr 120px;
+      gap:18px;
+      align-items:start;
+    }
+    .systemCard__body{
+      min-width:0;
+    }
+    .systemCard__media{
+      width:120px;
+      height:120px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:rgba(255,255,255,.03);
+      overflow:hidden;
+      flex:0 0 auto;
+      justify-self:end;
+    }
+    .systemCard__media img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .contacts{
+      padding:0 22px 22px;
+    }
+    .contacts__box{
+      border:1px solid var(--line);
+      border-radius:26px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.018)),
+        #0d141d;
+      padding:22px;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      align-items:start;
+    }
+    .contacts__title{
+      margin:0;
+      font-size:30px;
+      line-height:1;
+      letter-spacing:-.05em;
+    }
+    .contacts__text{
+      margin:14px 0 0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.8;
+      max-width:820px;
+    }
+    .contacts__list{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+    }
+    .contacts__item{
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:rgba(255,255,255,.03);
+      padding:14px 16px;
+      min-width:0;
+    }
+    .contacts__label{
+      color:var(--muted);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    .contacts__value{
+      margin-top:8px;
+      font-size:17px;
+      line-height:1.6;
+      font-weight:700;
+      overflow-wrap:anywhere;
+    }
+
+    .footer{
+      margin-top:22px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      border-radius:22px;
+      padding:16px 18px;
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width:1080px){
+      .category__summary{
+        grid-template-columns:1fr;
+        align-items:start;
+      }
+      .category__article,
+      .grid--2{
+        grid-template-columns:1fr;
+      }
+      .systemCard{
+        grid-template-columns:1fr;
+      }
+      .systemCard__media{
+        width:100%;
+        height:180px;
+        justify-self:stretch;
+      }
+    }
+    @media (max-width:760px){
+      .site-header__inner,
+      .wrap,
+      .hero__inner{
+        width:min(calc(100% - 20px), var(--wrap));
+      }
+      .site-header__inner{
+        min-height:70px;
+        padding:10px 0;
+      }
+      .nav{
+        gap:4px;
+      }
+      .nav a{
+        padding:8px 10px;
+        font-size:13px;
+      }
+      .hero{
+        min-height:calc(100vh - 70px);
+      }
+      .hero__inner{
+        min-height:calc(100vh - 70px);
+        padding:34px 0;
+      }
+      .hero__title{
+        font-size:50px;
+      }
+      .hero__text{
+        font-size:16px;
+      }
+      .section__head{
+        padding:18px 18px 8px;
+      }
+      .section__title{
+        font-size:30px;
+      }
+      .catalog{
+        padding:6px 10px 10px;
+      }
+      .category__summary{
+        padding:18px;
+      }
+      .category__name{
+        font-size:25px;
+      }
+      .category__article{
+        padding:18px;
+      }
+      .category__title{
+        font-size:34px;
+      }
+      .category__price{
+        width:100%;
+        padding-top:0;
+        font-size:16px;
+      }
+      .category__models{
+        gap:8px 12px;
+      }
+      .modelItem{
+        font-size:15px;
+      }
+      .modelItem.is-active{
+        font-size:20px;
+      }
+      .specs,
+      .contacts__list{
+        grid-template-columns:1fr;
+      }
+      .grid,
+      .contacts{
+        padding:0 18px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="#">
+        <img src="logo.png" alt="AirHokol-66">
+      </a>
+      <nav class="nav">
+        <a href="#aircraft">Самолёты</a>
+        <a href="#history">История</a>
+        <a href="#systems">Системы</a>
+        <a href="#contact">Связаться</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <div class="hero__meta">Кора • государственная авиастроительная корпорация • с 1932 года</div>
+        <h1 class="hero__title">AirHokol-66</h1>
+        <div class="hero__text">
+          Производитель пассажирских и грузовых самолётов. Серии гражданской авиации, инженерные системы безопасности,
+          развитие платформ и история одного из ключевых авиационных заводов Кивиша.
+        </div>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#aircraft">Смотреть категории самолётов</a>
+          <a class="btn" href="#contact">Связаться с заводом</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section class="section" id="aircraft">
+      <div class="section__head">
+        <div class="section__eyebrow">Категории самолётов</div>
+        <h2 class="section__title">Самолёты</h2>
+        <div class="section__text">
+          Основные категории текущей линейки AirHokol-66. Каждая категория раскрывается в отдельный большой блок с описанием,
+          особенностями серии и текущими моделями внутри направления.
+        </div>
+      </div>
+
+      <div class="catalog">
+        <article class="category">
+          <button class="category__summary" type="button">
+            <div class="category__left">
+              <h3 class="category__name">A-Series</h3>
+              <div class="category__desc">
+                Серия A объединяет малую и региональную турбовинтовую авиацию AirHokol-66: сельскохозяйственные самолёты, лёгкие машины общего назначения, малые пассажирские платформы, региональные грузовые версии и самолёты для северной эксплуатации.
+              </div>
+            </div>
+            <div class="category__meta">
+              <span class="pill">Сельхоз</span>
+              <span class="pill">Малая авиация</span>
+              <span class="pill">Турбовинтовые</span>
+              <span class="pill">Региональные</span>
+            </div>
+            <div class="category__arrow">⌄</div>
+          </button>
+
+          <div class="category__content">
+            <div class="category__inner">
+              <div class="category__article">
+                <div class="category__visualWrap">
+                  <div class="category__visual">
+                    <img class="seriesImage" src="aircraft/01.png" alt="A012">
+                  </div>
+
+                  <div class="category__models">
+                    <div class="category__modelsTitle">Модели серии</div>
+
+                    <button class="modelItem is-active" type="button"
+                      data-name="A012"
+                      data-image="aircraft/01.png"
+                      data-desc="Сельскохозяйственный турбовинтовой самолёт серии A, выпускающийся с 1952 года. Является развитием более ранней модели A02 1945 года и используется для аграрных работ, обработки полей и прикладной эксплуатации на местных аэродромах."
+                      data-role="Сельскохозяйственный самолёт"
+                      data-engine="1 × турбовинтовой двигатель"
+                      data-feature="Основная рабочая сельхоз-платформа серии A"
+                      data-price="35 000 000 KSH">A012</button>
+
+                    <button class="modelItem" type="button"
+                      data-name="A019"
+                      data-image="aircraft/02.png"
+                      data-desc="Лёгкий самолёт общего назначения, выпускающийся с 1971 года. Компактная машина на 2–4 места для частной, служебной, учебной и местной авиации."
+                      data-role="Лёгкий самолёт общего назначения"
+                      data-engine="1 × турбовинтовой двигатель"
+                      data-feature="Компактная платформа для частной и служебной эксплуатации"
+                      data-price="21 000 000 KSH">A019</button>
+
+                    <button class="modelItem" type="button"
+                      data-name="A024"
+                      data-image="aircraft/03.png"
+                      data-desc="Малый однодвигательный пассажирский турбовинтовой самолёт, выпускающийся с 1978 года. Рассчитан на 5–8 пассажиров и применяется на коротких местных линиях."
+                      data-role="Малый пассажирский самолёт"
+                      data-engine="1 × турбовинтовой двигатель"
+                      data-feature="Локальные пассажирские маршруты на 5–8 мест"
+                      data-price="95 000 000 KSH">A024</button>
+
+                    <button class="modelItem" type="button"
+                      data-name="A028"
+                      data-image="aircraft/04.png"
+                      data-desc="Двухдвигательный турбовинтовой пассажирский самолёт, выпускающийся с 1980 года. Предназначен для местных и региональных линий и вмещает от 8 до 14 пассажиров."
+                      data-role="Лёгкий региональный пассажирский самолёт"
+                      data-engine="2 × турбовинтовых двигателя"
+                      data-feature="Региональная эксплуатация на 8–14 пассажиров"
+                      data-price="180 000 000 KSH">A028</button>
+
+                    <button class="modelItem" type="button"
+                      data-name="AC50"
+                      data-image="aircraft/05.png"
+                      data-desc="Грузовая турбовинтовая модель серии A, выпускающаяся с 1964 года. Предназначена для перевозки грузов на региональных линиях, снабжения удалённых направлений и работы в условиях устойчивой повседневной эксплуатации."
+                      data-role="Региональный грузовой самолёт"
+                      data-engine="2 × турбовинтовых двигателя"
+                      data-feature="Грузовая эксплуатация на региональных направлениях"
+                      data-price="250 000 000 KSH">AC50</button>
+
+                    <button class="modelItem" type="button"
+                      data-name="A110"
+                      data-image="aircraft/06.png"
+                      data-desc="Двухдвигательный турбовинтовой пассажирский самолёт на 70 пассажиров, выпускающийся с 1992 года. Создан для северной эксплуатации, тяжёлых погодных условий и маршрутов в Форта и другие удалённые регионы."
+                      data-role="Северный региональный пассажирский самолёт"
+                      data-engine="2 × турбовинтовых двигателя"
+                      data-feature="Эксплуатация в северных и удалённых регионах"
+                      data-price="800 000 000 KSH">A110</button>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="category__heading">
+                    <h4 class="category__title">A-Series</h4>
+                    <div class="category__price seriesModelPrice fadeSwap"><span>Цена</span>35 000 000 KSH</div>
+                  </div>
+
+                  <div class="category__text seriesDesc fadeSwap">
+                    Сельскохозяйственный турбовинтовой самолёт серии A, выпускающийся с 1952 года. Является развитием более ранней модели A02 1945 года и используется для аграрных работ, обработки полей и прикладной эксплуатации на местных аэродромах.
+                  </div>
+
+                  <div class="specs">
+                    <div class="spec">
+                      <div class="spec__label">Текущая модель</div>
+                      <div class="spec__value seriesModelName fadeSwap">A012</div>
+                    </div>
+                    <div class="spec">
+                      <div class="spec__label">Тип</div>
+                      <div class="spec__value seriesModelRole fadeSwap">Сельскохозяйственный самолёт</div>
+                    </div>
+                    <div class="spec">
+                      <div class="spec__label">Силовая установка</div>
+                      <div class="spec__value seriesModelEngine fadeSwap">1 × турбовинтовой двигатель</div>
+                    </div>
+                    <div class="spec">
+                      <div class="spec__label">Ключевая особенность</div>
+                      <div class="spec__value seriesModelFeature fadeSwap">Основная рабочая сельхоз-платформа серии A</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="category">
+          <button class="category__summary" type="button">
+            <div class="category__left">
+              <h3 class="category__name">BI-Series</h3>
+              <div class="category__desc">Широкофюзеляжные пассажирские самолёты максимальной вместимости для дальнемагистральных линий, крупнейших пассажирских потоков и флагманской гражданской эксплуатации.</div>
+            </div>
+            <div class="category__meta">
+              <span class="pill">Широкофюзеляжные</span>
+              <span class="pill">Дальнемагистральные</span>
+              <span class="pill">Высокая вместимость</span>
+              <span class="pill">4 двигателя</span>
+            </div>
+            <div class="category__arrow">⌄</div>
+          </button>
+
+          <div class="category__content">
+            <div class="category__inner">
+              <div class="category__article">
+                <div class="category__visualWrap">
+                  <div class="category__visual">
+                    <img class="seriesImage" src="aircraft/07.png" alt="Bi315">
+                  </div>
+
+                  <div class="category__models">
+                    <div class="category__modelsTitle">Модели серии</div>
+                    <button class="modelItem is-active" type="button"
+                      data-name="Bi315"
+                      data-image="aircraft/07.png"
+                      data-desc="Bi315 — широкофюзеляжный дальнемагистральный пассажирский самолёт AirHokol-66, выпускающийся с 2010 года. Рассчитан на перевозку до 516 пассажиров и используется на наиболее загруженных международных и межконтинентальных направлениях как флагманская платформа гражданской линейки компании."
+                      data-role="Широкофюзеляжный дальнемагистральный пассажирский самолёт"
+                      data-engine="4 × турбореактивных двигателя"
+                      data-feature="Флагманская широкофюзеляжная платформа максимальной вместимости"
+                      data-price="9 900 000 000 KSH">Bi315</button>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="category__heading">
+                    <h4 class="category__title">BI-Series</h4>
+                    <div class="category__price seriesModelPrice fadeSwap"><span>Цена</span>9 900 000 000 KSH</div>
+                  </div>
+
+                  <div class="category__text seriesDesc fadeSwap">
+                    Bi315 — широкофюзеляжный дальнемагистральный пассажирский самолёт AirHokol-66, выпускающийся с 2010 года. Рассчитан на перевозку до 516 пассажиров и используется на наиболее загруженных международных и межконтинентальных направлениях как флагманская платформа гражданской линейки компании.
+                  </div>
+
+                  <div class="specs">
+                    <div class="spec">
+                      <div class="spec__label">Текущая модель</div>
+                      <div class="spec__value seriesModelName fadeSwap">Bi315</div>
+                    </div>
+                    <div class="spec">
+                      <div class="spec__label">Тип</div>
+                      <div class="spec__value seriesModelRole fadeSwap">Широкофюзеляжный дальнемагистральный пассажирский самолёт</div>
+                    </div>
+                    <div class="spec">
+                      <div class="spec__label">Силовая установка</div>
+                      <div class="spec__value seriesModelEngine fadeSwap">4 × турбореактивных двигателя</div>
+                    </div>
+                    <div class="spec">
+                      <div class="spec__label">Ключевая особенность</div>
+                      <div class="spec__value seriesModelFeature fadeSwap">Флагманская широкофюзеляжная платформа максимальной вместимости</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="category">
+          <button class="category__summary" type="button">
+            <div class="category__left">
+              <h3 class="category__name">C-Series</h3>
+              <div class="category__desc">Мини-джеты и бизнес-джеты для деловой авиации, компактных реактивных перевозок и частного сегмента.</div>
+            </div>
+            <div class="category__meta">
+              <span class="pill">Мини-джеты</span>
+              <span class="pill">Бизнес-джеты</span>
+            </div>
+            <div class="category__arrow">⌄</div>
+          </button>
+          <div class="category__content">
+            <div class="category__inner">
+              <div class="category__article">
+                <div class="category__visualWrap">
+                  <div class="category__visual">
+                    <img class="seriesImage" src="aircraft/08.png" alt="C90">
+                  </div>
+                  <div class="category__models">
+                    <div class="category__modelsTitle">Модели серии</div>
+                    <button class="modelItem is-active" type="button"
+                      data-name="C90"
+                      data-image="aircraft/08.png"
+                      data-desc="Компактный мини-джет для быстрых перелётов малого класса, коротких деловых маршрутов и оперативных вылетов между близкими точками."
+                      data-role="Мини-джет"
+                      data-engine="2 × турбореактивных двигателя"
+                      data-feature="Быстрые короткие деловые перелёты"
+                      data-price="Цена по запросу">C90</button>
+                    <button class="modelItem" type="button"
+                      data-name="C110"
+                      data-image="aircraft/09.png"
+                      data-desc="Увеличенная версия мини-джета с более спокойной деловой компоновкой салона, ориентированная на стабильные корпоративные вылеты."
+                      data-role="Мини-джет"
+                      data-engine="2 × турбореактивных двигателя"
+                      data-feature="Более просторная деловая кабина"
+                      data-price="Цена по запросу">C110</button>
+                    <button class="modelItem" type="button"
+                      data-name="C200 Executive"
+                      data-image="aircraft/10.png"
+                      data-desc="Бизнес-джет серии C для частной авиации, корпоративных перелётов и комфортной индивидуальной эксплуатации на средних дистанциях."
+                      data-role="Бизнес-джет"
+                      data-engine="2 × турбореактивных двигателя"
+                      data-feature="Комфортная частная и корпоративная авиация"
+                      data-price="Цена по запросу">C200 Executive</button>
+                  </div>
+                </div>
+                <div>
+                  <div class="category__heading">
+                    <h4 class="category__title">C-Series</h4>
+                    <div class="category__price seriesModelPrice fadeSwap"><span>Цена</span>Цена по запросу</div>
+                  </div>
+                  <div class="category__text seriesDesc fadeSwap">
+                    Компактный мини-джет для быстрых перелётов малого класса, коротких деловых маршрутов и оперативных вылетов между близкими точками.
+                  </div>
+                  <div class="specs">
+                    <div class="spec">
+                      <div class="spec__label">Текущая модель</div>
+                      <div class="spec__value seriesModelName fadeSwap">C90</div>
+                    </div>
+                    <div class="spec">
+                      <div class="spec__label">Тип</div>
+                      <div class="spec__value seriesModelRole fadeSwap">Мини-джет</div>
+                    </div>
+                    <div class="spec">
+                      <div class="spec__label">Силовая установка</div>
+                      <div class="spec__value seriesModelEngine fadeSwap">2 × турбореактивных двигателя</div>
+                    </div>
+                    <div class="spec">
+                      <div class="spec__label">Ключевая особенность</div>
+                      <div class="spec__value seriesModelFeature fadeSwap">Быстрые короткие деловые перелёты</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="category">
+          <button class="category__summary" type="button">
+            <div class="category__left">
+              <h3 class="category__name">D-Series</h3>
+              <div class="category__desc">Среднемагистральные и дальнемагистральные самолёты для регулярных пассажирских перевозок и основных линий эксплуатации.</div>
+            </div>
+            <div class="category__meta">
+              <span class="pill">Среднемагистральные</span>
+              <span class="pill">Дальнемагистральные</span>
+            </div>
+            <div class="category__arrow">⌄</div>
+          </button>
+          <div class="category__content">
+            <div class="category__inner">
+              <div class="category__article">
+                <div class="category__visualWrap">
+                  <div class="category__visual">
+                    <img class="seriesImage" src="aircraft/11.png" alt="D124">
+                  </div>
+                  <div class="category__models">
+                    <div class="category__modelsTitle">Модели серии</div>
+                    <button class="modelItem is-active" type="button"
+                      data-name="D124"
+                      data-image="aircraft/11.png"
+                      data-desc="Средний пассажирский самолёт серии D для регулярных линий, повседневной магистральной эксплуатации и стабильной работы на загруженных направлениях."
+                      data-role="Среднемагистральный пассажирский самолёт"
+                      data-engine="2 × турбореактивных двигателя"
+                      data-feature="Основная платформа регулярных перевозок"
+                      data-price="Цена по запросу">D124</button>
+                    <button class="modelItem" type="button"
+                      data-name="D128"
+                      data-image="aircraft/12.png"
+                      data-desc="Обновлённая пассажирская версия серии D с акцентом на более современную эксплуатацию, улучшенную экономичность и повседневную работу на средних маршрутах."
+                      data-role="Среднемагистральный пассажирский самолёт"
+                      data-engine="2 × турбореактивных двигателя"
+                      data-feature="Обновлённая конфигурация для средних линий"
+                      data-price="Цена по запросу">D128</button>
+                    <button class="modelItem" type="button"
+                      data-name="D160"
+                      data-image="aircraft/13.png"
+                      data-desc="Усиленная магистральная модель серии D для более нагруженных пассажирских направлений, увеличенной дальности и плотного графика гражданской эксплуатации."
+                      data-role="Дальнемагистральный пассажирский самолёт"
+                      data-engine="2 × турбореактивных двигателя повышенной тяги"
+                      data-feature="Увеличенная дальность и нагрузка"
+                      data-price="Цена по запросу">D160</button>
+                    <button class="modelItem" type="button"
+                      data-name="D160F"
+                      data-image="aircraft/14.png"
+                      data-desc="Грузовая версия платформы D для коммерческой логистики, работы с контейнерными нагрузками и магистральных перевозок на дальних маршрутах."
+                      data-role="Грузовой самолёт серии D"
+                      data-engine="2 × турбореактивных двигателя повышенной тяги"
+                      data-feature="Магистральная грузовая эксплуатация"
+                      data-price="Цена по запросу">D160F</button>
+                  </div>
+                </div>
+                <div>
+                  <div class="category__heading">
+                    <h4 class="category__title">D-Series</h4>
+                    <div class="category__price seriesModelPrice fadeSwap"><span>Цена</span>Цена по запросу</div>
+                  </div>
+                  <div class="category__text seriesDesc fadeSwap">
+                    Средний пассажирский самолёт серии D для регулярных линий, повседневной магистральной эксплуатации и стабильной работы на загруженных направлениях.
+                  </div>
+                  <div class="specs">
+                    <div class="spec">
+                      <div class="spec__label">Текущая модель</div>
+                      <div class="spec__value seriesModelName fadeSwap">D124</div>
+                    </div>
+                    <div class="spec">
+                      <div class="spec__label">Тип</div>
+                      <div class="spec__value seriesModelRole fadeSwap">Среднемагистральный пассажирский самолёт</div>
+                    </div>
+                    <div class="spec">
+                      <div class="spec__label">Силовая установка</div>
+                      <div class="spec__value seriesModelEngine fadeSwap">2 × турбореактивных двигателя</div>
+                    </div>
+                    <div class="spec">
+                      <div class="spec__label">Ключевая особенность</div>
+                      <div class="spec__value seriesModelFeature fadeSwap">Основная платформа регулярных перевозок</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="history">
+      <div class="section__head">
+        <div class="section__eyebrow">О заводе</div>
+        <h2 class="section__title">История</h2>
+        <div class="section__text">
+          AirHokol-66 основан в 1932 году в Коре на улице Торомская, 124. Изначально предприятие развивало военную авиационную технику,
+          а затем стало одним из ключевых производителей гражданских пассажирских и грузовых самолётов.
+        </div>
+      </div>
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>Формирование завода</h3>
+          <p>
+            Ранний этап AirHokol-66 связан с созданием собственной инженерной и производственной базы.
+            Завод постепенно перешёл от военных программ к развитию масштабных гражданских платформ,
+            что и определило его дальнейшую роль в авиапроме.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Развитие гражданских направлений</h3>
+          <p>
+            Со временем AirHokol-66 расширил линейку самолётов: от лёгких и региональных категорий
+            до широкофюзеляжных, среднемагистральных и дальнемагистральных платформ.
+            Именно так завод закрепился как крупный производитель гражданской авиации.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="systems">
+      <div class="section__head">
+        <div class="section__eyebrow">Инженерные системы</div>
+        <h2 class="section__title">Системы и безопасность</h2>
+        <div class="section__text">
+          Важная часть AirHokol-66 — не только сами самолёты, но и инженерные решения, связанные со стабилизацией,
+          аварийным оповещением, бортовой безопасностью, быстрой помощью после катастроф и системами поддержки экипажа.
+        </div>
+      </div>
+      <div class="grid grid--2">
+        <div class="card">
+          <div class="systemCard">
+            <div class="systemCard__body">
+              <h3>«Часовая система»</h3>
+              <p>
+                Одна из наиболее узнаваемых инженерных особенностей AirHokol-66,
+                связанная со стабилизацией и общей технической идентичностью пассажирских платформ компании.
+              </p>
+            </div>
+            <div class="systemCard__media">
+              <img src="clock-system.jpg" alt="Часовая система">
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="systemCard">
+            <div class="systemCard__body">
+              <h3>ССБС</h3>
+              <p>
+                Система, которая считывает данные с бортовых датчиков самолёта и в реальном времени
+                передаёт на землю в диспетчерскую информацию о конкретных событиях и ошибках:
+                возгорании, критических отказах, отсутствии активности экипажа и других аварийных состояниях.
+              </p>
+            </div>
+            <div class="systemCard__media">
+              <img src="ssbs.jpg" alt="ССБС">
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="systemCard">
+            <div class="systemCard__body">
+              <h3>ОБС</h3>
+              <p>
+                Отсек быстрого спасения — отдельный аварийный отсек, предназначенный для выживания после катастрофы.
+                Внутри размещаются запас воды, еда, одежда и базовые средства для первых часов после крушения.
+              </p>
+            </div>
+            <div class="systemCard__media">
+              <img src="obs.jpg" alt="ОБС">
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="systemCard">
+            <div class="systemCard__body">
+              <h3>AIHP</h3>
+              <p>
+                Система ИИ-помощи пилотам, дополняющая классические бортовые решения и усиливающая взаимодействие экипажа
+                с самолётом в более современных поколениях авиационных платформ AirHokol-66.
+              </p>
+            </div>
+            <div class="systemCard__media">
+              <img src="aihp.jpg" alt="AIHP">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section__head">
+        <div class="section__eyebrow">Связь с заводом</div>
+        <h2 class="section__title">Связаться с AirHokol-66</h2>
+        <div class="section__text">
+          Коммерческие запросы, закупка самолётов, производственные вопросы, эксплуатационная поддержка и общая связь с заводом.
+        </div>
+      </div>
+      <div class="contacts">
+        <div class="contacts__box">
+          <div>
+            <h3 class="contacts__title">Контакты</h3>
+            <div class="contacts__text">
+              Коммерческий отдел, поддержка эксплуатации, общая связь и штаб-квартира AirHokol-66.
+            </div>
+          </div>
+          <div class="contacts__list">
+            <div class="contacts__item">
+              <div class="contacts__label">Штаб-квартира</div>
+              <div class="contacts__value">Кора, ул. Торомская, 124</div>
+            </div>
+            <div class="contacts__item">
+              <div class="contacts__label">Коммерческий отдел</div>
+              <div class="contacts__value">sales@airhokol66.example</div>
+            </div>
+            <div class="contacts__item">
+              <div class="contacts__label">Эксплуатационная поддержка</div>
+              <div class="contacts__value">support@airhokol66.example</div>
+            </div>
+            <div class="contacts__item">
+              <div class="contacts__label">Общая связь</div>
+              <div class="contacts__value">+8 293 5647-28</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© AirHokol-66</div>
+      <div>Кора • авиастроение • с 1932 года</div>
+    </footer>
+  </main>
+
+  <script>
+    window.addEventListener("load",()=>{
+      document.body.classList.add("is-loaded");
+    });
+
+    const categories=[...document.querySelectorAll(".category")];
+
+    categories.forEach((category)=>{
+      const button=category.querySelector(".category__summary");
+      const items=[...category.querySelectorAll(".modelItem")];
+      const image=category.querySelector(".seriesImage");
+      const desc=category.querySelector(".seriesDesc");
+      const modelName=category.querySelector(".seriesModelName");
+      const modelRole=category.querySelector(".seriesModelRole");
+      const modelEngine=category.querySelector(".seriesModelEngine");
+      const modelFeature=category.querySelector(".seriesModelFeature");
+      const modelPrice=category.querySelector(".seriesModelPrice");
+
+      function swapText(elements, callback){
+        const validElements=elements.filter(Boolean);
+        validElements.forEach((el)=>el.classList.add("is-changing"));
+        setTimeout(()=>{
+          callback();
+          validElements.forEach((el)=>el.classList.remove("is-changing"));
+        },180);
+      }
+
+      function setModel(item){
+        items.forEach((i)=>i.classList.remove("is-active"));
+        item.classList.add("is-active");
+
+        image.style.opacity="0";
+        image.style.transform="translateY(6px)";
+
+        setTimeout(()=>{
+          image.src=item.dataset.image;
+          image.alt=item.dataset.name;
+          image.style.opacity="1";
+          image.style.transform="translateY(0)";
+        },180);
+
+        swapText(
+          [desc, modelName, modelRole, modelEngine, modelFeature, modelPrice],
+          ()=>{
+            desc.textContent=item.dataset.desc;
+            modelName.textContent=item.dataset.name;
+            modelRole.textContent=item.dataset.role;
+            modelEngine.textContent=item.dataset.engine;
+            modelFeature.textContent=item.dataset.feature;
+            if(modelPrice) modelPrice.innerHTML = `<span>Цена</span>${item.dataset.price || "Цена по запросу"}`;
+          }
+        );
+      }
+
+      items.forEach((item)=>{
+        item.addEventListener("mouseenter",()=>setModel(item));
+        item.addEventListener("click",(e)=>{
+          e.stopPropagation();
+          setModel(item);
+        });
+      });
+
+      button.addEventListener("click",()=>{
+        const opened=category.classList.contains("is-open");
+        categories.forEach((item)=>item.classList.remove("is-open"));
+        if(!opened) category.classList.add("is-open");
+      });
+    });
+  </script>
+</body>
+</html>
