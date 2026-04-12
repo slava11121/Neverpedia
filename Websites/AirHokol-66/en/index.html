@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -173,7 +173,7 @@
       background:
         linear-gradient(90deg, rgba(5,8,13,.86) 0%, rgba(5,8,13,.72) 36%, rgba(5,8,13,.30) 100%),
         linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)),
-        url("hero.jpg") center/cover no-repeat,
+        url("../hero.jpg") center/cover no-repeat,
         linear-gradient(180deg,#09111a,#05080d);
     }
     .hero::after{
@@ -764,25 +764,25 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a class="brand" href="#">
-        <img src="logo.png" alt="AirHokol-66">
+        <img src="../logo.png" alt="AirHokol-66">
       </a>
       <nav class="nav">
-        <a href="#aircraft">Самолёты</a>
-        <a href="#history">История</a>
-        <a href="#systems">Системы</a>
-        <a href="#contact">Связаться</a>
+        <a href="#aircraft">Aircraft</a>
+        <a href="#history">History</a>
+        <a href="#systems">Systems</a>
+        <a href="#contact">Contact</a>
 
         <div class="lang-switcher" id="langSwitcher">
-          <button class="lang-switcher__toggle" type="button" aria-label="Выбрать язык" aria-expanded="false">
-            <img src="languages/ru.jpg" alt="Русский">
+          <button class="lang-switcher__toggle" type="button" aria-label="Choose language" aria-expanded="false">
+            <img src="../languages/en.jpg" alt="English">
           </button>
 
           <div class="lang-switcher__menu">
-            <a class="lang-switcher__link" href="index.html" aria-label="Русская версия">
-              <img src="languages/ru.jpg" alt="Русский">
+            <a class="lang-switcher__link" href="../index.html" aria-label="Russian version">
+              <img src="../languages/ru.jpg" alt="Russian">
             </a>
-            <a class="lang-switcher__link" href="en/index.html" aria-label="English version">
-              <img src="languages/en.jpg" alt="English">
+            <a class="lang-switcher__link" href="index.html" aria-label="English version">
+              <img src="../languages/en.jpg" alt="English">
             </a>
           </div>
         </div>
@@ -793,15 +793,15 @@
   <section class="hero">
     <div class="hero__inner">
       <div class="hero__content">
-        <div class="hero__meta">Кора • государственная авиастроительная корпорация • с 1932 года</div>
+        <div class="hero__meta">Kora • state aircraft manufacturing corporation • since 1932</div>
         <h1 class="hero__title">AirHokol-66</h1>
         <div class="hero__text">
-          Производитель пассажирских и грузовых самолётов. Серии гражданской авиации, инженерные системы безопасности,
-          развитие платформ и история одного из ключевых авиационных заводов Кивиша.
+          Manufacturer of passenger and cargo aircraft. Civil aviation series, engineering safety systems,
+          platform development, and the history of one of Kivish’s key aircraft plants.
         </div>
         <div class="hero__actions">
-          <a class="btn btn--primary" href="#aircraft">Смотреть категории самолётов</a>
-          <a class="btn" href="#contact">Связаться с заводом</a>
+          <a class="btn btn--primary" href="#aircraft">View aircraft categories</a>
+          <a class="btn" href="#contact">Contact the plant</a>
         </div>
       </div>
     </div>
@@ -810,11 +810,11 @@
   <main class="wrap">
     <section class="section" id="aircraft">
       <div class="section__head">
-        <div class="section__eyebrow">Категории самолётов</div>
-        <h2 class="section__title">Самолёты</h2>
+        <div class="section__eyebrow">Aircraft categories</div>
+        <h2 class="section__title">Aircraft</h2>
         <div class="section__text">
-          Основные категории текущей линейки AirHokol-66. Каждая категория раскрывается в отдельный большой блок с описанием,
-          особенностями серии и текущими моделями внутри направления.
+          The main categories in the current AirHokol-66 lineup. Each category expands into a separate large block with a description,
+          series features, and current models within that segment.
         </div>
       </div>
 
@@ -824,14 +824,14 @@
             <div class="category__left">
               <h3 class="category__name">A-Series</h3>
               <div class="category__desc">
-                Серия A объединяет малую и региональную турбовинтовую авиацию AirHokol-66: сельскохозяйственные самолёты, лёгкие машины общего назначения, малые пассажирские платформы, региональные грузовые версии и самолёты для северной эксплуатации.
+                The A Series brings together AirHokol-66’s light and regional turboprop aviation: agricultural aircraft, light general-purpose aircraft, small passenger platforms, regional cargo versions, and aircraft designed for northern operations.
               </div>
             </div>
             <div class="category__meta">
-              <span class="pill">Сельхоз</span>
-              <span class="pill">Малая авиация</span>
-              <span class="pill">Турбовинтовые</span>
-              <span class="pill">Региональные</span>
+              <span class="pill">Agriculture</span>
+              <span class="pill">Light aviation</span>
+              <span class="pill">Turboprop</span>
+              <span class="pill">Regional</span>
             </div>
             <div class="category__arrow">⌄</div>
           </button>
@@ -841,64 +841,64 @@
               <div class="category__article">
                 <div class="category__visualWrap">
                   <div class="category__visual">
-                    <img class="seriesImage" src="aircraft/01.png" alt="A012">
+                    <img class="seriesImage" src="../aircraft/01.png" alt="A012">
                   </div>
 
                   <div class="category__models">
-                    <div class="category__modelsTitle">Модели серии</div>
+                    <div class="category__modelsTitle">Series models</div>
 
                     <button class="modelItem is-active" type="button"
                       data-name="A012"
-                      data-image="aircraft/01.png"
-                      data-desc="Сельскохозяйственный турбовинтовой самолёт серии A, выпускающийся с 1952 года. Является развитием более ранней модели A02 1945 года и используется для аграрных работ, обработки полей и прикладной эксплуатации на местных аэродромах."
-                      data-role="Сельскохозяйственный самолёт"
-                      data-engine="1 × турбовинтовой двигатель"
-                      data-feature="Основная рабочая сельхоз-платформа серии A"
+                      data-image="../aircraft/01.png"
+                      data-desc="An agricultural turboprop aircraft of the A Series, produced since 1952. It is a development of the earlier 1945 A02 model and is used for agricultural work, field treatment, and practical operations at local airfields."
+                      data-role="Agricultural aircraft"
+                      data-engine="1 × turboprop engine"
+                      data-feature="Primary agricultural work platform of the A Series"
                       data-price="35 000 000 KSH">A012</button>
 
                     <button class="modelItem" type="button"
                       data-name="A019"
-                      data-image="aircraft/02.png"
-                      data-desc="Лёгкий самолёт общего назначения, выпускающийся с 1971 года. Компактная машина на 2–4 места для частной, служебной, учебной и местной авиации."
-                      data-role="Лёгкий самолёт общего назначения"
-                      data-engine="1 × турбовинтовой двигатель"
-                      data-feature="Компактная платформа для частной и служебной эксплуатации"
+                      data-image="../aircraft/02.png"
+                      data-desc="A light general-purpose aircraft produced since 1971. A compact 2–4 seat aircraft for private, service, training, and local aviation."
+                      data-role="Light general-purpose aircraft"
+                      data-engine="1 × turboprop engine"
+                      data-feature="Compact platform for private and service use"
                       data-price="21 000 000 KSH">A019</button>
 
                     <button class="modelItem" type="button"
                       data-name="A024"
-                      data-image="aircraft/03.png"
-                      data-desc="Малый однодвигательный пассажирский турбовинтовой самолёт, выпускающийся с 1978 года. Рассчитан на 5–8 пассажиров и применяется на коротких местных линиях."
-                      data-role="Малый пассажирский самолёт"
-                      data-engine="1 × турбовинтовой двигатель"
-                      data-feature="Локальные пассажирские маршруты на 5–8 мест"
+                      data-image="../aircraft/03.png"
+                      data-desc="A small single-engine passenger turboprop aircraft produced since 1978. Designed for 5–8 passengers and used on short local routes."
+                      data-role="Small passenger aircraft"
+                      data-engine="1 × turboprop engine"
+                      data-feature="Local passenger routes for 5–8 seats"
                       data-price="95 000 000 KSH">A024</button>
 
                     <button class="modelItem" type="button"
                       data-name="A028"
-                      data-image="aircraft/04.png"
-                      data-desc="Двухдвигательный турбовинтовой пассажирский самолёт, выпускающийся с 1980 года. Предназначен для местных и региональных линий и вмещает от 8 до 14 пассажиров."
-                      data-role="Лёгкий региональный пассажирский самолёт"
-                      data-engine="2 × турбовинтовых двигателя"
-                      data-feature="Региональная эксплуатация на 8–14 пассажиров"
+                      data-image="../aircraft/04.png"
+                      data-desc="A twin-engine turboprop passenger aircraft produced since 1980. Intended for local and regional routes and seats 8 to 14 passengers."
+                      data-role="Light regional passenger aircraft"
+                      data-engine="2 × turboprop engines"
+                      data-feature="Regional operations for 8–14 passengers"
                       data-price="180 000 000 KSH">A028</button>
 
                     <button class="modelItem" type="button"
                       data-name="AC50"
-                      data-image="aircraft/05.png"
-                      data-desc="Грузовая турбовинтовая модель серии A, выпускающаяся с 1964 года. Предназначена для перевозки грузов на региональных линиях, снабжения удалённых направлений и работы в условиях устойчивой повседневной эксплуатации."
-                      data-role="Региональный грузовой самолёт"
-                      data-engine="2 × турбовинтовых двигателя"
-                      data-feature="Грузовая эксплуатация на региональных направлениях"
+                      data-image="../aircraft/05.png"
+                      data-desc="A cargo turboprop model of the A Series, produced since 1964. Designed for regional cargo transport, supplying remote destinations, and stable day-to-day operations."
+                      data-role="Regional cargo aircraft"
+                      data-engine="2 × turboprop engines"
+                      data-feature="Cargo operations on regional routes"
                       data-price="250 000 000 KSH">AC50</button>
 
                     <button class="modelItem" type="button"
                       data-name="A110"
-                      data-image="aircraft/06.png"
-                      data-desc="Двухдвигательный турбовинтовой пассажирский самолёт на 70 пассажиров, выпускающийся с 1992 года. Создан для северной эксплуатации, тяжёлых погодных условий и маршрутов в Форта и другие удалённые регионы."
-                      data-role="Северный региональный пассажирский самолёт"
-                      data-engine="2 × турбовинтовых двигателя"
-                      data-feature="Эксплуатация в северных и удалённых регионах"
+                      data-image="../aircraft/06.png"
+                      data-desc="A twin-engine turboprop passenger aircraft for 70 passengers, produced since 1992. Built for northern operations, severe weather conditions, and routes to Forta and other remote regions."
+                      data-role="Northern regional passenger aircraft"
+                      data-engine="2 × turboprop engines"
+                      data-feature="Operations in northern and remote regions"
                       data-price="800 000 000 KSH">A110</button>
                   </div>
                 </div>
@@ -906,29 +906,29 @@
                 <div>
                   <div class="category__heading">
                     <h4 class="category__title">A-Series</h4>
-                    <div class="category__price seriesModelPrice fadeSwap"><span>Цена</span>35 000 000 KSH</div>
+                    <div class="category__price seriesModelPrice fadeSwap"><span>Price</span>35 000 000 KSH</div>
                   </div>
 
                   <div class="category__text seriesDesc fadeSwap">
-                    Сельскохозяйственный турбовинтовой самолёт серии A, выпускающийся с 1952 года. Является развитием более ранней модели A02 1945 года и используется для аграрных работ, обработки полей и прикладной эксплуатации на местных аэродромах.
+                    An agricultural turboprop aircraft of the A Series, produced since 1952. It is a development of the earlier 1945 A02 model and is used for agricultural work, field treatment, and practical operations at local airfields.
                   </div>
 
                   <div class="specs">
                     <div class="spec">
-                      <div class="spec__label">Текущая модель</div>
+                      <div class="spec__label">Current model</div>
                       <div class="spec__value seriesModelName fadeSwap">A012</div>
                     </div>
                     <div class="spec">
-                      <div class="spec__label">Тип</div>
-                      <div class="spec__value seriesModelRole fadeSwap">Сельскохозяйственный самолёт</div>
+                      <div class="spec__label">Type</div>
+                      <div class="spec__value seriesModelRole fadeSwap">Agricultural aircraft</div>
                     </div>
                     <div class="spec">
-                      <div class="spec__label">Силовая установка</div>
-                      <div class="spec__value seriesModelEngine fadeSwap">1 × турбовинтовой двигатель</div>
+                      <div class="spec__label">Powerplant</div>
+                      <div class="spec__value seriesModelEngine fadeSwap">1 × turboprop engine</div>
                     </div>
                     <div class="spec">
-                      <div class="spec__label">Ключевая особенность</div>
-                      <div class="spec__value seriesModelFeature fadeSwap">Основная рабочая сельхоз-платформа серии A</div>
+                      <div class="spec__label">Key feature</div>
+                      <div class="spec__value seriesModelFeature fadeSwap">Primary agricultural work platform of the A Series</div>
                     </div>
                   </div>
                 </div>
@@ -941,13 +941,13 @@
           <button class="category__summary" type="button">
             <div class="category__left">
               <h3 class="category__name">BI-Series</h3>
-              <div class="category__desc">Широкофюзеляжные пассажирские самолёты максимальной вместимости для дальнемагистральных линий, крупнейших пассажирских потоков и флагманской гражданской эксплуатации.</div>
+              <div class="category__desc">Wide-body passenger aircraft with maximum capacity for long-haul routes, the largest passenger flows, and flagship civil operation.</div>
             </div>
             <div class="category__meta">
-              <span class="pill">Широкофюзеляжные</span>
-              <span class="pill">Дальнемагистральные</span>
-              <span class="pill">Высокая вместимость</span>
-              <span class="pill">4 двигателя</span>
+              <span class="pill">Wide-body</span>
+              <span class="pill">Long-haul</span>
+              <span class="pill">High capacity</span>
+              <span class="pill">4 engines</span>
             </div>
             <div class="category__arrow">⌄</div>
           </button>
@@ -957,18 +957,18 @@
               <div class="category__article">
                 <div class="category__visualWrap">
                   <div class="category__visual">
-                    <img class="seriesImage" src="aircraft/07.png" alt="Bi315">
+                    <img class="seriesImage" src="../aircraft/07.png" alt="Bi315">
                   </div>
 
                   <div class="category__models">
-                    <div class="category__modelsTitle">Модели серии</div>
+                    <div class="category__modelsTitle">Series models</div>
                     <button class="modelItem is-active" type="button"
                       data-name="Bi315"
-                      data-image="aircraft/07.png"
-                      data-desc="Bi315 — широкофюзеляжный дальнемагистральный пассажирский самолёт AirHokol-66, выпускающийся с 2010 года. Рассчитан на перевозку до 516 пассажиров и используется на наиболее загруженных международных и межконтинентальных направлениях как флагманская платформа гражданской линейки компании."
-                      data-role="Широкофюзеляжный дальнемагистральный пассажирский самолёт"
-                      data-engine="4 × турбореактивных двигателя"
-                      data-feature="Флагманская широкофюзеляжная платформа максимальной вместимости"
+                      data-image="../aircraft/07.png"
+                      data-desc="Bi315 is an AirHokol-66 wide-body long-haul passenger aircraft produced since 2010. Designed to carry up to 516 passengers, it is used on the busiest international and intercontinental routes as the flagship platform of the company’s civil lineup."
+                      data-role="Wide-body long-haul passenger aircraft"
+                      data-engine="4 × turbojet engines"
+                      data-feature="Flagship high-capacity wide-body platform"
                       data-price="9 900 000 000 KSH">Bi315</button>
                   </div>
                 </div>
@@ -976,29 +976,29 @@
                 <div>
                   <div class="category__heading">
                     <h4 class="category__title">BI-Series</h4>
-                    <div class="category__price seriesModelPrice fadeSwap"><span>Цена</span>9 900 000 000 KSH</div>
+                    <div class="category__price seriesModelPrice fadeSwap"><span>Price</span>9 900 000 000 KSH</div>
                   </div>
 
                   <div class="category__text seriesDesc fadeSwap">
-                    Bi315 — широкофюзеляжный дальнемагистральный пассажирский самолёт AirHokol-66, выпускающийся с 2010 года. Рассчитан на перевозку до 516 пассажиров и используется на наиболее загруженных международных и межконтинентальных направлениях как флагманская платформа гражданской линейки компании.
+                    Bi315 is an AirHokol-66 wide-body long-haul passenger aircraft produced since 2010. Designed to carry up to 516 passengers, it is used on the busiest international and intercontinental routes as the flagship platform of the company’s civil lineup.
                   </div>
 
                   <div class="specs">
                     <div class="spec">
-                      <div class="spec__label">Текущая модель</div>
+                      <div class="spec__label">Current model</div>
                       <div class="spec__value seriesModelName fadeSwap">Bi315</div>
                     </div>
                     <div class="spec">
-                      <div class="spec__label">Тип</div>
-                      <div class="spec__value seriesModelRole fadeSwap">Широкофюзеляжный дальнемагистральный пассажирский самолёт</div>
+                      <div class="spec__label">Type</div>
+                      <div class="spec__value seriesModelRole fadeSwap">Wide-body long-haul passenger aircraft</div>
                     </div>
                     <div class="spec">
-                      <div class="spec__label">Силовая установка</div>
-                      <div class="spec__value seriesModelEngine fadeSwap">4 × турбореактивных двигателя</div>
+                      <div class="spec__label">Powerplant</div>
+                      <div class="spec__value seriesModelEngine fadeSwap">4 × turbojet engines</div>
                     </div>
                     <div class="spec">
-                      <div class="spec__label">Ключевая особенность</div>
-                      <div class="spec__value seriesModelFeature fadeSwap">Флагманская широкофюзеляжная платформа максимальной вместимости</div>
+                      <div class="spec__label">Key feature</div>
+                      <div class="spec__value seriesModelFeature fadeSwap">Flagship high-capacity wide-body platform</div>
                     </div>
                   </div>
                 </div>
@@ -1011,13 +1011,13 @@
   <button class="category__summary" type="button">
     <div class="category__left">
       <h3 class="category__name">C-Series</h3>
-      <div class="category__desc">Малые реактивные самолёты AirHokol-66 для частной, корпоративной и представительской авиации: от компактных мини-джетов до полноценных бизнес-джетов.</div>
+      <div class="category__desc">Small AirHokol-66 jet aircraft for private, corporate, and executive aviation: from compact mini-jets to full-size business jets.</div>
     </div>
     <div class="category__meta">
-      <span class="pill">Мини-джеты</span>
-      <span class="pill">Бизнес-джеты</span>
-      <span class="pill">Частная авиация</span>
-      <span class="pill">Корпоративные рейсы</span>
+      <span class="pill">Mini-jets</span>
+      <span class="pill">Business jets</span>
+      <span class="pill">Private aviation</span>
+      <span class="pill">Corporate flights</span>
     </div>
     <div class="category__arrow">⌄</div>
   </button>
@@ -1027,37 +1027,37 @@
       <div class="category__article">
         <div class="category__visualWrap">
           <div class="category__visual">
-            <img class="seriesImage" src="aircraft/08.png" alt="C60">
+            <img class="seriesImage" src="../aircraft/08.png" alt="C60">
           </div>
 
           <div class="category__models">
-            <div class="category__modelsTitle">Модели серии</div>
+            <div class="category__modelsTitle">Series models</div>
 
             <button class="modelItem is-active" type="button"
               data-name="C60"
-              data-image="aircraft/08.png"
-              data-desc="C60 — базовый мини-джет серии C, выпускающийся с 1984 года. Компактный реактивный самолёт для быстрых частных и деловых перелётов на коротких и средних дистанциях."
-              data-role="Мини-джет"
-              data-engine="2 × турбореактивных двигателя"
-              data-feature="Быстрые частные и деловые перелёты на 4–6 пассажиров"
+              data-image="../aircraft/08.png"
+              data-desc="C60 is the base mini-jet of the C Series, produced since 1984. A compact jet aircraft for fast private and business flights over short and medium distances."
+              data-role="Mini-jet"
+              data-engine="2 × turbojet engines"
+              data-feature="Fast private and business flights for 4–6 passengers"
               data-price="140 000 000 KSH">C60</button>
 
             <button class="modelItem" type="button"
               data-name="C90"
-              data-image="aircraft/09.png"
-              data-desc="C90 — малый бизнес-джет серии C, выпускающийся с 1996 года. Предназначен для корпоративных рейсов, частной эксплуатации и более комфортных реактивных перелётов с малым числом пассажиров."
-              data-role="Малый бизнес-джет"
-              data-engine="2 × турбореактивных двигателя"
-              data-feature="Комфортные корпоративные и частные рейсы на 6–8 пассажиров"
+              data-image="../aircraft/09.png"
+              data-desc="C90 is a small business jet of the C Series, produced since 1996. Designed for corporate flights, private use, and more comfortable jet travel with a small number of passengers."
+              data-role="Small business jet"
+              data-engine="2 × turbojet engines"
+              data-feature="Comfortable corporate and private flights for 6–8 passengers"
               data-price="290 000 000 KSH">C90</button>
 
             <button class="modelItem" type="button"
               data-name="C200"
-              data-image="aircraft/10.png"
-              data-desc="C200 — бизнес-джет AirHokol-66, выпускающийся с 2013 года. Флагман серии C для корпоративной, представительской и частной авиации, рассчитанный на перелёты с повышенным комфортом и расширенной пассажирской компоновкой."
-              data-role="Бизнес-джет"
-              data-engine="2 × турбореактивных двигателя"
-              data-feature="Флагман серии для корпоративных и представительских перелётов на 10–14 пассажиров"
+              data-image="../aircraft/10.png"
+              data-desc="C200 is an AirHokol-66 business jet produced since 2013. The flagship of the C Series for corporate, executive, and private aviation, designed for flights with enhanced comfort and an expanded passenger layout."
+              data-role="Business jet"
+              data-engine="2 × turbojet engines"
+              data-feature="Series flagship for corporate and executive flights for 10–14 passengers"
               data-price="540 000 000 KSH">C200</button>
           </div>
         </div>
@@ -1065,29 +1065,29 @@
         <div>
           <div class="category__heading">
             <h4 class="category__title">C-Series</h4>
-            <div class="category__price seriesModelPrice fadeSwap"><span>Цена</span>140 000 000 KSH</div>
+            <div class="category__price seriesModelPrice fadeSwap"><span>Price</span>140 000 000 KSH</div>
           </div>
 
           <div class="category__text seriesDesc fadeSwap">
-            C60 — базовый мини-джет серии C, выпускающийся с 1984 года. Компактный реактивный самолёт для быстрых частных и деловых перелётов на коротких и средних дистанциях.
+            C60 is the base mini-jet of the C Series, produced since 1984. A compact jet aircraft for fast private and business flights over short and medium distances.
           </div>
 
           <div class="specs">
             <div class="spec">
-              <div class="spec__label">Текущая модель</div>
+              <div class="spec__label">Current model</div>
               <div class="spec__value seriesModelName fadeSwap">C60</div>
             </div>
             <div class="spec">
-              <div class="spec__label">Тип</div>
-              <div class="spec__value seriesModelRole fadeSwap">Мини-джет</div>
+              <div class="spec__label">Type</div>
+              <div class="spec__value seriesModelRole fadeSwap">Mini-jet</div>
             </div>
             <div class="spec">
-              <div class="spec__label">Силовая установка</div>
-              <div class="spec__value seriesModelEngine fadeSwap">2 × турбореактивных двигателя</div>
+              <div class="spec__label">Powerplant</div>
+              <div class="spec__value seriesModelEngine fadeSwap">2 × turbojet engines</div>
             </div>
             <div class="spec">
-              <div class="spec__label">Ключевая особенность</div>
-              <div class="spec__value seriesModelFeature fadeSwap">Быстрые частные и деловые перелёты на 4–6 пассажиров</div>
+              <div class="spec__label">Key feature</div>
+              <div class="spec__value seriesModelFeature fadeSwap">Fast private and business flights for 4–6 passengers</div>
             </div>
           </div>
         </div>
@@ -1100,13 +1100,13 @@
   <button class="category__summary" type="button">
     <div class="category__left">
       <h3 class="category__name">D-Series</h3>
-      <div class="category__desc">Основная реактивная серия AirHokol-66 для среднемагистральных пассажирских перевозок и коммерческой грузовой эксплуатации: от классических платформ до современных экономичных модификаций.</div>
+      <div class="category__desc">The main AirHokol-66 jet series for medium-haul passenger transportation and commercial cargo operation: from classic platforms to modern efficient variants.</div>
     </div>
     <div class="category__meta">
-      <span class="pill">Среднемагистральные</span>
-      <span class="pill">Пассажирские</span>
-      <span class="pill">Грузовые</span>
-      <span class="pill">Реактивные</span>
+      <span class="pill">Medium-haul</span>
+      <span class="pill">Passenger</span>
+      <span class="pill">Cargo</span>
+      <span class="pill">Jet</span>
     </div>
     <div class="category__arrow">⌄</div>
   </button>
@@ -1116,46 +1116,46 @@
       <div class="category__article">
         <div class="category__visualWrap">
           <div class="category__visual">
-            <img class="seriesImage" src="aircraft/11.png" alt="D128-Nova">
+            <img class="seriesImage" src="../aircraft/11.png" alt="D128-Nova">
           </div>
 
           <div class="category__models">
-            <div class="category__modelsTitle">Модели серии</div>
+            <div class="category__modelsTitle">Series models</div>
 
             <button class="modelItem is-active" type="button"
               data-name="D128-Nova"
-              data-image="aircraft/11.png"
-              data-desc="D128-Nova — современный среднемагистральный пассажирский самолёт AirHokol-66, выпускающийся с 2015 года. Рассчитан на 156 пассажиров и создан как экономичная реактивная платформа нового поколения для массовых гражданских перевозок."
-              data-role="Среднемагистральный пассажирский самолёт"
-              data-engine="3 × турбореактивных двигателя"
-              data-feature="Экономичность современного уровня при трёхдвигательной схеме"
+              data-image="../aircraft/11.png"
+              data-desc="D128-Nova is a modern medium-haul AirHokol-66 passenger aircraft produced since 2015. Designed for 156 passengers, it was created as an efficient next-generation jet platform for large-scale civil transportation."
+              data-role="Medium-haul passenger aircraft"
+              data-engine="3 × turbojet engines"
+              data-feature="Modern-level efficiency with a three-engine layout"
               data-price="2 950 000 000 KSH">D128-Nova</button>
 
             <button class="modelItem" type="button"
               data-name="D134"
-              data-image="aircraft/12.png"
-              data-desc="D134 — среднемагистральный реактивный пассажирский самолёт серии D, выпускающийся с 2013 года. Рассчитан на 160 пассажиров и используется как основная классическая платформа для повседневной эксплуатации на загруженных гражданских линиях."
-              data-role="Среднемагистральный пассажирский самолёт"
-              data-engine="2 × турбореактивных двигателя"
-              data-feature="Базовая магистральная платформа на 160 пассажиров"
+              data-image="../aircraft/12.png"
+              data-desc="D134 is a medium-haul jet passenger aircraft of the D Series, produced since 2013. Designed for 160 passengers, it is used as the main classic platform for daily operation on busy civil routes."
+              data-role="Medium-haul passenger aircraft"
+              data-engine="2 × turbojet engines"
+              data-feature="Core mainline platform for 160 passengers"
               data-price="1 950 000 000 KSH">D134</button>
 
             <button class="modelItem" type="button"
               data-name="D140"
-              data-image="aircraft/13.png"
-              data-desc="D140 — удлинённая пассажирская версия серии D, выпускающаяся с 2017 года. Рассчитана на 185 пассажиров и предназначена для более плотных среднемагистральных направлений и увеличенных пассажирских потоков."
-              data-role="Удлинённый среднемагистральный пассажирский самолёт"
-              data-engine="2 × турбореактивных двигателя"
-              data-feature="Увеличенная пассажировместимость до 185 мест"
+              data-image="../aircraft/13.png"
+              data-desc="D140 is an extended passenger version of the D Series, produced since 2017. Designed for 185 passengers and intended for denser medium-haul routes and increased passenger flows."
+              data-role="Extended medium-haul passenger aircraft"
+              data-engine="2 × turbojet engines"
+              data-feature="Increased passenger capacity up to 185 seats"
               data-price="2 250 000 000 KSH">D140</button>
 
             <button class="modelItem" type="button"
               data-name="D140-CGO"
-              data-image="aircraft/14.png"
-              data-desc="D140-CGO — грузовая модификация платформы D140, выпускающаяся с 2018 года. Предназначена для коммерческой логистики, регулярных грузовых перевозок и эксплуатации на реактивных среднемагистральных маршрутах."
-              data-role="Среднемагистральный грузовой самолёт"
-              data-engine="2 × турбореактивных двигателя"
-              data-feature="Грузовая эксплуатация на базе платформы D140"
+              data-image="../aircraft/14.png"
+              data-desc="D140-CGO is a cargo modification of the D140 platform, produced since 2018. Intended for commercial logistics, scheduled cargo transport, and operation on jet medium-haul routes."
+              data-role="Medium-haul cargo aircraft"
+              data-engine="2 × turbojet engines"
+              data-feature="Cargo operation based on the D140 platform"
               data-price="2 100 000 000 KSH">D140-CGO</button>
           </div>
         </div>
@@ -1163,29 +1163,29 @@
         <div>
           <div class="category__heading">
             <h4 class="category__title">D-Series</h4>
-            <div class="category__price seriesModelPrice fadeSwap"><span>Цена</span>2 950 000 000 KSH</div>
+            <div class="category__price seriesModelPrice fadeSwap"><span>Price</span>2 950 000 000 KSH</div>
           </div>
 
           <div class="category__text seriesDesc fadeSwap">
-            D128-Nova — современный среднемагистральный пассажирский самолёт AirHokol-66, выпускающийся с 2015 года. Рассчитан на 156 пассажиров и создан как экономичная реактивная платформа нового поколения для массовых гражданских перевозок.
+            D128-Nova is a modern medium-haul AirHokol-66 passenger aircraft produced since 2015. Designed for 156 passengers, it was created as an efficient next-generation jet platform for large-scale civil transportation.
           </div>
 
           <div class="specs">
             <div class="spec">
-              <div class="spec__label">Текущая модель</div>
+              <div class="spec__label">Current model</div>
               <div class="spec__value seriesModelName fadeSwap">D128-Nova</div>
             </div>
             <div class="spec">
-              <div class="spec__label">Тип</div>
-              <div class="spec__value seriesModelRole fadeSwap">Среднемагистральный пассажирский самолёт</div>
+              <div class="spec__label">Type</div>
+              <div class="spec__value seriesModelRole fadeSwap">Medium-haul passenger aircraft</div>
             </div>
             <div class="spec">
-              <div class="spec__label">Силовая установка</div>
-              <div class="spec__value seriesModelEngine fadeSwap">3 × турбореактивных двигателя</div>
+              <div class="spec__label">Powerplant</div>
+              <div class="spec__value seriesModelEngine fadeSwap">3 × turbojet engines</div>
             </div>
             <div class="spec">
-              <div class="spec__label">Ключевая особенность</div>
-              <div class="spec__value seriesModelFeature fadeSwap">Экономичность современного уровня при трёхдвигательной схеме</div>
+              <div class="spec__label">Key feature</div>
+              <div class="spec__value seriesModelFeature fadeSwap">Modern-level efficiency with a three-engine layout</div>
             </div>
           </div>
         </div>
@@ -1196,28 +1196,28 @@
 
     <section class="section" id="history">
       <div class="section__head">
-        <div class="section__eyebrow">О заводе</div>
-        <h2 class="section__title">История</h2>
+        <div class="section__eyebrow">About the plant</div>
+        <h2 class="section__title">History</h2>
         <div class="section__text">
-          AirHokol-66 основан в 1932 году в Коре на улице Торомская, 124. Изначально предприятие развивало военную авиационную технику,
-          а затем стало одним из ключевых производителей гражданских пассажирских и грузовых самолётов.
+          AirHokol-66 was founded in 1932 in Kora at 124 Toromskaya Street. Initially, the enterprise developed military aviation equipment,
+          and later became one of the key manufacturers of civil passenger and cargo aircraft.
         </div>
       </div>
       <div class="grid grid--2">
         <div class="card">
-          <h3>Формирование завода</h3>
+          <h3>Formation of the plant</h3>
           <p>
-            Ранний этап AirHokol-66 связан с созданием собственной инженерной и производственной базы.
-            Завод постепенно перешёл от военных программ к развитию масштабных гражданских платформ,
-            что и определило его дальнейшую роль в авиапроме.
+            The early stage of AirHokol-66 was connected with the creation of its own engineering and production base.
+            The plant gradually moved from military programs to the development of large-scale civil platforms,
+            which defined its future role in the aviation industry.
           </p>
         </div>
         <div class="card">
-          <h3>Развитие гражданских направлений</h3>
+          <h3>Development of civil programs</h3>
           <p>
-            Со временем AirHokol-66 расширил линейку самолётов: от лёгких и региональных категорий
-            до широкофюзеляжных, среднемагистральных и дальнемагистральных платформ.
-            Именно так завод закрепился как крупный производитель гражданской авиации.
+            Over time, AirHokol-66 expanded its aircraft lineup: from light and regional categories
+            to wide-body, medium-haul, and long-haul platforms.
+            This is how the plant established itself as a major civil aviation manufacturer.
           </p>
         </div>
       </div>
@@ -1225,54 +1225,54 @@
 
     <section class="section" id="systems">
       <div class="section__head">
-        <div class="section__eyebrow">Инженерные системы</div>
-        <h2 class="section__title">Системы и безопасность</h2>
+        <div class="section__eyebrow">Engineering systems</div>
+        <h2 class="section__title">Systems and safety</h2>
         <div class="section__text">
-          Важная часть AirHokol-66 — не только сами самолёты, но и инженерные решения, связанные со стабилизацией,
-          аварийным оповещением, бортовой безопасностью, быстрой помощью после катастроф и системами поддержки экипажа.
+          An important part of AirHokol-66 is not only the aircraft themselves, but also engineering solutions related to stabilization,
+          emergency notification, onboard safety, rapid post-crash assistance, and crew support systems.
         </div>
       </div>
       <div class="grid grid--2">
         <div class="card">
           <div class="systemCard">
             <div class="systemCard__body">
-              <h3>«Часовая система»</h3>
+              <h3>“Clock System”</h3>
               <p>
-                Одна из наиболее узнаваемых инженерных особенностей AirHokol-66,
-                связанная со стабилизацией и общей технической идентичностью пассажирских платформ компании.
+                One of the most recognizable engineering features of AirHokol-66,
+                associated with stabilization and the overall technical identity of the company’s passenger platforms.
               </p>
             </div>
             <div class="systemCard__media">
-              <img src="clock-system.jpg" alt="Часовая система">
+              <img src="../clock-system.jpg" alt="Clock System">
             </div>
           </div>
         </div>
         <div class="card">
           <div class="systemCard">
             <div class="systemCard__body">
-              <h3>ССБС</h3>
+              <h3>SDRS</h3>
               <p>
-                Система, которая считывает данные с бортовых датчиков самолёта и в реальном времени
-                передаёт на землю в диспетчерскую информацию о конкретных событиях и ошибках:
-                возгорании, критических отказах, отсутствии активности экипажа и других аварийных состояниях.
+                A system that reads data from the aircraft’s onboard sensors and in real time
+                transmits information about specific events and faults to ground dispatch:
+                fire, critical failures, lack of crew activity, and other emergency conditions.
               </p>
             </div>
             <div class="systemCard__media">
-              <img src="ssbs.jpg" alt="ССБС">
+              <img src="../ssbs.jpg" alt="SSBS">
             </div>
           </div>
         </div>
         <div class="card">
           <div class="systemCard">
             <div class="systemCard__body">
-              <h3>ОБС</h3>
+              <h3>RRC</h3>
               <p>
-                Отсек быстрого спасения — отдельный аварийный отсек, предназначенный для выживания после катастрофы.
-                Внутри размещаются запас воды, еда, одежда и базовые средства для первых часов после крушения.
+                The Rapid Rescue Compartment is a separate emergency compartment designed for survival after a crash.
+                It contains a supply of water, food, clothing, and basic necessities for the first hours after the accident.
               </p>
             </div>
             <div class="systemCard__media">
-              <img src="obs.jpg" alt="ОБС">
+              <img src="../obs.jpg" alt="RRC">
             </div>
           </div>
         </div>
@@ -1281,12 +1281,12 @@
             <div class="systemCard__body">
               <h3>AIHP</h3>
               <p>
-                Система ИИ-помощи пилотам, дополняющая классические бортовые решения и усиливающая взаимодействие экипажа
-                с самолётом в более современных поколениях авиационных платформ AirHokol-66.
+                An AI pilot-assistance system that complements classic onboard solutions and strengthens crew interaction
+                with the aircraft in newer generations of AirHokol-66 aviation platforms.
               </p>
             </div>
             <div class="systemCard__media">
-              <img src="aihp.jpg" alt="AIHP">
+              <img src="../aihp.jpg" alt="AIHP">
             </div>
           </div>
         </div>
@@ -1295,35 +1295,35 @@
 
     <section class="section" id="contact">
       <div class="section__head">
-        <div class="section__eyebrow">Связь с заводом</div>
-        <h2 class="section__title">Связаться с AirHokol-66</h2>
+        <div class="section__eyebrow">Contact the plant</div>
+        <h2 class="section__title">Contact AirHokol-66</h2>
         <div class="section__text">
-          Коммерческие запросы, закупка самолётов, производственные вопросы, эксплуатационная поддержка и общая связь с заводом.
+          Commercial inquiries, aircraft procurement, production questions, operational support, and general contact with the plant.
         </div>
       </div>
       <div class="contacts">
         <div class="contacts__box">
           <div>
-            <h3 class="contacts__title">Контакты</h3>
+            <h3 class="contacts__title">Contacts</h3>
             <div class="contacts__text">
-              Коммерческий отдел, поддержка эксплуатации, общая связь и штаб-квартира AirHokol-66.
+              Sales department, operational support, general contact, and AirHokol-66 headquarters.
             </div>
           </div>
           <div class="contacts__list">
             <div class="contacts__item">
-              <div class="contacts__label">Штаб-квартира</div>
-              <div class="contacts__value">Кора, ул. Торомская, 124</div>
+              <div class="contacts__label">Headquarters</div>
+              <div class="contacts__value">Kora, 124 Toromskaya Street</div>
             </div>
             <div class="contacts__item">
-              <div class="contacts__label">Коммерческий отдел</div>
+              <div class="contacts__label">Sales department</div>
               <div class="contacts__value">sales@airhokol66.example</div>
             </div>
             <div class="contacts__item">
-              <div class="contacts__label">Эксплуатационная поддержка</div>
+              <div class="contacts__label">Operational support</div>
               <div class="contacts__value">support@airhokol66.example</div>
             </div>
             <div class="contacts__item">
-              <div class="contacts__label">Общая связь</div>
+              <div class="contacts__label">General contact</div>
               <div class="contacts__value">+8 293 5647-28</div>
             </div>
           </div>
@@ -1333,7 +1333,7 @@
 
     <footer class="footer">
       <div>© AirHokol-66</div>
-      <div>Кора • авиастроение • с 1932 года</div>
+      <div>Kora • aircraft manufacturing • since 1932</div>
     </footer>
   </main>
 
@@ -1386,7 +1386,7 @@
             modelRole.textContent=item.dataset.role;
             modelEngine.textContent=item.dataset.engine;
             modelFeature.textContent=item.dataset.feature;
-            if(modelPrice) modelPrice.innerHTML = `<span>Цена</span>${item.dataset.price || "Цена по запросу"}`;
+            if(modelPrice) modelPrice.innerHTML = `<span>Price</span>${item.dataset.price || "Price on request"}`;
           }
         );
       }

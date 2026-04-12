@@ -11,16 +11,24 @@
       margin:0;
       background:#f6f7f8;
       color:#202122;
-      font:16px/1.55 Arial, sans-serif;
+      font:16px/1.5 Arial, sans-serif;
     }
     a{color:#3366cc;text-decoration:none}
     a:hover{text-decoration:underline}
-    .page{display:flex;gap:16px;padding:16px 12px}
-    .sidebar{width:160px}
-    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
-    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
-    .nav a{display:block;margin:6px 0}
 
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;               
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    /* === ЯЗЫКИ (добавлено) === */
     .lang-block{
       margin-top:20px;
       border-top:1px solid #c8ccd1;
@@ -41,26 +49,61 @@
     }
 
     .content{flex:1}
-    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
-    .title{margin:0 0 6px 0;font-size:30px;line-height:1.25}
-    .lead{color:#54595d;margin:0 0 14px 0}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
     .infobox{
-      float:right;width:300px;background:#fff;
-      border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px;
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;  
+      font-size:14px;
     }
     .infobox .h{
-      background:#eef3f8;border-bottom:1px solid #c8ccd1;
-      padding:8px 10px;font-weight:bold;text-align:center
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
     }
-    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
-    h2{font-size:22px;margin:18px 0 8px}
-    h3{font-size:18px;margin:16px 0 6px}
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
     ul{margin:0 0 12px 20px}
-    .notes{font-size:14px;color:#54595d}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
     @media(max-width:900px){
       .page{flex-direction:column}
       .sidebar{width:auto}
-      .infobox{float:none;width:100%;margin:0 0 12px 0}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
     }
   </style>
 </head>
@@ -91,14 +134,14 @@
 
       <aside class="infobox">
         <div class="h">MiAZ</div>
-        <div class="cell"><img src="../000.jpg" alt="Miatovsky Aviation Plant"></div>
+        <div class="cell"><img src="../084.jpg" alt="Miatovsky Aviation Plant"></div>
         <div class="cell"><b>Full name</b><br>Miatovsky Aviation Plant</div>
         <div class="cell"><b>Type</b><br>State aircraft plant</div>
         <div class="cell"><b>Founded</b><br>1976</div>
-        <div class="cell"><b>Location</b><br>Kivish, Satali Island, Miata</div>
+        <div class="cell"><b>Location</b><br>Kivish, Satali Island, Miata, st. Filena 12</div>
         <div class="cell"><b>Specialization</b><br>Modernization, life extension, adaptation</div>
         <div class="cell"><b>Main platforms</b><br>Tu-154</div>
-        <div class="cell"><b>Notable</b><br>Zero accidents until 2009</div>
+        <div class="cell"><b>Website</b><br><a href="Websites/Miaz/index.html" target="_blank" rel="noopener">miaz-tupolev.ksh</a></div>
       </aside>
 
       <h1 class="title">Miatovsky Aviation Plant (MiAZ)</h1>

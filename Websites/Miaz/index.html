@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>МиАЗ — Миатовский авиационный завод</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      background: #e9edf2;
+      color: #222;
+    }
+
+    a {
+      color: #003b7a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .topline {
+      background: #d7dde5;
+      border-bottom: 1px solid #aeb8c3;
+      font-size: 12px;
+      color: #333;
+    }
+
+    .topline .wrap {
+      width: 1180px;
+      margin: 0 auto;
+      padding: 6px 10px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .header {
+      background: linear-gradient(to bottom, #f8fafc, #dde5ee);
+      border-bottom: 1px solid #9ea9b6;
+    }
+
+    .header .wrap {
+      width: 1180px;
+      margin: 0 auto;
+      padding: 12px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      min-width:0;
+      gap:8px;
+    }
+
+    .brand img {
+      height:42px;
+      width:auto;
+      object-fit:contain;
+    }
+
+    .brand-text h1 {
+      margin: 0 0 4px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #163a63;
+    }
+
+    .brand-text div {
+      color: #444;
+      font-size: 13px;
+    }
+
+    .head-contacts {
+      text-align: right;
+      font-size: 13px;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .head-contacts strong {
+      color: #000;
+    }
+
+    .menu {
+      background: #234b78;
+      border-top: 1px solid #183553;
+      border-bottom: 1px solid #183553;
+    }
+
+    .menu .wrap {
+      width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      color: #fff;
+      padding: 12px 18px;
+      display: block;
+      border-right: 1px solid #183553;
+      font-size: 14px;
+    }
+
+    .menu a:hover {
+      background: #183553;
+      text-decoration: none;
+    }
+
+    .banner {
+      width: 1180px;
+      margin: 14px auto 0;
+      border: 1px solid #aeb8c3;
+      background: #fff;
+    }
+
+    .banner img {
+      display: block;
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+    }
+
+    .content {
+      width: 1180px;
+      margin: 14px auto 20px;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 14px;
+    }
+
+    .sidebar,
+    .main {
+      min-width: 0;
+    }
+
+    .box {
+      background: #fff;
+      border: 1px solid #aeb8c3;
+      margin-bottom: 14px;
+    }
+
+    .box-title {
+      background: linear-gradient(to bottom, #f2f5f9, #dce4ed);
+      border-bottom: 1px solid #b6c0cb;
+      padding: 10px 12px;
+      font-weight: bold;
+      color: #163a63;
+      font-size: 15px;
+    }
+
+    .box-body {
+      padding: 12px;
+    }
+
+    .side-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .side-menu li {
+      border-bottom: 1px solid #e2e7ed;
+    }
+
+    .side-menu a {
+      display: block;
+      padding: 9px 10px;
+      color: #1f4066;
+    }
+
+    .side-menu a:hover {
+      background: #f2f6fb;
+      text-decoration: none;
+    }
+
+    .news-list,
+    .doc-list {
+      margin: 0;
+      padding-left: 18px;
+      line-height: 1.7;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .intro p {
+      margin: 0 0 12px;
+      line-height: 1.65;
+    }
+
+    .intro img {
+      width: 100%;
+      border: 1px solid #b7c1cc;
+      display: block;
+    }
+
+    .status-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .status-item {
+      border: 1px solid #c9d2dc;
+      background: #f6f9fc;
+      padding: 10px;
+      font-size: 13px;
+    }
+
+    .status-item strong {
+      display: block;
+      color: #163a63;
+      margin-bottom: 4px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: #fff;
+    }
+
+    th {
+      background: #e5ebf2;
+      color: #163a63;
+      border: 1px solid #bbc5cf;
+      padding: 9px 8px;
+      text-align: left;
+    }
+
+    td {
+      border: 1px solid #c9d1da;
+      padding: 9px 8px;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .product {
+      border: 1px solid #bcc6d0;
+      background: #fdfefe;
+    }
+
+    .product img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      border-bottom: 1px solid #c4cdd7;
+      display: block;
+    }
+
+    .product-body {
+      padding: 12px;
+    }
+
+    .product-body h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #163a63;
+    }
+
+    .product-body p {
+      margin: 0 0 8px;
+      line-height: 1.55;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #dfe8f2;
+      border: 1px solid #b8c4d1;
+      padding: 4px 8px;
+      font-size: 12px;
+      margin-bottom: 10px;
+      color: #223f62;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .service-card {
+      border: 1px solid #c4ccd6;
+      background: #f8fafc;
+      padding: 12px;
+    }
+
+    .service-card h4 {
+      margin: 0 0 8px;
+      color: #163a63;
+      font-size: 16px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .request-form {
+      display: grid;
+      gap: 10px;
+    }
+
+    .request-form input,
+    .request-form textarea,
+    .request-form select {
+      width: 100%;
+      padding: 9px 10px;
+      border: 1px solid #b8c2cd;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      background: #fff;
+    }
+
+    .request-form textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .request-form button {
+      width: 220px;
+      padding: 10px 12px;
+      border: 1px solid #234b78;
+      background: #234b78;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .request-form button:hover {
+      background: #183553;
+    }
+
+    .footer {
+      background: #d9e0e8;
+      border-top: 1px solid #aeb8c3;
+      padding: 14px 0;
+      font-size: 12px;
+      color: #444;
+    }
+
+    .footer .wrap {
+      width: 1180px;
+      margin: 0 auto;
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 1220px) {
+      .topline .wrap,
+      .header .wrap,
+      .menu .wrap,
+      .banner,
+      .content,
+      .footer .wrap {
+        width: calc(100% - 20px);
+      }
+    }
+
+    @media (max-width: 920px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .intro,
+      .products,
+      .service-grid,
+      .contact-grid,
+      .status-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .header .wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .head-contacts {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topline">
+    <div class="wrap">
+      <div>Официальный сайт Миатовского авиационного завода</div>
+      <div>Продажа воздушных судов • Модернизация • Капитальный ремонт • Сервисное сопровождение</div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="wrap">
+      <div class="brand">
+        <img src="logo.png" alt="МиАЗ">
+        <div class="brand-text">
+          <div>Миатовский авиационный завод</div>
+          <div>о. Сатали, г. Миата, ул. Филена 12</div>
+        </div>
+      </div>
+      <div class="head-contacts">
+        <div><strong>Отдел продаж:</strong> +8 (172) 3687-56</div>
+        <div><strong>Сервисный отдел:</strong> +8 (172) 9683-46</div>
+        <div><strong>E-mail:</strong> sales@miaz.example</div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="menu">
+    <div class="wrap">
+      <a href="#main">Главная</a>
+      <a href="#products">Продукция</a>
+      <a href="#services">Услуги завода</a>
+      <a href="#docs">Документы</a>
+      <a href="#contacts">Контакты</a>
+      <a href="#request">Отправить заявку</a>
+    </div>
+  </nav>
+
+  <div class="banner">
+    <img src="hero.jpg" alt="Самолёт МиАЗ">
+  </div>
+
+  <div class="content" id="main">
+    <aside class="sidebar">
+      <div class="box">
+        <div class="box-title">Разделы сайта</div>
+        <div class="box-body" style="padding:0;">
+          <ul class="side-menu">
+            <li><a href="#products">Самолёты, доступные к заказу</a></li>
+            <li><a href="#services">Модернизация и ремонт</a></li>
+            <li><a href="#docs">Каталоги и документы</a></li>
+            <li><a href="#contacts">Контактная информация</a></li>
+            <li><a href="#request">Форма заявки</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="box-title">Актуальная информация</div>
+        <div class="box-body">
+          <ul class="news-list">
+            <li>Приём заявок на поставку пассажирских и грузовых версий.</li>
+            <li>Выполнение капитального ремонта и продления ресурса.</li>
+            <li>Подготовка коммерческих предложений по индивидуальной комплектации.</li>
+            <li>Доступна техническая консультация для эксплуатантов.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="box" id="docs">
+        <div class="box-title">Документы</div>
+        <div class="box-body">
+          <ul class="doc-list">
+            <li><a href="#">Каталог продукции</a></li>
+            <li><a href="#">Технические характеристики</a></li>
+            <li><a href="#">Форма коммерческого запроса</a></li>
+            <li><a href="#">Перечень сервисных работ</a></li>
+            <li><a href="#">Реквизиты предприятия</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="box">
+        <div class="box-title">О предприятии</div>
+        <div class="box-body">
+          <div class="intro">
+            <div>
+              <p>
+                Миатовский авиационный завод осуществляет производство, модернизацию,
+                капитальный ремонт и сервисное сопровождение самолётов Ту-154 и их специальных исполнений.
+              </p>
+              <p>
+                Основное направление работы предприятия — поставка воздушных судов заказчикам,
+                выполнение заводских доработок, продление ресурса и поддержка эксплуатантов.
+              </p>
+              <p>
+                На сайте представлена актуальная информация по продукции завода, условиям заказа,
+                сервисным работам и контактам профильных подразделений.
+              </p>
+
+              <div class="status-strip">
+                <div class="status-item">
+                  <strong>Продукция</strong>
+                  пассажирские и грузовые версии
+                </div>
+                <div class="status-item">
+                  <strong>Услуги</strong>
+                  ремонт, модернизация, сопровождение
+                </div>
+                <div class="status-item">
+                  <strong>Документы</strong>
+                  каталоги, формы запросов, спецификации
+                </div>
+                <div class="status-item">
+                  <strong>Связь</strong>
+                  отдел продаж и сервисный отдел
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <img src="plant.jpg" alt="Территория завода">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box" id="products">
+        <div class="box-title">Самолёты, доступные к заказу</div>
+        <div class="box-body">
+          <div class="products">
+            <div class="product">
+              <img src="01.jpg" alt="Ту-154МК-23">
+              <div class="product-body">
+                <div class="badge">Доступен к заказу</div>
+                <h3>Ту-154МК-23</h3>
+                <p>Пассажирская серийная версия для регулярной эксплуатации.</p>
+                <p><strong>Назначение:</strong> пассажирские перевозки</p>
+                <p><strong>Статус:</strong> производство по заказу</p>
+                <p><strong>Цена:</strong> 2 450 000 000 KSH</p>
+              </div>
+            </div>
+
+            <div class="product">
+              <img src="02.jpg" alt="Ту-154МК-23-JPN">
+              <div class="product-body">
+                <div class="badge">Специальное исполнение</div>
+                <h3>Ту-154МК-23-JPN</h3>
+                <p>Пассажирская версия в специальной конфигурации по отдельному запросу.</p>
+                <p><strong>Назначение:</strong> специальная поставка</p>
+                <p><strong>Статус:</strong> по согласованию с заказчиком</p>
+                <p><strong>Цена:</strong> 2 600 000 000 KSH</p>
+              </div>
+            </div>
+
+            <div class="product">
+              <img src="03.jpg" alt="Ту-154K-CGO-25">
+              <div class="product-body">
+                <div class="badge">Грузовая версия</div>
+                <h3>Ту-154K-CGO-25</h3>
+                <p>Грузовое исполнение с адаптацией под перевозку коммерческих и специальных грузов.</p>
+                <p><strong>Назначение:</strong> грузовые перевозки</p>
+                <p><strong>Статус:</strong> доступен к заказу</p>
+                <p><strong>Цена:</strong> 2 550 000 000 KSH</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="height:14px;"></div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Модель</th>
+                  <th>Статус</th>
+                  <th>Назначение</th>
+                  <th>Форма поставки</th>
+                  <th>Дополнительно</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ту-154МК-23</td>
+                  <td>доступен к заказу</td>
+                  <td>пассажирский</td>
+                  <td>по договору поставки</td>
+                  <td>возможна индивидуальная комплектация</td>
+                </tr>
+                <tr>
+                  <td>Ту-154МК-23-JPN</td>
+                  <td>по спецзаказу</td>
+                  <td>пассажирский</td>
+                  <td>по согласованию</td>
+                  <td>отдельные требования к комплектации</td>
+                </tr>
+                <tr>
+                  <td>Ту-154K-CGO-25</td>
+                  <td>доступен к заказу</td>
+                  <td>грузовой</td>
+                  <td>по договору поставки</td>
+                  <td>возможна адаптация под задачи заказчика</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="box" id="services">
+        <div class="box-title">Услуги завода</div>
+        <div class="box-body">
+          <div class="service-grid">
+            <div class="service-card">
+              <h4>Капитальный ремонт</h4>
+              <div>Выполнение заводского капитального ремонта воздушных судов и агрегатов.</div>
+            </div>
+            <div class="service-card">
+              <h4>Модернизация</h4>
+              <div>Установка новых систем, изменение комплектации, адаптация под требования заказчика.</div>
+            </div>
+            <div class="service-card">
+              <h4>Продление ресурса</h4>
+              <div>Комплекс работ по продлению срока службы и сопровождению эксплуатации.</div>
+            </div>
+            <div class="service-card">
+              <h4>Техническое сопровождение</h4>
+              <div>Поддержка эксплуатантов, консультации, документация, сервисные работы.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box" id="contacts">
+        <div class="box-title">Контакты</div>
+        <div class="box-body">
+          <div class="contact-grid">
+            <div>
+              <p><strong>Миатовский авиационный завод</strong></p>
+              <p>г. Миата, о. Сатали</p>
+              <p><strong>Отдел продаж:</strong> +8 (172) 3687-56</p>
+              <p><strong>Сервисный отдел:</strong> +8 (172) 9683-46</p>
+              <p><strong>Приёмная:</strong> +8 (172) 1238-37</p>
+              <p><strong>E-mail:</strong> sales@miaz.example</p>
+            </div>
+            <div>
+              <p><strong>Режим работы:</strong></p>
+              <p>Пн–Пт: 09:00–18:00</p>
+              <p>Сб–Вс: выходной</p>
+              <p><strong>Документы и запросы:</strong></p>
+              <p>Коммерческие предложения, технические запросы, сервисное сопровождение и заявки на ремонт принимаются через форму ниже или по электронной почте.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box" id="request">
+        <div class="box-title">Отправить заявку</div>
+        <div class="box-body">
+          <form class="request-form">
+            <input type="text" placeholder="Наименование организации">
+            <input type="text" placeholder="Контактное лицо">
+            <input type="text" placeholder="Телефон">
+            <input type="email" placeholder="E-mail">
+            <select>
+              <option>Выберите предмет запроса</option>
+              <option>Поставка самолёта</option>
+              <option>Коммерческое предложение</option>
+              <option>Капитальный ремонт</option>
+              <option>Модернизация</option>
+              <option>Сервисное сопровождение</option>
+            </select>
+            <textarea placeholder="Текст запроса"></textarea>
+            <button type="submit">Отправить заявку</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div>© МиАЗ — Миатовский авиационный завод</div>
+      <div>Официальный сайт предприятия</div>
+    </div>
+  </footer>
+
+</body>
+</html>
