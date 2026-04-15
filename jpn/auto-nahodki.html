@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>オート・ナホトキ — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">メインページ</a>
+        <a href="create.html">記事を作成</a>
+        <a href="#">ランダム記事</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">言語 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../auto-nahodki.html">Русский</a>
+          <a href="../en/auto-nahodki.html">English</a>
+          <a href="../ksh/auto-nahodki.html">Кiвiшский</a>
+          <a href="../cn/auto-nahodki.html">简体中文</a>
+          <a href="auto-nahodki.html">日本語</a>
+          <a href="../ko/auto-nahodki.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">オート・ナホトキ</div>
+          <div class="cell">
+            <img src="../085.jpg" alt="オート・ナホトキ">
+          </div>
+          <div class="cell"><b>種類</b><br>自動車の売買・掲載プラットフォーム</div>
+          <div class="cell"><b>設立</b><br>1954年5月3日</div>
+          <div class="cell"><b>構想提唱者</b><br>リノヘ・シン</div>
+          <div class="cell"><b>本社</b><br>キヴィシュ、アフトヴォ市、テリナ通り4番地</div>
+          <div class="cell"><b>形態</b><br>新聞（1954–2010）、インターネット（1992年より）</div>
+          <div class="cell"><b>状況</b><br>運営中</div>
+          <div class="cell"><b>サイト</b><br><a href="../Websites/AutoNahodki/index.html" target="_blank" rel="noopener">auto-nahodki.ksh</a></div>
+        </aside>
+
+        <h1 class="title">オート・ナホトキ</h1>
+
+        <p class="lead">
+          <b>オート・ナホトキ</b>は、放置車両および発見車両を扱うキヴィシュの制度であり、同時に国内最大級の自動車売買広告プラットフォームでもある。
+          このプロジェクトは<a href="skr.html">SKR</a>時代に新聞欄として始まり（1954年）、その後、
+          テキスト型ネットワークカタログ（1992年）から、印刷媒体を完全に置き換えるウェブプラットフォーム（2010年）へと
+          段階的なデジタル進化を遂げた。
+        </p>
+
+        <p>
+          歴史的に「オート・ナホトキ」は二つの課題を解決していた。すなわち、<b>街路からの放置車両の排除</b>と、
+          <b>整備された中古車市場</b>（市民向けの手頃な中古車供給）である。現代の形では、このプラットフォームは
+          二つの流れを兼ね備えている。国家による調査手続き後の<b>発見車両の販売</b>と、
+          利用者および企業による<b>民間広告</b>である。
+        </p>
+
+        <figure class="thumb">
+          <img src="../086.jpg" alt="アフトヴォ市">
+          <figcaption class="cap">「アフトヴォ」は、放置車両搬出のための緩衝拠点として設けられた郊外保管ハブである。</figcaption>
+        </figure>
+
+        <h2>背景</h2>
+        <p>
+          1950年代、SKRの都市では自動車の台数が急増した。同時に、放置車両の大量発生も始まった。
+          車は中庭や街路に置き去りにされ、駐車場は埋まり、一部の所有者は正式な手続きを行わないまま国外へ去った。
+          自動車を破棄するのは非効率であり、車両のかなりの部分は比較的新しく、なお運用可能な状態にあった。
+        </p>
+
+        <h2>歴史</h2>
+
+        <h3>「アフトヴォ」の建設と新聞欄の開始（1954年）</h3>
+        <p>
+          1954年、技師リノヘは都市外縁部に保管拠点を建設するというインフラ上の解決策を提案し、
+          それは<b>「アフトヴォ」</b>と名付けられた。周辺にはサービス用の町と交通結節点（近郊電車）が計画され、
+          閉鎖区域内には、大量の車両を長期保管できる多層式駐車施設が設けられた。
+          この方式はすぐに効果を示し、街路や中庭は車両を破壊することなく整理されていった。
+        </p>
+        <p>
+          次の問題は、蓄積された車両をどのように販売するかであった。そこで同年、
+          新聞欄<b>「オート・ナホトキ」</b>が開始された。発見車両には<b>識別コード番号</b>が与えられ、
+          旧所有者の登録番号は取り外され、管理と移動のための仮標識が付けられた。
+          新聞には毎日、新しい出品車両が簡潔な説明と見学場所付きで掲載された。
+          車両は新車より安価で販売され、この市場は大衆的かつ手の届くものになった。
+        </p>
+
+        <h3>新聞を通じた民間販売（1967年）</h3>
+        <p>
+          1967年、地元住民の提案により、「オート・ナホトキ」の人気を主要広告チャネルとして活用し、
+          所有者が同じ場を通じて<b>自分の</b>車両を販売できるようにする構想が承認された。
+          形式は「発見車両」の出品と同じで、写真、簡潔な説明、連絡先が掲載された。
+          ただし、国家は取引価格の<b>50%</b>を差し引いていた。
+        </p>
+
+        <figure class="thumb">
+          <img src="../087.jpg" alt="1971年の紙面">
+          <figcaption class="cap">1971年の新聞『ゴヴォリト・コラ』に掲載された「オート・ナホトキ」欄。</figcaption>
+        </figure>
+
+        <p>
+          厳しい条件にもかかわらず、この仕組みは人気を集めた。代替手段が乏しかったためである
+          （壁の貼り紙、市場、口コミなど）。新聞は広い到達範囲と、理解しやすい取引の流れを提供した。
+        </p>
+
+        <h3>1972年改革：控除率引き下げと有料プロモーション</h3>
+        <p>
+          1972年、内政の緩和と公的レトリックの変化を背景に、掲載ルールが見直された。
+          販売時の控除は<b>20%</b>へ引き下げられ、掲載および流通のための料金
+          （実質的には手数料・サービス料）として固定された。
+          さらに、追加料金を支払うことで、号内でより頻繁に広告を表示できる仕組み
+          （初期の「プロモーション」形式）が導入された。
+        </p>
+
+        <h3>1989年以後の移行と民間形式の発展</h3>
+        <p>
+          1989年以後、国家が共産主義モデルを離れ、中立的な技術大国への路線を打ち出すと、
+          自動車市場は急速に複雑化した。競争が激化し、新たな取引チャネルが生まれ、中古車への需要も変化した。
+          それでも「オート・ナホトキ」は消えなかった。この制度はすでに市民にとって馴染み深く、
+          「一つの窓口」という形式への信頼も高かったからである。
+          やがてこのプロジェクトは、組織としては国家の直轄から離れ、自立した構造として機能するようになったが、
+          発見車両に関しては国家との連携機構を維持した。
+        </p>
+
+        <h2>デジタル進化</h2>
+
+        <h3>テキスト型ネットワークカタログ（1992年）</h3>
+        <p>
+          1992年、「オート・ナホトキ」は最初のデジタル化に踏み出した。
+          DOS／ターミナル型インターフェースによるネットワークカタログが登場したのである。
+          利用者はサーバーへ接続することで最新の出品一覧を見ることができ、
+          次の新聞号を待たずに情報を更新できた。
+          この開始は、キヴィシュにおいて「ネットへ行く」初期の大衆的動機の一つだったとしばしば語られる。
+        </p>
+
+        <figure class="thumb">
+          <img src="../088.jpg" alt="DOS版『オート・ナホトキ』サイト">
+          <figcaption class="cap">DOSインターネット時代の「オート・ナホトキ」サイトの外観。</figcaption>
+        </figure>
+
+        <h3>最初のHTMLサイト（1995年）</h3>
+        <p>
+          1995年、このプラットフォームはグラフィカルなウェブ外観を得た。
+          形式は意図的に簡素で、<b>広告カード</b>には写真、簡潔な説明、
+          電話番号、売主または販売拠点の住所が載せられた。
+          新規広告はページの更新（再読み込み）によって現れ、
+          当時としては「ほとんどリアルタイム」と受け取られていた。
+        </p>
+
+        <h3>CSSと初期JavaScript（2001年）</h3>
+        <p>
+          2001年、サイトは初めて明確な視覚レイヤーを得た。
+          最初のCSS装飾要素が導入され、構造がより整えられ、
+          のちには簡単なJavaScriptスクリプトも追加された。
+          サイトはフォーム、入力確認、開閉ブロック、初期の使いやすいナビゲーション要素などを通じて、
+          利用者との相互作用を強め、「電子新聞」から本格的なサービスへと徐々に移行していった。
+        </p>
+
+        <h3>印刷媒体の完全終了（2010年）</h3>
+        <p>
+          2010年、デザインと機能のさらなる更新の後、新規広告の紙媒体掲載は終了した。
+          新聞は自動車売買情報の掲載をやめ、「オート・ナホトキ」は完全にデジタル形式へ移行した。
+          以後、このサイトが提案更新の唯一の中核拠点となった。
+        </p>
+
+        <figure class="thumb">
+          <img src="../089.jpg" alt="2010年の『オート・ナホトキ』欄付き最終新聞">
+          <figcaption class="cap">2010年、「オート・ナホトキ」欄を掲載した最後の新聞。</figcaption>
+        </figure>
+
+        <h2>運用方式</h2>
+
+        <h3>発見車両</h3>
+        <p>
+          現代の「発見車両」フローは、以下の手続きの連鎖として構成されている。
+        </p>
+        <ol>
+          <li>車両は街路または問題のある駐車場で国家機関（警察を含む）により発見される。</li>
+          <li>車両の法的地位と出現事情について調査が行われる（登録、確認、販売の妥当性審査）。</li>
+          <li>販売が決定された場合、車両は「オート・ナホトキ」プラットフォームへ引き渡される。</li>
+          <li>プラットフォームは自らの名義で出品を掲載する。写真、価格、状態説明、見学および名義変更条件が含まれる。</li>
+        </ol>
+        <p>
+          歴史的に、発見車両には最終販売までの待機期間が設けられている。
+          通常車両では<b>2年</b>、高価な車両では<b>4年</b>である。
+        </p>
+
+        <h3>民間広告</h3>
+        <p>
+          利用者および企業は、自ら広告を掲載し、自動車を売買することができる。
+          サービスの伝統として、有料掲載およびプロモーション機能
+          （新聞時代の「より頻繁に載せる」という仕組みの歴史的継承）が維持されている。
+        </p>
+
+        <h2>意義</h2>
+        <ul>
+          <li><b>都市的意義：</b>放置車両を街路から迅速に管理保管へ移すこと。</li>
+          <li><b>社会的意義：</b>透明な流通を通じて中古車を大衆的に入手可能にしたこと。</li>
+          <li><b>市場的意義：</b>安定した中古車市場と、その周辺サービス（査定、修理、物流）を形成したこと。</li>
+          <li><b>技術的意義：</b>1992年以降、キヴィシュにおける初期かつ最も大衆的なインターネットサービスの一つであったこと。</li>
+        </ul>
+
+        <h2>批判</h2>
+        <p>
+          プロジェクトの初期形態は、SKR時代特有の厳格さと、1960年代末における高い控除率（50%）のため批判された。
+          1972年改革後、経済的側面への批判はかなり穏やかになり、
+          1989年以後は、議論の中心は統一プラットフォームにおける競争とモデレーション規則の問題へ移っていった。
+        </p>
+
+        <h2>関連項目</h2>
+        <ul>
+          <li><a href="skr.html">キヴィシュ諸共和国連邦（SKR）</a></li>
+          <li><a href="kivish.html">キヴィシュ</a></li>
+          <li><a href="kora.html">コラ</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意：</strong> Neverpedia は架空のプロジェクトです。
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

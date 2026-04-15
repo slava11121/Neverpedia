@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ksh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Кiвiшько Торомски — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox, .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">Нэрглав</a>
+      <a href="create.html">Сотвор нэр</a>
+      <a href="#">Случа нэр</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">Лiнга ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../kivishko-toromskiy.html">Русский</a>
+        <a href="../en/kivishko-toromskiy.html">English</a>
+        <a href="kivishko-toromskiy.html">Кiвiшский</a>
+        <a href="../cn/kivishko-toromskiy.html">中国人</a>
+        <a href="../jpn/kivishko-toromskiy.html">日本語</a>
+        <a href="../ko/kivishko-toromskiy.html">한국인</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+      <aside class="infobox">
+        <div class="h">Кiвiшько Торомски</div>
+        <div class="cell">
+          <img src="../004.jpg" alt="Кiвiшько Торомски">
+        </div>
+        <div class="cell"><b>Жир-нач</b><br>окол 580–590 годэ</div>
+        <div class="cell"><b>Финход</b><br>окол 642 годэ</div>
+        <div class="cell"><b>Нэрроль</b><br>Начат i перв-правел Кiвiшь</div>
+        <div class="cell"><b>Лiн-род</b><br>Торомски</div>
+      </aside>
+
+      <h1 class="title">Кiвiшько Торомски</h1>
+      <p class="lead"><b>Кiвiшько Торомски</b> — леген-нарат Начат Кiвiшь i перв-правел стран-ядра. Его нэр стоит en сам корень Кiвiшь-нэр i Торомски-лiн.</p>
+
+      <p>Исток-листы рисуют его как зорнар-вод, воj-сбор i лiнга-ходник, сумевший стянуть разроз-земы Сибирi en едiн узел. En поздн летопись его образ держит нео просто человек-нэр, а стран-нач знамя. Через этот образ шёл ран-код Кiвiшь: меч, сторож, ход-торг, зем-сбор.</p>
+
+      <figure class="thumb">
+        <img src="../005.jpg" alt="Памят Кiвiшько Торомски en Мiрi">
+        <figcaption class="cap">Памят Кiвiшько Торомски en Мiрi.</figcaption>
+      </figure>
+
+      <h2>Жирход</h2>
+      <p>Ран-годи Кiвiшько Торомски остаются fogra i лето-лом. Хрон-листы говорят про конец VI века, дом вожд-лiн i скор ран воj-уч. En юнг-ходе он брал славу через быстр реш, зор-смотр i племен-сшив. Имено этот слой позже стал серд леген-био.</p>
+      <p>En 620-х годэ шли серiй походы proxi сосед-плем. Итог — зем-сбор вокруг <b>Мiрi</b>. Дата 600 годэ держится en Кiвiшь как стран-нач-марк, even если поздн хроны спорят по год-лине. Для ksh-памят именно 600 стал узл-нул.</p>
+
+      <h2>Правел-ход</h2>
+      <p>Правел Кiвiшько Торомски en поздн опис-ходе связан с перв закон-нит, воj-строй, торг-ключ i центрум-узел. Он нео оставил длин бумаж-след, но его нар-ход вошёл en хроны как баз-схем для будущ правелов: сил-збер, зем-сбор, торг-отвор, знам-щит.</p>
+      <p>Много форм later priписывают ему ordan-реш: сторож-лины на путi, друж-узлы с сосед-зем, сбор дан-код, ран-перелом от племен-роз к стран-строй. Часть этих слов остаётся хазбр, но ksh-культ держит их как начат-стерж.</p>
+
+      <h3>Меч-символа</h3>
+      <p>En сказ-листах именно Кiвiшько утверд красн меч как защит-знак народ-узла. Позже этот меч вошёл en знамен-формы Кiвiшь i остался сквозь лiн-век как рез-центр символа. Для ksh-образа меч нео про гол силу, а proxi збер-народ i держ-зем.</p>
+
+      <h2>Култ-след</h2>
+      <p>Кiвiшько Торомски — едiн из глав нэров ksh-памят. Его лик стоит en памят-кам, летопись, школ-лист, знам-рит i гос-символа. En <a href="kivish.html">Кiвiшь</a> он идёт как стран-нач отец-образ, нео букв-био. Из-за этого многие опис-листы смешивают хрона, леген i культ-нарат.</p>
+
+      <h2>Факт-крат</h2>
+      <ul>
+        <li>Начат Кiвiшь держится en 600 годэ.</li>
+        <li>Перв-правел Торомски-лiн.</li>
+        <li>Имя стоит en корень Кiвiшь-нэр.</li>
+        <li>Красн меч поздн связан с его символ-узлом.</li>
+      </ul>
+
+      <h2>Ещё-линки</h2>
+      <ul>
+        <li><a href="kivish.html">Кiвiшь</a></li>
+        <li><a href="kora.html">Кора</a></li>
+        <li><a href="rulers-kis.html">Правел-лист Кiвiшь</a></li>
+      </ul>
+
+      <h2>Замет-лин</h2>
+      <ol class="notes">
+        <li>Год-лины i событ-ходы держатся en леген-листах i поздн хронах.</li>
+      </ol>
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>Озир:</strong> Neverpedia — вымес-проект.
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

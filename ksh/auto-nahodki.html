@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ksh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Авто-Находкi — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Нэрглав</a>
+        <a href="create.html">Сотвор нэр</a>
+        <a href="#">Случа нэр</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">Языки ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../auto-nahodki.html">Русский</a> 
+          <a href="../en/auto-nahodki.html">English</a>
+          <a href="auto-nahodki.html">Кiвiшский</a> 
+          <a href="../cn/auto-nahodki.html">中国人</a>
+          <a href="../jpn/auto-nahodki.html">日本語</a>
+          <a href="../ko/auto-nahodki.html">한국인</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">Авто-Находкi</div>
+          <div class="cell">
+            <img src="../085.jpg" alt="Авто-Находкi">
+          </div>
+          <div class="cell"><b>Форма</b><br>Маш-лот площа i найден-маш реал-строй</div>
+          <div class="cell"><b>Начат</b><br>3 Май 1954</div>
+          <div class="cell"><b>Идея-начат</b><br>Линохэ Син</div>
+          <div class="cell"><b>Штаб-локата</b><br>Кiвiшь, Автово, Терина 4 к</div>
+          <div class="cell"><b>Формат-ход</b><br>Газет-лист (1954–2010), интернет (с 1992)</div>
+          <div class="cell"><b>Стат</b><br>Действ-ход</div>
+          <div class="cell"><b>Сайт</b><br><a href="../Websites/AutoNahodki/index.html" target="_blank" rel="noopener">auto-nahodki.ksh</a></div>
+        </aside>
+
+        <h1 class="title">Авто-Находкi</h1>
+
+        <p class="lead"><b>Авто-Находкi</b> — кiвiшьска машин-наход i лот-площа. Систем-ход держит двi роли: брош-маш вывод ex улиц i втор-маркет для куп-продаж. Начал-форма рождена en СКР как газет-страна 1954 годэ; поздн ход-путь шёл en цифр-сеть, катал-терминал i full web-обол до печат-финал 2010.</p>
+
+        <p>Истор роль «Авто-Находкi» проста: улиц-очист i люд-доступ к б/у маш без хаос-маркета. Соврем форма ведёт двi потоки: найден-маш реал post государ-разбор i част-лот поток ex люд i компани. Так проект держит i город-поряд, i масов втор-рынк.</p>
+
+        <figure class="thumb">
+          <img src="../086.jpg" alt="Автово">
+          <figcaption class="cap">Автово — хран-узел i буфер-град для вывод брош-маш.</figcaption>
+        </figure>
+
+        <h2>Преход</h2>
+        <p>1950-е СКР-городи увидели резк авто-рост. Вместе с тем пошли первы мас-случ брош-транспорта: дворы забив, улиц-линии лом, парков-зоны вставали, а часть владель-людей покидали стран-ход, не закрыв имущ-формы. Уничтож маш парк было невыг: мног борти-маш оставались новы i пригодны к пут-ходу.</p>
+
+        <h2>Хронход</h2>
+
+        <h3>Автово-строй i газет-лист начал (1954)</h3>
+        <p>1954 годэ инженер Линохэ дал инфра-идея: вне город-края строить хран-узел, что взял нэр <b>«Автово»</b>. Рядом шёл обслуж-городок i пут-узел с электрич-линой; в закрыт-зоне росли многоярус парков-строй под долг машин-хран. Практик быстро дала плод: улиц i дворы чистились без метал-лома i парк-уничтож.</p>
+        <p>Следом встал вопрос: как вести реал накоп-маш. Так родилась газет-страна <b>«Авто-Находкi»</b>. Найден-маш брали код-нумер, стар рег-знак снимали, врем табл ставили для учёт i перемещ. Газеты daily вели новы лоты: крат-опис, осмотр-место, маш-стат. Цена шла ниже новы борти-маш, i ход стал масов i люд-доступ.</p>
+
+        <h3>Част-лот через газету (1967)</h3>
+        <p>1967 годэ approved была локал-идея: взять уже сильн популяр «Авто-Находкi» как глав лот-канал i дать владель-людям вести <b>свои</b> маш через ту же витрину. Формат был един: фото, крат-опис, контакт-нит. Тогда государ-узел держал <b>50%</b> сделки-стоим.</p>
+
+        <figure class="thumb">
+          <img src="../087.jpg" alt="Газет-лист 1971">
+          <figcaption class="cap">Газет «Говорiт Кора», раздел «Авто-Находкi», лист 1971 годэ.</figcaption>
+        </figure>
+
+        <p>При жёст-услов механиз still стал популярен: альтернатив-канал были слабы — стен-объяв, базар-ход, слух-нить. Газет-лист давал быстр взгляд-охват i понят порядок сделки.</p>
+
+        <h3>1972 перестрой: удерж-снижен i плат-продвиг</h3>
+        <p>1972 годэ, post внутр-полит смяг i публич-речь смена, лист-правила пересмотр. Удерж с продаж снизили до <b>20%</b> i закрепили как плата за лист-публик i распростран. Появился i продвиг-ход: плат bolshe — объяв чаще входит en выпуск-верх. Это была ран форма digital-продвиг до digital-эпоха.</p>
+
+        <h3>1989 переход i част-форм рост</h3>
+        <p>Post 1989 годэ, когда стран-ход ex коммунист-модел ушёл en нейтрал техно-линию, машин-рынк резко усложнился: конкур-рост, новы торг-каналы, спрос-смена на б/у маш. Но «Авто-Находкi» neо исчезли: систем-строй уже сидел en повседнев-быт, а довер к «едiн витрина» держался высок. Постепенно проект ушёл ex прям государ-крыло i стал самострой-узел, но найден-маш поток сохранил связ с государ-разбором.</p>
+
+        <h2>Цифр-рост</h2>
+
+        <h3>Текст-сет катал (1992)</h3>
+        <p>1992 годэ «Авто-Находкi» сделали перв цифр-шаг: сет-катал en чист текст-терминал форме. Польз видал актуал лоты при сервер-обращ. Лист можно было тянуть снова без ожид газет-след. Этот старт часто зовут одним из ран мас-поводов «идти en сеть» внутри Кiвiшь.</p>
+
+        <figure class="thumb">
+          <img src="../088.jpg" alt="DOS-сайт Авто-Находкi">
+          <figcaption class="cap">Вид сайта «Авто-Находкi» en DOS-сеть-ход.</figcaption>
+        </figure>
+
+        <h3>Перв HTML-сайт (1995)</h3>
+        <p>1995 годэ платформа взяла граф-web обол. Формат держали намер прост: <b>лот-карта</b> с фото, крат-опис, телефон-нитью i продав-адресом либо площ-адресом. Новы лоты входили при лист-обнове, i для своего хода это звучало как «почти реал-время».</p>
+
+        <h3>CSS i ран JavaScript (2001)</h3>
+        <p>2001 годэ сайт получил вид-слой: CSS-формы, ровн структура, поздн — прост JavaScript-сценар. Польз-ход стал живей: формы, проверки, расклад-блоки, перв удоб-навигац элементы. Так «Авто-Находкi» ушли ex роли «электрон-газет» i взяли full сервис-роль.</p>
+
+        <h3>Печат-финал (2010)</h3>
+        <p>2010 годэ, post очередн дизайн i функц-перестрой, печат-публик новы лотов была останов. Газет-листы more neо вели куп-продаж маш, а «Авто-Находкi» wholly перешли en цифр-форму. С того хода сайт стал едiн точка для обнов предлож.</p>
+
+        <figure class="thumb">
+          <img src="../089.jpg" alt="Послед газет-лист 2010">
+          <figcaption class="cap">Послед газет-лист с разделом «Авто-Находкi», 2010 годэ.</figcaption>
+        </figure>
+
+        <h2>Ход-схема</h2>
+
+        <h3>Найден-маш</h3>
+        <p>Соврем поток найден-маш идёт как ряд процедур:</p>
+        <ol>
+          <li>Государ-службы, включая полицiя, находят маш en улиц-линии либо проблем-стоянке.</li>
+          <li>Идёт статус-разбор: учёт, проверка, появ-обстоят, целесообраз продаж.</li>
+          <li>Когда реал-реш принят, маш переходит на площу «Авто-Находкi».</li>
+          <li>Площа выводит лот ex свой нэр: фото, цена, стат-опис i осмотр-услов с переоформ-ходом.</li>
+        </ol>
+        <p>Истор-правило збер: ожид до финал-реал — <b>2 года</b> для обыч маш i <b>4 года</b> для дорог форм.</p>
+
+        <h3>Част-лот</h3>
+        <p>Люд i компани могут сами вести объяв-лот, продав i куп маш. Как след газет-традиц, збер плат-опцii на публик i продвиг: истор наслед того самого «ставить чаще».</p>
+
+        <h2>Роль</h2>
+        <ul>
+          <li><b>Город-роль:</b> быстр вывод брош-маш ex улиц en контрол-хран.</li>
+          <li><b>Сонда-роль:</b> мас-доступ к б/у маш через прозрачен оборот.</li>
+          <li><b>Рынк-роль:</b> устойчив втор-рынк i сервис-сеть вокруг него: осмотр, ремонт, логист.</li>
+          <li><b>Техно-роль:</b> один из ран i масов интернет-сервисов Кiвiшь, начат с 1992.</li>
+        </ul>
+
+        <h2>Крит</h2>
+        <p>Ран формы проекта критиковались за жёст СКР-эпох ход i за слишком высок удерж-конец 1960-х. Post 1972 перестрой эконом-крит заметно смяг, а post 1989 спор ушёл en конкур-правила i модерац-строй едiн площи.</p>
+
+        <h2>Ещё нэр</h2>
+        <ul>
+          <li><a href="skr.html">Союз Кiвiшских Республик (СКР)</a></li>
+          <li><a href="kivish.html">Кiвiшь</a></li>
+          <li><a href="kora.html">Кора</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>Озир:</strong> Neverpedia — вымес-проект.
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

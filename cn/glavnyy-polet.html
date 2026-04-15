@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Glavnyy Polet — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto; margin:0 auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="create.html">创建条目</a>
+        <a href="#">随机条目</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../glavnyy-polet.html">Русский</a>
+          <a href="../en/glavnyy-polet.html">English</a>
+          <a href="../ksh/glavnyy-polet.html">Кiвiшский</a>
+          <a href="glavnyy-polet.html">简体中文</a>
+          <a href="../jpn/glavnyy-polet.html">日本語</a>
+          <a href="../ko/glavnyy-polet.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">Glavnyy Polet</div>
+          <div class="cell">
+            <img src="../077.jpg" alt="Glavnyy Polet 标志">
+          </div>
+          <div class="cell"><b>类型</b><br>国有航空公司（СКР）</div>
+          <div class="cell"><b>成立时间</b><br>1931年2月3日</div>
+          <div class="cell"><b>终止时间</b><br>1989年11月8日</div>
+          <div class="cell"><b>总部</b><br>科拉</div>
+          <div class="cell"><b>枢纽机场</b><br>技术官机场</div>
+          <div class="cell"><b>区域基地</b><br>利吉纳（马耳他市），弗拉坚（拉姆亚市）</div>
+          <div class="cell"><b>航班前缀</b><br>GP-###</div>
+        </aside>
+
+        <h1 class="title">Glavnyy Polet</h1>
+        <p class="lead">
+          <b>Glavnyy Polet</b> 是基维什共和国联盟（СКР）的第一家国有客运航空公司，
+          运营时间为1931年至1989年。这家航空公司经历了从示范性远程航班到全国航线网络，
+          再到喷气式与超音速运营的发展过程。
+        </p>
+
+        <p>
+          Glavnyy Polet 的历史通常分为三个阶段：早期阶段（1931–1945）、
+          战后增长阶段（1945–1960）以及喷气式/超音速时代（1960–1989）。
+          这家航空公司的声誉不仅由开通新航线塑造，也同样受到一系列事故事件影响；
+          而每次事故之后，公司内部都会确立新的纪律、培训和维护标准。
+        </p>
+
+        <figure class="thumb">
+          <img src="../078.jpg" alt="Glavnyy Polet 的早期航班">
+          <figcaption class="cap">早期阶段：Glavnyy Polet 最初是以少量远程航班起步的。</figcaption>
+        </figure>
+
+        <h2>创立与早期阶段（1931–1945）</h2>
+        <p>
+          Glavnyy Polet 成立于1931年，作为一家国有航空公司，负责保障 СКР 各核心中心与盟友方向之间的客运联通。
+          这一时期的特点是示范性航班、对首都枢纽的高度依赖，以及航线数量有限但每一班飞行都具有很高的象征意义。
+        </p>
+
+        <h3>GP-01</h3>
+        <p>
+          通常被认为具有历史意义的第一班航班是 <b>GP-01</b>（科拉 → 莫斯科），
+          它确认了远程客运航线本身的存在，也为后续网络形成了“标准远程航班”的概念。
+        </p>
+
+        <h2>战后航线网络（1945–1959）</h2>
+        <p>
+          战后，这家航空公司从零散飞行转向恢复定期国内航线。
+          一个清晰的结构逐渐形成：首都枢纽 —— 区域基地 —— 次级航点。
+        </p>
+
+        <h3>首批战后航班</h3>
+        <ul>
+          <li><b>GP-002</b> —— 科拉 → 马耳他（1945年）</li>
+          <li><b>GP-003</b> —— 科拉 → 拉姆亚（1946年）</li>
+          <li><b>GP-004</b> —— 科拉 → 萨恰（1946年）</li>
+        </ul>
+
+        <h3>GP-007 空难（1951年）</h3>
+        <p>
+          1951年，这家航空公司发生了第一起空难：执行 <b>GP-007</b>（马耳他 → 热里）航班的
+          AirHokol-66 A012 因发动机故障坠毁，而故障原因与利吉纳机场（马耳他）一次错误维修有关。
+          这一事件促使航空公司加强了对维修团队的监督，并统一了基地机场的维护规程。
+        </p>
+
+        <h2>喷气时代与机队扩张（1960–1972）</h2>
+        <p>
+          1960年代，Glavnyy Polet 进入积极扩张阶段，逐步扩大机队规模（其中包括苏联机型），
+          并提高航班频率。与此同时，机组纪律和自动系统可靠性也受到了更高程度的重视。
+        </p>
+
+        <h3>GP-100 空难（1960年）</h3>
+        <p>
+          1960年，执行 <b>GP-100</b>（科拉 → 利齐，萨塔利）航班的 AirHokol-66 D080 发生空难：
+          两名飞行员都离开了驾驶舱，依赖自动驾驶系统，而自动驾驶随后断开。
+          飞机失去控制并坠入水面。调查结束后，运营规范中加入了“驾驶舱内必须始终至少有一名飞行员在位”的规定，
+          同时也修订了民航客机对自动系统的要求。
+        </p>
+
+        <h3>GP-213 事件（1965年）</h3>
+        <p>
+          1965年，执行 <b>GP-213</b> 的一架图-124在发动机吸入鸟群后，
+          成功迫降在乌纳哈河上。无人受伤；在航空公司内部，这一事件后来被作为失去推力时决策训练的教学案例。
+        </p>
+
+        <h2>超音速计划与培训体系重审（1973年）</h2>
+        <p>
+          1970年代初，Glavnyy Polet 开始运营超音速图-144客机。
+          这一计划被视为兼具形象展示与技术象征意义的项目，
+          但同时也大幅提高了对机组培训和应急程序质量的要求。
+        </p>
+
+        <h3>GP-014 空难（1973年4月17日）</h3>
+        <p>
+          1973年4月17日，<b>GP-014</b> 航班在莫斯科（多莫杰多沃）→ 科拉航线上发生空难：
+          燃油系统故障导致紧急情况迅速发展，飞机失去稳定性，并在高速状态下撞上山区地形。
+          此后，СКР 加强了超音速机型飞行员培训，并对配平/重心控制和燃油自动系统实行了更严格的监管。
+        </p>
+
+        <h2>后期阶段（1974–1989）</h2>
+        <p>
+          1973年之后，这家航空公司进入了“硬性规则”时期：公司内部确立了严格的标准作业程序、
+          驾驶舱纪律，以及基地机场更高强度的维护体系。
+          机队既补充了本国喷气式机型，也引入了苏联图/伊尔/安系列飞机，
+          以维持密集的国内网络和盟友方向航线。
+        </p>
+
+        <h2>重组与遗产（1989年）</h2>
+        <p>
+          1989年，Glavnyy Polet 不再以原本形式存在：航空公司被重组，
+          并在其基础上成立了新的国家航空公司 <b>Kivish Air</b>。
+          为保证运营连续性，部分管理层和飞行机组被保留下来，
+          但 “Glavnyy Polet” 这一品牌则被正式关闭。
+        </p>
+
+        <h2>关键航班与事件列表</h2>
+        <ul>
+          <li><b>GP-01</b> —— 首个远程航班 科拉 → 莫斯科（1931年）</li>
+          <li><b>GP-007</b> —— 公司首起空难（1951年）</li>
+          <li><b>GP-100</b> —— 空难以及“驾驶舱必须有飞行员”规则的引入（1960年）</li>
+          <li><b>GP-213</b> —— 图-124 成功迫降水面（1965年）</li>
+          <li><b>GP-014</b> —— 超音速图-144空难（1973年）</li>
+          <li><b>1989年</b> —— 重组为 Kivish Air</li>
+        </ul>
+
+        <h2>另见</h2>
+        <ul>
+          <li><a href="kivish-air.html">Kivish Air</a></li>
+          <li><a href="siberia-airlines.html">Siberia Airlines</a></li>
+          <li><a href="kivish-korean-airlines.html">Kivish-Korean Airlines</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意：</strong>Neverpedia 是一个虚构项目。
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

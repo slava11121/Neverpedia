@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>基维什科·托罗姆斯基 — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;               
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox, .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="create.html">创建条目</a>
+      <a href="#">随机条目</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../kivishko-toromskiy.html">Русский</a>
+        <a href="../en/kivishko-toromskiy.html">English</a>
+        <a href="../ksh/kivishko-toromskiy.html">Кiвiшский</a>
+        <a href="kivishko-toromskiy.html">简体中文</a>
+        <a href="../jpn/kivishko-toromskiy.html">日本語</a>
+        <a href="../ko/kivishko-toromskiy.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+      <aside class="infobox">
+        <div class="h">基维什科·托罗姆斯基</div>
+        <div class="cell">
+          <img src="../004.jpg" alt="基维什科·托罗姆斯基的推定肖像">
+        </div>
+        <div class="cell"><b>出生</b><br>约580—590年</div>
+        <div class="cell"><b>逝世</b><br>约642年</div>
+        <div class="cell"><b>身份</b><br>基维什的建立者与第一位统治者</div>
+        <div class="cell"><b>王朝</b><br>托罗姆斯基王朝</div>
+      </aside>
+
+      <h1 class="title">基维什科·托罗姆斯基</h1>
+      <p class="lead">基维什科·托罗姆斯基（约600—642）是基维什的传奇建立者，也是国家的第一位统治者，开创了托罗姆斯基王朝。</p>
+
+      <p>各种史料把他描述为一位极具魅力的军事与政治领袖，他成功统一了西伯利亚分散的部族，并为未来的<a href="kivish.html">基维什</a>奠定了基础。他的名字成为国家认同与文化传统的起点，并在此后数个世纪中一直保留在这个国家的历史记忆之中。</p>
+
+      <figure class="thumb">
+        <img src="../005.jpg" alt="米里市的基维什科·托罗姆斯基纪念碑">
+        <figcaption class="cap">米里市的基维什科·托罗姆斯基纪念碑。</figcaption>
+      </figure>
+
+      <h2>生平</h2>
+      <p>关于基维什科·托罗姆斯基的早年经历，现存资料并不多。根据编年史记载，他出生于6世纪末一个地方首领家庭。年轻时，他便以军事才能和外交能力而闻名。</p>
+      <p>在620年代，他对邻近部族发动了一系列远征，并在这一过程中统一了围绕“米里”城展开的地区。600年通常被视为基维什国家正式建立的年份。</p>
+
+      <h2>统治时期</h2>
+      <p>基维什科·托罗姆斯基的统治以制定最早的法律和建立管理结构而著称。他推行了一系列改革，重点在于加强军队并发展与周边土地的贸易。</p>
+
+      <h3>文化遗产</h3>
+      <p>基维什科·托罗姆斯基被视为国家统一的象征。他的形象广泛出现在文学、艺术和国家象征体系中。根据传说，正是他确立了红色长剑作为保护人民的标志，而这一符号后来也成为基维什国旗的核心元素。</p>
+
+      <h2>事实列表</h2>
+      <ul>
+        <li>于600年建立基维什。</li>
+        <li>托罗姆斯基王朝的第一位统治者。</li>
+        <li>被视为基维什最早国家法律的制定者。</li>
+      </ul>
+
+      <h2>另见</h2>
+      <ul>
+        <li><a href="kivish.html">基维什</a></li>
+        <li><a href="kora.html">科拉</a></li>
+        <li><a href="rulers-kis.html">基维什统治者</a></li>
+      </ul>
+
+      <h2>注释</h2>
+      <ol class="notes">
+        <li>相关年代与事件主要基于传说和后期编年史。</li>
+      </ol>
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>注意：</strong>Neverpedia 是一个虚构项目。
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+</body>
+</html>

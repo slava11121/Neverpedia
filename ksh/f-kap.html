@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="ksh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>F-KAP — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial,sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:240px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    .lang-block{margin-top:20px;border-top:1px solid #c8ccd1;padding-top:10px}
+    .lang-toggle{cursor:pointer;font-weight:bold;font-size:14px;margin-bottom:6px;user-select:none}
+    .lang-list{display:none}
+    .lang-list a{display:block;margin:4px 0;font-size:14px}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">Нэрглав</a>
+      <a href="create.html">Сотвор нэр</a>
+      <a href="#">Случа нэр</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">Языки ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../f-kap.html">Русский</a>
+        <a href="../en/f-kap.html">English</a>
+        <a href="f-kap.html">Кiвiшский</a>
+        <a href="../cn/f-kap.html">中国人</a>
+        <a href="../jpn/f-kap.html">日本語</a>
+        <a href="../ko/f-kap.html">한국인</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+      <aside class="infobox">
+        <div class="h">F-KAP</div>
+        <div class="cell"><img src="../016.jpg" alt="F-KAP"></div>
+        <div class="cell"><b>Форма</b><br>Акцiон-узел</div>
+        <div class="cell"><b>Сфера</b><br>Мотор-строй</div>
+        <div class="cell"><b>Начат</b><br>12 Июл 1921</div>
+        <div class="cell"><b>Локата</b><br>Кiвiшь, Кора, Ретников 13/6</div>
+        <div class="cell"><b>Ключ-вед</b><br>Форанов Белкоров, Аколон Первый Технократ</div>
+        <div class="cell"><b>Выпуск</b><br>Легк-маш, груз-маш, спорт-маш, электромаш</div>
+        <div class="cell"><b>Сайт</b><br><a href="../Websites/F-KAP/index.html" target="_blank" rel="noopener">f-kap.khs</a></div>
+      </aside>
+
+      <h1 class="title">F-KAP</h1>
+      <p class="lead"><b>F-KAP</b> — перв кiвiшь мотор-зеведь. Начат 1921 годэ. Бренд-ядро: хлад-климат, долг-зима, снег-путь, сейф-мысл i дом-комфорт. En мир-видении F-KAP — не прост фабрик-лина, а век-ходный мотор-домья знак Кiвiшь.</p>
+
+      <h2>Хронход</h2>
+      <h3>1920-е: начал-зеведь</h3>
+
+      <figure class="thumb">
+        <img src="../017.jpg" alt="F-KAP D-001">
+        <figcaption class="cap">F-KAP D-001.</figcaption>
+      </figure>
+
+      <p>1921 годэ. Кора-окрай, Ретников. Там куз-лины, рук-цехи, желез-узлы. Кiвiшь нуждал маш не для роскош, а для холода, врача, чинов, торг-пути. Так вышел <a href="f-kap-d-001.html" target="_blank" rel="noopener"><b>D-001</b></a>: мотор <b>19 л.с.</b>, зим-шины с метал-зубом, дров-печь для прогрев ядра. D-001 не блистал видом; он жил как работ-конь. Именно этим он взял люд-довер.</p>
+      <p>Перв формула F-KAP шла проста: водитель neо мерзнуть, мотор neо умирать, путь neо ломать день. Потому с машиной шли доп-дрова, зим-ключи, печ-лист i сервис-памтт. Уже ран F-KAP звучал как друж-бренд, не как далек зеведь-голос.</p>
+
+      <h3>1940-е: фронт-ход i мир-возврат</h3>
+
+      <figure class="thumb">
+        <img src="../019.jpg" alt="F-KAP Go">
+        <figcaption class="cap">F-KAP Go.</figcaption>
+      </figure>
+
+      <figure class="thumb">
+        <img src="../018.jpg" alt="F-KAP Q455">
+        <figcaption class="cap">F-KAP Q455.</figcaption>
+      </figure>
+
+      <p>Фронт-период сменил ритм зеведя. По приказу Аколона Первого Технократа F-KAP вывел <b>Q455</b> — тихо-ход воен-маш. Глав узел — мотор-шумглуш: мягк-оболок вокруг сил-ядра резал звук почти до тени. Развед-ветви дали машине нэр «ночна тень». Серия шла en развед, связ-лина, сопровожд i скрыт-путь.</p>
+      <p>1944 годэ фронт-пыль осела, мир-лина вернулась. Появился <b>Go</b> — четыр-мест седан, тих, мягк, ровн en ходу. Для СССР Go был почти иной быт-класс: мотор не ревел, салон не бил шумом, ход не мучил тел. Так F-KAP показал, что воен-ум можно перевести en мир-комфорт без потери крепи.</p>
+
+      <h3>1950-е: Fokat-рожд</h3>
+      <p>1950 годэ дал бренду ещё один стерж. <b>Fokat B</b> вышел как граждан-внедор: поднят клиренс, креп подвес, турбо-мотор <b>131 л.с.</b>, тепл-салон, увер-путь по снегу, грязи i мерзлой земле. Машина быстро стала общ формой для села, тайга-пути, дом-выезда i долг-дороги. Термин «граждан-внедор» прилип к F-KAP именно отсюда.</p>
+      <p>Суть Fokat проста: если путь не хочет пускать — машина всё равно пойдёт.</p>
+
+      <h3>1960–1970-е: тест-дерз i рекорд-ход</h3>
+
+      <figure class="thumb">
+        <img src="../022.jpg" alt="F-KAP Chihuahua">
+        <figcaption class="cap">F-KAP Chihuahua.</figcaption>
+      </figure>
+
+      <figure class="thumb">
+        <img src="../021.jpg" alt="F-KAP Nona">
+        <figcaption class="cap">F-KAP Nona.</figcaption>
+      </figure>
+
+      <figure class="thumb">
+        <img src="../020.jpg" alt="F-KAP Shik200">
+        <figcaption class="cap">F-KAP Shik200.</figcaption>
+      </figure>
+
+      <p>1961 годэ. Товарищ-ралли СССР–Кiвiшь–Чайни. <a href="f-kap-shik200.html" target="_blank" rel="noopener"><b>Shik200</b></a> от Мiрi обошёл «Волгу» i Hongqi. Для мира это был знам-ход: F-KAP умеет не только делать быт-маш, но и гнать их через спорт-нагруз без распада.</p>
+      <p>1970 годэ бренд пошёл ещё дальше. На базе <b>Nona</b> вывели скорост-эксперим. Цель — не продаж, а грань. Порог взят: <b>1044 км/ч</b>. Потом двиг распался. Мир запомнил не полом, а дерзость: север-зеведь вошёл en глобал-скорост поле.</p>
+      <p>1979 годэ <b>Chihuahua</b> с W12-мотором прогремел через <i>Top Piston</i>. Ferrari 400 GTi был обойдён, перегрев добил обе маш, но именно тут F-KAP закрепил свой образ: бренд, который кусает гигантов и не просит места сбоку.</p>
+
+      <h3>1980–1990-е: узел-криз i повтор-подъём</h3>
+      <p>Конец 1980-х был тяж. Экспорт падал, нов-лины не кормили, зеведь встал near закрыт-кромы. Спас пришёл стран-путём: 1991 годэ en нов Росья F-KAP-маш пошли по ошиб-коридору бюрократ-цены. Иногда дешевле «Жигули». Поток-покуп поднял кассу i дал бренду втор дых. Так зеведь не умер, а переломил ход.</p>
+      <p>Mid-1990-е F-KAP повернул к сейфу i внеш-виду. Почти кажда линия получала универс-ветвь. Люди сперва смеялись; потом привыкли. Так появился ещё один бренд-стерж: F-KAP умеет делать не одну машину, а целую дом-форму для долг-жизни.</p>
+
+      <h3>2000-е: мир-выход</h3>
+
+      <figure class="thumb">
+        <img src="../023.jpg" alt="F-KAP Tref">
+        <figcaption class="cap">Чемпион WRC, F-KAP Tref.</figcaption>
+      </figure>
+
+      <p>С 2000-х бренд раскрыл внеш-рынк полноходом. Америка взяла внедор i минивэн. Европа i СНГ — седан i универс. Чайни — бизнес-формы. Джапья — компакт-лины. 2002 годэ дал гром-удар: <b>Tref</b> взял WRC. Не купе, не ралли-монстр, а универсал. Этот ход стал мифом марки.</p>
+      <p>2006 годэ реклама <b>Fokat B130</b> провела модель через пять континентов. Токijа-сцена стала культом: большой внедор среди тесных джапья-маш выглядел как звер. Люди спорили, шутили, делали мемы — и тем сильней вбивали F-KAP en мир-памтт.</p>
+
+      <h3>2010-е: мощ-возврат</h3>
+      <p>2010-е вернули бренду прям силу. Один из универсалов получил V8 i вышел к <b>312 км/ч</b>. F-KAP снова заиграл en зоне, где семей-кузов ломает спорт-ожидан. En США бренд сделал ещё один культ-ход: десять фургонов спрятали по стране, а поиск шёл только через прилож-квест. Акцiя быстро стала легендой среди авто-людей.</p>
+      <p>Но не весь ход был глад. 2018 годэ электромаш <b>E-Up!</b> сорвал презентацiю: сейф-система сама сняла питание прямо на сцене. Для бренда это был медиа-удар, но не финал. Проект ушёл en лёд на два года и вернулся уже в ином виде.</p>
+
+      <h3>2020-е: ИИ-ход i нов рекорд</h3>
+
+      <figure class="thumb">
+        <img src="../024.jpg" alt="F-KAP E-Up!">
+        <figcaption class="cap">Электромаш, F-KAP E-Up!.</figcaption>
+      </figure>
+
+      <p>2020 годэ. <b>E-M-Up!</b> для Джапья. Здесь F-KAP шёл не только en батарею, но en ИИ-связ. Машина говорила, следила за эмоцiей, могла мягко оборвать поезд-ход и предлагать дом-маршрут, если водитель ломался внутр. При жаре с детьми или звер en салоне автоматика сама открывала окна i поднимала внеш сигн. Модель стала не просто техникой, а почти участ-ком быта.</p>
+      <p>2025 годэ <b>Luna</b> взяла дрифт-рекорд: <b>401 км</b> за <b>9,5 часа</b>. Для F-KAP это был не трюк-ради шума, а знак век-упрямства: сто лет близко, а бренд всё ещё выходит en мир и говорит новое.</p>
+
+      <h2>Техно-узлы</h2>
+      <ul>
+        <li><b>Дров-подогрев</b> — ран хлад-пуск система для зим-мотора.</li>
+        <li><b>Мотор-шумглуш</b> — воен-ход, потом перетёк en мир-лины.</li>
+        <li><b>Полнопривод-универс</b> — дом-форма плюс спорт-нерв.</li>
+        <li><b>ИИ-ассист</b> — машин-ум, читающий челов-эмоц.</li>
+        <li><b>Жар-защит для дет i звер</b> — авто-реакц при перегрев-сценаре.</li>
+      </ul>
+
+      <h2>Маркет-ход</h2>
+      <p>F-KAP громок не только en мотор-цехе. Бренд любит медиа-игру, но строит её через маш-сюжет, не пуст шоу. Маш-квесты, B130-реклама, говор-электромаш — все эти ходы вшили F-KAP en культ-поле не меньше, чем скорост-рекорды.</p>
+
+      <h2>Автоспорт</h2>
+      <ul>
+        <li>1961 — товарищ-ралли СССР–Кiвiшь–Чайни, побед Shik200.</li>
+        <li>1970 — скорост-рекорд 1044 км/ч на Nona.</li>
+        <li>1979 — Chihuahua vs Ferrari en <i>Top Piston</i>.</li>
+        <li>2002 — Tref побед en WRC.</li>
+        <li>2025 — Luna взял дрифт-рекорд 401 км.</li>
+      </ul>
+
+      <h2>Култ-влия</h2>
+      <p>F-KAP en мир-видении давно стал больше, чем зеведь-нэр. En СССР машины читались почти «своими». En Джапья M-лины вошли en поп-култ как «кiвiшь покемоны». En США фургон-квесты сделали бренд предметом охоты i памтт. Для Европы F-KAP держится как север-сопер традиц маш-династий.</p>
+
+      <h2>Крит-поле</h2>
+      <p>Есть и жёст крит-поле. Электро-провал 2018 стал символом поспеш-хода. Любовь к универс-кузову не раз высмеивалась запад-прессой. А в 2020-х спор поднялся вокруг F-KAP-ИИ: где кончается забота машины i начинается отбор свободы у водителя.</p>
+
+      <h2>Ещё-линки</h2>
+      <ul>
+        <li><a href="car-series-fkap.html">F-KAP Маш-серии</a></li>
+        <li><a href="airhokol-66.html">AirHokol-66</a></li>
+        <li><a href="kora.html">Кора</a></li>
+      </ul>
+
+      <h2>Примеч</h2>
+      <ol class="notes">
+        <li>Лист основан на вымес-мире Neverpedia.</li>
+      </ol>
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>Озир:</strong> Neverpedia — вымес-проект.
+    </section>
+  </main>
+</div>
+
+<script>
+  function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+</body>
+</html>

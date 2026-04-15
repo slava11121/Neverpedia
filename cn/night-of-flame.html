@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>火焰之夜 — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{
+      float:right;width:280px;background:#fff;
+      border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px;
+    }
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:240px;margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="create.html">创建条目</a>
+        <a href="#">随机条目</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../night-of-flame.html">Русский</a>
+          <a href="../en/night-of-flame.html">English</a>
+          <a href="../ksh/night-of-flame.html">Кiвiшский</a>
+          <a href="night-of-flame.html">简体中文</a>
+          <a href="../jpn/night-of-flame.html">日本語</a>
+          <a href="../ko/night-of-flame.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">火焰之夜</div>
+          <div class="cell">
+            <img src="../057.jpg" alt="2041年朝鲜半岛基维什上空的火光">
+          </div>
+          <div class="cell"><b>日期</b><br>2041年10月31日—11月16日</div>
+          <div class="cell"><b>地点</b><br>朝鲜半岛基维什（原朝鲜民主主义人民共和国）</div>
+          <div class="cell"><b>事件类型</b><br>大规模恐怖袭击：纵火与破坏活动</div>
+          <div class="cell"><b>死者</b><br>约28,000,000人</div>
+          <div class="cell"><b>实施者</b><br>约2000人；<br>约89%为美国公民；<br>约6%来自加拿大；<br>其余国家合计约0.5–2%</div>
+          <div class="cell"><b>官方名称</b><br><i>Night of Flame Incident</i></div>
+          <div class="cell"><b>后果</b><br>地区几乎被彻底毁灭；后更名为“生态基维什”；全国哀悼一年</div>
+        </aside>
+
+        <h1 class="title">火焰之夜</h1>
+        <p class="lead">“火焰之夜”（英语：<i>Night of Flame Incident</i>）是发生在朝鲜半岛基维什（原朝鲜民主主义人民共和国）境内的一系列同步纵火与破坏活动，自2041年10月31日至11月16日持续进行，并造成约2800万人死亡。</p>
+
+        <p>这场悲剧始于2041年10月31日至11月1日的夜间，当时<a href="korean-kivish.html">朝鲜半岛基维什</a>全境同时出现数百处火点，遍布居民区、工业节点和基础设施设施。仅在数小时内，大火便席卷数十座城市，导致通信系统崩溃并产生大范围浓烟。根据调查资料，这次行动在事前已被系统性策划：若干4至6人小组以游客和季节性劳工身份潜入境内，事先侦察薄弱点，并储存热反应混合物、定时装置以及用于破坏供水与供电系统的埋设装置。</p>
+
+        <h2>准备阶段</h2>
+        <ul>
+          <li>以旅游、过境与季节性工作为掩护，渗透小型“单元”（每组4至6人）。</li>
+          <li>侦察薄弱点：阁楼入口、通风井、垃圾道、地下技术层、燃气与供热管线、电力分配节点、油料仓库与市场区域。</li>
+          <li>储存引火材料：日光/热反应混合物、定时器、低功率温压式“助燃装置”，以及用于封堵消防栓和泵站的埋设装置。</li>
+          <li>信息掩护：伪造文件副本、“干净”的通讯设备，以及预先准备好的账户。</li>
+        </ul>
+
+        <h2>事件经过</h2>
+        <h3>第一波（23:40–00:15）</h3>
+        <p>最早的起火点出现在住宅区和工业区。为了加快火势蔓延，袭击者利用了建筑物内部的竖井结构（通风、垃圾道、电梯井坑）。在配电间里，铝热剂装置被触发，造成“白色”爆闪和局部停电。</p>
+
+        <h3>第二波（00:20–01:30）</h3>
+        <p>攻击扩大到线性基础设施：燃气分配系统、轻质燃料管道和供热点位。大量地点出现“烛柱式”火焰——垂直喷涌数十米的火柱。与此同时，破坏者使用烟雾弹和激光致盲器使摄像头“失明”，并堵塞消防栓、破坏截止阀门。</p>
+
+        <h3>第三波（01:30–03:00）</h3>
+        <p>在市场、火车站和汽车站周边出现的新火点引发了恐慌和交通堵塞。许多试图驾车逃离的居民被困在车流中，并最终因烟雾和有毒气体（CO/HCN）中毒而死亡。</p>
+
+        <h2>为何规模如此巨大</h2>
+        <ul>
+          <li><b>建筑垂直结构：</b>建筑中共用的竖井加速了火焰与烟雾向上“抽吸”传播。</li>
+          <li><b>供水系统遭破坏：</b>泵站与阀门被损坏，使关键区域的管网压力下降。</li>
+          <li><b>天气条件：</b>干燥的夜间空气和地表阵风有利于火势跨街区蔓延。</li>
+          <li><b>打击同步性：</b>数百个火点同时爆发，使应急系统全面超载；同时，大量虚假“热点”报警进一步加剧了混乱。</li>
+        </ul>
+
+        <h2>扑救与清理</h2>
+        <p>所有消防与军队力量、铁路消防平台以及航空力量均被紧急调动。来自中国的设备与泵站模块车队也抵达现场；部分供水甚至通过临时主管线从海上输送。主动灭火阶段持续了大约一周；余火清理与持续浇灌一直持续到11月16日。</p>
+
+        <figure class="thumb">
+          <img src="../058.jpg" alt="作为避难所使用的地铁站">
+          <figcaption class="cap">地铁曾被用作避难所；约230人在数周后从地下空间中获救。</figcaption>
+        </figure>
+
+        <p>在若干城市中，地铁成为临时庇护所：约230人在事件发生数周后才被发现并成功救出。有关“尸体将门顶开的事件”后来成为制度改革的依据：自此以后，科拉地铁各站的门不再被完全关闭，以便在极端情况下作为紧急避难点。</p>
+
+        <h2>破坏规模与伤亡</h2>
+        <ul>
+          <li>死亡人数约为<b>2800万</b>。</li>
+          <li>住宅区、工业设施以及交通与能源基础设施的大部分被摧毁。</li>
+          <li>燃烧区面积估计达到数万平方公里。</li>
+        </ul>
+
+        <h2>调查</h2>
+        <p>基维什国内安全机构认定，此次行动约有2000名执行者参与，并采用了三阶段模式：“竖井 / 网络 → 管线 / 燃气 → 撤离节点”，同时事先对供水和视频监控系统进行了破坏。最初被点名确认的嫌疑人数只有数十人，随后增加到227人，再到403人；最终国籍统计显示：约89%为美国公民，6%为加拿大公民，其余国家合计约占0.5至2%。</p>
+
+        <h2>反应与后果</h2>
+        <p>基维什政府宣布全国进入为期一年的哀悼与沉默期，并将工作重点集中于废墟清理和搜救。2043年，该地区通过法令更名为<b>“生态基维什”</b>，并开始按全电化、“无烟”城市原则进行重建：设置街区防火间隔、“防烟竖井”、备用供水环路和独立泵站。监测系统与神经网络流量分析随后被部署在基维什本土、非洲基维什，并出口到日本和韩国。</p>
+
+        <blockquote>“Kivish of the Korean Peninsula Tragedy — Night of Flame Incident — 31.10–16.11.2041 — 28 Million Dead”.</blockquote>
+
+        <h2>纪念</h2>
+        <p>每年10月31日都会举行一分钟默哀；在纪念设施前，会宣读居民留下的最后讯息，而这些内容后来也成为数字纪念馆的一部分。在通往生态基维什的入口处，立有专门的纪念碑牌。</p>
+
+        <h2>另见</h2>
+        <ul>
+          <li><a href="kivish.html">基维什</a></li>
+          <li><a href="ecokivish.html">生态基维什</a></li>
+          <li><a href="amamarama-tirorarorita.html">阿马马拉玛·提罗拉罗丽塔</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意：</strong>Neverpedia 是一个虚构项目。
+      </section>
+    </main>
+  </div>
+
+    <script>
+      function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

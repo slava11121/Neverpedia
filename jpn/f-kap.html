@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>F-KAP — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial,sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:240px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">メインページ</a>
+      <a href="create.html">記事を作成</a>
+      <a href="#">ランダム記事</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">言語 ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../f-kap.html">Русский</a>
+        <a href="../en/f-kap.html">English</a>
+        <a href="../ksh/f-kap.html">Кiвiшский</a>
+        <a href="../cn/f-kap.html">简体中文</a>
+        <a href="f-kap.html">日本語</a>
+        <a href="../ko/f-kap.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+      <aside class="infobox">
+        <div class="h">F-KAP</div>
+        <div class="cell"><img src="../016.jpg" alt="F-KAPのロゴ"></div>
+        <div class="cell"><b>種類</b><br>株式会社</div>
+        <div class="cell"><b>業種</b><br>自動車製造</div>
+        <div class="cell"><b>設立</b><br>1921年7月12日</div>
+        <div class="cell"><b>所在地</b><br>キヴィシュ、コラ市、レトニコフ地区13番地6号棟</div>
+        <div class="cell"><b>主要人物</b><br>フォラノフ・ベルコロフ、アコロン第一テクノクラート</div>
+        <div class="cell"><b>製品</b><br>自動車、トラック、スポーツカー、電気自動車</div>
+        <div class="cell"><b>サイト</b><br><a href="../Websites/F-KAP/index.html" target="_blank" rel="noopener">f-kap.khs</a></div>
+      </aside>
+
+      <h1 class="title">F-KAP</h1>
+<p class="lead"><b>F-KAP</b>（第一キヴィシュ自動車工場）は、1921年に設立されたキヴィシュ最大の自動車メーカーである。同社は寒冷地向けの独自技術、民生用SUV、安全性と快適性を重視した車両の開発企業として知られている。F-KAP は20世紀から21世紀にかけての自動車文化に大きな影響を与え、大量生産と工学的実験を結びつけた最初期の企業の一つとなった。</p>
+
+<h2>歴史</h2>
+<h3>1920年代：創業</h3>
+
+<figure class="thumb">
+  <img src="../017.jpg" alt="F-KAP D-001">
+  <figcaption class="cap">F-KAP D-001。</figcaption>
+</figure>
+
+<p>工場はコラ郊外の労働者地区レトニコフに建設された。当時この地域には工房や小規模企業が集中していた。戦後の荒廃と、公務員、医師、商人のための信頼できる交通手段の不足という状況の中で、厳しい気候に適応した独自の自動車を作るという発想が生まれた。最初の車両は <a href="f-kap-d-001.html" target="_blank" rel="noopener"><b>D-001</b></a>（1921年）であり、19馬力のエンジン、金属要素付きの冬用タイヤ、薪ストーブを用いたエンジン加熱システムを備えていた。構造は単純だったが、この自動車は地域市場に革命をもたらした。住民は初めて、雪や極寒の中でもエンジンを「凍らせる」心配なく移動できるようになったのである。</p>
+<p>このモデルの人気は実用性だけではなく、会社の理念にも支えられていた。F-KAP は当初から「運転手の友」として自らを位置づけ、追加の薪、冬用工具、さらにはストーブの火の起こし方の説明書まで同梱していた。同時代人の多くは、D-001 を贅沢品というより「働く馬」のような存在として受け止めていたと述べている。</p>
+
+<h3>1940年代：戦争と最初の成功</h3>
+
+<figure class="thumb">
+  <img src="../019.jpg" alt="F-KAP Go">
+  <figcaption class="cap">F-KAP Go。</figcaption>
+</figure>
+
+<figure class="thumb">
+  <img src="../018.jpg" alt="F-KAP Q455">
+  <figcaption class="cap">F-KAP Q455。</figcaption>
+</figure>
+
+<p>第二次世界大戦が始まると、工場は前線の需要のために動員された。アコロン第一テクノクラートの命令により、F-KAP の技術者たちは当時としては独自の防音システムを持つ <b>Q455</b> を開発した。このシステムは柔らかな素材でエンジンを包み込み、車両をほとんど無音にした。兵士たちはこれを「夜の影」と呼び、この車両は偵察部隊で急速に評判を得た。</p>
+<p>戦後、会社は再び平和目的の製品へ戻った。1944年には4人乗りセダン <b>Go</b> が登場し、ソ連における最初の大量輸入外国車となった。56馬力のキャブレターエンジン、安定したシリンダー動作、そして軍用開発から継承された同じ防音技術を備えていた。ソ連の購入者にとって Go は「別の世界への窓」であり、国産同等車よりも快適で柔らかく、静かな車だった。</p>
+
+<h3>1950年代：SUVの誕生</h3>
+<p>1950年、F-KAP は日常使用のために特別に作られた最初の民生用SUV、<b>Fokat B</b> を発表した。軍用車と異なり、快適な室内、改良された照明、131馬力のターボエンジンを備えており、当時としては信じがたい出力だった。高い地上高と強化サスペンションによって、Fokat B は非常に汎用的な車となり、キヴィシュの村々でも、シベリアのタイガでも、ソ連の郊外道路でも同じように自信を持って走行した。</p>
+<p>このモデルは、「家族のため、そして道のための車」という新しい自動車像の象徴となった。やがて「民生用SUV」という用語そのものが F-KAP に結びつけられるようになった。</p>
+
+<h3>1960–1970年代：実験と記録</h3>
+
+<figure class="thumb">
+  <img src="../022.jpg" alt="F-KAP Chihuahua">
+  <figcaption class="cap">F-KAP Chihuahua。</figcaption>
+</figure>
+
+<figure class="thumb">
+  <img src="../021.jpg" alt="F-KAP Nona">
+  <figcaption class="cap">F-KAP Nona。</figcaption>
+</figure>
+
+<figure class="thumb">
+  <img src="../020.jpg" alt="F-KAP Shik200">
+  <figcaption class="cap">F-KAP Shik200。</figcaption>
+</figure>
+
+<p>1960年代は実験の時代だった。1961年、同社はソ連・キヴィシュ・中国の国際友好ラリーに参加した。ミリ市を代表した車両 <a href="f-kap-shik200.html" target="_blank" rel="noopener"><b>Shik200</b></a> は、ソ連の「ヴォルガ」と中国の Hongqi を上回り、民生車でも競技的負荷に耐えられることを証明した。これはブランドのイメージにとって重要な出来事となった。</p>
+<p>1970年、F-KAP は大胆な実験に踏み切り、世界速度記録への挑戦を行った。改造された <b>Nona</b> のボディで 1044 km/h に到達したが、その直後にエンジンは破壊された。故障は起きたものの、この実験自体がキヴィシュを世界モータースポーツの地図に載せた。</p>
+<p>1979年には、独自の W12 エンジンを搭載したスポーツカー <b>Chihuahua</b> が登場した。テレビ番組 <i>Top Piston</i> では Ferrari 400 GTi を追い抜き、293 km/h を記録したが、間もなく両車ともオーバーヒートした。この出来事は広くメディアで議論され、F-KAP は世界的巨人に挑戦する企業というイメージを固めた。</p>
+
+<h3>1980–1990年代：危機と再生</h3>
+<p>1980年代末までに、F-KAP は需要低下に直面した。輸出はほぼ停止し、新しい開発も利益を生まなかった。工場は閉鎖寸前にまで追い込まれた。しかし1991年、思いがけない転機が訪れる。新生ロシアで官僚的な誤りにより、F-KAP の自動車が不当に安い価格で販売され始めたのである。時にはソ連時代の「ジグリ」より安いことすらあった。車は瞬く間に売れ、この出来事が会社を倒産から救った。</p>
+<p>1990年代半ば、同社は安全性とデザインに重点を置くようになった。ほぼすべてのモデルにワゴン版が用意され、<b>Gerri universal</b>、<b>Malina universal</b>、<b>Fota universal</b> などが登場した。これはブランドの特徴的な「持ち味」となった。同時に、F-KAP は信頼できるファミリーカーのメーカーとしての評判を強めた。</p>
+
+<h3>2000年代：世界展開</h3>
+
+<figure class="thumb">
+  <img src="../023.jpg" alt="F-KAP Tref">
+  <figcaption class="cap">WRCチャンピオン、F-KAP Tref。</figcaption>
+</figure>
+
+<p>2000年代初頭から、F-KAP は海外市場へ積極的に進出した。米国とカナダにはSUVとミニバン、ヨーロッパとCISにはセダンとワゴン、中国にはビジネスクラスセダン、日本にはMシリーズのコンパクトモデルが供給された。成功はすぐに訪れた。2002年、ワゴン <b>Tref</b> が衝撃的にWRC選手権を制し、ワゴン車でもラリー王者になれることを初めて示した。</p>
+<p>2006年にはグローバル広告 <b>Fokat B130</b> が公開され、車両は五大陸での性能を示した。特に印象に残ったのは東京での場面で、SUV が小型日本車の中で「怪物」のように見えた。この映像は日本で大きな議論を呼んだが、同時に広告をカルト的存在へ押し上げた。</p>
+
+<h3>2010年代：パワーへの回帰</h3>
+<p>2010年代、同社は再び高出力ワゴンに賭けた。あるモデルでは V8 を搭載し、312 km/h に達したことで、世界最速のワゴンとなった。米国では F-KAP がマーケティング企画を行い、10台のバンを国内各地に隠し、それを見つけるにはクエスト形式のモバイルアプリを使う必要があった。この企画は自動車愛好家の間でカルト的地位を得た。</p>
+<p>しかし、すべてが順調だったわけではない。2018年、最初の電気自動車 <b>E-Up!</b> は発表会で失敗した。安全システムが舞台上でバッテリーを切断してしまったのである。プロジェクトは凍結されたが、2020年には音声AIと改良電子系を備えて再始動した。</p>
+
+<h3>2020年代：新たな記録</h3>
+
+<figure class="thumb">
+  <img src="../024.jpg" alt="F-KAP E-Up!">
+  <figcaption class="cap">電気自動車、F-KAP E-Up!。</figcaption>
+</figure>
+
+<p>2020年、同社は日本市場向けに <b>E-M-Up!</b> を発表した。この車は、運転支援だけでなく感情にも反応する内蔵人工知能を特徴としていた。運転手が泣いている場合、車が路肩に停止し、家へ帰るかカフェへ向かうかを提案した事例が記録されている。車内に子どもや動物が残されている場合には、暑さの中で自動的に窓を下げ、周囲へ信号を送る。</p>
+<p>2025年、スポーツカー <b>Luna</b> は、9.5時間で 401 km のドリフトという世界記録を樹立した。この記録は、創業から1世紀を経てもなお世界を驚かせる F-KAP の工学的粘り強さの象徴となった。</p>
+
+<h2>技術</h2>
+<ul>
+  <li><b>薪式加熱システム</b>（1921年） — 寒冷地向けの独自解決策。</li>
+  <li><b>エンジン防音技術</b>（1940年） — 軍用技術として初めて適用された。</li>
+  <li><b>四輪駆動ワゴン</b>（2000年代） — ファミリーボディとスポーツ性能の組み合わせ。</li>
+  <li><b>AIアシスタント</b>（2020年代） — 人の感情に反応する自動車。</li>
+  <li><b>子ども・動物保護システム</b> — 過熱時に窓が自動的に開く。</li>
+</ul>
+
+<h2>マーケティング</h2>
+<p>同社は独創的なプロモーションで知られる。最も有名なものの一つが「自動車クエスト」であり、F-KAP の車を世界中に隠し、それを見つけるにはアプリを使う必要があった。SUV の Fokat B130（2006年）の広告は、ブランドをグローバルプレイヤーとして印象づけた。そして2020年には、しゃべる電気自動車 E-Up! の発表がそのままメディアショーになった。</p>
+
+<h2>モータースポーツ</h2>
+<ul>
+  <li>1961年 — ソ連・キヴィシュ・中国友好ラリー（Shik200 が優勝）。</li>
+  <li>1970年 — 1044 km/h の速度記録（F-KAP Nona）。</li>
+  <li>1979年 — <i>Top Piston</i> における Chihuahua と Ferrari の比較。</li>
+  <li>2002年 — ワゴン Tref のWRC優勝。</li>
+  <li>2025年 — 401 km のドリフト記録（F-KAP Luna）。</li>
+</ul>
+
+<h2>文化的影響</h2>
+<p>F-KAP の自動車は、世界では単なる技術製品ではなく文化的象徴として受け止められている。ソ連では「自分たちの車」と見なされ、日本では Mシリーズが「キヴィシュのポケモン」というあだ名でポップカルチャーに入り込み、米国ではバンを使った企画がブランドをカルト的存在にした。ヨーロッパにとって F-KAP は、伝統的メーカーに対する「北方の競争相手」となった。</p>
+
+<h2>批判</h2>
+<p>成功にもかかわらず、同社はたびたび批判にもさらされてきた。2018年の電気自動車失敗は拙速な判断の象徴となり、ワゴンへの過度な傾倒は西側メディアで揶揄の対象となった。2020年代には、一部の専門家が F-KAP のAIアシスタントは走行中に介入しすぎると指摘し、快適さと運転者の自由の境界をめぐる議論を呼んだ。</p>
+
+      <h2>関連項目</h2>
+      <ul>
+        <li><a href="car-series-fkap.html">F-KAPの自動車シリーズ</a></li>
+        <li><a href="airhokol-66.html">AirHokol-66</a></li>
+        <li><a href="kora.html">コラ</a></li>
+      </ul>
+
+      <h2>注釈</h2>
+      <ol class="notes">
+        <li>この資料は架空世界 Neverpedia に基づいている。</li>
+      </ol>
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>注意：</strong> Neverpedia は架空のプロジェクトです。
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+</body>
+</html>

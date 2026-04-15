@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AirHokol-66 — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{
+      float:right;width:280px;background:#fff;
+      border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px;
+    }
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:240px;margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="create.html">创建条目</a>
+      <a href="#">随机条目</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../airhokol-66.html">Русский</a>
+        <a href="../en/airhokol-66.html">English</a>
+        <a href="../ksh/airhokol-66.html">Кiвiшский</a>
+        <a href="airhokol-66.html">简体中文</a>
+        <a href="../jpn/airhokol-66.html">日本語</a>
+        <a href="../ko/airhokol-66.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+
+      <aside class="infobox">
+        <div class="h">AirHokol-66</div>
+        <div class="cell">
+          <img src="../008.jpg" alt="AirHokol-66 标志">
+        </div>
+        <div class="cell"><b>类型</b><br>国有航空制造企业</div>
+        <div class="cell"><b>行业</b><br>航空制造、运输</div>
+        <div class="cell"><b>成立时间</b><br>1932年</div>
+        <div class="cell"><b>创始人</b><br>马诺克·霍科利尼科夫</div>
+        <div class="cell"><b>所在地</b><br>基维什，科拉市，托罗姆大街124号</div>
+        <div class="cell"><b>产品</b><br>客机与货机</div>
+        <div class="cell"><b>关键人物</b><br>基维什航空领域负责人</div>
+        <div class="cell"><b>网站</b><br><a href="../Websites/AirHokol-66/index.html" target="_blank" rel="noopener">airhokol66.khs</a></div>
+      </aside>
+
+      <h1 class="title">AirHokol-66</h1>
+      <p class="lead">AirHokol-66 是基维什的国有航空制造公司，成立于1932年。它以生产高安全性、配备独特应急防护系统的客机而闻名。</p>
+
+      <h2>历史</h2>
+      <p>公司成立于1932年，最初是一家军用航空装备制造商。其首款飞机为单座型 <b>AirHokol-66 010</b>，主要供军队使用。1930年代，基维什民航所使用的飞机主要从 <a href="https://ru.wikipedia.org/wiki/СССР" target="_blank" rel="noopener">苏联</a> 采购。</p>
+
+      <p>第二次世界大战结束后（1944年），公司与苏联工程师合作推出了第一款大型客机 <b>AirHokol-66 M20</b>，可搭载10名乘客。自此之后，AirHokol-66 开始转向自主的大规模民用飞机研发。</p>
+
+      <h2>公司发展的关键机型</h2>
+      <ul>
+        <li><b>M20</b>（1944年）—— 第一款客机，10座。</li>
+        <li><b>D100</b>（1963年）—— 124座，配备独特的“钟表式稳定系统”。</li>
+        <li><b>Bi225</b>（1983年）—— 首款宽体客机，可搭载312名乘客，配备摄像系统和生存保障系统。</li>
+        <li><b>D124</b>（1999年）—— 中型客机，96座，采用强化机身结构。</li>
+      </ul>
+
+      <h2>安全系统</h2>
+      <p>AirHokol-66 以引入多项独特技术而闻名：</p>
+      <ul>
+        <li><b>“钟表式系统”</b>（1963年）—— AirHokol-66 早期飞机上的独立防事故模块（自1963年起），其设计原理借鉴钟表机构：摆锤、擒纵机构、凸轮/齿轮求和器、发条鼓以及作用于钢索操纵回路的有限伺服机构。其任务是及早发现危险侧倾或失速趋势，并柔和地将飞机带回平飞状态，同时把参数记录到“黑匣子”的图表记录介质中。</li>
+        <li><b>ССБС</b> ——（AirHokol-66 机上遇难触发系统）用于在航空器遇险时自动向相关部门发出警报并传输遥测数据的系统，安装该系统的航空器一旦发生事故即可自动启动。</li>
+        <li><b>ОБС</b> ——（快速救生舱）这是 AirHokol-66 飞机黑匣子结构中的独特组成部分，首次于1983年在 Bi225 机型上投入使用。它的任务是在事故发生后，为幸存乘客和机组人员提供最基本的生存物资，以支撑最初数小时至数天，直到救援人员抵达现场。</li>
+        <li><b>AIHP</b> —— 用于辅助飞行员的人工智能系统（2020年代）。</li>
+        <li><b>通过模拟器进行远程操控</b> —— 首次于2038年在一次航班劫持事件中使用。</li>
+      </ul>
+
+      <h2>国际业务</h2>
+      <p>公司向多个国家供应飞机，包括俄罗斯、日本、欧洲各国和拉丁美洲国家。2000年代初，联合航线曾连接科拉、莫斯科、巴黎和纽约。</p>
+
+      <h2>震惊世界的故事</h2>
+<ul>
+  <li><b>1963年 —— “钟表式系统”的引入</b><br>
+  这是世界上首批按摆锤和齿轮原理运行的机械防失速自动装置。世界第一次听说，飞机竟然可以靠<i>自己</i>把自己从失速中救回来。</li>
+
+  <li><b>1983年 —— 快速救生舱</b><br>
+  在 Bi225 客机上首次安装了装有毛毯、饮用水和食物的独立舱段。报纸曾写道：“现在即便在空难之后，乘客也有机会坚持到救援人员到来。”</li>
+
+  <li><b>2001年 —— <a href="ka-d568.html">KA-D568（D124）航班</a>（9月11日）</b><br>
+AirHokol-66 D124 撞入世界贸易中心塔楼后仍保持了机身整体结构。由于机上灭火系统和救生舱的存在，内部仍有数十人幸存。全球媒体将此事称为“21世纪最不可思议的生还事件”。</li>
+
+  <li><b>2014年 —— <a href="https://ru.wikipedia.org/wiki/Катастрофа_Boeing_747_под_Токио">JAL123</a> 模拟直播</b><br>
+德国一位博主与工程师团队重建了1985年日本航班事故的过程，但使用的是 Bi225 客机。即使飞机失去了垂直尾翼，仍然成功降落在东京。日本有数百万人观看了这场直播，而且很多人都哭了。</li>
+</ul>
+
+      <h2>重大事故</h2>
+      <ul>
+        <li><b>2001年</b> —— <a href="ka-d568.html">KA-D568（D124）航班</a> 在9月11日袭击中幸存，这让公司获得了世界性知名度。</li>
+        <li><b>2006年</b> —— G530 航班在黑海上空失事，原因是天气条件恶劣。</li>
+      </ul>
+
+      <h2>遗产</h2>
+      <p>AirHokol-66 被认为是全球航空安全领域的领导者之一。2015年以后与 Airbus 的联合研发成果已被应用于大多数欧洲客机之中，而到了2030年代，该公司已确立其作为空难预防标杆的地位。</p>
+
+      <h2>另见</h2>
+      <ul>
+        <li><a href="https://ru.wikipedia.org/wiki/Россия">俄罗斯</a></li>
+      </ul>
+
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>注意：</strong>Neverpedia 是一个虚构项目。
+    </section>
+  </main>
+</div>
+
+<script>
+  function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+</body>
+</html>

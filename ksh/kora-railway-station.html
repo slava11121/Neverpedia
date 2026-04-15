@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ksh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Рельстант Кора — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{ margin:0; background:#f6f7f8; color:#202122; font:16px/1.5 Arial, sans-serif; }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{ display:flex; gap:16px; padding:16px 12px; }
+    .sidebar{ width:160px; }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+    .content{flex:1}
+    .box{ background:#fff; border:1px solid #c8ccd1; padding:16px; }
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+    .infobox{ float:right; width:280px; background:#fff; border:1px solid #c8ccd1; margin:0 0 12px 12px; font-size:14px; }
+    .infobox .h{ background:#eef3f8; border-bottom:1px solid #c8ccd1; padding:8px 10px; font-weight:bold; text-align:center; }
+    .infobox .cell{ padding:8px 10px; border-top:1px solid #e6e6e6; }
+    .infobox img{display:block; max-width:100%; height:auto}
+    .thumb{ float:right; width:240px; margin:0 0 12px 12px; border:1px solid #c8ccd1; background:#fff; padding:6px; font-size:14px; }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px; color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox, .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">Нэрглав</a>
+      <a href="create.html">Сотвор нэр</a>
+      <a href="#">Случа нэр</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">Лiнга ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../kora-railway-station.html">Русский</a>
+        <a href="../en/kora-railway-station.html">English</a>
+        <a href="kora-railway-station.html">Кiвiшский</a>
+        <a href="../cn/kora-railway-station.html">中国人</a>
+        <a href="../jpn/kora-railway-station.html">日本語</a>
+        <a href="../ko/kora-railway-station.html">한국인</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+
+      <aside class="infobox">
+        <div class="h">Рельстант Кора</div>
+        <div class="cell">
+          <img src="../043.jpg" alt="Рельстант Кора">
+        </div>
+        <div class="cell"><b>Форма</b><br>Глав рель-вокзел</div>
+        <div class="cell"><b>Локата</b><br>Кiвiшь, Кора, Морковная 40, юж-край</div>
+        <div class="cell"><b>Открыв</b><br>1841</div>
+        <div class="cell"><b>Стат</b><br>Жив-ход</div>
+        <div class="cell"><b>Пут-линий</b><br>6</div>
+        <div class="cell"><b>Пересад</b><br>Путiнстант «Вокзел» (с 1940)</div>
+        <div class="cell"><b>Знач-ходы</b><br>Авар 1901, 1950; прожект-памят рекон</div>
+      </aside>
+
+      <h1 class="title">Рельстант Кора</h1>
+      <p class="lead">
+        Глав i едiн рель-вокзел Кора. Начат 1841 годэ. Док-нэр полн — «Железнодорожная станция города Кора»,
+        но en жив-реч ходит крат-форма: «Вокзел Кора».
+      </p>
+
+      <p>
+        Стант now лежит en юж-край города. Ран XIX-век ходе она стояла near центр-серд, но град-рост вынес узел en outer-line.
+        Объект держит истор-облик i сечан-эксплуат. Шесть пут-линий ведут пассаж-составы разн-хода, а сам дом-узел известен
+        мед-кровлей, арк-фасом i аккурат-свет модерн 2000-х.
+      </p>
+
+      <figure class="thumb">
+        <img src="../044.jpg" alt="Рельстант Кора сверху">
+        <figcaption class="cap">Вид-верх: фас-линия i платформ-схем.</figcaption>
+      </figure>
+
+      <h2>Хронход</h2>
+      <p>
+        Рельстант воздвиг 1841 годэ по сам-автор проекту. Дом-строй neо шёл en европ-мода; instead взял own-вид:
+        тяж-кирпич, камн-узел, выс-арк центр-тело i мед-кровля. Later same-форма стала знак-видом Кiвiшь beyond-зем.
+        En Втор мир-ход част пут-линий служила воен-перевоз i союз-снаб для СССР.
+      </p>
+
+      <h2>Арх-строй</h2>
+      <p>
+        Композ ядро держит высок арк-ризалит с час-щит above вход-узел. Мед-кровля over годи взяла зелён патин-вид;
+        2000-х свет-система подчёркнула этот тон en ноч-часе. Under платформ лежат инженер-канал i навес-фермы;
+        весь узел расчёт-под long-состав приём.
+      </p>
+
+      <h2>Пут i платформ</h2>
+      <p>
+        Эксплуат-схем держит <b>6 пут-линий</b> i несколко крыт платформ. Глав-роль — пассаж-ход. Воен-use 1940-х был врем-ветвь,
+        без лом граждан-профиль. Состав-приём идёт ритмно, platform-turn zber through сечан диспетч-схем.
+      </p>
+
+      <h2>Инцид-ходы</h2>
+      <ul>
+        <li><b>1901.</b> Рельс-лом вызвал сход паровоз-хода; машина въехала en платформ-край i опрокид. Пар-котёл burst. Шуньдерт 23.</li>
+        <li><b>1950.</b> Электро-состав с тормоз-fail сошёл с лини i повредил навес-узлы. Мас-шуньдерт neо: Ivan Samolsky вывел людей off платформ before удар.</li>
+      </ul>
+      <p>
+        Память 1950-хода now держит <b>памтт прожектор</b> en одном столб-узле. Он даёт худож-рекон станции i жива-кадр 1950-х near веч-час.
+      </p>
+
+      <h2>Путiно-доступ</h2>
+      <p>
+        Прям Метрi-лина к вокзлу neо. Пересад-ход держит nearby <b>путiнстант «Вокзел»</b>, открыв 1940 годэ:
+        here сходят град-автобус i межград-линий. Рель-узел i автобус-узел живут en пар-сцеп, forming един вход-точка для Кора-путника.
+      </p>
+
+      <h2>Знач</h2>
+      <p>
+        Рельстант Кора — one из глав-символов города i rare жив-объект XIX-век пут-мира. Он zбер истор-конструк i at same time
+        берёт систем-модерн внутр-служб: свет, диспетч, пассаж-информ. Из-за этого узел stays глав рель-серд Кора.
+      </p>
+
+      <h2>Ещё-линки</h2>
+      <ul>
+        <li><a href="metro-kora.html">Метрi Кора</a></li>
+        <li><a href="kcvsbs.html">Путiнстант «Тех-збер»</a></li>
+      </ul>
+
+      <h2>Примеч</h2>
+      <ol class="notes">
+        <li>Дат i ход-событ взяты из Кора-хрон i мест-архив листов.</li>
+      </ol>
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>Озир:</strong> Neverpedia — вымес-проект.
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>

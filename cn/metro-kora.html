@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>科拉地铁 — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:280px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="create.html">创建条目</a>
+      <a href="#">随机条目</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../metro-kora.html">Русский</a>
+        <a href="../en/metro-kora.html">English</a>
+        <a href="../ksh/metro-kora.html">Кiвiшский</a>
+        <a href="metro-kora.html">简体中文</a>
+        <a href="../jpn/metro-kora.html">日本語</a>
+        <a href="../ko/metro-kora.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+      <aside class="infobox">
+        <div class="h">科拉地铁</div>
+        <div class="cell"><img src="../040.jpg" alt="科拉地铁标志"></div>
+        <div class="cell"><b>成立时间</b><br>1939年6月24日</div>
+        <div class="cell"><b>城市</b><br>科拉</div>
+        <div class="cell"><b>线路数量</b><br>3条</div>
+        <div class="cell"><b>总长度</b><br>约27公里</div>
+        <div class="cell"><b>车站数量</b><br>11座</div>
+        <div class="cell"><b>类型</b><br>地铁系统</div>
+      </aside>
+
+      <h1 class="title">科拉地铁</h1>
+      <p class="lead">科拉地铁是基维什首都科拉的快速轨道交通系统，于1939年6月24日开通。它是全国最古老的交通系统之一，服务整个科拉城市辖区。</p>
+
+      <p>科拉地铁共由三条线路组成：<b>环线</b>（紫色）、<b>1号线</b>（橙色）和<b>2号线</b>（绿色）。尽管城市规模较为紧凑，地铁在连接住宅区、工业区和文化区域方面依然发挥着重要作用。</p>
+
+      <h2>历史</h2>
+
+      <figure class="thumb">
+        <img src="../041.jpg" alt="首座地铁站开通照片">
+        <figcaption class="cap">首座地铁站开通时的照片。</figcaption>
+      </figure>
+
+      <p>地铁建设始于1936年，属于城市基础设施现代化计划的一部分。第一期工程——紫色环线——于1939年6月24日开通，共设六座车站。系统从启用之初便成为科拉技术进步的象征，也被用作展示基维什工程成就的代表项目。</p>
+      <p>在战后恢复时期（1940至1950年代），地铁持续扩建：出现了换乘节点，车站装饰也采用了纪念性现代主义风格。到1970年代，橙色1号线建成，将北部区域连接起来；到1990年代，绿色2号线也投入使用，并通过河流通向波多利斯卡娅街和奥夫拉日纳亚街。</p>
+
+      <h2>线路与车站</h2>
+
+      <h3>环线（紫色）</h3>
+      <p>这是最古老的一条地铁线路，连接城市中心区域并形成交通环线。主要车站包括：<b>星辰站</b>、<b>切尔诺夫斯基林荫大道站</b>、<b>商业街站</b>、<b>达韦斯基站</b>和<b>比留佐夫站</b>。换乘可在<b>星辰站</b>（换乘1号线）和<b>托罗姆斯卡亚—中心站</b>（换乘2号线）实现。</p>
+
+      <figure class="thumb">
+        <img src="../038.jpg" alt="科拉地铁线路图及站名">
+        <figcaption class="cap">科拉地铁官方线路图及车站名称。</figcaption>
+      </figure>
+
+      <h3>1号线（橙色）</h3>
+      <p>该线自北向南贯穿城市，将<b>北区</b>、<b>黑海区</b>和<b>鞑靼区</b>与市中心连接起来。它于1972年建成，作为对超负荷公交线路的替代方案。在<b>星辰站</b>可换乘环线。</p>
+
+      <h3>2号线（绿色）</h3>
+      <p>这是一条沿河铺设的南部线路，于1989年开通，共设三座车站：<b>波多利斯卡娅站</b>、<b>托罗姆斯卡亚—中心站</b>和<b>奥夫拉日纳亚街站</b>。与环线的换乘位于<b>托罗姆斯卡亚—中心站</b>。</p>
+
+      <h2>基础设施与车辆</h2>
+      <p>科拉地铁的列车车辆在其整个历史中，始终完全通过向苏联采购，之后则改为向俄罗斯采购来构成车队。</p>
+      <p>自1939年系统开通起，最早使用的是<a href="https://ru.wikipedia.org/wiki/А_(вагон_метро)"><b>“A”型</b></a>车厢，并一直运营到1956年。之后采购了<a href="https://ru.wikipedia.org/wiki/Д_(вагон_метро)"><b>“D”型</b></a>列车（1956–1963），并持续使用到1970年代初。自1970年至1973年间，线路又引入了新的<a href="https://ru.wikipedia.org/wiki/Еж_(вагон_метро)"><b>“Ёж”型</b></a>列车，这些列车运营至1985年，随后被<a href="https://ru.wikipedia.org/wiki/81-717/714"><b>81-717/714系列</b></a>所取代，而后者至今仍在大多数线路上运行。</p>
+      <p>在<b>2012年至2016年</b>期间，橙色线路采购了现代化的<a href="https://ru.wikipedia.org/wiki/Ока_(вагон_метро)"><b>81-760/761“奥卡”</b></a>型列车，它们拥有更佳的能耗表现、自动驾驶系统以及 обновлённый 内饰。</p>
+      <p>列车的技术维护和检修工作由位于科拉东南边缘的<b>“线路区”车辆段</b>负责。这里同时也是中央<b>行车调度控制系统</b>所在地，负责监控所有线路。运行安全则通过<b>基维什自动控制与信号系统</b>来保障，这些系统按照国家内部交通安全标准开发。</p>
+
+      <figure class="thumb">
+        <img src="../039.jpg" alt="科拉地铁现代线路技术图">
+        <figcaption class="cap">科拉地铁技术线路图。</figcaption>
+      </figure>
+
+      <h2>趣闻</h2>
+      <ul>
+        <li>第一条线路仅用三年建成，按1930年代的标准来看，这属于创纪录的工期。</li>
+        <li><b>托罗姆斯卡亚—中心站</b>被认为是全国最深的车站之一。</li>
+        <li>所有车站标识均采用双语：基维什语和俄语。</li>
+        <li>环线的紫色象征着科拉“中心与边缘的统一”。</li>
+      </ul>
+
+      <h2>另见</h2>
+      <ul>
+        <li><a href="f-kap.html">F-KAP</a></li>
+        <li><a href="kora.html">科拉</a></li>
+        <li><a href="kivish.html">基维什</a></li>
+      </ul>
+
+      <h2>注释</h2>
+      <ol class="notes">
+        <li>资料来源：基维什交通部档案（1936–2024）。</li>
+      </ol>
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>注意：</strong>Neverpedia 是一个虚构项目。
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>

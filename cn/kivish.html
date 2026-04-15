@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>基维什 — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;               
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;  
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="create.html">创建条目</a>
+        <a href="#">随机条目</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../kivish.html">Русский</a>
+          <a href="../en/kivish.html">English</a>
+          <a href="../ksh/kivish.html">Кiвiшский</a>
+          <a href="kivish.html">简体中文</a>
+          <a href="../jpn/kivish.html">日本語</a>
+          <a href="../ko/kivish.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">基维什</div>
+          <div class="cell">
+            <img src="../001.jpg" alt="基维什国旗">
+            <img src="../002.jpg" alt="基维什领土">
+          </div>
+          <div class="cell"><b>类型</b><br>国家</div>
+          <div class="cell"><b>位置</b><br>西伯利亚和远东</div>
+          <div class="cell"><b>总统</b><br><a href="amamarama-tirorarorita.html">阿马马拉玛·提罗拉罗丽塔（2031年－至今）</a></div>
+          <div class="cell"><b>建立者</b><br><a href="kivishko-toromskiy.html">基维什科·托罗姆斯基（600－642年）</a></div>
+          <div class="cell"><b>首都</b><br>科拉（自631年起）</div>
+          <div class="cell"><b>人口</b><br>12,564,364人</div>
+          <div class="cell"><b>货币</b><br>基沙（自1789年起）</div>
+          <div class="cell"><b>IOC代码</b><br>KSH</div>
+          <div class="cell"><b>电话区号</b><br>+8</div>
+          <div class="cell"><b>时区</b><br>UTC+7、UTC+8、UTC+9</div>
+        </aside>
+
+<h1 class="title">基维什</h1>
+<p class="lead">
+  <b>基维什</b>是该国在1989年10月13日脱离共产主义阵营并转向中立与技术发展路线后所采用的现代名称。
+  这个国家位于西伯利亚，并统治着数块领土，包括核心地区（基维什）、
+  <a href="korean-kivish.html">朝鲜半岛基维什</a>（KKP）以及
+  <a href="african-kivish.html">非洲基维什</a>。
+</p>
+
+<p>
+  <b>基维什</b>是<i>基维什共和国联盟</i>（СКР）时期的法理继承者。1989年之后，国家放弃了集团对抗模式，
+  但保留了中央集权治理和技术官僚式发展风格。
+  在行政上，这个国家作为一个拥有统一政府的单一共和国运作，但同时设有不同的领土制度：
+  在每一块领土上居住和工作都适用单独的公民身份 / 签证规则，同时整体上仍属于同一个国家框架。
+  基维什时期的外交政策建立在务实原则之上：在扩大贸易开放的同时，加强交通与技术安全，
+  尤其是在北太平洋方向。
+</p>
+
+<figure class="thumb">
+  <img src="../003.jpg" alt="基维什首都科拉全景">
+  <figcaption class="cap">科拉——基维什的首都，也是最重要的技术中心。</figcaption>
+</figure>
+
+<h2>词源与自称</h2>
+<p>
+  “基维什”这一名称既指国家的历史核心地区，也指整个联盟式国家实体。
+  在俄语资料中，还可见“基维什民族”以及“基维什共和国联盟”这样的表述（后者用于指代1989年之前的历史时期）。
+</p>
+
+<h2>地理</h2>
+<p>
+  国家核心地区位于西伯利亚；首都是<a href="kora.html"><b>科拉</b></a>。主要城市包括：米里、福尔塔、D市、瓦拉尔。
+  <a href="korean-kivish.html">朝鲜半岛基维什</a>位于原朝鲜民主主义人民共和国领土之上（KKP），而
+  <a href="african-kivish.html">非洲基维什</a>则是于2020年代被并入并完成重建的领土。
+</p>
+
+<h2>历史</h2>
+
+<h3>从СКР过渡到基维什（1989–1992）</h3>
+<p>
+  1989年10月13日，国家宣布退出共产主义阵营，并正式确立中立与技术发展的路线。
+  在最初几年，国家进行了大规模证件（护照）更换，并对民用机构进行了品牌重塑，其中也包括航空系统：
+  原有机构被重组，并成立了国家航空公司 <b>Kivish Air</b>。
+  1990年，国家开始开放贸易：在保持与苏联和中国关系的同时，也开始采购西方民用技术设备
+  （同时保留此前已购入的机队）。
+</p>
+<p>
+  1992年，基维什正式宣布放弃核武器及未来使用核武器的可能性，同时在朝鲜民主主义人民共和国带来的风险背景下推进防御项目。
+  也正是在这一时期，СКР时代的重要基础设施项目——<b>KS-54</b> 干线公路完工，
+  将首都与国家主要城市连接起来。
+</p>
+
+<h3>安全危机与“航空转向”（1993–1996）</h3>
+<p>
+  在朝鲜民主主义人民共和国核危机持续升高的背景下，基维什加快了应对核风险的相关工作。
+  1994年，发生了 <b>KA-624</b> 航班空难（Boeing 737-200坠毁），调查发现该机被违规当作“新机”交付。
+  在引发大规模社会与政治丑闻后，国家对 Boeing 飞机在本国境内的运营实施禁令，
+  并将运输体系转向本国和俄罗斯机型。
+</p>
+<p>
+  1996年，基维什对这一制度进行了部分放松：允许 Boeing 飞机飞越本国领空，
+  但本国航空公司使用这类机型着陆和运营仍然被禁止。
+</p>
+
+<h3>市场开放与技术展示（1997–2002）</h3>
+<p>
+  从1990年代末起，国家开始“试探”进入美国和其他市场：汽车工业推出试销批次，航空工业也提出了首批方案，
+  在国外一度被视为后苏联时代的细分产品。
+  2000年，国家在<b>斯纳西</b>市经历了一场技术灾难：核电站事故导致反应堆堆芯熔毁并被迫全面疏散，
+  这一事件在国际上被称为“第二个切尔诺贝利”。
+  2000年2月2日，米里姆·卡拉松逝世；权力转交给塔雷姆，后者在保留对 Boeing 限制的同时，开始谨慎地与美国接近。
+</p>
+<p>
+  为展示国家的全球联通能力，<b>Kivish Air Delta</b> 航线（568航班）开通，线路为
+  科拉 — 莫斯科 — 巴黎 — 纽约，使用 <b>AH-66 D124</b> 客机。
+  2001年，霍科利尼科夫设计局的一架飞机在美国灾难中经受住了撞击与残骸冲击，因此成为高强度结构防护的典型案例；
+  后来又为市场推出了去除重型装甲的轻量化版本 AH-66 D128。
+  2002年，F-KAP 凭借旅行车 <b>F-KAP Tref</b> 在世界拉力赛中的胜利而一举成名。
+</p>
+
+<h3>朝鲜半岛紧张局势与国内冲击（2003–2008）</h3>
+<p>
+  2003年，一架教育航班“15号机”（Tu-154）在朝鲜民主主义人民共和国上空被击落，此后基维什加强了措辞立场，
+  并加入了围绕朝鲜半岛安全问题的多边谈判机制。
+  2004年，科拉地铁“柳德明斯卡亚”站发生恐怖袭击，成为这一时期最具震撼性的事件之一：
+  恐怖分子利用一名青少年携带爆炸装置。国家随后通过扩大内部调查和实施安全改革作出回应。
+</p>
+<p>
+  2006年，朝鲜民主主义人民共和国进行了首次核试验，这使朝鲜方向成为基维什国家安全战略的核心之一。
+  与此同时，民航标准和国内安全检查也在不断加强，并查出和清除了若干大型犯罪网络。
+  2008年，基维什公开批评朝鲜民主主义人民共和国的治理方式具有危险性，并加强了与周边国家在地区安全方面的协作。
+</p>
+
+<h3>朝鲜半岛重组与影响力扩张（2009–2014）</h3>
+<p>
+  2009年，日本发生了一起出口型 Tu-154 在日本认证体系下的空难；调查确认飞机技术状态正常，
+  事故原因被认定为机组无视警告的人为失误。
+  这对日本航空声誉造成打击，也进一步提升了外界对机组纪律培训的关注。
+</p>
+<p>
+  2011年，朝鲜民主主义人民共和国原政权被推翻并终结；该地区随后被设立为<b>朝鲜半岛基维什（KKP）</b>。
+  KKP 的边界是分阶段开放的：为了降低失稳风险，贸易先于自由通行启动。
+  2014年，首次谨慎的签证旅行制度开始运行。
+  在欧洲与后苏联空间持续动荡的背景下，基维什削减了石油出口，同时保留了对日本的有限供应，
+  并扩大了与日本防务领域的技术合作。
+</p>
+
+<h3>政治危机与恢复（2015–2020）</h3>
+<p>
+  2015年，福连当选总统；其执政时期通常被描述为停滞且腐败严重。
+  2016年爆发了大规模抗议，随后遭到强力部门镇压。
+  2018年，政府与各委员会将福连赶下台，前任领导人重新回到治理位置；
+  2018年11月13日，国家宣布启动被盗资金追缴计划
+  （按当时估算，金额约为2万亿基沙）。
+</p>
+<p>
+  2019年发生了一起国际震动事件：一名在1980年代失踪的女孩米娅被发现居住在纽约，并使用伪造身份。
+  2020年，COVID-19疫情导致严格限制措施实施，对航空和旅游业造成重击；
+  与此同时，F-KAP 在美国推出了搭载对话神经网络的电动车 <b>E-UP</b>，
+  即使在疫情背景下也成为相当显眼的热门产品。
+</p>
+
+<h3>非洲基维什与新的外交表述（2021–2030）</h3>
+<p>
+  2021年，在非洲稳定化行动结束后，<b>非洲基维什</b>正式设立，并启动重建计划。
+  2022年，基维什公开谴责俄罗斯入侵乌克兰，指出此举可能导致更大范围的局势升级。
+  2023年，考虑到围绕俄罗斯制裁所引发的市场变化，国家恢复了活跃的石油出口。
+</p>
+<p>
+  2024年，基维什对唐纳德·特朗普赢得美国大选持中立偏积极态度，并扩大了与日本的合作，
+  包括若干联合项目（其中也包括对罕见“粉红猫”现象的科学研究）。
+  2027年，Tarifa Auto 扩大了其在东欧的存在，在白俄罗斯收购 Belgee 并建立本地生产。
+  2030年12月，23岁的阿马马拉玛·提罗拉罗丽塔赢得选举，标志着国家领导层的代际更替。
+</p>
+
+<h2>事实列表</h2>
+<ul>
+  <li>首都——<b>科拉</b>；主要城市包括米里、瓦拉尔、福尔塔等。</li>
+  <li>三块领土由统一政府管理，但各自要求单独公民身份。</li>
+  <li>对外国企业的税收政策：进入时税率较高，随后根据长期忠诚度逐步下调。</li>
+  <li>关键产业包括汽车工业（F-KAP）、航空（AirHokol-66）、航天（KSFOSE）、城市基础设施与安全。</li>
+  <li>自2031年起，国家实施城市现代化与交通导航统一化计划。</li>
+</ul>
+
+<h2>国家体制与政治</h2>
+<p>
+  基维什是一个中央集权共和国，对三块领土实施统一政府管理。
+  在每一块领土生活和工作都需要单独公民身份，但三块领土在法律上共同组成一个国家。
+  外交政策建立在如下原则之上：
+  对基维什发动侵略将导致威胁被消除，必要时甚至可能引发吞并；对盟友则按其请求提供帮助。
+</p>
+
+<h2>经济</h2>
+<p>
+  经济以高科技产业、交通运输和安全体系为基础。
+  针对外国公司的税收政策采取较高准入门槛，随后在多年稳定经营后逐步降低税率；
+  若企业退出后又重新进入，则恢复最高税率。
+</p>
+
+<h3>关键公司</h3>
+<ul>
+  <li><a href="f-kap.html">第一基维什汽车制造厂（F-KAP）</a>——汽车与主动安全系统。</li>
+  <li><a href="airhokol-66.html">AirHokol-66</a>——民用航空，以运输安全标杆而著称。</li>
+  <li><a href="ksfose.html">Kivish Space Flight Organization Study of Extraterrestrial Space</a>——航天计划（自1958年开始发射）。</li>
+  <li><a href="tarifa.html">Tarifa</a>——商用运输与专用设备。</li>
+  <li><a href="kibus.html">KiBus</a>——公交车制造，并强调运输安全。</li>
+  <li><a href="tarifa-auto.html">Tarifa Auto</a>——乘用车。</li>
+</ul>
+
+<h2>交通与安全</h2>
+<p>
+  自2030年代初开始，国家为三块领土统一实施了道路标志与道路标线标准，
+  同时推进大规模城市交通和监测系统现代化。
+  航空领域则由航空公司与航空制造工业共同构成，并与国家内部安全标准深度整合。
+</p>
+
+<h2>文化与社会</h2>
+<p>
+  基维什将自己定位为一个以技术为中心、崇尚效率和基础设施发展的社会。
+  国家已为非洲基维什开通签证通道，并扩大了与友好国家的教育交流。
+</p>
+
+<h2>行政区划</h2>
+<ul>
+  <li><b>基维什</b>（核心地区，首都——科拉）；</li>
+  <li><a href="korean-kivish.html"><b>朝鲜半岛基维什</b></a>（双语：基维什语 / 朝鲜语）；</li>
+  <li><a href="african-kivish.html"><b>非洲基维什</b></a>（签证最开放的地区）。</li>
+</ul>
+
+<h2>象征体系</h2>
+<p>
+  各领土的旗帜通常采用绿色、黑色和蓝色组合，并配有红色长剑和白色星辰。
+  北基维什和非洲基维什还拥有各自独立的变体构图。
+</p>
+
+<h2>统治者</h2>
+<p>
+  统治者的连续名单可追溯到600年；近代领导人包括：
+  第一技术官阿科隆（1917–1944）、卡拉斯·阿科隆松（1944–1972）、米里姆·卡拉松（1972–2000）、
+  塔里姆·米里姆松（2000–2015）、福连·塔里姆松（2015–2030）、<b>阿马马拉玛·提罗拉罗丽塔</b>（自2031年起）。
+  完整名单见条目 <a href="rulers-kis.html">《基维什统治者》</a>。
+</p>
+
+<h2>法律与迁移</h2>
+<p>
+  基维什法律体系将对外部威胁的严厉措施，与康复计划和城市更新方案结合在一起。
+  领土之间的内部流动，则通过各领土签证和公民身份制度加以管理。
+</p>
+
+<h2>事实列表</h2>
+<ul>
+  <li>首都——<b>科拉</b>；主要城市包括米里、瓦拉尔、福尔塔等。</li>
+  <li>三块领土由统一政府管理，但各自要求单独公民身份。</li>
+  <li>对外国企业的税收政策：进入时税率较高，随后根据长期忠诚度逐步下调。</li>
+  <li>关键产业包括汽车工业（F-KAP）、航空（AirHokol-66）、航天（KSFOSE）、城市基础设施与安全。</li>
+  <li>自2031年起，国家实施城市现代化与交通导航统一化计划。</li>
+</ul>
+
+<h2>另见</h2>
+<ul>
+  <li><a href="f-kap.html">F-KAP</a></li>
+  <li><a href="airhokol-66.html">AirHokol-66</a></li>
+  <li><a href="ksfose.html">基维什航天计划</a></li>
+</ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意：</strong>Neverpedia 是一个虚构项目。
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>メインページ — Neverpedia</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><img class="logo" src="../logo.png" alt="Neverpedia"></a>
+      <nav class="nav">
+        <a href="index.html">メインページ</a>
+        <a href="create.html">記事を作成</a>
+        <a href="#">ランダム記事</a>
+      </nav>
+      <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">
+      言語 ▾
+      </div>
+      <div id="langList" class="lang-list">
+      <a href="../index.html">Русский</a>
+      <a href="../en/index.html">English</a>
+      <a href="../ksh/index.html">Кiвiшский</a>
+        <a href="../cn/index.html">简体中文</a>
+        <a href="index.html">日本語</a>
+        <a href="../ko/index.html">한국어</a>
+      </div>
+     </div>
+    </aside>
+
+    <main class="content">
+      <div class="box">
+        <div class="top">
+          <h1 class="title"><a href="index.html">Neverpedia</a> へようこそ</h1>
+          <form class="search" action="list.html" method="get" role="search">
+            <input type="search" name="q" placeholder="Neverpedia を検索…">
+            <button type="submit" class="btn">検索</button>
+          </form>
+        </div>
+
+        <p class="lead"><a href="https://ja.wikipedia.org/wiki/架空">誰でも編集できる架空百科事典</a>。</p>
+
+        <h2 class="h2">最近の記事</h2>
+
+        <ul class="recent-list" id="recentList">
+          <li class="recent-item">
+            <img class="thumb" src="../001.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="kivish.html">Kivish</a></div>
+              <div class="desc">Kivish は、三つの領域（Kivish、North Kivish、African Kivish）を統合的に統治する、シベリアの高度技術国家である。発達した産業、もう一つの歴史、そして厳格でありながら実利的な対外政策で知られている。</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../064.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="tarifa.html">Tarifa</a></div>
+              <div class="desc">Tarifa は、1976年に City D で設立された Kivish の民間機械工業会社である。空港牽引車や滑走路維持から、輸出向けバン、トラクター、特殊車両まで、実用本位の姿勢で知られている。2000〜2010年代には、Tarifa は「飾らない交通」の象徴の一つとなり、単純で耐久性が高く分かりやすい車づくりで評価された。また、同社の一部デザインは、モデル寿命の異常な長さによってカルト的地位を得た。</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample3.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article3.html">記事名 3</a></div>
+              <div class="desc">2行の概要。</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample4.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article4.html">記事名 4</a></div>
+              <div class="desc">記事の簡単な説明。</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample5.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article5.html">記事名 5</a></div>
+              <div class="desc">記事の簡単な説明。</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample6.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article6.html">記事名 6</a></div>
+              <div class="desc">記事の簡単な説明。</div>
+            </div>
+          </li>
+        </ul>
+
+        <p id="emptyMsg" class="lead">
+          まだ記事がありません。<a href="create.html">最初の記事を作成しましょう！</a>
+        </p>
+      </div>
+
+      <div class="notice">
+        <strong>注意：</strong> Neverpedia は架空のプロジェクトです。
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const list = document.getElementById('recentList');
+      const msg  = document.getElementById('emptyMsg');
+      if (list && msg && list.children.length > 0) msg.style.display = 'none';
+    })();
+  </script>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display =
+      list.style.display === "block" ? "none" : "block";
+  } 
+  </script>
+</body>
+</html>

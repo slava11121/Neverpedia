@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ksh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Мiрi — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial,sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:260px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+    .lang-block{margin-top:20px;border-top:1px solid #c8ccd1;padding-top:10px}
+    .lang-toggle{cursor:pointer;font-weight:bold;font-size:14px;margin-bottom:6px;user-select:none}
+    .lang-list{display:none}
+    .lang-list a{display:block;margin:4px 0;font-size:14px}
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><img class="logo" src="../logo.png" alt="Neverpedia"></a>
+    <nav class="nav">
+      <a href="index.html">Нэрглав</a>
+      <a href="create.html">Сотвор нэр</a>
+      <a href="#">Случа нэр</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">Лiнга ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../miri.html">Русский</a>
+        <a href="../en/miri.html">English</a>
+        <a href="miri.html">Кiвiшский</a>
+        <a href="../cn/miri.html">中国人</a>
+        <a href="../jpn/miri.html">日本語</a>
+        <a href="../ko/miri.html">한국인</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+
+      <aside class="infobox">
+        <div class="h">Мiрi</div>
+        <div class="cell"><img src="../051.jpg" alt="Мiрi"></div>
+        <div class="cell"><b>Стран-ядро</b><br><a href="kivish.html">Кiвiшь</a></div>
+        <div class="cell"><b>Начат</b><br>600 годэ</div>
+        <div class="cell"><b>Центраград-стар</b><br>до 714 годэ</div>
+        <div class="cell"><b>Рельвокзел</b><br><a href="miri-railway-station.html">Вокзел Мiрi</a></div>
+        <div class="cell"><b>Ключ-компани</b><br><a href="kibus.html">KiBus</a>; Folet-500</div>
+        <div class="cell"><b>Живмас</b><br>54 548</div>
+        <div class="cell"><b>Стат-лик</b><br>«град коши»</div>
+        <div class="cell"><b>Час-лин</b><br>UTC+7</div>
+      </aside>
+
+      <h1 class="title">Мiрi</h1>
+      <p class="lead"><b>Мiрi</b> — стар-градище <a href="kivish.html">Кiвiшь</a>. Начат 600 годэ by Кiвiшько Торомски; до 714 годэ kept центраград-ход. Seчан Мiрi stays тих-узел: путiно, индуст, лерна-нит i коши-лик. Град often named «град коши» by whole Kivish-ling.</p>
+
+      <h2>Нэрход i Самонэр</h2>
+      <p>Нэр <b>Мiрi</b> holds from ран-лит Kivish-list. Sound-form short, clear, old-root. En лок-речь some soft-shifts exist, but лист-нарвет keeps same spell-line: <b>Мiрi</b>.</p>
+
+      <h2>Хронход</h2>
+      <p>Мiрi laid en 600 годэ under first Kivish-ruler. For first век it worked as центраград-body: нарвет, торгов-узлы i ран-воj lines all crossed here. 714 годэ центраград-ход moved to <a href="kora.html">Кора</a>, where warm-flow i route-core served broader торгов-path from Чайни-side.</p>
+
+      <figure class="thumb">
+        <img src="../052.jpg" alt="Мiрi сверху">
+        <figcaption class="cap">Мiрi: кварт-сет, парк-лин i выход к рельвокзел-узлу.</figcaption>
+      </figure>
+
+      <p>After center-shift, Мiрi kept life as service-node, trade-stop i later transport-lock. En XX век град hardened into local путiно-hub. En XXI век city-border received <a href="kibus.html">KiBus</a>-plant, and мед-универ cluster grew into ген-лерна node, including pink-cat studies.</p>
+
+      <h2>Земара i Град-строй</h2>
+      <p>Мiрi uses regular кварт-сет with low-rise body, ringed by forest-belts. Центрум-axis pulls toward rail-node. North-east keeps park-zone on Molotovo-line with Кiвiшько monument. Outer-rims hold индуст-yards, KiBus-bases i service-lots.</p>
+
+      <h2>Нарвет-узлы</h2>
+      <p>Мiрi works as обыч-град-округ inside Kivish-narvet. Муниц-layer runs road-clean, обще-путiно, санитар-watch i all коши-pass systems. Cat-policy here neо decor-only: it shapes civil-rules, street-clean i urban daily-flow.</p>
+
+      <h2>Домья</h2>
+      <h3>Индуст i Сервис-узлы</h3>
+      <ul>
+        <li><b>Автобус-строй.</b> <a href="kibus.html">KiBus</a> feeds work, parts-flow i route-service.</li>
+        <li><b>Мед i ген-лерна.</b> Мед-универ cluster runs applied studies, including pink-cat surviv-logic i social-form.</li>
+        <li><b>Путiно i логист.</b> Rail-node, склад-yards i bus-bases keep freight-service body.</li>
+      </ul>
+
+      <h3>Торг i Сервис-лин</h3>
+      <p>Мiрi prefers small shops, caf-locks i repair-yards over giant retail-nodes. Visit-flow niche: cat-lovers, city-photo hunters i техно-walk guests.</p>
+
+      <h2>Путiно</h2>
+      <p>Град-flow leans on назем-обще transport. Road-clean kept near absolute-state — part of коши-protect norm, since грязь, shard i ice-hold may harm cat-body.</p>
+
+      <h3>Автобус-лин</h3>
+      <p>Маршрут-body served by <b>KiBus</b>-fleet. Град keeps storage-node, repair-bays i service-shift around fleet-issue and return-flow.</p>
+
+      <h3>Рельса</h3>
+      <p><a href="miri-railway-station.html"><b>Вокзел Мiрi</b></a> stands on south-rim and takes пригород i даль-flows. Spur-lines peel off toward индуст-zone and loading-yards.</p>
+
+      <h2>Култа i Медиа-лин</h2>
+      <p>Unofficial sign of Мiрi is коша. City runs lerna, social-form i count-pass for animals; коши receive civic-passports, though they stay outside admin-pop count. 2016 promo-wave painted part of bus-fleet in anime liveries. Folet-500, local техно-sport channel, also lives here and tracks автоспорт, machines i city-engineer stories.</p>
+
+      <h2>Лерна</h2>
+      <ul>
+        <li><b>Мед-универ Мiрi</b> — clinic-lerna i ген-studies.</li>
+        <li><b>Парк-кампус</b> — public-lerna, fest-lines i civic-open days.</li>
+      </ul>
+
+      <h2>Символ-лик</h2>
+      <p>Мiрi carries no separate flag-body, but cat-image fills public design, route-art i city-sonda. This makes Мiрi one of the most instantly read Kivish-cities even at small scale.</p>
+
+      <h2>Ещё-линки</h2>
+      <ul>
+        <li><a href="kivish.html">Кiвiшь</a></li>
+        <li><a href="kibus.html">KiBus</a></li>
+        <li><a href="kora.html">Кора</a></li>
+      </ul>
+
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>Озир:</strong> Neverpedia — вымес-проект.
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>

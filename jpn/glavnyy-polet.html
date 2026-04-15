@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Glavnyy Polet — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto; margin:0 auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">メインページ</a>
+        <a href="create.html">記事を作成</a>
+        <a href="#">ランダム記事</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">言語 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../glavnyy-polet.html">Русский</a>
+          <a href="../en/glavnyy-polet.html">English</a>
+          <a href="../ksh/glavnyy-polet.html">Кiвiшский</a>
+          <a href="../cn/glavnyy-polet.html">简体中文</a>
+          <a href="glavnyy-polet.html">日本語</a>
+          <a href="../ko/glavnyy-polet.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">Glavnyy Polet</div>
+          <div class="cell">
+            <img src="../077.jpg" alt="Glavnyy Polet のロゴ">
+          </div>
+          <div class="cell"><b>種類</b><br>国営航空会社（UKR）</div>
+          <div class="cell"><b>設立</b><br>1931年2月3日</div>
+          <div class="cell"><b>廃止</b><br>1989年11月8日</div>
+          <div class="cell"><b>本部</b><br>コラ</div>
+          <div class="cell"><b>ハブ空港</b><br>テクノクラート記念空港</div>
+          <div class="cell"><b>地方拠点</b><br>リギナ（マルタ市）、ヴラデン（ラミャ市）</div>
+          <div class="cell"><b>便名プレフィックス</b><br>GP-###</div>
+        </aside>
+
+        <h1 class="title">Glavnyy Polet</h1>
+        <p class="lead">
+          <b>Glavnyy Polet</b> は、1931年から1989年まで運航していた
+          <b>UKR</b>（Union of Kivish Republics）初の国営旅客航空会社である。
+          この航空会社は、実証的な長距離飛行から全国的な路線網へ、
+          さらにジェット機および超音速機の運航へと発展していった。
+        </p>
+
+        <p>
+          Glavnyy Polet の歴史は通常、初期段階（1931–1945年）、
+          戦後成長期（1945–1960年）、そしてジェット／超音速時代（1960–1989年）の
+          三つに分けられる。同社の評価は、路線開設だけでなく、
+          事故や重大事案の後に社内で新たな規律、訓練、整備基準が定着したことによっても形成された。
+        </p>
+
+        <figure class="thumb">
+          <img src="../078.jpg" alt="Glavnyy Polet の初期飛行">
+          <figcaption class="cap">初期段階：Glavnyy Polet は少数の長距離飛行から始まった。</figcaption>
+        </figure>
+
+        <h2>設立と初期段階（1931–1945年）</h2>
+        <p>
+          Glavnyy Polet は1931年、UKR の主要中心地と同盟方面を結ぶ
+          旅客輸送を確保するための国営航空会社として設立された。
+          初期段階の特徴は、実証的な飛行、首都ハブへの強い依存、
+          そして各便に高い象徴的意味が与えられていた少数路線であった。
+        </p>
+
+        <h3>GP-01</h3>
+        <p>
+          最初の歴史的便として通常挙げられるのは <b>GP-01</b>（コラ → モスクワ）である。
+          この便は、長距離旅客路線そのものの存在を確立し、
+          後のネットワークにおける「基準となる長距離便」の概念を形づくった。
+        </p>
+
+        <h2>戦後路線網（1945–1959年）</h2>
+        <p>
+          戦後、航空会社は単発的な飛行から、定期的な国内路線の復旧へと移行した。
+          首都ハブ ― 地方拠点 ― 小規模方面という明確な構造が形成されていった。
+        </p>
+
+        <h3>最初の戦後路線</h3>
+        <ul>
+          <li><b>GP-002</b> — コラ → マルタ（1945年）</li>
+          <li><b>GP-003</b> — コラ → ラミャ（1946年）</li>
+          <li><b>GP-004</b> — コラ → サチャ（1946年）</li>
+        </ul>
+
+        <h3>GP-007 墜落事故（1951年）</h3>
+        <p>
+          1951年、航空会社最初の墜落事故が発生した。
+          <b>GP-007</b>（マルタ → ジェリ）便は AirHokol-66 A012 で運航されていたが、
+          リギナ空港（マルタ）での不適切な修理に起因するエンジン故障の後に墜落した。
+          この出来事により、整備班への監督が強化され、
+          基幹空港における整備規程の統一が進められた。
+        </p>
+
+        <h2>ジェット時代と機材拡張（1960–1972年）</h2>
+        <p>
+          1960年代、Glavnyy Polet は積極的成長期に入り、
+          ソ連製機材を含む機材群を徐々に拡大しながら便数も増加させた。
+          この成長は、乗務員規律と自動システムの信頼性への
+          より強い注意を伴っていた。
+        </p>
+
+        <h3>GP-100 墜落事故（1960年）</h3>
+        <p>
+          1960年、<b>GP-100</b>（コラ → リツィ、サタリ）便は AirHokol-66 D080 で運航されていたが、
+          両操縦士がオートパイロットに依存して操縦室を離れ、
+          そのオートパイロットが解除された後に墜落した。
+          機体は制御を失い、水面へ衝突した。
+          調査の結果、少なくとも1名の操縦士が常時操縦室に在席しなければならないという規則が
+          運航基準に導入され、民間旅客機の自動化要件も見直された。
+        </p>
+
+        <h3>GP-213 事案（1965年）</h3>
+        <p>
+          1965年、Tu-124 で運航されていた <b>GP-213</b> 便は、
+          鳥の吸い込みによるエンジン損傷の後、ウナハ川への着水に成功した。
+          負傷者は出ず、この出来事は社内で、
+          推力喪失時の意思決定に関する訓練事例として用いられた。
+        </p>
+
+        <h2>超音速計画と訓練見直し（1973年）</h2>
+        <p>
+          1970年代初頭、Glavnyy Polet は超音速 Tu-144 の運航を開始した。
+          この計画は、イメージ戦略的かつ技術的なものと受け止められていたが、
+          乗務員訓練と緊急手順の質に対する要求を大きく引き上げた。
+        </p>
+
+        <h3>GP-014 墜落事故（1973年4月17日）</h3>
+        <p>
+          1973年4月17日、モスクワ（ドモジェドヴォ）→ コラ 路線で
+          <b>GP-014</b> の墜落事故が発生した。
+          燃料系統の故障が急速な緊急事態、安定性の喪失、
+          そして高速での山岳地帯への衝突を引き起こした。
+          この後、UKR では超音速機の操縦士訓練が厳格化され、
+          重心管理および燃料自動制御への監督もより厳しいものとなった。
+        </p>
+
+        <h2>後期段階（1974–1989年）</h2>
+        <p>
+          1973年以後、この航空会社は「厳格な規則」のもとで運航した。
+          すなわち、厳しい SOP、操縦室規律、基幹空港での強化整備である。
+          機材は、自国製ジェット機とソ連製の Tu / Il / An 系列の双方によって補充され、
+          密度の高い国内路線網と同盟方面の維持が図られた。
+        </p>
+
+        <h2>再編と遺産（1989年）</h2>
+        <p>
+          1989年、Glavnyy Polet は従来の形での存在を終えた。
+          同航空会社は再編され、その基盤の上に新しい国営航空会社 <b>Kivish Air</b> が設立された。
+          運航継続性のため、経営陣と飛行要員の一部は維持されたが、
+          Glavnyy Polet というブランド自体は終了した。
+        </p>
+
+        <h2>主要便と出来事一覧</h2>
+        <ul>
+          <li><b>GP-01</b> — 最初の長距離便 コラ → モスクワ（1931年）</li>
+          <li><b>GP-007</b> — 会社最初の墜落事故（1951年）</li>
+          <li><b>GP-100</b> — 墜落事故と「操縦士は操縦室にいること」規則の導入（1960年）</li>
+          <li><b>GP-213</b> — Tu-124 の着水成功（1965年）</li>
+          <li><b>GP-014</b> — 超音速 Tu-144 の墜落事故（1973年）</li>
+          <li><b>1989年</b> — Kivish Air への再編</li>
+        </ul>
+
+        <h2>関連項目</h2>
+        <ul>
+          <li><a href="kivish-air.html">Kivish Air</a></li>
+          <li><a href="siberia-airlines.html">Siberia Airlines</a></li>
+          <li><a href="kivish-korean-airlines.html">Kivish-Korean Airlines</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意：</strong> Neverpedia は架空のプロジェクトです。
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

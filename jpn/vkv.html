@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Great Stable Directorate — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{
+      float:right;width:280px;background:#fff;border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;font-size:14px;
+    }
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:240px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox, .thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">メインページ</a>
+      <a href="create.html">記事を作成</a>
+      <a href="#">ランダム記事</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">言語 ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../vkv.html">Русский</a>
+        <a href="../en/vkv.html">English</a>
+        <a href="../ksh/vkv.html">Кiвiшский</a>
+        <a href="../cn/vkv.html">简体中文</a>
+        <a href="vkv.html">日本語</a>
+        <a href="../ko/vkv.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+      <aside class="infobox">
+        <div class="h">Great Stable Directorate</div>
+        <div class="cell"><img src="../014.jpg" alt="機関のロゴ"></div>
+        <div class="cell"><b>種類</b><br>国家機関</div>
+        <div class="cell"><b>分野</b><br>畜産、交通</div>
+        <div class="cell"><b>設立</b><br>1436年</div>
+        <div class="cell"><b>廃止</b><br>1948年5月23日</div>
+        <div class="cell"><b>所在地</b><br>Kivish、Miri</div>
+        <div class="cell"><b>主要人物</b><br>歴史的には Kivish の最高統治者たち</div>
+      </aside>
+
+      <h1 class="title">Great Stable Directorate</h1>
+      <p class="lead">Great Stable Directorate（GSD）は、1436年に創設された Kivish 最古級の国家機関の一つであり、馬の繁殖、登録、運用を体系化するために設立された。</p>
+
+      <p>数世紀にわたり、GSD は馬事行政の統制と発展を担う中央機関であった。その活動は、品種改良、個体登録、軍および民間への馬の供給、さらには最初期の動物識別制度の整備にまで及んでいた。この機関は Kivish の経済と軍事の発展において重要な役割を果たした。長いあいだ、馬は主要な移動手段であり、国家の文化的アイデンティティの一部でもあったからである。</p>
+
+      <figure class="thumb">
+        <img src="../015.jpg" alt="Kivish の馬">
+        <figcaption class="cap">この機関の保護下にあった Kivish の馬品種。</figcaption>
+      </figure>
+
+      <h2>歴史</h2>
+      <p>この機関は15世紀、Kivish が積極的に拡張していた時代に創設された。当初は純粋に軍事的需要に奉仕し、騎兵や伝令のための馬を確保していた。やがて機能は拡大し、種馬牧場、希少品種保存計画、烙印制度、民間利用向け馬登録制度が整えられた。1948年5月、Great Stable Directorate は、国家がより発展性の高い機械工業分野を優先したため閉鎖された。</p>
+
+      <h2>機能</h2>
+      <ul>
+        <li>独自の Kivish 馬品種の繁殖と保護。</li>
+        <li>自動車の書類に類する、馬用の「技術パスポート」の発行。</li>
+        <li>軍および国家機関への輸送用動物の供給。</li>
+        <li><a href="f-kap.html">F-KAP</a> を含む他機関との連携による識別制度の開発。</li>
+      </ul>
+
+      <h2>現代における位置づけ</h2>
+      <p>機械化が進んだ後も、GSD は21世紀において一定の象徴的意義を保っている。Kivish では現在でも馬を国家登録し、ナンバープレートを取得できるが、これは世界的にも珍しい実践とされている。この制度的伝統は、文化的慣習の維持と、包摂的農業プログラムへの参加という形で引き継がれている。</p>
+
+      <h2>関連項目</h2>
+      <ul>
+        <li><a href="f-kap.html">F-KAP</a></li>
+        <li><a href="ksfose.html">Kivish Space Flight Organization Study of Extraterrestrial Space</a></li>
+      </ul>
+
+      <h2>注釈</h2>
+      <ol class="notes">
+        <li>1436年、Kivish の統治者の勅令によって設立された。</li>
+        <li>この機関の公文書アーカイブは、首都 Kora に保管されている。</li>
+      </ol>
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>注意：</strong> Neverpedia は架空のプロジェクトです。
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>

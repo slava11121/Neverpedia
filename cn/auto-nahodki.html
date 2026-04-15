@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>汽车发现 — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="../index.html">首页</a>
+        <a href="../create.html">创建条目</a>
+        <a href="#">随机条目</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../auto-nahodki.html">Русский</a>
+          <a href="../en/auto-nahodki.html">English</a>
+          <a href="../ksh/auto-nahodki.html">Кiвiшский</a>
+          <a href="auto-nahodki.html">简体中文</a>
+          <a href="../jpn/auto-nahodki.html">日本語</a>
+          <a href="../ko/auto-nahodki.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">汽车发现</div>
+          <div class="cell">
+            <img src="../085.jpg" alt="汽车发现">
+          </div>
+          <div class="cell"><b>类型</b><br>汽车信息发布与销售平台</div>
+          <div class="cell"><b>创立时间</b><br>1954年5月3日</div>
+          <div class="cell"><b>理念提出者</b><br>利诺赫·辛</div>
+          <div class="cell"><b>总部</b><br>基维什，阿夫托沃市，捷里纳街4号</div>
+          <div class="cell"><b>形式</b><br>报纸（1954—2010），互联网（自1992年起）</div>
+          <div class="cell"><b>状态</b><br>运营中</div>
+          <div class="cell"><b>网站</b><br><a href="../Websites/AutoNahodki/index.html" target="_blank" rel="noopener">auto-nahodki.ksh</a></div>
+        </aside>
+
+        <h1 class="title">汽车发现</h1>
+
+        <p class="lead">
+          <b>汽车发现</b>是基维什处理弃置与发现车辆的体系，同时也是全国最大的汽车买卖信息平台。
+          该项目诞生于<a href="../skr.html">基维什共和国联盟（СКР）</a>时期，最初只是报纸上的一个栏目（1954年），
+          之后经历了持续的数字化演进：从文本网络目录（1992年）发展为最终完全取代纸媒的网页平台（2010年）。
+        </p>
+
+        <p>
+          从历史上看，“汽车发现”承担了两项任务：一是<b>清理街道</b>上的弃置车辆，二是建立<b>规范化的二手车市场</b>
+          （让民众能够买到价格可负担的二手车）。在现代形态下，这个平台结合了两类来源：
+          一类是国家完成调查程序后对<b>被发现车辆的处置出售</b>，另一类则是用户和公司发布的<b>私人广告</b>。
+        </p>
+
+        <figure class="thumb">
+          <img src="../086.jpg" alt="阿夫托沃市">
+          <figcaption class="cap">“阿夫托沃”是为转运弃置车辆而建立的郊区储存枢纽。</figcaption>
+        </figure>
+
+        <h2>背景</h2>
+        <p>
+          1950年代，СКР各城市中的汽车数量迅速增加。与此同时，也出现了首批大规模弃置车辆现象：
+          车辆被遗弃在庭院和街道上，停车场被塞满，一部分车主甚至离开国家而未办理财产手续。
+          直接销毁这些车辆并不划算，因为车队中相当一部分车辆仍较新，且具备使用价值。
+        </p>
+
+        <h2>历史</h2>
+
+        <h3>“阿夫托沃”的建立与报纸栏目启动（1954年）</h3>
+        <p>
+          1954年，工程师利诺赫提出了一项基础设施方案：在城市边界之外建设一个储存枢纽，并将其命名为<b>“阿夫托沃”</b>。
+          该区域旁规划建设服务小镇和交通节点（电气列车），在封闭区内则修建多层停车设施，
+          以满足大规模机动车的长期存放需求。这一做法很快见效：街道和庭院得以清理，而车队本身并未被销毁。
+        </p>
+        <p>
+          接下来的问题是如何处置这些积累下来的车辆。于是同年推出了报纸栏目<b>“汽车发现”</b>：
+          被发现的车辆会获得<b>编号代码</b>，原车主的旧车牌会被拆除，
+          并换上用于登记和转运的临时标识牌。报纸每天都会刊登新的车辆信息，
+          附带简短描述和实地看车地点。由于价格低于新车，这一市场迅速变得大众化且触手可及。
+        </p>
+
+        <h3>通过报纸进行私人售车（1967年）</h3>
+        <p>
+          1967年，一项由本地居民提出的倡议获得批准：利用“汽车发现”作为最主要广告渠道的影响力，
+          允许车主通过同一平台出售<b>自己的</b>车辆。其形式与“发现车辆”信息基本相同：
+          照片、简短描述和联系方式。但国家会从交易金额中抽取<b>50%</b>。
+        </p>
+
+        <figure class="thumb">
+          <img src="../087.jpg" alt="1971年的版面">
+          <figcaption class="cap">1971年《科拉之声》报纸中的“汽车发现”版面。</figcaption>
+        </figure>
+
+        <p>
+          尽管条件相当严格，这一机制还是迅速流行起来：在替代方式较少的背景下
+          （墙上贴广告、集市交易、口口相传），报纸提供了快速覆盖和清晰的交易流程。
+        </p>
+
+        <h3>1972年改革：降低抽成并引入付费推广</h3>
+        <p>
+          1972年，随着国内政策趋于缓和以及公共话语风格变化，信息发布规则被重新审议。
+          销售抽成降至<b>20%</b>，并被正式界定为刊登与传播费用（本质上相当于佣金/服务费）。
+          此外，用户还可以支付更高费用，让自己的广告在报纸中出现得更频繁
+          （这被视为“推广”功能的早期形式）。
+        </p>
+
+        <h3>1989年转折与私人模式的发展</h3>
+        <p>
+          1989年后，国家脱离共产主义模式并宣布走向中立的技术强国路线，
+          汽车市场迅速变得更加复杂：竞争加剧，新的交易渠道出现，人们对二手车的需求也发生变化。
+          尽管如此，“汽车发现”并未消失：这一体系已为大众所熟悉，而人们对“单一展示窗口”形式的信任仍然很高。
+          项目逐渐不再作为“国家直属”组织单位存在，而是转变为独立运作的结构，
+          同时保留了在发现车辆处置方面与国家协作的机制。
+        </p>
+
+        <h2>数字化演进</h2>
+
+        <h3>文本网络目录（1992年）</h3>
+        <p>
+          1992年，“汽车发现”迈出了第一步数字化转型：平台上线了文本格式的网络目录
+          （DOS/终端界面）。用户只要连接服务器，就能看到最新车辆信息：
+          这份列表可以实时更新，而不必再等待下一期报纸。这个上线常被视为
+          基维什国内早期推动大众“接入网络”的原因之一。
+        </p>
+
+        <figure class="thumb">
+          <img src="../088.jpg" alt="“汽车发现”的 DOS 网站">
+          <figcaption class="cap">“汽车发现”在 DOS 网络中的网站界面示意图。</figcaption>
+        </figure>
+
+        <h3>首个 HTML 网站（1995年）</h3>
+        <p>
+          1995年，平台获得了图形化网页外壳。设计有意保持简洁：
+          采用<b>车辆信息卡片</b>形式，包含照片、简要描述、电话和卖家/展示场地地址。
+          新广告会在页面刷新后显示出来，在当时被视为“几乎接近实时”的体验。
+        </p>
+
+        <h3>CSS 与早期 JavaScript（2001年）</h3>
+        <p>
+          2001年，网站首次拥有较为明显的视觉层：出现了早期 CSS 样式、更整洁的结构，
+          随后又加入了简单的 JavaScript 脚本。网站开始更积极地与用户互动
+          （表单、验证、可展开区块、早期便捷导航元素），逐渐从“电子报纸”转型为完整服务平台。
+        </p>
+
+        <h3>彻底放弃纸媒（2010年）</h3>
+        <p>
+          2010年，在又一次设计与功能更新之后，新的汽车买卖广告不再刊登于报纸：
+          各报纸停止发布汽车交易信息，而“汽车发现”则完全转入数字形式。
+          从这一时刻起，网站成为更新供给信息的唯一统一入口。
+        </p>
+
+        <figure class="thumb">
+          <img src="../089.jpg" alt="2010年最后一期带有“汽车发现”栏目的报纸">
+          <figcaption class="cap">2010年最后一期含“汽车发现”栏目的报纸。</figcaption>
+        </figure>
+
+        <h2>运作方式</h2>
+
+        <h3>被发现车辆</h3>
+        <p>
+          现代“被发现车辆”流程按以下程序进行：
+        </p>
+        <ol>
+          <li>国家服务部门（包括警方）在街道或问题停车区发现车辆。</li>
+          <li>对车辆状态及其出现原因进行调查（登记、核查、是否适合出售）。</li>
+          <li>若决定进行处置出售，车辆将移交给“汽车发现”平台。</li>
+          <li>平台以自身名义发布信息：照片、价格、车况描述以及看车/过户条件。</li>
+        </ol>
+        <p>
+          从历史上看，被发现车辆在最终出售前设有等待期限：
+          普通车辆为<b>2年</b>，高价车辆为<b>4年</b>。
+        </p>
+
+        <h3>私人广告</h3>
+        <p>
+          用户和公司可以自行发布广告，出售和购买车辆。
+          这一服务仍保留付费发布与推广选项，
+          它正是报纸时代“多登几次”传统的延续。
+        </p>
+
+        <h2>意义</h2>
+        <ul>
+          <li><b>城市层面：</b>快速将弃置车辆从街道转移到受控储存设施中。</li>
+          <li><b>社会层面：</b>通过透明流转机制，让二手车对大众更加可负担。</li>
+          <li><b>市场层面：</b>形成稳定的二手车市场及其周边服务（验车、维修、物流）。</li>
+          <li><b>技术层面：</b>是基维什最早且最具大众影响力的互联网服务之一（自1992年起）。</li>
+        </ul>
+
+        <h2>批评</h2>
+        <p>
+          项目早期形式曾因СКР时代的严厉特征以及1960年代末高额抽成（50%）而受到批评。
+          1972年改革后，针对其经济机制的批评明显减弱；1989年之后，讨论焦点则转向
+          统一平台上的竞争问题和信息审核规则。
+        </p>
+
+        <h2>另见</h2>
+        <ul>
+          <li><a href="skr.html">基维什共和国联盟（СКР）</a></li>
+          <li><a href="kivish.html">基维什</a></li>
+          <li><a href="kora.html">科拉</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意：</strong>Neverpedia 是一个虚构项目。
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

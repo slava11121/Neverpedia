@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Авто-Находки</title>
+  <script>
+  history.scrollRestoration = 'manual';
+</script>
+  <style>
+    :root{
+      --bg:#1b1b1f;
+      --bg2:#232329;
+      --panel:#2b2b33;
+      --panel2:#34343d;
+      --line:rgba(255,255,255,.08);
+      --text:#f3f3f5;
+      --muted:#b7b7c0;
+      --red:#c81f32;
+      --red2:#9f1626;
+      --radius:18px;
+      --shadow:0 18px 36px rgba(0,0,0,.3);
+      --max:1360px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font:16px/1.45 Inter, Arial, sans-serif;
+      background:linear-gradient(180deg,#17171a 0%, #1d1d22 100%);
+      color:var(--text);
+      animation:pageFadeIn .45s ease both;
+    }
+
+    @keyframes pageFadeIn{
+      from{
+        opacity:0;
+        transform:translateY(10px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes cardFadeIn{
+      from{
+        opacity:0;
+        transform:translateY(12px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    button,input,select{font:inherit}
+
+    .container{
+      width:min(var(--max), calc(100% - 24px));
+      margin:0 auto;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(23,23,26,.96);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(8px);
+    }
+
+    .topbar-inner{
+      min-height:92px;
+      display:grid;
+      grid-template-columns:1fr auto 1fr;
+      align-items:center;
+      gap:14px;
+    }
+
+    .side-left,.side-right{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .side-right{justify-content:flex-end}
+
+    .top-button{
+      min-height:46px;
+      padding:0 16px;
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:var(--panel);
+      color:var(--text);
+      cursor:pointer;
+      font-weight:700;
+      transition:.2s ease;
+    }
+
+    .top-button:hover{
+      background:var(--panel2);
+      border-color:rgba(200,31,50,.35);
+    }
+
+    .top-button.red{
+      background:linear-gradient(180deg,var(--red),var(--red2));
+      border-color:rgba(255,255,255,.05);
+    }
+
+    .logo-wrap{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .logo-photo{
+      width:320px;
+      max-width:100%;
+      height:76px;
+      object-fit:cover;
+      border-radius:16px;
+      border:none;
+      box-shadow:none;
+      background:transparent;
+    }
+
+    .dropdown-panel{
+      max-height:0;
+      opacity:0;
+      visibility:hidden;
+      border-top:1px solid transparent;
+      background:#212126;
+      overflow:hidden;
+      transition:max-height .28s ease, opacity .22s ease, visibility .22s ease, border-color .22s ease;
+    }
+
+    .dropdown-panel.open{
+      max-height:260px;
+      opacity:1;
+      visibility:visible;
+      border-top:1px solid var(--line);
+    }
+
+    .dropdown-inner{padding:16px 0 18px}
+
+    .filters-grid{
+      display:grid;
+      grid-template-columns:repeat(5,1fr);
+      gap:12px;
+    }
+
+    .field{
+      display:grid;
+      gap:7px;
+    }
+
+    .field label{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .field input,.field select{
+      min-height:44px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:var(--panel);
+      color:var(--text);
+      padding:0 12px;
+      outline:none;
+    }
+
+    .filter-actions{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .lang-panel{
+      position:absolute;
+      right:0;
+      top:calc(100% + 8px);
+      width:220px;
+      background:#232329;
+      border:1px solid var(--line);
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      padding:8px;
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(-8px);
+      transition:opacity .22s ease, transform .22s ease, visibility .22s ease;
+    }
+
+    .lang-panel.open{
+      opacity:1;
+      visibility:visible;
+      transform:translateY(0);
+    }
+
+    .lang-link{
+      display:block;
+      padding:11px 12px;
+      border-radius:12px;
+      color:var(--text);
+    }
+
+    .lang-link:hover{background:var(--panel)}
+    .lang-wrap{position:relative}
+
+    .content{padding:18px 0 34px}
+
+    .results-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      margin-bottom:16px;
+    }
+
+    .results-head h1{
+      margin:0;
+      font-size:28px;
+      letter-spacing:-.03em;
+    }
+
+    .results-head p{
+      margin:4px 0 0;
+      color:var(--muted);
+    }
+
+    .sort-select{
+      min-height:44px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:var(--panel);
+      color:var(--text);
+      padding:0 12px;
+    }
+
+    .cars-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:16px;
+    }
+
+    .car-card{
+      background:linear-gradient(180deg,#26262c 0%, #222228 100%);
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      animation:cardFadeIn .35s ease both;
+    }
+
+    .car-card:nth-child(1){animation-delay:.02s}
+    .car-card:nth-child(2){animation-delay:.05s}
+    .car-card:nth-child(3){animation-delay:.08s}
+    .car-card:nth-child(4){animation-delay:.11s}
+    .car-card:nth-child(5){animation-delay:.14s}
+    .car-card:nth-child(6){animation-delay:.17s}
+    .car-card:nth-child(7){animation-delay:.20s}
+    .car-card:nth-child(8){animation-delay:.23s}
+    .car-card:nth-child(9){animation-delay:.26s}
+    .car-card:nth-child(10){animation-delay:.29s}
+    .car-card:nth-child(11){animation-delay:.32s}
+    .car-card:nth-child(12){animation-delay:.35s}
+
+    .car-image-wrap{
+      position:relative;
+      aspect-ratio:16/10;
+      background:#303038;
+    }
+
+    .car-image{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .badge-row{
+      position:absolute;
+      top:12px;
+      left:12px;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    .badge{
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      background:rgba(18,18,22,.78);
+      border:1px solid rgba(255,255,255,.12);
+    }
+
+    .badge.red{
+      background:rgba(200,31,50,.92);
+      border-color:rgba(255,255,255,.06);
+    }
+
+    .car-body{padding:16px}
+
+    .car-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:start;
+      gap:12px;
+      margin-bottom:12px;
+    }
+
+    .car-title{
+      margin:0 0 5px;
+      font-size:24px;
+      letter-spacing:-.03em;
+    }
+
+    .car-sub{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .price{
+      text-align:right;
+      white-space:nowrap;
+      color:#fff;
+    }
+
+    .price strong{
+      display:block;
+      font-size:24px;
+      line-height:1;
+    }
+
+    .price span{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .specs{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:10px;
+      margin-bottom:12px;
+    }
+
+    .spec{
+      padding:10px 12px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:12px;
+    }
+
+    .spec b{
+      display:block;
+      margin-bottom:3px;
+      font-size:14px;
+    }
+
+    .spec span{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .car-desc{
+      color:#dddddf;
+      margin-bottom:14px;
+      min-height:44px;
+    }
+
+    .car-actions{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .car-meta{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .mini-btns{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .mini-btn{
+      min-height:40px;
+      padding:0 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:var(--panel);
+      color:var(--text);
+      cursor:pointer;
+      font-weight:700;
+    }
+
+    .mini-btn.red{
+      background:linear-gradient(180deg,var(--red),var(--red2));
+      border-color:rgba(255,255,255,.05);
+    }
+
+    .footer{
+      padding:10px 0 28px;
+      color:var(--muted);
+      font-size:14px;
+      text-align:center;
+    }
+
+    @media (max-width:1120px){
+      .filters-grid{grid-template-columns:repeat(3,1fr)}
+    }
+
+    @media (max-width:860px){
+      .topbar-inner{
+        grid-template-columns:1fr;
+        padding:12px 0;
+      }
+
+      .side-left,.side-right,.logo-wrap{justify-content:center}
+      .filters-grid,.cars-grid{grid-template-columns:1fr}
+      .results-head,.car-top{flex-direction:column;align-items:start}
+      .price{text-align:left}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="side-left">
+        <button class="top-button red" id="filtersToggle">Фильтры</button>
+      </div>
+
+      <div class="logo-wrap">
+        <img class="logo-photo" src="an-ru.png" alt="Логотип Авто-Находки" />
+      </div>
+
+      <div class="side-right">
+        <div class="lang-wrap">
+          <button class="top-button" id="langToggle">Языки</button>
+          <div class="lang-panel" id="langPanel">
+            <a class="lang-link" href="#">Русский</a>
+            <a class="lang-link" href="#">English</a>
+            <a class="lang-link" href="#">Кiвiшский</a>
+            <a class="lang-link" href="#">한국어</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown-panel" id="filtersPanel">
+      <div class="container dropdown-inner">
+        <div class="filters-grid">
+          <div class="field">
+            <label for="searchInput">Поиск</label>
+            <input id="searchInput" type="text" placeholder="Марка или модель" />
+          </div>
+          <div class="field">
+            <label for="typeFilter">Тип объявления</label>
+            <select id="typeFilter">
+              <option value="all">Все</option>
+              <option value="found">Найденные</option>
+              <option value="private">Частные</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="cityFilter">Город</label>
+            <select id="cityFilter">
+              <option value="all">Любой</option>
+              <option value="Кора">Кора</option>
+              <option value="Мири">Мири</option>
+              <option value="Автово">Автово</option>
+              <option value="Город Д">Город Д</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="priceFilter">Цена до</label>
+            <input id="priceFilter" type="number" placeholder="Например 1200000" />
+          </div>
+          <div class="field">
+            <label for="gearboxFilter">Коробка</label>
+            <select id="gearboxFilter">
+              <option value="all">Любая</option>
+              <option value="механика">Механика</option>
+              <option value="автомат">Автомат</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filter-actions">
+          <button class="top-button red" id="applyFilters">Применить</button>
+          <button class="top-button" id="resetFilters">Сбросить</button>
+          <button class="top-button" id="rerollCars">Обновить выдачу</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="container">
+      <div class="results-head">
+        <div>
+          <h1>Автомобили</h1>
+          <p id="resultsText">Показано 0 объявлений</p>
+        </div>
+        <select class="sort-select" id="sortSelect">
+          <option value="default">Сначала случайные</option>
+          <option value="new">Сначала новые</option>
+          <option value="cheap">Сначала дешевле</option>
+          <option value="expensive">Сначала дороже</option>
+        </select>
+      </div>
+
+      <section class="cars-grid" id="carsGrid"></section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    Авто-Находки — каталог автомобилей
+  </footer>
+
+  <script src="catalog.js"></script>
+</body>
+</html>

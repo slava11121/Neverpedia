@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>基维什共和国联盟 — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{display:flex; gap:16px; padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{margin-top:20px; border-top:1px solid #c8ccd1; padding-top:10px}
+    .lang-toggle{cursor:pointer; font-weight:bold; font-size:14px; margin-bottom:6px; user-select:none}
+    .lang-list{display:none}
+    .lang-list a{display:block; margin:4px 0; font-size:14px}
+
+    .content{flex:1}
+    .box{background:#fff; border:1px solid #c8ccd1; padding:16px}
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{padding:8px 10px; border-top:1px solid #e6e6e6}
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="create.html">创建条目</a>
+        <a href="#">随机条目</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../skr.html">Русский</a>
+          <a href="../en/skr.html">English</a>
+          <a href="../ksh/skr.html">Кiвiшский</a>
+          <a href="skr.html">简体中文</a>
+          <a href="../jpn/skr.html">日本語</a>
+          <a href="../ko/skr.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">基维什共和国联盟</div>
+          <div class="cell">
+            <img src="../083.jpg" alt="基维什共和国联盟旗帜">
+            <img src="../002.jpg" alt="基维什共和国联盟疆域">
+          </div>
+          <div class="cell"><b>全称</b><br>基维什共和国联盟</div>
+          <div class="cell"><b>类型</b><br>国家（历史时期名称）</div>
+          <div class="cell"><b>位置</b><br>西伯利亚与远东</div>
+          <div class="cell"><b>首都</b><br><a href="kora.html">科拉</a></div>
+          <div class="cell"><b>宣告成立日期</b><br>1923年6月13日</div>
+          <div class="cell"><b>关键领导人</b><br><a href="akolon-technocrat.html">第一技术官阿科隆</a>（1917–1944）</div>
+          <div class="cell"><b>货币</b><br>基沙（1925年货币改革）</div>
+          <div class="cell"><b>电话区号</b><br>+8</div>
+          <div class="cell"><b>时区</b><br>UTC+7、UTC+8、UTC+9</div>
+          <div class="cell"><b>继承者</b><br><a href="kivish.html">基维什</a>（1989年10月13日之后）</div>
+        </aside>
+
+<h1 class="title">基维什共和国联盟</h1>
+<p class="lead">
+  <b>基维什共和国联盟</b>（简称 <b>СКР</b>）是基维什在共产主义时期（1923—1989）的国家名称。这个时期，国家在西伯利亚和远东形成了独立的社会主义政体，并在与苏联和中国保持紧密联盟的同时维持自身主权。
+</p>
+
+<p>
+  <b>СКР</b> 是历史上的官方自称，于1923年6月13日正式采用。当时基维什转向共产主义治理模式，但仍保留独立主权国家地位。
+  “共和国联盟”这一名称长期被视为颇不寻常：在形式上，国家仍然是中央集权体制，而“共和国”一词在官方解释中被扩大理解为类似“州”或“地区”的概念。
+</p>
+
+<figure class="thumb">
+  <img src="../084.jpg" alt="СКР时期的科拉">
+  <figcaption class="cap">科拉——СКР时期的政治与工业中心。</figcaption>
+</figure>
+
+<h2>词源与自称</h2>
+<p>
+  缩写 <b>СКР</b> 的全称是“基维什共和国联盟”。
+  对外界观察者来说，这一名称常常显得像是对苏联表述方式的模仿；但在官方话语中，СКР始终强调自身国家独立性以及属于自己的技术官僚式共产主义模式。
+</p>
+
+<h2>地理</h2>
+<p>
+  СКР 的疆域覆盖了西伯利亚和远东的大部分地区，其中包括<a href="satali.html">萨塔利</a>岛（萨哈林），该岛在战后时期获得了特殊战略意义。
+  主要城市包括：<a href="kora.html">科拉</a>（首都）、米里、福尔塔、D市、瓦拉尔。
+</p>
+
+<h2>历史</h2>
+<p>
+  <b>СКР</b> 通常被概括为“共产主义外壳下的技术官僚内核”：国家采取了社会主义模式，
+  但始终坚持主权独立，并保有自主制定工业和军事政策的权利。
+  以下是构成1923—1989年这一时期核心设定的主要阶段。
+</p>
+
+<h3>前提：拒绝加入苏联（1922）</h3>
+<p>
+  1922年，在苏联成立后，基维什曾被提议加入这一新国家。
+  由<a href="akolon-technocrat.html">第一技术官阿科隆</a>领导的基维什方面拒绝了这一提议，并强调国家将继续保持独立。
+  这一事件成为关键分界点：СКР 的建立并不是“苏联的一部分”，而是社会主义阵营中一个独立的盟友国家。
+</p>
+
+<h3>СКР 的成立与“没有共和国的共和国联盟”（1923—1924）</h3>
+<p>
+  1923年6月13日，基维什正式转向共产主义治理模式，同时保留独立国家地位。
+  国家确定采用<b>“基维什共和国联盟”</b>这一正式名称——在外部看来，这一名称显得奇怪，因为国家内部并不存在作为主体单位的独立共和国。
+  官方解释中，“共和国”被描述成类似州 / 地区的概念，而后世则更直白地将这一说法视为一种政治性修辞。
+</p>
+<p>
+  1924年，莫斯科曾建议将国名改为“共产主义基维什”，但第一技术官阿科隆拒绝接受：
+  对他而言，名称本身就是主权象征，也是СКР并非苏联行政组成部分的证明。
+</p>
+
+<h3>工业化、自治与语言改革（1925—1939）</h3>
+<p>
+  1925年，国家进行了货币改革，并确立 <b>基沙</b> 为官方货币。
+  随后，政权将重点放在重工业、交通运输、粮食稳定和国防基础设施建设上。
+  也是在这一阶段，形成了“技术独立比进口便利更重要”的总体思路：СКР 构建本国供应链，同时继续保持与中国的贸易和技术联系，而这一关系被视为自基维什早期历史以来就极其重要的传统纽带。
+</p>
+<p>
+  第一技术官阿科隆在这一时期还推行了一项最震动全国的改革：语言改革。
+  国家宣布启动一个为期百年的过渡计划，将文字体系从原有的汉字传统（中国基础）转向<b>基维什西里尔字母</b>。
+  这一决定在当时被视为极其激进，因为它意味着教育体系、文书系统、城市标识乃至整个行政运作方式都要被重新塑造。
+</p>
+
+<h3>亚洲战线：中国、日本与航空工业的崛起（1931—1939）</h3>
+<p>
+  在日本对中国发动扩张后，СКР 并未采取中立立场，而是逐步扩大对中国的援助，后来甚至包括军事技术援助。
+  与此同时，国内形成了自己的航空工程体系：1932年，霍科利尼科夫设计局研制出快速飞机 <b>AirHokol-66 010</b>，
+  这成为一种象征——说明亚洲社会主义阵营并不只是模仿者，也有能力创造属于自己的技术方案。
+</p>
+
+<h3>第二次世界大战：工业总动员与1944年战役</h3>
+<p>
+  1942年，在得知德国进攻苏联后，СКР 将工业体系全面转入战时状态：
+  大部分民用生产被压缩，资源优先转向对苏联的供应，同时仍维持（尽管被削弱但未中断）对中国的支援。
+  各类 AH-66 系列飞机（包括“010”及其后续型号）、各类装备、粮食以及部分重型“山猫”类机械（ЛК-123）被大规模运往前线。
+</p>
+<p>
+  同一时期，СКР 还开放了北方空中走廊（阿拉斯加—西伯利亚），供苏联转运飞机使用。
+  在基维什的历史线中，欧洲战事比现实更早结束：1944年，СКР 和苏联的联合攻势击溃了纳粹德国；<b>柏林由苏联军队攻占</b>。
+</p>
+
+<h3>战后转折与萨塔利（1945—1953）</h3>
+<p>
+  战后，国家发生权力交接：阿科隆于1944年卸任总统，但在过渡期内仍保留一定的治理作用。
+  苏联为承认盟友贡献，将萨哈林岛移交给СКР，该岛随后被改名为 <b>萨塔利</b>。
+  到1946年，СКР 开始密切关注日本被占领的局势，因为事件发生地点已经与萨塔利非常接近。
+</p>
+<p>
+  在1950年代初朝鲜战争危机背景下，СКР 加强了边境制度，并警惕冲突演变为更大规模战争的风险。
+  1951年，国内发生了这一时期的首起重大空难——<b>GP-007</b>（AH-66 A012），
+  这推动了航空安全规章进一步收紧。
+</p>
+
+<h3>卡拉斯时期的强硬意识形态、核议程与内部动荡（1954—1968）</h3>
+<p>
+  1954年，总统 <b>卡拉斯·申塔科斯</b> 发表强硬意识形态声明，称СКР“坚定站在共产主义立场上”，
+  并中断了与日本及与美国有关国家的沟通。
+  在实际层面，这一政策破坏了阿科隆时期建立的一部分关系，并使外交和合作更加集中于苏联、中国和朝鲜民主主义人民共和国。
+</p>
+<p>
+  在全球核试验不断升级的背景下，СКР 加快了自身核计划，并与苏联合作推进。
+  1960年，侦察机 <b>U-2</b> 在СКР领空上空被击落；随后一系列事件引发了重大内部政治丑闻，也使军队与空军纪律进一步收紧。
+  1965年，科拉“托罗姆斯卡亚”站发生恐怖袭击（34人死亡），进一步加深了国内紧张气氛。
+</p>
+<p>
+  在国际上，СКР 加入了重要的框架性协定：1967年支持禁止在太空部署核武器的原则，1968年加入核不扩散条约体系。
+  然而国内抗议并未停止，对政权的压力反而越来越大。
+</p>
+
+<h3>宇宙象征与治理危机（1969）</h3>
+<p>
+  1969年，<b>“Kijer”</b> 任务完成了人类历史上第一次登月。
+  这一事件短期内缓和了国内冲突，并成为СКР最重要的宣传性成就；
+  但几个月后，社会紧张再次回升，国家治理能力也随之恶化。
+</p>
+
+<h3>权力更替、向务实主义漂移与晚期阶段（1970—1989）</h3>
+<p>
+  到1970年代初，国内抗议和对国家未来方向的争论不断加剧。
+  1972年，总统卡拉斯在赴中国途中因专列爆炸事件遭恐怖袭击身亡。
+  此后，权力转交给 <b>米里姆·卡拉松</b>，他批评前任统治方式，但同时也承认这些政策是在长期危机背景下形成的“有其逻辑”。
+</p>
+<p>
+  1973年，借全球石油危机之机，СКР 扩大了石油出口；同年 <b>GP-014</b>（图-144）空难以及与苏联围绕事故原因的争论，进一步推动国家在意识形态上转向中立与技术务实。
+  1975年，米里正式确认并以法律形式承认了城市智慧猫作为公民的身份。
+  1981年，<b>GP-096</b>（图-154）航班失踪，成为该时期最大未解航空谜案之一。
+</p>
+<p>
+  到1980年代，СКР 在面向中立市场和日本方向上逐渐扩大了消费与技术交流窗口。
+  1983年，一架大型民航客机误入СКР领空，最终在萨塔利被迫降、接受检查后安全放行，
+  这一事件后来被视为成功降级局势的典型案例。
+</p>
+<p>
+  1989年10月13日，米里姆·卡拉松正式宣布 <b>СКР 退出共产主义阵营</b>，
+  国家转向中立，并开始塑造“开放合作的技术强国”形象。
+  在国内政治上，这一举措被视为СКР时代的终结，以及向<a href="kivish.html">基维什</a>国家形态的过渡。
+</p>
+
+<h2>国家体制与政治</h2>
+<p>
+  СКР 一直保持中央集权共和国体制，行政权力强大，并拥有高度发展的安全部门体系。
+  对外政策围绕与苏联和中国的联盟展开，同时强调维护亚洲地区稳定以及保卫自身边界，
+  包括北太平洋方向。
+</p>
+
+<h2>经济</h2>
+<p>
+  СКР 的经济模式结合了计划分配与技术官僚式工业管理。
+  国家经济基础包括机械制造、交通运输、航空、冶金以及战略粮食储备生产。
+</p>
+
+<h3>关键企业与部门</h3>
+<ul>
+  <li><a href="vkv.html">大马政总署</a>——负责种马培育与牲畜登记管理。</li>
+  <li><a href="f-kap.html">第一基维什汽车制造厂（F-KAP）</a>——汽车及主动安全系统。</li>
+  <li><a href="airhokol-66.html">AirHokol-66</a>——民用航空工业，以运输安全标杆著称。</li>
+  <li><a href="ksfose.html">Kivish Space Flight Organization Study of Extraterrestrial Space</a>——航天计划（自1958年开始发射）。</li>
+  <li><a href="tarifa.html">Tarifa</a>——商用运输与专用设备。</li>
+</ul>
+
+<h2>交通与安全</h2>
+<p>
+  在科拉，快速交通系统（包括地铁）持续发展，而航空业则逐渐形成自己的独立规章制度，
+  并在重大事故之后不断收紧——其中包括1973年的 GP-014 空难以及1981年的 GP-096 失踪事件。
+</p>
+
+<h2>文化与社会</h2>
+<p>
+  СКР 塑造了一种“工程国家”的自我形象，其核心是对基础设施与纪律的崇尚。
+  到1960年代末，米里已经出现了广为人知的智慧城市猫现象；
+  1975年，这些猫被正式承认为公民，并拥有独立权利和证件。
+</p>
+
+<h2>象征体系</h2>
+<p>
+  СКР 时期的视觉识别体系包括绿色、黑色和蓝色的综合色板，以及象征国家力量与控制的红色长剑。
+  各领土与主要城市的象征系统则由国家相关部门统一标准化。
+</p>
+
+<h2>СКР时期的统治者</h2>
+<ul>
+  <li><b>第一技术官阿科隆</b>（1917–1944）——确立СКР体制、推动工业化和语言改革。</li>
+  <li><b>卡拉斯·申塔科斯</b>（1944–1972）——主导战后政策并强化国家安全。</li>
+  <li><b>米里姆·卡拉松</b>（1972–1989，作为СКР领导人）——晚期统治、技术转向以及退出共产主义阵营。</li>
+</ul>
+
+<h2>另见</h2>
+<ul>
+  <li><a href="kivish.html">基维什</a></li>
+  <li><a href="kora.html">科拉</a></li>
+  <li><a href="ksfose.html">KSFOSES</a></li>
+</ul>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意：</strong>Neverpedia 是一个虚构项目。
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>首页 — Neverpedia</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><img class="logo" src="../logo.png" alt="Neverpedia"></a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="create.html">创建条目</a>
+        <a href="#">随机条目</a>
+      </nav>
+      <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">
+      语言 ▾
+      </div>
+      <div id="langList" class="lang-list">
+      <a href="../index.html">Русский</a>
+      <a href="../en/index.html">English</a>
+      <a href="../ksh/index.html">Кiвiшский</a>
+        <a href="index.html">简体中文</a>
+        <a href="../jpn/index.html">日本語</a>
+        <a href="../ko/index.html">한국어</a>
+      </div>
+     </div>
+    </aside>
+
+    <main class="content">
+      <div class="box">
+        <div class="top">
+          <h1 class="title">欢迎来到 <a href="index.html">Neverpedia</a></h1>
+          <form class="search" action="list.html" method="get" role="search">
+            <input type="search" name="q" placeholder="搜索 Neverpedia…">
+            <button type="submit" class="btn">搜索</button>
+          </form>
+        </div>
+
+        <p class="lead"><a href="https://ru.wikipedia.org/wiki/Фиктивная_запись">虚构百科全书</a>，任何人都可以编辑。</p>
+
+        <h2 class="h2">最新条目</h2>
+
+        <ul class="recent-list" id="recentList">
+          <li class="recent-item">
+            <img class="thumb" src="../001.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="kivish.html">基维什</a></div>
+              <div class="desc">基维什是位于西伯利亚的高科技国家，对三块领土（基维什、北基维什和非洲基维什）实行统一统治，以发达工业、另类历史以及强硬但务实的外交政策而闻名。</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../064.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="tarifa.html">Tarifa</a></div>
+              <div class="desc">Tarifa 是基维什的一家私营机械制造公司，成立于1976年，位于D市。公司以务实风格闻名：从机场牵引车和跑道维护设备，到出口型厢式车、牵引车和专用机械。到了2000至2010年代，Tarifa 成为“低调实用型”交通工具的代表之一——简单、耐用、易于理解，而公司的一些设计方案也因车型生命周期异常漫长而获得了近乎传奇的地位。</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample3.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article3.html">条目名称 3</a></div>
+              <div class="desc">两行摘要。</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample4.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article4.html">条目名称 4</a></div>
+              <div class="desc">条目简要介绍。</div>
+            </div>
+          </li>
+
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample5.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article5.html">条目名称 5</a></div>
+              <div class="desc">条目简要介绍。</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample6.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article6.html">条目名称 6</a></div>
+              <div class="desc">条目简要介绍。</div>
+            </div>
+          </li>
+        </ul>
+
+
+        <p id="emptyMsg" class="lead">
+          目前还没有条目。<a href="create.html">来创建第一篇吧！</a>
+        </p>
+      </div>
+
+      <div class="notice">
+        <strong>注意：</strong>Neverpedia 是一个虚构项目。
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const list = document.getElementById('recentList');
+      const msg  = document.getElementById('emptyMsg');
+      if (list && msg && list.children.length > 0) msg.style.display = 'none';
+    })();
+  </script>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display =
+      list.style.display === "block" ? "none" : "block";
+  } 
+  </script>
+</body>
+</html>

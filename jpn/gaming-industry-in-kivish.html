@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>キヴィシュのゲーム産業 — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial, sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25;border-bottom:1px solid #c8ccd1;padding-bottom:8px}
+    .lead{font-size:15px;color:#54595d;margin:12px 0}
+    h2{font-size:22px;margin:24px 0 8px;border-bottom:1px solid #c8ccd1;padding-bottom:4px}
+    h3{font-size:18px;margin:16px 0 8px}
+    ul,ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">メインページ</a>
+        <a href="create.html">記事を作成</a>
+        <a href="#">ランダム記事</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">言語 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../gaming-industry-in-kivish.html">Русский</a>
+          <a href="../en/gaming-industry-in-kivish.html">English</a>
+          <a href="../ksh/gaming-industry-in-kivish.html">Кiвiшский</a>
+          <a href="../cn/gaming-industry-in-kivish.html">简体中文</a>
+          <a href="gaming-industry-in-kivish.html">日本語</a>
+          <a href="../ko/gaming-industry-in-kivish.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <h1 class="title">キヴィシュのゲーム産業</h1>
+        <p class="lead">キヴィシュ領内におけるゲーム機の登場、失敗、そして成功の完全な歴史――1970年代の試験的輸入とアーケード熱から、自国製プラットフォーム <b>Samita</b>、小売エコシステム <b>Game Store Master (GSM)</b>、そして <b>Game Kivish World (GKW)</b> のヒット作に至るまで。本記事では、市場と産業に直接影響を与えた出来事のみを扱う（物流、経済、ローカライズ、独占タイトル、インフラなど）。また、販売動向を変化させた大規模な社会的危機も含まれる。</p>
+
+        <h2>簡潔な定義</h2>
+        <p><b>キヴィシュのゲーム産業</b>とは、ゲーム機およびソフトウェアの輸入と現地供給を中心に形成された、プラットフォーム製造業者、パブリッシャー、開発スタジオ、小売業者、ユーザー共同体の総体を指す。主要な参加者は、<b>GSM (Game Store Master)</b> ――専門小売チェーン兼メディア、<b>GKW (Game Kivish World)</b> ――キヴィシュを代表する開発スタジオ、<b>Samita/Samota</b> ――ゲーム機製造企業である。</p>
+
+        <h2>1970年代：初期の試みと理解不足</h2>
+        <p>最初のゲーム機は珍品として受け止められていた。<b>Magnavox Odyssey</b>（1972–1975）は「Элiтрог」と「мАкjон」を通じて少量輸入されたが、白黒画面、音の欠如、テレビに貼るオーバーレイは購入者を納得させなかった。小規模ながら関心の高まりを生んだのは <b>Atari Pong</b>（1975–1976）である。電子テニスという直感的で即座に理解できる内容により、入荷分はすぐに売れた。<b>Atari 2600</b>（1977）による大衆市場への試みは、約3500キシャという価格（家電製品クラス）に阻まれ、全国でおよそ <b>12</b> 台しか売れなかった。</p>
+
+        <h2>1980年代：前線としてのアーケード、家庭用の失敗、そして「耐久の倉庫」</h2>
+        <p>1982年、アーケード機（<b>Donkey Kong</b>）への賭けは来客の流れを生み、「家の外で遊ぶ」という習慣を形成した。その成功を家庭用 <b>ColecoVision</b>（1983）＋ Donkey Kong 同梱版に移そうとしたが、価格の壁（約3800キシャ）にぶつかり、販売は数十台に留まった。10年代末までに、売れ残った <i>Odyssey</i>、<i>2600</i>、<i>Intellivision</i>、<i>ColecoVision</i> はミリへ運ばれ、半ば伝説化した <b>「耐久の倉庫」</b> に収められた。のちにそこは博物館展示品とノスタルジーの源泉となる。</p>
+
+        <h2>1987–1991年：NES、経済的跳躍、専門小売の誕生</h2>
+        <p>所得上昇を背景に、人々は手の届く価格帯のハードを受け入れる準備が整った。<b>Nintendo Entertainment System</b>（2200–2500キシャ）は最初の大衆的ヒットとなり、店頭から姿を消した。1988年、「мАкjон」は倒産し、その跡地に <b>Game Store Master (GSM)</b> が開業した。これは、訓練を受けた相談員、カタログ、雑誌、イベントを備えた最初の専門ゲーム店だった。「家電店」から「ゲームセンター」への転換は、その後の市場全体を規定することになった。</p>
+
+        <h2>1990年代：コンソール戦争とインフラ</h2>
+        <p><b>Sega Mega Drive</b>（1989年–）は、攻撃的で若者向けのマーケティング（Sonic）を持ち込み、GSM を中心とする市場構造を明確にした。1991年のソ連崩壊は、ロシアと中国を経由する新たな物流回廊を開き、輸入は安定し、アクセサリーやカートリッジの「グレー輸入」も増加した。その結果、ゲームライブラリとサービス可能性は拡大した。</p>
+        <p><b>Sony PlayStation</b>（1997年以降）は堅実に始まったが、転機となったのは GSM 誌に掲載された <i>Gran Turismo</i> のレビューである。国の自動車文化的傾向が、瞬時に需要へと転化した。<b>Nintendo 64</b>（1999年）は忠実なファン層を獲得したが、カートリッジ方式とソフト価格の高さが大衆化を妨げた。</p>
+
+        <h2>2000年代：新時代、ローカライズ、携帯機</h2>
+        <h3>Y2K とスナシ原発事故（2000年）：需要の一時的冷却</h3>
+        <p>技術的トラブルと社会的不安の中で販売は落ち込んだが、<b>Sega Dreamcast</b> はオンライン機能を評価する愛好家の間で鮮烈なスタートを切った。弱点は家庭向けインターネット・インフラの未成熟さにあった。</p>
+        <h3>第6世代（2002–2003年）</h3>
+        <ul>
+          <li><b>PlayStation 2</b> — 「2 in 1」（DVDプレーヤー＋ゲーム）と <i>Gran Turismo 3</i> によって首位を固めた。</li>
+          <li><b>Xbox</b> — <b>「Xboxは自分で買え」</b> 現象。若者たちは LAN/Live 対応ゲームのために自ら貯金して購入し、ネットワーククラブ文化が形成された。</li>
+          <li><b>Nintendo GameCube</b> — 安定したファミリー向けニッチを確保した。</li>
+        </ul>
+        <h3>携帯機ブーム（2004–2005年）</h3>
+        <p><b>PSP</b> は「ポケットの中のコンソール体験」の象徴となった。一方、<b>Nintendo DS</b> は強力なソフト群を持ちながらも、より子ども向けのものとして認識されていた。</p>
+
+        <h2>2005–2013年：第7世代、物流、海賊版</h2>
+        <p><b>Xbox 360</b>、<b>PlayStation 3</b>、<b>Wii</b> はいずれも積極的に展開された。Kinect は家族向け購入の急増を生み、Move はニッチに留まり、Wii は安定したユーザー層を維持した。</p>
+        <h3>Xbox 360 供給に関する物流事故（2005–2008年）</h3>
+        <p>アジアの中継拠点で足止めされた大規模ロットは、2008年になってようやく新規出荷分と同時に店頭へ並んだ。この「二重スタート」により記録的な販売が実現し、その世代最大級のマルチプレイヤー・コミュニティが急速に形成された。</p>
+        <h3>海賊版と改造（2013年）</h3>
+        <p>キヴィシュおよび北キヴィシュで <b>PS3</b> と <b>Xbox 360</b> の改造方法が広まったことで、合法的なソフト販売は大きな打撃を受けた。これに対し GSM は値引きプログラム、現地キャンペーン「海賊版を持ってきて正規ディスクと交換」、そしてアカウント連動型ネット配信作品の拡充で対応した。</p>
+
+        <h2>2016年以降：自国プラットフォームと戦略的独占タイトル</h2>
+        <h3>Samita Fit（2016年）</h3>
+        <p>最初の国産コンソール。モバイル版 <b>Intel</b> とディスクリート <b>NVIDIA</b>、独自 BIOS、独自 OS <b>La</b> を備えていた。アーキテクチャ上はノートPCに近かったが、統一ストア、SDK、GSM の支援を備え、「コンソールとして」起動した。国内不安定期において、それは技術的自立の象徴となり、地元開発者たちの関心を引き寄せた。</p>
+        <h3>Samita Salan（2019年）</h3>
+        <p><b>AMD Ryzen</b> への移行、成熟した SDK、そして独占タイトル重視への転換。最大の推進力となったのは、<b>GKW</b> による <b>「ПОИСК…」</b> シリーズである。感情的なアクション・アドベンチャーとして、プラットフォームの顔となり、国外ですらハード購入理由を生み出した。</p>
+        <h3>Samita Ladi（2023–2025年）</h3>
+        <p>音響性能、エネルギー効率、OS <b>La</b> の「高速更新モード」を強化した改訂版。自社製チップ導入前の中間段階となった。</p>
+        <h3>Samota Kistol（2028–2030年）</h3>
+        <p>ブランド刷新と、自社製 CPU <b>More</b> および GPU <b>Gast</b> への移行。初の完全な「キヴィシュ製」アーキテクチャであり、グラフィックス性能と電力効率の両面で当時の PlayStation/Xbox 世代に競合しうる水準に到達した。</p>
+
+        <h2>ゲームとスタジオ</h2>
+        <h3>Game Kivish World (GKW)</h3>
+        <ul>
+          <li><b>Top Piston Game</b>（1998年） — 自動車番組ブームに乗った国内ヒット作であり、テクノシミュレーター需要を安定的に形成した。</li>
+          <li><b>「ПОИСК…」</b> Part I（2019年）、II（2023年）、III（2027年） — Samita/Samota の感情重視独占タイトル群。プラットフォーム販売の主要因だった。</li>
+          <li><b>LORR:A — Life of a Rookie Racer: Asia</b>（2033年） — キヴィシュ、日本、韓国、中国、ロシアによる共同開発作品。Forza / Gran Turismo の直接的競合作。</li>
+        </ul>
+
+        <h2>小売とメディア：Game Store Master (GSM) の役割</h2>
+        <p><b>GSM</b> は単なる店ではなく、店舗、雑誌／動画チャンネル、大会、交換キャンペーン、サービスを含むエコシステムである。購入者の「ゲーム・リテラシー」を形成したのはまさに GSM だった。相談対応、体験台、ローカルレビュー、カタログがその中心にあった。2004年と2009年には、GSM を通じて本体ケースの<b>カスタマイズ</b>の波が広がった。エアブラシ、スキン、アート塗装によって、コンソールは個人のアイデンティティの一部となった。</p>
+
+        <h2>産業に直接影響した出来事</h2>
+        <ul>
+          <li><b>ソ連崩壊（1991年）</b> — ロシア／中国経由の物流回廊が開き、輸入チェーンと価格が安定した。</li>
+          <li><b>スナシ原発事故（2000年）</b> — 需要の一時的落ち込みと、「オンライン対応コンソール」に対する家庭の警戒。</li>
+          <li><b>Xbox 360 の物流事故（2005–2008年）</b> — 遅延と「二重スタート」により、その世代最大のマルチプレイヤー共同体が形成された。</li>
+          <li><b>Forza Horizon スキャンダル（2032年）</b> — Xbox 系スタジオ作品におけるキヴィシュ表象利用への制限。一時的に需要が Samita / Sony エコシステムへ移動した。</li>
+          <li><b>「友情の超高層ビル」テロ（2038年）</b> と <b>「炎の夜」（2041年）</b> — 全国的な抑うつ状態、世界的パブリッシャーによる地域向け発売の自主停止、販売の最低水準への落ち込み。</li>
+        </ul>
+
+        <h2>Samita プラットフォーム表</h2>
+        <table>
+          <thead>
+            <tr><th>プラットフォーム</th><th>年</th><th>プロセッサ / グラフィックス</th><th>OS</th><th>主な特徴</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Samita Fit</td><td>2016–2019</td><td>Intel (mobile) / NVIDIA (mobile)</td><td>La</td><td>最初の国産リリース、ストア＋SDK、「PCのようなコンソール」</td></tr>
+            <tr><td>Samita Salan</td><td>2019–2023</td><td>AMD Ryzen / ディスクリートGPU</td><td>La</td><td>GKW独占作、成熟したエコシステム</td></tr>
+            <tr><td>Samita Ladi</td><td>2023–2025</td><td>AMD Ryzen (rev) / ディスクリートGPU</td><td>La</td><td>静音冷却、高速OSアップデート</td></tr>
+            <tr><td>Samota Kistol</td><td>2028–2030</td><td>More (CPU) / Gast (GPU)</td><td>La</td><td>完全キヴィシュ製チップ、PS/Xbox競合機</td></tr>
+          </tbody>
+        </table>
+
+        <h2>短い年表</h2>
+        <ul>
+          <li>1972–1975 — Magnavox Odyssey：試験輸入、失敗。</li>
+          <li>1975–1976 — Atari Pong：最初の大衆的関心。</li>
+          <li>1977–1978 — Atari 2600：高価、約12台。</li>
+          <li>1982–1983 — Donkey Kong アーケード → ColecoVision：ゲームセンター成功、家庭用は価格障壁。</li>
+          <li>1987年– — NES：最初の大衆的ヒット。</li>
+          <li>1989年– — Sega Mega Drive：若者向け成功。</li>
+          <li>1997年– — Sony PlayStation：<i>Gran Turismo</i> 後に爆発的普及。</li>
+          <li>1999年– — Nintendo 64：ファン層中心のニッチ。</li>
+          <li>2000年 — Dreamcast：インフラより先を行った理念。</li>
+          <li>2002–2003 — PS2 / Xbox / GameCube：成熟市場、「Xboxは自分で買え」。</li>
+          <li>2004–2005 — PSP（携帯機の主役）、Nintendo DS。</li>
+          <li>2005–2013 — Xbox 360、PS3、Wii：「三強時代」、360の物流事例。</li>
+          <li>2016年 — Samita Fit：自国プラットフォーム開始。</li>
+          <li>2019年 — Samita Salan；「ПОИСК…」Part I。</li>
+          <li>2020年 — PS5、Xbox Series X|S：世界的世代交代。</li>
+          <li>2023–2025 — Samita Ladi：改訂版。</li>
+          <li>2028–2030 — Samota Kistol：自社製チップ。</li>
+          <li>2033年 — GKW の LORR:A。</li>
+          <li>2038 / 2041 — 危機と発売停止。</li>
+        </ul>
+
+        <h2>関連項目</h2>
+        <ul>
+          <li><a href="kivish.html">キヴィシュ</a></li>
+          <li><a href="gkw.html">Game Kivish World</a></li>
+          <li><a href="gsm.html">Game Store Master</a></li>
+          <li><a href="samita.html">Samita</a></li>
+        </ul>
+
+        <h2>注釈</h2>
+        <ol class="notes">
+          <li>本資料は Neverpedia の公式設定に基づき、ゲーム機産業に直接影響した出来事のみを扱っている。</li>
+          <li>略称：GSM — Game Store Master（小売／メディア）；GKW — Game Kivish World（開発スタジオ）。</li>
+          <li>価格と年代は、架空の年表および通貨キシャに基づく。</li>
+        </ol>
+
+      </article>
+    </main>
+  </div>
+
+    <script>
+      function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

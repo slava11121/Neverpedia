@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ksh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AirHokol-66 — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{
+      float:right;width:280px;background:#fff;
+      border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px;
+    }
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:240px;margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">Нэрглав</a>
+      <a href="create.html">Сотвор нэр</a>
+      <a href="#">Случа нэр</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">Языки ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../airhokol-66.html">Русский</a> 
+        <a href="../en/airhokol-66.html">English</a>
+        <a href="airhokol-66.html">Кiвiшский</a> 
+        <a href="../cn/airhokol-66.html">中国人</a>
+        <a href="../jpn/airhokol-66.html">日本語</a>
+        <a href="../ko/airhokol-66.html">한국인</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+
+      <aside class="infobox">
+        <div class="h">AirHokol-66</div>
+        <div class="cell">
+          <img src="../008.jpg" alt="Логотип AirHokol-66">
+        </div>
+        <div class="cell"><b>Форма</b><br>Гос-авиано корпора</div>
+        <div class="cell"><b>Отрасл</b><br>Авиано-строй, путiно-строй</div>
+        <div class="cell"><b>Начат</b><br>1932</div>
+        <div class="cell"><b>Начат-люд</b><br>Манок Хокольников</div>
+        <div class="cell"><b>Локата</b><br>Кiвiшь, Кора, Торомска 124</div>
+        <div class="cell"><b>Продукт</b><br>Пассажир i груз-борт</div>
+        <div class="cell"><b>Ключ-вед</b><br>Авиано-сектор нарвет Кiвiшь</div>
+        <div class="cell"><b>Сайт</b><br><a href="../Websites/AirHokol-66/index.html" target="_blank" rel="noopener">airhokol66.khs</a></div>
+      </aside>
+
+      <h1 class="title">AirHokol-66</h1>
+      <p class="lead"><b>AirHokol-66</b> — кiвiшьска гос-авиано корпора, начат en 1932 годэ. Имя-компани держит эталон-сейф: пассажир-борт, груз-борт, авар-защита, чёрн-ящик строй, выжив-систем i креп-фюзел ход.</p>
+
+      <h2>Хронход</h2>
+      <p>1932 годэ: AirHokol-66 рождена как воен-авиано строj-узел. Первы борт — <b>AirHokol-66 010</b>, одномест-форма для армiя-нуж. Граждан-авиано en 1930-х Кiвiшь ещё брала борт-маш ex СССР, но свой школ-строй уже рос en Кора-конструкт узле.</p>
+
+      <p>1944 годэ, post война-фаз, AirHokol-66 с инжен-люд СССР вывела перв круп пассажир-лайнер <b>AirHokol-66 M20</b>. С того хода корпора вышла из чисто воен-ролi i взяла мас-граждан разработ-путь.</p>
+
+      <h2>Ключ-модел</h2>
+      <ul>
+        <li><b>M20</b> (1944) — перв пассажир-борт, 10 мест.</li>
+        <li><b>D100</b> (1963) — 124 мест, час-система стабил.</li>
+        <li><b>Bi225</b> (1983) — перв широк-фюзел лайнер, 312 пассажир, камера-сеть i выжив-систем.</li>
+        <li><b>D124</b> (1999) — сред-класс лайнер, 96 мест, усил-фюзел.</li>
+      </ul>
+
+      <h2>Сейф-систем</h2>
+      <p>AirHokol-66 вяден en мир как корпора нестандарт-сейф решений:</p>
+      <ul>
+        <li><b>Час-система</b> (1963) — авто-антисвал узел ран AirHokol-66. Маят-ход, анкер-ход, шестер-сумматор, пружин-барабан i мал серво. Узел ловит опас-крен i свал, мягко ведёт борт en горизонт i пишет параметр en чёрн-ящик носител.</li>
+        <li><b>ССБС</b> — авто-бедств сигнал-система. Даёт служба-вест i телеметр при борт-бедств.</li>
+        <li><b>ОБС</b> — отсек быстр-спас. Внутри: вода, еда, тепл-комплект i перв выжив-набор для пассажир i экипаш в перв час post палигте.</li>
+        <li><b>AIHP</b> — интеллект-помощ для копитен i лётне. Ход-этап: 2020-е.</li>
+        <li><b>Удал-нарвет тренаж-ход</b> — перв реал-примен en 2038 годэ, захват путины-инцидент.</li>
+      </ul>
+
+      <h2>Мир-ход</h2>
+      <p>AirHokol-66 шлёт борт en мног страны: Росья, Джапья, европ-земы i Латин-Америка. Начал 2000-х дал совмест путины, что вязали Кора, Москвi, Парещ i Невь-Ёрк. Корпора долго держала образ не просто экспорт-строй, а сейф-стандарт для длин путины-линий.</p>
+
+      <h2>Мир-удар истории</h2>
+      <ul>
+        <li><b>1963 — Час-система вход</b><br>
+        Мир вперв услышал о механ-антисвал автомате, где борт может сам снять себя ex опас-пад. Для внеш пресса это был техно-шок.</li>
+
+        <li><b>1983 — ОБС вход</b><br>
+        На Bi225 вперв поставлен быстр-спас отсек: одеял, вода, еда, выжив-набор. После того хода имя AirHokol-66 связалось с формулой «палигте neо конец-шанс».</li>
+
+        <li><b>2001 — путины <a href="ka-d568.html">KA-D568 (D124)</a>, 11 сентябр</b><br>
+        AirHokol-66 D124 пробил башн Всемир торг-центра i збер фюзел-целость. Пожар-систем i спас-отсек дали десят людям жив-выход. Мир-СМИ назвали ход «сам невероjт спас XXI века».</li>
+
+        <li><b>2014 — прям-эфир симул <a href="https://ru.wikipedia.org/wiki/Катастрофа_Boeing_747_под_Токио">JAL123</a></b><br>
+        Немец блогер i инжен-люд собрали авар-модель япон рейса 1985, но на Bi225. Борт без киля всё же дал нерди en Токijа. Джапья эфир-смотр шёл на миллионы взгляд i слёз-реак.</li>
+      </ul>
+
+      <h2>Круп-инцид</h2>
+      <ul>
+        <li><b>2001</b> — путины <a href="ka-d568.html">KA-D568 (D124)</a> дал жив-выход en 11 сентябр-атак; корпора взяла мир-извест.</li>
+        <li><b>2006</b> — палигте G530 над Чёрн морем; причин-узел — погод-удар.</li>
+      </ul>
+
+      <h2>След i Валичан роль</h2>
+      <p>AirHokol-66 держится en одном из верх мест мир-авиано сейф. Post 2015 совмест-строй с Airbus вошёл en мног европ-лайнер. К 2030-м корпора закрепила нэр как эталон палигте-предотврат, борт-живучесть i копитен-помощ систем.</p>
+
+      <h2>Ещё нэр</h2>
+      <ul>
+        <li><a href="https://ru.wikipedia.org/wiki/Россия">Росья</a></li>
+      </ul>
+
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>Озир:</strong> Neverpedia — вымес-проект.
+    </section>
+  </main>
+</div>
+
+<script>
+  function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+</body>
+</html>

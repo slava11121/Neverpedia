@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kora — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial, sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:260px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+    
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><img class="logo" src="../logo.png" alt="Neverpedia"></a>
+    <nav class="nav">
+      <a href="index.html">メインページ</a>
+      <a href="create.html">記事を作成</a>
+      <a href="#">ランダム記事</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">言語 ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../kora.html">Русский</a>
+        <a href="../en/kora.html">English</a>
+        <a href="../ksh/kora.html">Кiвiшский</a>
+        <a href="../cn/kora.html">简体中文</a>
+        <a href="kora.html">日本語</a>
+        <a href="../ko/kora.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+
+      <aside class="infobox">
+        <div class="h">Kora</div>
+        <div class="cell"><img src="../035.jpg" alt="Kora"></div>
+        <div class="cell"><b>国家</b><br><a href="kivish.html">Kivish</a></div>
+        <div class="cell"><b>建設</b><br>631年</div>
+        <div class="cell"><b>首都</b><br>714年より</div>
+        <div class="cell"><b>河川</b><br>アンガラ川</div>
+        <div class="cell"><b>橋梁</b><br>「Bridge 1」/ Taronskiy（600年代）；「Bridge 2」/ Sovetova（1700年代）；両橋の近代化 — 1900年代</div>
+        <div class="cell"><b>人口（推計）</b><br>約2,840,000（市内）、約2,980,000（都市圏）</div>
+        <div class="cell"><b>面積</b><br>約1,240km²</div>
+        <div class="cell"><b>空港</b><br>Technocrat Memorial Airport（1917）</div>
+        <div class="cell"><b>企業</b><br><a href="f-kap.html">F-KAP</a>; <a href="airhokol-66.html">AirHokol-66</a>; <a href="ksfose.html">KSFOSES</a></div>
+        <div class="cell"><b>時間帯</b><br>UTC+7</div>
+      </aside>
+
+      <h1 class="title">Kora</h1>
+      <p class="lead">
+        <b>Kora</b> は、アンガラ川沿いに位置する <a href="kivish.html">Kivish</a> の首都であり、政治の中心、工業・技術の中枢、そして国東部の主要交通結節点である。
+        この都市は631年に建設され、714年に首都の地位が確立された。戦後近代化の建築的象徴は、
+        <a href="great_friendship_skyscraper.html">Great Friendship Skyscraper</a>（1958）である。
+      </p>
+
+      <h2>語源と自称</h2>
+      <p>
+        「Kora」という名称は、早期中世から国家の文書記録に確認されている。口語では短縮形も用いられるが、公式文書では一貫して同一の表記が使われる。
+      </p>
+
+      <h2>歴史</h2>
+      <p>
+        この都市は、アンガラ川を横断する河川交通と陸路交通の交点に成立した。600年代には、通年利用可能な渡河を実現する最初の本格的橋梁として、公式名称「Bridge 1」（地元伝承では Taronskiy）が建設された。
+      </p>
+
+      <figure class="thumb">
+        <img src="../036.jpg" alt="宇宙から見た都市">
+        <figcaption class="cap">宇宙から見た都市の景観。</figcaption>
+      </figure>
+
+      <p>
+        714年、Kora は首都の地位を得た。18世紀（1700年代）には輸送量増大に伴い、第二の渡河施設である公式名称「Bridge 2」（地元伝承では Sovetova）が建設された。20世紀初頭には、両橋とも橋脚の補強と桁構造の更新を含む包括的近代化が行われた。
+      </p>
+      <p>
+        1955年から1957年にかけて、市中心部に <a href="great_friendship_skyscraper.html">Great Friendship Skyscraper</a> が建設され（1958年開業）、戦後都市景観を決定づける支配的シルエットを形成した。2025年時点でも、この建物は継続して使用されていた。
+      </p>
+      <p>
+        2030年代には、都市ナビゲーション、アクセシビリティ、公共交通の近代化プログラムが進められている。
+      </p>
+
+      <h2>地理と都市構造</h2>
+      <p>
+        Kora はアンガラ川の両岸にまたがっている。中心部の都市構造は、規則的な街路網と河岸への開放を組み合わせており、二つの橋梁によって縦横方向の交通軸が形成されている。川の南側には物流・鉄道施設が置かれ、西側には飛行場クラスターが位置する。
+      </p>
+      <p>
+        住宅ストックは、歴史的建築から後期ソ連型、そして現代の高層住宅まで幅広い時代層を含み、内庭には小規模な公共空間が発達している。
+      </p>
+
+      <h2>統治機構</h2>
+      <p>
+        この都市には共和国レベルの行政機関と政府部局が集中している。自治体レベルは、道路、公共交通、美化、 коммунальインフラの運用を担当する。規則は Kivish 全体の国家基準と同期しており、アクセシビリティと視覚ナビゲーションの標準も含まれている。
+      </p>
+
+      <h2>経済</h2>
+      <p>
+        経済は多部門構造を持つ。自動車産業、民間航空、宇宙活動が中核を成し、建設、交通・物流サービス、IT セクター、教育、都市サービスも重要な役割を果たしている。市の財政収入は、法人税・個人税収、非税収入（賃貸料、インフラ利用料、自治体サービス料）、および政府間移転によって構成される。
+      </p>
+      <h3>工業と技術セクター</h3>
+      <ul>
+        <li><b>自動車産業。</b> <a href="f-kap.html">F-KAP</a> は、部品供給網、整備拠点、教育提携を含む生産・販売回路を形成している。</li>
+        <li><b>航空クラスター。</b> <a href="airhokol-66.html">AirHokol-66</a> は設計局、整備能力、人材育成を支え、空港は貨物輸送を担う。</li>
+        <li><b>宇宙活動。</b> <a href="ksfose.html">KSFOSES</a> は、材料、電子機器、ソフトウェア、制御系試験設備を発展させている。</li>
+        <li><b>IT と通信。</b> IT 技術大学とテクノパークは、開発者、ネットワーク技術者、組み込みシステム専門家を育成している。</li>
+        <li><b>建設と коммуналь分野。</b> 道路、河岸、停留所の近代化プログラムが安定した業務量を生み出している。</li>
+      </ul>
+      <h3>商業とサービス</h3>
+      <p>
+        小売は都市市場とチェーン型店舗を組み合わせた構造を持ち、飲食業は官庁食堂から歴史的建物内の個人経営カフェまで多様である。観光流入は、ビジネス訪問、業界展示会、博物館ルートを中心としている。
+      </p>
+      <h3>税制と投資環境</h3>
+      <p>
+        Kivish 共通モデルが適用されており、外国企業には初期税率が高く設定される一方、長期的事業活動によって段階的に引き下げられる。撤退後に再参入した場合は最大税率が再適用される。投資は、インフラ協定、市債、都市環境改善プロジェクトへの優遇措置を通じて誘致されている。
+      </p>
+      <h3>労働市場</h3>
+      <p>
+        主な需要を形成するのは、エンジニア、製造労働者、IT 専門職、交通部門、運用スタッフである。教育プログラムは、デュアル方式を通じて実務と結びついている。
+      </p>
+
+      <h2>交通</h2>
+      <p>
+        道路網は、アンガラ川沿いの縦方向幹線と、橋梁へ向かう横方向接続によって構成されている。主要交差点では公共交通優先制御と現代的な信号アルゴリズムが導入されている。
+      </p>
+      <h3>航空交通</h3>
+      <p>
+        <b>Kora City Airport</b> は1914年から運用されており、ターミナル複合体は段階的に拡張されてきた。飛行場は西部工業地区と接続している。旅客便、貨物便、訓練飛行のすべてを扱っている。
+      </p>
+      <h3>鉄道</h3>
+      <p>
+        <a href="kora-railway-station.html"><b>Kora Railway Station</b></a> は結節点駅であり、長距離列車と近郊列車を扱い、河岸沿いには工業支線と入換ヤードを持つ。
+      </p>
+      <h3>地下鉄</h3>
+
+      <figure class="thumb">
+        <img src="../037.jpg" alt="Toromskaya - City Center Station">
+        <figcaption class="cap">「Toromskaya」- City Center 駅。  
+        Purple Line - Ring Line</figcaption>
+      </figure>
+
+      <p>
+        <a href="metro-kora.html"><b>Kora City Metro</b></a> は、環状線と二本の直線系統、すなわち Green Line、Purple Line、Orange Line から構成される。乗換結節点は地上交通およびバリアフリールートと統合されている。
+      </p>
+      <h3>バスステーション</h3>
+      <ul>
+        <li><a href="kcvsbs.html"><b>Kora City Khranenie Tekhniki Bus Station</b></a>（1924）— 国営、車両基地と路線出庫を担う。</li>
+        <li><a href="kibus-bus-station.html"><b>Khranenie KiBus Bus Station</b></a>（2003）— 民間、バス製造企業によって運営される。</li>
+      </ul>
+
+      <h2>住宅・ коммуналь インフラ</h2>
+      <p>
+        熱供給、水道、電力ネットワークの運用は統一規則に基づいて行われている。2030年代には、デジタル設備 паспорт、漏水・エネルギー損失の遠隔監視、モジュール式熱供給ポイントが導入されている。
+      </p>
+
+      <h2>教育と科学</h2>
+      <ul>
+        <li><b>Institute of Public Administration</b> — 行政人材育成の基幹機関（<a href="amamarama-tirorarorita.html">Amamarama Tirorarorita</a> 参照）。</li>
+        <li><b>University of IT Technologies</b> — 情報科学、ネットワーク技術、応用数学、組み込みシステムを扱う。</li>
+      </ul>
+
+      <h2>文化と博物館</h2>
+      <p>
+        <b>Museum of Technological Development of the State of Kivish</b> では、F-KAP の設計ライン、計算機技術資料、軍事技術史、インターネット史に関する展示が行われている。都市空間は、工学 творчество の祭典や業界展示会にも利用されている。
+      </p>
+
+      <h2>都市環境と2030年代の近代化</h2>
+      <p>
+        更新プログラムには、統一視覚ナビゲーション、アクセシビリティ標準、河岸整備、照明と停留所パビリオンの改善、歩行者動線と自転車道の拡充が含まれている。旧 VKV 跡地には <b>「Konevaya Street」</b> 住宅地区が形成された。
+      </p>
+
+      <h2>象徴</h2>
+      <p>
+        この都市には独自の紋章と旗はなく、公式には Kivish 国旗が用いられる。都市の視覚的アイデンティティでは、アンガラ川のパノラマと Friendship Skyscraper のシルエットが伝統的に用いられている。
+      </p>
+
+      <h2>人口</h2>
+      <p>
+        推計人口は行政区域内で約 <b>710千人</b>、都市圏全体で <b>約1.05百万人</b>、面積は約 <b>310km²</b> である。人口動態は、工業クラスターの発展、交通インフラ、学生受け入れと相関している。
+      </p>
+
+      <h2>関連項目</h2>
+      <ul>
+        <li><a href="kivish.html">Kivish</a></li>
+        <li><a href="great_friendship_skyscraper.html">Great Friendship Skyscraper</a></li>
+        <li><a href="f-kap.html">F-KAP</a></li>
+      </ul>
+
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>注意：</strong> Neverpedia は架空のプロジェクトです。
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>

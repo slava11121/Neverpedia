@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kivish — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">メインページ</a>
+        <a href="create.html">記事を作成</a>
+        <a href="#">ランダム記事</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">言語 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../kivish.html">Русский</a>
+          <a href="../en/kivish.html">English</a>
+          <a href="../ksh/kivish.html">Кiвiшский</a>
+          <a href="../cn/kivish.html">简体中文</a>
+          <a href="kivish.html">日本語</a>
+          <a href="../ko/kivish.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">Kivish</div>
+          <div class="cell">
+            <img src="../001.jpg" alt="Kivish の旗">
+            <img src="../002.jpg" alt="Kivish の領土">
+          </div>
+          <div class="cell"><b>政体</b><br>国家</div>
+          <div class="cell"><b>所在地</b><br>シベリアおよび極東</div>
+          <div class="cell"><b>統治者</b><br><a href="amamarama-tirorarorita.html">アママラマ・ティロラロリタ（2031年 - 現在）</a></div>
+          <div class="cell"><b>初代統治者</b><br><a href="kivishko-toromskiy.html">キヴィシュコ・トロムスキ（600年 - 642年）</a></div>
+          <div class="cell"><b>首都</b><br>コラ（631年）</div>
+          <div class="cell"><b>人口</b><br>12,564,364</div>
+          <div class="cell"><b>通貨</b><br>キシャ（1789年より）</div>
+          <div class="cell"><b>IOCコード</b><br>KSH</div>
+          <div class="cell"><b>電話コード</b><br>+8</div>
+          <div class="cell"><b>時間帯</b><br>UTC+7, UTC+8, UTC+9</div>
+        </aside>
+
+<h1 class="title">Kivish</h1>
+<p class="lead">
+  <b>Kivish</b> は国家である。1989年10月13日に UKR 体制から離脱し、中立路線、技術成長、中央統治を維持した。
+  シベリアに位置し、三つの領域から構成される。すなわち、中核 Kivish、
+  <a href="korean-kivish.html">Kivish Korean Territory</a>（KKP）、
+  そして <a href="african-kivish.html">African Kivish</a> である。
+</p>
+
+<p>
+  <b>Kivish</b> は UKR の後継国家である。旧来のブロック体制は消滅したが、中央統治とテクノクラート的運営は維持された。
+  統一国家であり共通の政府を持つ一方で、各領域には独自の居住制度と独自の査証制度がある。
+  対外路線は実利主義的であり、貿易の開放、交通安全、技術安全保障、特に北太平洋方面での協力を重視している。
+</p>
+
+<figure class="thumb">
+  <img src="../003.jpg" alt="コラ">
+  <figcaption class="cap">コラ — Kivish の首都であり技術的中心地。</figcaption>
+</figure>
+
+<h2>名称と自己認識</h2>
+<p>
+  「Kivish」という名称は二つの役割を持つ。歴史的中核地域を指す意味と、国家全体を指す意味である。
+  ロシア語圏の歴史資料では、「キヴィシュ国家」や「キヴィシュ諸共和国連邦」といった表現が
+  1989年以前の時代を指す名称として用いられている。
+</p>
+
+<h2>地理</h2>
+<p>
+  中核領域はシベリアに位置し、首都は <a href="kora.html"><b>コラ</b></a> である。
+  主要都市にはミリ、フォルタ、City D、ヴァラルがある。
+  <a href="korean-kivish.html">Kivish Korean Territory</a> は旧北朝鮮の領域にあり、
+  <a href="african-kivish.html">African Kivish</a> は2020年代に再建された海外領土である。
+</p>
+
+<h2>歴史</h2>
+
+<h3>UKR からの離脱と Kivish 国家の始まり（1989–1992）</h3>
+<p>
+  1989年10月13日、UKR 体制は終了し、中立路線が確立された。初期数年には、
+  文書制度の移行、市民制度の再編、航空制度の再構築が進められた。
+  旧来の組織の上に、新たな国営航空会社 <b>Kivish Air</b> が設立された。
+  1990年には貿易開放が始まり、ソ連および中国との関係は維持されつつ、西側民間技術の導入も許可された。
+</p>
+<p>
+  1992年、Kivish は正式に核兵器を保有せず、将来的にも使用しない方針を宣言した。
+  これと並行して、北朝鮮リスクを背景に防衛計画が進められた。
+  同時期には、UKR 時代のインフラ計画の完成として、幹線道路 <b>KS-54</b> が整備され、
+  コラと主要都市群が結ばれた。
+</p>
+
+<h3>安全保障危機と航空政策の転換（1993–1996）</h3>
+<p>
+  北朝鮮をめぐる核緊張は、反核的政策と防衛計画を加速させた。
+  1994年には <b>KA-624 便の墜落事故</b> が発生した。
+  調査により、「新品」と偽られた機体が納入されていたことが判明した。
+  その後の大規模なスキャンダルを受けて、Kivish 国内では Boeing が禁止され、
+  輸送の中心は国産機およびロシア製機材へ移行した。
+</p>
+<p>
+  1996年には一部規制が緩和された。Boeing 機の領空通過は許可されたが、
+  国内航空会社による登録・運用は禁止のままだった。
+</p>
+
+<h3>市場開放と技術的プレゼンス（1997–2002）</h3>
+<p>
+  1990年代末には、アメリカその他の市場への進出が試みられた。
+  自動車産業は試験輸出、航空産業は初期オファーの段階に入った。
+  2000年にはスナシ事故が発生した。原子力発電所での事故は炉心溶融と完全避難を引き起こし、
+  世界ではこの出来事を「チェルノブイリ 2.0」と呼んだ。
+</p>
+<p>
+  2000年2月2日、ミリム・カラッソンが死去した。権力はタレムへ移行し、
+  アメリカとの慎重な接近が始まったが、Boeing に対する制限は維持された。
+  国際的接続を示す象徴として、<b>Kivish Air Delta</b> の路線
+  コラ — モスクワ — パリ — ニューヨーク が開設され、<b>AH-66 D124</b> が投入された。
+  2001年、この機体の一つはアメリカでの悲劇の中で衝撃後も構造を保ち、
+  高い耐衝撃設計の象徴となった。のちに軽量化版 AH-66 D128 が登場した。
+  2002年には、F-KAP が <b>F-KAP Tref</b> により世界ラリーで大きな勝利を収めた。
+</p>
+
+<h3>朝鮮半島危機と国内の衝撃（2003–2008）</h3>
+<p>
+  2003年、北朝鮮領空上で教育飛行便「Board No.15」（Tu-154）が撃墜された。
+  この出来事の後、Kivish は対北朝鮮レトリックを強め、
+  朝鮮半島の安全保障をめぐる多国間交渉枠組みに加わった。
+  2004年にはコラ地下鉄の「リュドミンスカヤ」駅で爆破テロが発生し、
+  爆発物を携行した少年が実行犯となった。
+  Kivish の対応は、国内捜査体制の強化と安全保障改革の拡大であった。
+</p>
+<p>
+  2006年には北朝鮮が初の核実験を実施した。
+  朝鮮半島方面は Kivish の戦略上の最重要領域となった。
+  これと並行して、民間航空の安全基準と国内検査が強化され、
+  大規模な犯罪ネットワークが摘発・解体された。
+  2008年、Kivish は北朝鮮の統治体制を危険なものとして公然と批判し、
+  周辺国との地域協力をさらに強めた。
+</p>
+
+<h3>Korean Territory の再編と影響力拡大（2009–2014）</h3>
+<p>
+  2009年、日本では日本向け輸出 Tu-154 の事故が発生した。
+  調査の結果、技術的には正常であり、原因は乗員の誤りと警報無視であることが示された。
+  日本の航空界の評判は打撃を受け、乗員規律への関心が高まった。
+</p>
+<p>
+  2011年、北朝鮮体制は崩壊・解体され、その領域は <b>Kivish Korean Territory (KKP)</b> として再編された。
+  KKP の境界は段階的に開放され、まず貿易、のちに自由移動が実施された。
+  2014年には最初の査証制度が始まった。
+  ヨーロッパと旧ソ連圏が不安定化する中でも、Kivish は石油輸出を減らしつつ、
+  日本向け供給を維持し、防衛・技術協力を拡大した。
+</p>
+
+<h3>政治危機と復帰の時代（2015–2020）</h3>
+<p>
+  2015年、フォレンが統治者の座に就いた。
+  その時代は停滞と汚職の時代として語られる。
+  2016年には大規模抗議が起こり、政権は武力的圧力で応じた。
+  2018年には政府とフォレンの評議会が退き、前政権系の勢力が国家運営へ復帰した。
+  2018年11月13日には、不正流出資産の追回収プログラムが発表された。
+</p>
+<p>
+  2019年、1980年代に失踪した少女ミヤがニューヨークで偽名のもとで発見され、国際的衝撃を与えた。
+  2020年には COVID-19 による厳格制限が導入され、航空と観光は大きな打撃を受けた。
+  同年、F-KAP はアメリカ市場で会話型ニューラルネットワークを搭載した電気自動車 <b>E-UP</b> を投入し、
+  パンデミック下でも注目を集めるヒットとなった。
+</p>
+
+<h3>African Kivish と新たな対外路線（2021–2030）</h3>
+<p>
+  2021年、アフリカでの安定化作戦の後、新たな領域 <b>African Kivish</b> が成立し、
+  復興計画が始まった。
+  2022年、Kivish はロシアのウクライナ侵攻を公然と非難し、
+  それをエスカレーションの危険と位置づけた。
+  2023年には、ロシアをめぐる制裁後の市場変化を踏まえつつ、石油供給は再び活発水準へ戻った。
+</p>
+<p>
+  2024年、Kivish はアメリカ大統領選での Donald Trump の勝利を中立的かつ前向きに受け止め、
+  日本との協力を一層強めた。そこには共同プロジェクトや、「ピンクの猫」に関する珍しい研究も含まれていた。
+  2027年には Tarifa Auto が東欧で拡大し、ベラルーシの Belgee を買収して現地生産を開始した。
+  2030年12月、アママラマ・ティロラロリタが選挙に勝利し、
+  国家上層部における世代交代の象徴となった。
+</p>
+
+<h2>国家構造と対外路線</h2>
+<p>
+  Kivish は三領域を統合する中央集権的国家である。
+  それぞれの領域で働くこと、住むことには個別の居住制度が必要だが、
+  三領域全体で一つの国家を構成している。
+  対外路線は明快である。Kivish に対する侵略は、脅威の排除と場合によっては併合へとつながりうる。
+  同盟国に対しては、要請に応じて支援を提供する。
+</p>
+
+<h2>経済</h2>
+<p>
+  経済の基盤は、高度技術産業、交通インフラ、安全保障部門である。
+  外国企業は高い参入障壁を通じて市場へ入るが、
+  長期的に安定した活動を続けることで税負担は段階的に軽減される。
+  一度撤退してから再参入した場合、税率は再び最大水準へ戻される。
+</p>
+
+<h3>主要企業</h3>
+<ul>
+  <li><a href="f-kap.html">First Kivish Automobile Plant (F-KAP)</a> — 自動車製造と高度安全システム。</li>
+  <li><a href="airhokol-66.html">AirHokol-66</a> — 民間航空機製造、安全輸送の基準。</li>
+  <li><a href="ksfose.html">Kivish Space Flight Organization Study of Extraterrestrial Space</a> — 1958年開始の宇宙計画。</li>
+  <li><a href="tarifa.html">Tarifa</a> — 商用輸送と特殊機械。</li>
+  <li><a href="kibus.html">KiBus</a> — バス製造と輸送安全。</li>
+  <li><a href="tarifa-auto.html">Tarifa Auto</a> — 乗用車部門。</li>
+</ul>
+
+<h2>交通と安全</h2>
+<p>
+  2030年代初頭から、三領域全体で道路標識と車線標示の統一基準が導入されている。
+  それと並行して、都市交通の大規模近代化と監視システムの拡張が進んでいる。
+  航空分野は輸送と航空機製造に支えられ、国内安全基準が強く組み込まれている。
+</p>
+
+<h2>文化と社会</h2>
+<p>
+  Kivish は、自らを技術と秩序の中心として認識している。
+  効率の文化、インフラ成長、整然とした都市構造が重視される。
+  African Kivish では査証経路が比較的開かれており、
+  友好国との教育交流も拡大している。
+</p>
+
+<h2>領域構成</h2>
+<ul>
+  <li><b>Kivish</b> — 中核領域；首都はコラ。</li>
+  <li><a href="korean-kivish.html"><b>Kivish Korean Territory</b></a> — 二言語領域：キヴィシュ語と朝鮮語。</li>
+  <li><a href="african-kivish.html"><b>African Kivish</b></a> — 最も開かれた査証制度を持つ地域。</li>
+</ul>
+
+<h2>象徴</h2>
+<p>
+  各領域の旗は、緑・黒・青の線構成に、赤い剣と白い星を組み合わせた意匠を共有している。
+  北方の形式と African Kivish の形式には、それぞれ独自の変形版が存在する。
+</p>
+
+<h2>統治者一覧</h2>
+<p>
+  統治者の系譜は600年から途切れなく続いている。
+  後期の代表的統治者としては、アコロン第一テクノクラート（1917–1944）、
+  カラス・アコロンソン（1944–1972）、
+  ミリム・カラッソン（1972–2000）、
+  タリム・ミリムソン（2000–2015）、
+  フォレン・タリムソン（2015–2030）、
+  そして <b>アママラマ・ティロラロリタ</b>（2031年–）がいる。
+  完全な一覧は <a href="rulers-kis.html">「Kivish の統治者」</a> を参照。
+</p>
+
+<h2>法制度と移動</h2>
+<p>
+  法制度は、外部脅威に対する厳格な対応と、都市再生を伴う更生・再建プロジェクトを併せ持っている。
+  領域間の移動は、各領域ごとの査証と居住制度に基づいて管理されている。
+</p>
+
+<h2>要点</h2>
+<ul>
+  <li>首都は <b>コラ</b>；主要都市はミリ、ヴァラル、フォルタなど。</li>
+  <li>三つの領域は一つの国家を構成するが、居住制度は個別である。</li>
+  <li>外国企業の参入税率は高いが、長期活動により段階的に軽減される。</li>
+  <li>主力産業は自動車（F-KAP）、航空（AirHokol-66）、宇宙（KSFOSE）、都市インフラ、安全保障。</li>
+  <li>2031年以降、都市近代化計画と交通ナビゲーション統一が進行中。</li>
+</ul>
+
+<h2>関連項目</h2>
+<ul>
+  <li><a href="f-kap.html">F-KAP</a></li>
+  <li><a href="airhokol-66.html">AirHokol-66</a></li>
+  <li><a href="ksfose.html">Kivish 宇宙計画</a></li>
+</ul>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意:</strong> Neverpedia は架空のプロジェクトです。
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

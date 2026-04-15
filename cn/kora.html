@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>科拉 — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial, sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:260px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+    
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><img class="logo" src="../logo.png" alt="Neverpedia"></a>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="create.html">创建条目</a>
+      <a href="#">随机条目</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../kora.html">Русский</a>
+        <a href="../en/kora.html">English</a>
+        <a href="../ksh/kora.html">Кiвiшский</a>
+        <a href="kora.html">简体中文</a>
+        <a href="../jpn/kora.html">日本語</a>
+        <a href="../ko/kora.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+
+      <aside class="infobox">
+        <div class="h">科拉</div>
+        <div class="cell"><img src="../035.jpg" alt="科拉"></div>
+        <div class="cell"><b>国家</b><br><a href="kivish.html">基维什</a></div>
+        <div class="cell"><b>建立时间</b><br>631年</div>
+        <div class="cell"><b>首都地位</b><br>自714年起</div>
+        <div class="cell"><b>河流</b><br>安加拉河</div>
+        <div class="cell"><b>桥梁</b><br>“1号桥”/塔龙桥（7世纪）；“2号桥”/索维托瓦桥（18世纪）；两桥均于20世纪完成现代化改造</div>
+        <div class="cell"><b>人口（估算）</b><br>约2,840,000（市区），约2,980,000（都会区）</div>
+        <div class="cell"><b>面积</b><br>约1240平方公里</div>
+        <div class="cell"><b>机场</b><br>技术官命名机场（1917年）</div>
+        <div class="cell"><b>企业</b><br><a href="f-kap.html">F-KAP</a>；<a href="airhokol-66.html">AirHokol-66</a>；<a href="ksfose.html">KSFOSES</a></div>
+        <div class="cell"><b>时区</b><br>UTC+7</div>
+      </aside>
+
+      <h1 class="title">科拉</h1>
+      <p class="lead">
+        <b>科拉</b>是<a href="kivish.html">基维什</a>位于安加拉河畔的首都；它既是国家政治中心，也是工业与技术枢纽，以及该国东部最重要的交通节点。
+        这座城市建立于631年，并在714年正式确立首都地位。战后现代化的建筑象征则是
+        <a href="great_friendship_skyscraper.html">伟大友谊摩天楼</a>（1958年）。
+      </p>
+
+      <h2>词源与自称</h2>
+      <p>
+        “科拉”这一名称自中世纪早期起就已见于国家公文中。口语中也存在简化叫法，但在正式文件里始终使用统一写法。
+      </p>
+
+      <h2>历史</h2>
+      <p>
+        这座城市起源于跨越安加拉河的水路与陆路交通交汇点。7世纪时，这里修建了第一座永久性桥梁——官方名称为“1号桥”（在地方传统中称为塔龙桥），从而实现了全年不间断通行。
+      </p>
+
+      <figure class="thumb">
+        <img src="../036.jpg" alt="从太空俯瞰城市">
+        <figcaption class="cap">从太空俯瞰城市。</figcaption>
+      </figure>
+
+      <p>
+        714年，科拉获得首都地位。18世纪（1700年代），由于运输量增长，第二座跨河通道建成——官方名称为“2号桥”（在地方传统中称为索维托瓦桥）。到20世纪初，两座桥梁都完成了综合现代化改造，包括桥墩加固和跨梁结构更新。
+      </p>
+      <p>
+        1955至1957年间，市中心建成了<a href="great_friendship_skyscraper.html">伟大友谊摩天楼</a>（1958年启用），并由此塑造了战后城市天际线中的主导轮廓。到2025年为止，这座建筑仍在持续使用。
+      </p>
+      <p>
+        到2030年代，城市正在推进导航系统、无障碍环境以及公共交通方面的现代化计划。
+      </p>
+
+      <h2>地理与城市结构</h2>
+      <p>
+        科拉分布在安加拉河两岸。中心城区的规划结构结合了规整的街道网格与通往河岸步道的出口；两座桥梁则形成了纵横交错的交通框架。河流以南分布着物流与铁路场地；西部则是机场综合区。
+      </p>
+      <p>
+        住宅建筑跨越多个时代——从历史建筑，到晚期苏联式高层住宅，再到当代高层开发；而在各片区内部，也逐渐形成了本地化的公共空间。
+      </p>
+
+      <h2>治理体系</h2>
+      <p>
+        城市内集中了共和国级国家机关与各类部门。市政层级则负责道路系统、公共交通、城市环境整治和公用基础设施运行。相关规章与基维什全国标准保持同步，其中包括无障碍标准与视觉导航规范。
+      </p>
+
+      <h2>经济</h2>
+      <p>
+        科拉经济具有多元产业结构。汽车制造、民用航空和航天活动占据关键地位；建筑业、交通物流服务、IT产业、教育和城市服务业也同样重要。市政预算收入来源包括企业与个人税收、非税收入（如租赁支付、基础设施使用费、市政服务收费）以及上级财政转移支付。
+      </p>
+      <h3>工业与技术领域</h3>
+      <ul>
+        <li><b>汽车制造。</b> <a href="f-kap.html">F-KAP</a> 形成了由零部件供应商、服务基地和教育合作网络组成的完整生产销售体系。</li>
+        <li><b>航空产业集群。</b> <a href="airhokol-66.html">AirHokol-66</a> 维持着设计局、维修能力和人员培训体系；机场则保障货运通道。</li>
+        <li><b>航天活动。</b> <a href="ksfose.html">KSFOSES</a> 推动材料、电子、软件以及控制系统试验台的发展。</li>
+        <li><b>IT与电信。</b> IT技术大学和科技园培养软件开发者、网络工程师以及嵌入式系统专家。</li>
+        <li><b>建筑与公用事业。</b> 街道、河岸和公交站点现代化计划为本地提供了稳定的工程需求。</li>
+      </ul>
+      <h3>商业与服务业</h3>
+      <p>
+        零售贸易结合了城市市场和连锁商业形式；餐饮业则从机关食堂一直延伸到历史建筑中的私人咖啡馆。旅游流量主要面向商务访问、行业展览和博物馆路线。
+      </p>
+      <h3>税收与投资环境</h3>
+      <p>
+        这里适用全基维什统一模式：外国公司在进入市场时面临较高的起始税率，随着长期经营而逐步下降；若企业退出后重新进入，则适用最高税率。城市通过基础设施协议、市政债券和改善城市环境项目的优惠条件来吸引投资。
+      </p>
+      <h3>劳动力市场</h3>
+      <p>
+        主要需求集中在工程师、产业工人、IT专家、交通系统人员和运营维护人员。教育项目通过双元制等形式与实际工作紧密结合。
+      </p>
+
+      <h2>交通</h2>
+      <p>
+        城市道路网络以沿安加拉河分布的纵向干道和连接桥梁的横向通道为基础。在重要节点上，正在引入公共交通优先机制以及现代信号灯控制算法。
+      </p>
+      <h3>航空运输</h3>
+      <p>
+        <b>科拉市机场</b> 自1914年起投入使用；航站综合体经过分阶段扩建，飞行区与西部工业区相连。机场服务于客运、货运以及训练飞行。
+      </p>
+      <h3>铁路</h3>
+      <p>
+        <a href="kora-railway-station.html"><b>科拉市火车站</b></a> 是一个铁路枢纽：服务于长途和市郊方向，同时还连接工业支线和沿河调车场。
+      </p>
+      <h3>地铁</h3>
+
+      <figure class="thumb">
+        <img src="../037.jpg" alt="托罗姆斯卡亚—市中心站">
+        <figcaption class="cap">“托罗姆斯卡亚—市中心”站。<br>紫线——环线。</figcaption>
+      </figure>
+
+      <p>
+        <a href="metro-kora.html"><b>科拉地铁</b></a> 包括环线以及两条直线线路：绿线、紫线和橙线。换乘节点与地面交通和无障碍通道系统进行了整合。
+      </p>
+      <h3>汽车站</h3>
+      <ul>
+        <li><a href="kcvsbs.html"><b>科拉市“技术存放”汽车站</b></a>（1924年）——国有设施，用于车辆驻场和上线调度。</li>
+        <li><a href="kibus-bus-station.html"><b>KiBus停放场汽车站</b></a>（2003年）——私营设施，由公交制造商组织运营。</li>
+      </ul>
+
+      <h2>住房与公用基础设施</h2>
+      <p>
+        供热、供水和供电网络按照统一规程运行。到2030年代，城市开始引入设施数字护照、泄漏与能耗远程监测，以及模块化换热站。
+      </p>
+
+      <h2>教育与科学</h2>
+      <ul>
+        <li><b>国家管理学院</b>——培养行政管理人才的核心基地（另见<a href="amamarama-tirorarorita.html">阿马马拉玛·提罗拉罗丽塔</a>）。</li>
+        <li><b>IT技术大学</b>——涵盖计算机科学、网络技术、应用数学与嵌入式系统。</li>
+      </ul>
+
+      <h2>文化与博物馆</h2>
+      <p>
+        <b>基维什国家技术发展博物馆</b> 展示 F-KAP 的设计路线、计算设备样本、军事技术资料以及互联网历史。城市公共空间也被用于举办工程创意节和行业展览。
+      </p>
+
+      <h2>2030年代的城市环境与现代化</h2>
+      <p>
+        更新计划包括统一视觉导航系统、无障碍标准、河岸开发、照明和候车亭改善、步行路线拓展以及自行车道建设。在原 VKV 旧址上，已形成名为<b>“科涅瓦亚街区”</b>的新住宅片区。
+      </p>
+
+      <h2>象征体系</h2>
+      <p>
+        这座城市没有独立的市徽与市旗；官方使用的是基维什国家旗帜。在城市的视觉识别中，传统上常出现安加拉河全景以及友谊摩天楼的轮廓（尤其在历史图像中）。
+      </p>
+
+      <h2>人口</h2>
+      <p>
+        估算人口约为<b>71万人</b>（行政边界内），而整个都会区约为<b>105万人</b>；城市面积约为<b>310平方公里</b>。人口变化与工业集群发展、交通基础设施建设以及学生流入密切相关。
+      </p>
+
+      <h2>另见</h2>
+      <ul>
+        <li><a href="kivish.html">基维什</a></li>
+        <li><a href="great_friendship_skyscraper.html">伟大友谊摩天楼</a></li>
+        <li><a href="f-kap.html">F-KAP</a></li>
+      </ul>
+
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>注意：</strong>Neverpedia 是一个虚构项目。
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>

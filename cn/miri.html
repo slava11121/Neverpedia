@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>米里 — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial, sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:260px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><img class="logo" src="../logo.png" alt="Neverpedia"></a>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="create.html">创建条目</a>
+      <a href="#">随机条目</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../miri.html">Русский</a>
+        <a href="../en/miri.html">English</a>
+        <a href="../ksh/miri.html">Кiвiшский</a>
+        <a href="miri.html">简体中文</a>
+        <a href="../jpn/miri.html">日本語</a>
+        <a href="../ko/miri.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+
+      <aside class="infobox">
+        <div class="h">米里</div>
+        <div class="cell"><img src="../051.jpg" alt="米里全景"></div>
+        <div class="cell"><b>国家</b><br><a href="kivish.html">基维什</a></div>
+        <div class="cell"><b>建立时间</b><br>600年</div>
+        <div class="cell"><b>首都地位</b><br>至714年为止</div>
+        <div class="cell"><b>铁路</b><br><a href="#rail">米里火车站</a></div>
+        <div class="cell"><b>企业</b><br><a href="kibus.html">KiBus</a>；<a href="folet-500.html">Folet-500</a>（电视频道）</div>
+        <div class="cell"><b>人口</b><br>54,548人</div>
+        <div class="cell"><b>地位</b><br>“猫之城”（官方动物保护与登记项目）</div>
+        <div class="cell"><b>时区</b><br>UTC+7</div>
+      </aside>
+
+      <h1 class="title">米里</h1>
+      <p class="lead">
+        <b>米里</b>是<a href="kivish.html">基维什</a>最古老的城市之一，由基维什科·托罗姆斯基本人在600年建立。
+        从600年到714年，这里一直承担国家首都职能。如今，它是一座安静的交通与工业中心，
+        拥有<a href="kibus.html">KiBus</a>工厂、科研实验室，以及独特的城市动物政策：
+        米里以“猫之城”而闻名。
+      </p>
+
+      <h2>词源与自称</h2>
+      <p>
+        “米里”这一地名自基维什早期起便固定出现在官方文书中。
+        在本地口语里也存在一些日常化简称，但在正式文件中始终采用统一写法。
+      </p>
+
+      <h2>历史</h2>
+      <p>
+        这座城市由基维什科·托罗姆斯基于600年建立，并一直是国家政治中心直到714年。
+        首都地位之所以被转移到气候更温暖、地理位置更居中的居民点
+        （见<a href="kora.html">科拉</a>），
+        是为了更好地保障经由西伯利亚、从中国方向而来的商队贸易路线通行。
+        在对路线进行分析后，国家建立了“通行线路”系统——即被标识并受保护的路段，
+        从而降低商队在恶劣自然条件下覆灭的风险。
+      </p>
+
+      <figure class="thumb">
+        <img src="../052.jpg" alt="从上方俯瞰米里">
+        <figcaption class="cap">从上方俯瞰米里：规则化街区网格以及通往铁路枢纽的出口。</figcaption>
+      </figure>
+
+      <p>
+        到20世纪中叶，米里已稳固成为一座区域性交通与服务中心。
+        进入21世纪后，城市范围内启用了<a href="kibus.html">KiBus</a>巴士制造厂，
+        同时依托医科大学形成了遗传学研究集群，
+        在这里曾开展有关新“粉红品种”生存能力与社会化的研究工作。
+      </p>
+
+      <h2>地理与城市结构</h2>
+      <p>
+        城市整体采用规则化低层街区网格布局，周围被森林带包围。
+        中央主轴通向铁路客运站；在东北部的莫洛托沃街123号设有城市公园，
+        其中竖立着基维什科·托罗姆斯基纪念碑。
+        城市边缘则分布着工业区和 KiBus 基地。
+      </p>
+
+      <h2>治理体系</h2>
+      <p>
+        米里是基维什境内一个普通的城市辖区，并以自治方式运行。
+        市政当局负责街道与道路维护、公共交通服务，以及“猫之城”相关项目，
+        其中包括卫生监管和动物护照登记。
+      </p>
+
+      <h2>经济</h2>
+      <h3>工业与服务业</h3>
+      <ul>
+        <li><b>巴士制造。</b> <a href="kibus.html">KiBus</a>工厂负责车辆生产，并承担城市线路服务体系的支撑。</li>
+        <li><b>科学与医学。</b> 医科大学附属遗传学中心从事应用研究（“粉红品种”项目）。</li>
+        <li><b>交通与物流。</b> 火车站及周边仓储设施为运输和维护服务提供就业。</li>
+      </ul>
+
+      <h3>商业与服务</h3>
+      <p>
+        当地以小型私人商店、咖啡馆和维修作坊为主。
+        旅游业则属于小众性质——主要吸引猫文化爱好者和工业摄影爱好者。
+      </p>
+
+      <h2>交通</h2>
+      <p>
+        城市交通网络以地面公共交通为主。
+        道路始终保持极高整洁度——这也是动物保护官方政策的一部分，
+        因为垃圾和结冰都会对猫造成伤害。
+      </p>
+
+      <h3>公交</h3>
+      <p>
+        路网由 <b>KiBus</b> 巴士承担运营；城市设有车辆停放站和自有维修基地。
+      </p>
+
+      <h3 id="rail">铁路</h3>
+      <p>
+        <a href="miri-railway-station.html"><b>米里火车站</b></a>位于城市南缘，
+        接发市郊和长途列车；同时从车站还分出多条通往工业区的专用支线。
+      </p>
+
+      <h2>文化与媒体</h2>
+      <p>
+        米里的非正式象征是猫。
+        城市层面实施了动物教育、社会化和登记项目，
+        并向它们发放“居民护照”（但不将其计入官方人口数）。
+        2016年，为配合一部新动画的宣传活动，
+        数辆城市公交车曾采用主题涂装。
+        米里还拥有科技与赛车导向的电视频道 <b>Folet-500</b>，
+        主要报道赛车运动和工程项目。
+      </p>
+
+      <h2>教育</h2>
+      <ul>
+        <li><b>米里医科大学</b>——临床培养与遗传学研究。</li>
+        <li><b>城市公园校园</b>——面向公众教育项目与城市活动。</li>
+      </ul>
+
+      <h2>另见</h2>
+      <ul>
+        <li><a href="kivish.html">基维什</a></li>
+        <li><a href="kibus.html">KiBus</a></li>
+        <li><a href="kora.html">科拉</a></li>
+      </ul>
+
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>注意：</strong>Neverpedia 是一个虚构项目。
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>

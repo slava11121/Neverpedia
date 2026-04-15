@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tarifa — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial,sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:240px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="create.html">创建条目</a>
+      <a href="#">随机条目</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../tarifa.html">Русский</a>
+        <a href="../en/tarifa.html">English</a>
+        <a href="../ksh/tarifa.html">Кiвiшский</a>
+        <a href="tarifa.html">简体中文</a>
+        <a href="../jpn/tarifa.html">日本語</a>
+        <a href="../ko/tarifa.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+      <aside class="infobox">
+        <div class="h">Tarifa</div>
+        <div class="cell"><img src="../064.jpg" alt="Tarifa 标志"></div>
+        <div class="cell"><b>类型</b><br>私营公司</div>
+        <div class="cell"><b>行业</b><br>汽车制造、专用机械</div>
+        <div class="cell"><b>成立时间</b><br>1976年</div>
+        <div class="cell"><b>所在地</b><br>基维什，D市，科托娃街9号1栋</div>
+        <div class="cell"><b>产品</b><br>厢式车、迷你厢式车、牵引车、拖拉机、挖掘机、机场设备</div>
+        <div class="cell"><b>网站</b><br><a href="../Websites/Tarifa/index.html" target="_blank" rel="noopener">tarifa.khs</a></div>
+      </aside>
+
+      <h1 class="title">Tarifa</h1>
+      <p class="lead"><b>Tarifa</b> 是一家基维什私营机械制造企业，1976年创立于 D 市。它以务实风格著称：从机场牵引车和跑道维护设备，到出口型厢式车、牵引车和专用机械。到了2000至2010年代，Tarifa 成为“不过分张扬”的交通工具代表之一——简单、耐用、容易理解，而公司的一些设计方案也因为车型生命周期异常漫长而获得了近乎传奇的地位。</p>
+
+      <h2>历史</h2>
+
+      <h3>1970年代：成立与机场设备方向</h3>
+
+      <figure class="thumb">
+        <img src="../065.jpg" alt="Tarifa 早期机场设备">
+        <figcaption class="cap">Tarifa 的早期机场设备（1970年代末）。</figcaption>
+      </figure>
+
+      <p>Tarifa 于1976年在 D 市成立，最初是一家面向机场设备的制造商：生产用于将飞机从停机位拖至滑行道的牵引车、行李拖车牵引设备以及跑道维护车辆。对于一家汽车工厂来说，这一细分领域看起来有些特别，但它能够提供稳定需求，同时也让公司迅速积累了牵引传动、液压系统以及连续高负荷工况方面的经验。</p>
+      <p>在 СКР 时期（1989年以前），公司生产首先面向国内订单以及与友好市场的合作；其中机场设备最重要的外部方向通常被认为是苏联和中国。</p>
+
+      <h3>1980—1982年：进入轻型商用领域 —— FGR1</h3>
+
+      <figure class="thumb">
+        <img src="../066.jpg" alt="Tarifa FGR1">
+        <figcaption class="cap">Tarifa FGR1（1980年）。</figcaption>
+      </figure>
+
+      <p>1980年，Tarifa 扩展了业务范围，开始生产轻型商用车辆。公司利用自有的车架平台，打造出 <b>Tarifa FGR1</b> 厢式车，其车身在造型上受到了美国实用主义设计流派的启发（尤其在比例上让人联想到 Chevrolet G10）。这款车型被定位为“工作型厢式车”——结构简单、维修方便，专门为糟糕路况和高强度日常使用而设计。</p>
+      <p>基于统一车架的方案很快衍生出一个完整的上装家族：<b>FGR1.10</b>（平板型）、<b>FGR1.20</b>（篷布型）和 <b>FGR1.Vida</b>（小型罐车）。这一思路让 Tarifa 很快建立起“模块化实用主义制造商”的形象：同一平台，可以服务于许多不同部门。</p>
+
+      <h3>1983—1985年：发动机争议与 FGR2 的加速推出</h3>
+
+      <figure class="thumb">
+        <img src="../067.jpg" alt="Tarifa FGR2">
+        <figcaption class="cap">Tarifa FGR2（1984年）。</figcaption>
+      </figure>
+
+      <p>1983年，行业媒体（尤其是 <i>AutoWorld</i> 杂志）开始明显批评 FGR1 在负载状态下牵引力不足：空载时它被认为“几乎无可挑剔”，但在半载和爬坡情况下，动态表现明显不够。Tarifa 的反应比原计划更快：仅到1984年，新一代 <b>FGR2</b> 就已推出——它拥有自家的设计语言、更耐用的发动机以及明显更舒适的车厢。</p>
+      <p>在一系列实用改进中，最常被提到的是暖风系统以及挡风玻璃吹风 / 加热功能——这一方案很快在严寒气候下被视为“必须具备的基础配置”。FGR2 系列也延续了模块化结构：<b>FGR2</b>、<b>FGR2.10</b>、<b>FGR2.20</b>、<b>FGR2.Vida</b>。</p>
+      <p>到了1985年，这一车系又加入了专门版本：<b>FGR2.Evak</b>（清障车）和 <b>FGR2.30</b>（小型随车吊），由此进一步巩固了 Tarifa 在服务车辆和市政专用设备领域的地位。</p>
+
+      <h3>1987—1989年：进入重型专用机械 —— Mita 与 HK</h3>
+
+      <figure class="thumb">
+        <img src="../068.jpg" alt="Tarifa HK">
+        <figcaption class="cap">Tarifa HK（1980年代末）。</figcaption>
+      </figure>
+
+      <p>在液压系统和强化车架方面积累的经验，自然推动公司进入建筑和农业设备领域。1987年，Tarifa 推出了 <b>Tarifa Mita</b> 挖掘机和 <b>Tarifa HK</b> 拖拉机（后来逐渐被理解为 <i>Horse Kraft</i>）。直到1980年代末，公司仍然主要以商用和专用机械为主业，并持续在“工作型”车辆和设备类别中积累能力。</p>
+
+      <h3>1989—1994年：新基维什、全球市场与 Minity</h3>
+
+      <p>1989年进入新基维什阶段后，国家法律和经济规则发生变化：对制造商而言，这意味着生产流程的重新整理，以及全面接入全球市场。Tarifa 的回应是于1990年初推出 <b>FGR3.Series</b>，同时更新机场设备产品线。</p>
+      <p>1992年，在后苏联地区经济混乱的背景下，Tarifa 积极向该地区出售剩余批次和成熟系列的 <b>FGR1</b>/<b>FGR2</b> 以及早期版本的 <b>HK</b>。与此同时，公司也在欧洲方向推广更现代化的 <b>FGR3</b> 以及 <b>Mita</b>/<b>HK</b> 专用机械。</p>
+      <p>1994年，Tarifa 在“民用化”方向上迈出新一步：推出了迷你厢式车 <b>Tarifa Minity</b>。它最初沿用了当时大众化 MPV 的整体理念，但后来逐渐摆脱对外部设计流派的直接借鉴，发展为一款更独立的车型。</p>
+
+      <h3>1995—2001年：FGR4、半车架 People 和更名为 Dart</h3>
+
+      <p>1995年，Tarifa 更新了商用平台，推出了 <b>FGR4.Series</b>，搭载全新的车身、发动机以及重新设计的系统架构。其中一个特别重要的版本是 <b>FGR4.People</b> —— 这是一款面向线路运营的 пассажирская 版本，采用半车架结构：下部车架主要承担底盘防护功能，而车身本体则提供主要刚性。这一方案被认为在技术上相当务实：即使拆除车架，也不会让整车结构“彻底散架”，同时仍保留基本使用能力。</p>
+      <p>在1990年代中期，Tarifa 还为 пассажирская 版本引入了从更高等级民用车型那里购买来的悬架技术方案，这显著改善了线路车辆车厢舒适性。</p>
+      <p>1997年，Tarifa 曾尝试进入重型卡车领域，但其牵引车概念并未真正量产；最终基于这些研发成果，诞生了一款通过性很强的厢式 грузовичок <b>Tarifa Harit</b>。</p>
+      <p>1998年，在新管理层主导下，重型卡车项目重新回到生产计划中：于是出现了 <b>Tarifa 0100</b> —— 一款全轮驱动平头卡车，其设计目标是尽量简单，以便快速投产。1999年，随着管理层再次更替，项目迎来深度 redesign：1999年10月，<b>Tarifa 0101</b> 上市，它拥有更“国际化”的外观，并搭载了与 КамАЗ 合作开发的发动机。</p>
+      <p>2000年，Tarifa 对产品命名体系进行了重组：FGR 作为品牌名被取消，整个系列统一更名为 <b>Dart</b>，此前复杂的“编号分支”也被重新整理为更容易理解的版本（厢式、罐式、清障、线路 пассажирская 版本等）并配合新编号。与此同时，<b>Mita</b>、<b>HK</b> 和 <b>Minity</b> 这些名称则被保留下来。</p>
+
+      <figure class="thumb">
+        <img src="../069.jpg" alt="Tarifa 0101">
+        <figcaption class="cap">Tarifa 0101（1999年）。</figcaption>
+      </figure>
+
+      <h3>2001年：美国广告与 9·11 后的撤下决定</h3>
+
+      <p>2001年，Tarifa 原本准备通过一组“平价厢式车”广告进入美国市场，广告拍摄地点就在纽约。9月11日事件后，公司迅速中止并撤下整套广告，认为在社会创伤最强烈的时刻继续播放那些旧城市画面是不合适的。这个决定后来经常被提起，被视为品牌较早展现“品牌伦理”的案例之一：Tarifa 正是因为主动放弃这场广告投放，而在美国舆论空间中获得了明显关注。</p>
+
+      <h3>2005—2012年：“不会老去的设计”</h3>
+
+      <figure class="thumb">
+        <img src="../070.jpg" alt="Tarifa Dart（2005）">
+        <figcaption class="cap">Tarifa Dart（2005年风格）。</figcaption>
+      </figure>
+
+      <p>2005年，Tarifa 做出了最受讨论的一次设计决定：公司请来一位来自科拉、以“街头派”绘图风格闻名的年轻设计者，并让她重新定义核心车型的外观。最终结果是：Dart 厢式车、Minity 迷你厢式车以及重型卡车线都获得了新设计。Dart 变得更像真正的“工作机器”，空间感更强；Minity 则摆脱了对外部轮廓的直接模仿，形成了更独立的个性；而重型卡车则找到了一种把早期粗粝感和较现代几何感融合起来的折中风格。</p>
+      <p>出乎 Tarifa 自己预料的是，2005年的这套设计竟然好到让公司多年都不愿意改动外观，只是不断提升动力、更新内饰并适配更严格的环保法规。到2012年，公司内部已经有人公开表示：“外观根本不知道该怎么更新——它现在看起来还是不过时。”</p>
+
+      <h3>2011—2017年：Misi-N 与短暂的 Style 时代</h3>
+
+      <figure class="thumb">
+        <img src="../071.jpg" alt="Tarifa Misi-N">
+        <figcaption class="cap">Tarifa Misi-N（2011年）。</figcaption>
+      </figure>
+
+      <p>2011年，Tarifa 推出了第一款真正意义上的大众“国民乘用车” <b>Tarifa Misi-N</b>，主要面向朝鲜半岛基维什地区。它的技术哲学极其务实：为了把成本压到最低，工程师们使用了一款从2000年代初 Dart 更大排量总成衍生出来的简化发动机——通过减少气缸数量实现低成本化。Misi-N 很快成为驾驶培训和 массовая 机动化的重要车型，而公司内部也为此成立了独立的乘用车 подразделение，并启用了新的品牌标识体系。</p>
+      <p>2013年，Tarifa 又出人意料地进入了“中型轿车”领域，推出 <b>Tarifa Style</b>，其目标是与传统乘用车制造商竞争。市场兴趣在2013至2014年达到高峰，随后逐渐冷却。2017年，Style 被停产，最终作为一个限量、完整、但没有后续扩展的项目被归档。</p>
+
+      <h3>2019—2023年：Revint Di3、2022年大改款与 Misi-N 的终结</h3>
+
+      <p>2019年，Tarifa 推出了 нишевая модель <b>Tarifa Revint Di3</b> —— 一款受到1990年代末经典“街头赛车”双门跑车审美启发的车型（通常会让人联想到 Skyline R34 那一时代）。这个项目存活时间并不长：到2021年就结束销售，但它成功把自己留在品牌形象和收藏文化之中。</p>
+      <p>同样在2019年，传奇的 Dart 也只进行了最小程度的外观更新（例如类似“天使眼”的灯光轮廓），同时动力和环保标准也有所提升。不过真正意义上的时代更替发生在2022年：Tarifa 终于彻底更新了厢式车外观，随后又轮到 Minity、牵引车，以及经过深度外观与人体工学 модернизация 的 HK 和 Mita，使其专用机械逐渐接近国际当代标准的视觉语言。</p>
+      <p>2023年，Tarifa 正式停止生产 Misi-N：最后一辆车卖给了私人买家李永俊，而经销中心则把这一时刻作为“品牌最平价车型时代结束”的象征性事件来庆祝。</p>
+
+      <h3>2025—2026年：稳定期与“无聊”的掀背车</h3>
+
+      <p>到2025年，Tarifa 已经稳固了 2022 年形成的新产品线，并没有再推出新的乘用车型。公司内部曾讨论过采购并 rebadge 中国汽车的可能性，但最终否决了这一方案，因为它被视为对品牌声誉有害。在机场设备方向上，则出现了一些更低预算的配置方案，例如把内置风扇作为廉价配置下替代空调的解决办法。</p>
+      <p>2026年，乘用车 подразделение 推出了掀背车 <b>Tarifa Minic</b>，评论界普遍认为它“普通得不能再普通”：既没有引发热烈追捧，也没有遭遇猛烈反感。同一时期，Tarifa 还加强了与 KiBus 的合作，推出了一些基于商用平台的实用线路版本，但完全没有试图在设计上制造惊喜；这也让网络上开始讨论，认为品牌的雄心似乎已经下降。</p>
+
+      <h2>技术</h2>
+      <ul>
+        <li><b>模块化车架平台</b> —— FGR1/FGR2 早期核心哲学：单一平台，对应多种上装（平板、篷布、罐车、清障、吊装）。</li>
+        <li><b>半车架底盘防护</b>（FGR4.People）—— 把车架视为底盘保护结构，而将主要承载交给车身本体。</li>
+        <li><b>快速工程迭代</b> —— 例如在 FGR1 遭遇批评后迅速推出 FGR2，以及在不更换外观情况下悄悄迭代内饰。</li>
+        <li><b>简化动力架构</b>（Misi-N）—— 通过衍生式总成来实现最低持有成本。</li>
+        <li><b>操作位人体工学</b> —— 在机场和工程设备上，持续改进驾驶与操作空间。</li>
+      </ul>
+
+      <h2>营销</h2>
+      <p>Tarifa 的营销史常常建立在一种“反浮夸”逻辑上。其中最著名的案例就是 2001 年美国广告的撤下：正是因为在 9·11 后主动叫停投放，公司获得了一个谨慎且有分寸的品牌形象。另一个同样重要的部分，则是 2005 年形成的“设计神话”——那位来自科拉的年轻设计者，让 Tarifa 的厢式车外观开始和一种极少见的“抗老化设计”联系在一起。</p>
+
+      <h2>汽车运动</h2>
+      <ul>
+        <li><b>Revint Di3</b>（2019–2021）—— 面向改装、漂移与粉丝文化的形象车型；项目已结束。</li>
+      </ul>
+
+      <h2>文化影响</h2>
+      <p>Tarifa 通常被看作是“为工作和生活造车的品牌”，而不是奢侈品牌。2005 年的厢式车设计，已经成为它长达数十年的视觉名片。Misi-N 则被普遍视为在朝鲜半岛基维什开启大规模个人机动化的关键车型，而 Revint Di3 则代表着品牌短暂但鲜明地尝试用粉丝汽车文化的语言与其对话。</p>
+
+      <h2>批评</h2>
+      <p>公司经常因 1990 年代末管理决策不稳定而受到批评（例如 0100 / 0101 项目方向频繁变化），同时也因对成功设计“过度保守地长期维持”而引发争议。到了2020年代，乘用车 подразделение 的某些决定同样引发讨论：尤其是当 Minic 被视为一种过于模板化的产品时，这种印象与品牌在 2005 年和 2019 年那些更有冲击力的阶段形成了鲜明反差。</p>
+
+      <h2>另见</h2>
+      <ul>
+        <li><a href="f-kap.html">F-KAP</a></li>
+        <li><a href="kibus.html">KiBus</a></li>
+        <li><a href="kora.html">科拉</a></li>
+      </ul>
+
+      <h2>注释</h2>
+      <ol class="notes">
+        <li>本文内容基于 Neverpedia 的虚构世界观设定。</li>
+      </ol>
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>注意：</strong>Neverpedia 是一个虚构项目。
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>

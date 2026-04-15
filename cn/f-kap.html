@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>F-KAP — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial,sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:240px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="create.html">创建条目</a>
+      <a href="#">随机条目</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../f-kap.html">Русский</a>
+        <a href="../en/f-kap.html">English</a>
+        <a href="../ksh/f-kap.html">Кiвiшский</a>
+        <a href="f-kap.html">简体中文</a>
+        <a href="../jpn/f-kap.html">日本語</a>
+        <a href="../ko/f-kap.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+      <aside class="infobox">
+        <div class="h">F-KAP</div>
+        <div class="cell"><img src="../016.jpg" alt="F-KAP 标志"></div>
+        <div class="cell"><b>类型</b><br>股份公司</div>
+        <div class="cell"><b>行业</b><br>汽车制造</div>
+        <div class="cell"><b>成立时间</b><br>1921年7月12日</div>
+        <div class="cell"><b>所在地</b><br>基维什，科拉市，列特尼科夫区13号6栋</div>
+        <div class="cell"><b>关键人物</b><br>福拉诺夫·别尔科罗夫，第一技术官阿科隆</div>
+        <div class="cell"><b>产品</b><br>汽车、卡车、跑车、电动车</div>
+        <div class="cell"><b>网站</b><br><a href="../Websites/F-KAP/index.html" target="_blank" rel="noopener">f-kap.khs</a></div>
+      </aside>
+
+      <h1 class="title">F-KAP</h1>
+<p class="lead"><b>F-KAP</b>（第一基维什汽车制造厂）是基维什最大的汽车制造商，成立于1921年。公司以研发适应寒冷气候的独特技术、民用越野车以及注重安全与舒适性的汽车而闻名。F-KAP 对20世纪至21世纪的汽车文化产生了显著影响，成为最早将大规模生产与工程实验结合起来的公司之一。</p>
+
+<h2>历史</h2>
+<h3>1920年代：创立</h3>
+
+<figure class="thumb">
+  <img src="../017.jpg" alt="F-KAP D-001">
+  <figcaption class="cap">F-KAP D-001。</figcaption>
+</figure>
+
+<p>工厂建于科拉郊外的列特尼科夫工人区，当时这里集中了大量作坊和小型企业。在战后破败环境中，由于官员、医生和商人缺乏可靠交通工具，于是产生了制造一款适应严酷气候的本土汽车的想法。第一款汽车是 <a href="f-kap-d-001.html" target="_blank" rel="noopener"><b>D-001</b></a>（1921年），搭载19马力发动机、带金属嵌件的冬季轮胎，以及通过木柴炉加热发动机的预热系统。尽管结构简单，这款车却在本地市场引发了革命：居民第一次能够在风雪和严寒中出行，而不用担心把发动机“冻死”。</p>
+<p>这款车型之所以受欢迎，不仅因为它实用，还因为公司的理念：F-KAP 从一开始就把自己定位为“驾驶者的朋友”，随车附送额外木柴、冬季工具，甚至还有一份如何生火烧炉的说明书。许多同时代的人都指出，D-001 与其说是一件奢侈品，不如说更像一匹“工作马”。</p>
+
+<h3>1940年代：战争与最初的成功</h3>
+
+<figure class="thumb">
+  <img src="../019.jpg" alt="F-KAP Go">
+  <figcaption class="cap">F-KAP Go。</figcaption>
+</figure>
+
+<figure class="thumb">
+  <img src="../018.jpg" alt="F-KAP Q455">
+  <figcaption class="cap">F-KAP Q455。</figcaption>
+</figure>
+
+<p>第二次世界大战开始后，企业被动员起来服务前线。根据第一技术官阿科隆的命令，F-KAP 的工程师开发出了 <b>Q455</b> 车型，其特点是当时极为独特的发动机隔音系统。它使用柔软材料包覆发动机，使这款车几乎没有噪音。士兵们称它为“夜影”，这项技术也迅速在侦察部队中建立了声誉。</p>
+<p>战后，公司重新转向民用产品。1944年，四座轿车 <b>Go</b> 问世，成为苏联第一款大规模普及的外国汽车。它配备56马力化油器发动机、运转平稳的气缸，以及从军用开发中继承而来的同款隔音技术。对苏联消费者来说，Go 成了“通往另一个世界的窗户”——比本土同类车型更舒适、更柔和、也更安静。</p>
+
+<h3>1950年代：越野车的诞生</h3>
+<p>1950年，F-KAP 推出了 <b>Fokat B</b>——第一款专为日常使用打造的民用越野车。与军用车辆不同，它拥有更舒适的车厢、更好的照明，以及一台131马力的涡轮发动机，这在当时被视为难以置信的动力。更高的离地间隙和强化悬挂让 Fokat B 成为一种通用车型：无论是在基维什乡村、西伯利亚针叶林，还是苏联郊外公路上，它都能稳定行驶。</p>
+<p>这款车成为新型汽车的象征——“既适合家庭，也适合道路”。不久之后，“民用越野车”这一术语就与 F-KAP 紧密联系在一起。</p>
+
+<h3>1960—1970年代：实验与纪录</h3>
+
+<figure class="thumb">
+  <img src="../022.jpg" alt="F-KAP Chihuahua">
+  <figcaption class="cap">F-KAP Chihuahua。</figcaption>
+</figure>
+
+<figure class="thumb">
+  <img src="../021.jpg" alt="F-KAP Nona">
+  <figcaption class="cap">F-KAP Nona。</figcaption>
+</figure>
+
+<figure class="thumb">
+  <img src="../020.jpg" alt="F-KAP Shik200">
+  <figcaption class="cap">F-KAP Shik200。</figcaption>
+</figure>
+
+<p>1960年代是实验的时代。1961年，公司参加了苏联—基维什—中国国际友谊拉力赛。代表米里市出战的汽车 <a href="f-kap-shik200.html" target="_blank" rel="noopener"><b>Shik200</b></a> 成功超越了苏联“伏尔加”和中国红旗，证明民用汽车同样能够承受高强度运动负荷。这成为品牌形象上的重要事件。</p>
+<p>1970年，F-KAP 进行了一次近乎疯狂的实验：冲击世界速度纪录。通过改装后的 <b>Nona</b> 车身，车辆成功达到1044公里/小时，随后发动机解体。尽管以机械损毁告终，这一实验本身仍让基维什进入了世界汽车运动版图。</p>
+<p>1979年，搭载独特 W12 发动机的跑车 <b>Chihuahua</b> 问世。在电视节目 <i>Top Piston</i> 中，它以293公里/小时超过了 Ferrari 400 GTi，尽管不久后两辆车都因过热而停下。这个事件在媒体上被广泛讨论，也进一步巩固了 F-KAP 作为敢于挑战世界巨头的公司形象。</p>
+
+<h3>1980—1990年代：危机与复兴</h3>
+<p>到1980年代末，F-KAP 面临需求下降。出口几乎停滞，新研发项目也无法带来利润。工厂一度濒临关闭。然而1991年出现了意外转折：在新的俄罗斯，由于官僚体系失误，F-KAP 的汽车开始以被低估的价格出售——有时甚至比苏联的“日古利”还便宜。车辆被迅速抢购一空，这也让公司摆脱了破产危机。</p>
+<p>1990年代中期，公司将重点转向安全与设计。几乎每一款车型都推出了旅行版：<b>Gerri universal</b>、<b>Malina universal</b>、<b>Fota universal</b>。这成为品牌的标志性“特色”。与此同时，F-KAP 进一步巩固了自己作为可靠家庭汽车制造商的声誉。</p>
+
+<h3>2000年代：全球扩张</h3>
+
+<figure class="thumb">
+  <img src="../023.jpg" alt="F-KAP Tref">
+  <figcaption class="cap">WRC冠军，F-KAP Tref。</figcaption>
+</figure>
+
+<p>进入2000年代后，F-KAP 开始积极进军海外市场。越野车和小型厢式车出口到美国和加拿大，轿车与旅行车进入欧洲和独联体，商务级轿车销往中国，而 M 系列紧凑型车则进入日本。成功来得很快：2002年，旅行车 <b>Tref</b> 爆冷赢得 WRC 世界冠军，第一次向世界证明旅行车也可以成为拉力赛冠军。</p>
+<p>2006年推出的全球广告 <b>Fokat B130</b>，展示了这款车在五大洲的能力表现。尤其令人印象深刻的是东京那一幕：越野车在日本小型汽车之间显得像个“怪兽”。这在日本引发了热烈讨论，也让这支广告成为经典。</p>
+
+<h3>2010年代：重回大马力时代</h3>
+<p>2010年代，公司再次把重点放在高性能旅行车上。其中一款车型成功塞入 V8 发动机，使车辆最高时速达到312公里，成为世界上最快的旅行车。在美国，F-KAP 曾进行一项营销活动：10辆厢式车被藏在全国各地，而人们只能通过带有解谜任务的手机应用去寻找它们。这项活动在车迷中获得了近乎传奇的地位。</p>
+<p>不过并非一切都顺利：2018年，第一款电动车 <b>E-Up!</b> 在发布会上失败，当时安全系统竟在舞台上直接切断了电池。项目随后被冻结，但在2020年重新启动——这一次加入了语音人工智能和改进后的电子系统。</p>
+
+<h3>2020年代：新的纪录</h3>
+
+<figure class="thumb">
+  <img src="../024.jpg" alt="F-KAP E-Up!">
+  <figcaption class="cap">电动车，F-KAP E-Up!。</figcaption>
+</figure>
+
+<p>2020年，公司为日本市场推出了 <b>E-M-Up!</b>。这款车的特点是配备了内置人工智能，不仅能协助驾驶员，还可以对人的情绪作出反应。曾有记录显示，当司机在车内哭泣时，汽车会主动停靠路边，并建议回家或前往咖啡馆。如果车内留有儿童或动物，车辆也会在高温下自动降下车窗，并向周围人发出提醒信号。</p>
+<p>2025年，跑车 <b>Luna</b> 创下了新的世界最长漂移纪录——在9.5小时内完成401公里漂移。这项纪录成为工程坚持与 F-KAP 即使在创立一个世纪后依旧能够震惊世界的象征。</p>
+
+<h2>技术</h2>
+<ul>
+  <li><b>木柴预热系统</b>（1921年）—— 为寒冷气候打造的独特解决方案。</li>
+  <li><b>发动机隔音技术</b>（1940年代）—— 首次应用于军用车辆。</li>
+  <li><b>四驱旅行车</b>（2000年代）—— 将家庭车身形式与运动性能结合。</li>
+  <li><b>AI助手</b>（2020年代）—— 可对人类情绪作出反应的汽车。</li>
+  <li><b>儿童与动物保护系统</b> —— 过热时车窗会自动打开。</li>
+</ul>
+
+<h2>营销</h2>
+<p>公司因富有创意的营销活动而闻名。其中最著名的一项是“汽车寻宝任务”：F-KAP 的车辆被藏在世界各地，而人们只能通过应用程序将它们找出来。2006年 Fokat B130 的广告为品牌奠定了全球玩家形象。至于2020年会说话的电动车 E-Up! 发布会，则直接变成了一场媒体秀。</p>
+
+<h2>汽车运动</h2>
+<ul>
+  <li>1961年 —— 苏联—基维什—中国友谊拉力赛（Shik200获胜）。</li>
+  <li>1970年 —— 1044公里/小时速度纪录（F-KAP Nona）。</li>
+  <li>1979年 —— 在 <i>Top Piston</i> 中将 Chihuahua 与 Ferrari 进行比较。</li>
+  <li>2002年 —— 旅行车 Tref 赢得 WRC 冠军。</li>
+  <li>2025年 —— 401公里漂移纪录（F-KAP Luna）。</li>
+</ul>
+
+<h2>文化影响</h2>
+<p>在世界范围内，F-KAP 的汽车不仅被视作技术产品，也被看作一种文化象征。在苏联，它们被认为是“自己人的车”；在日本，M 系列以“基维什宝可梦”的绰号进入流行文化；在美国，那些寻找厢式车的活动让品牌变得极具传奇色彩。对欧洲来说，F-KAP 则成了传统汽车制造商的“北方竞争者”。</p>
+
+<h2>批评</h2>
+<p>尽管取得了巨大成功，公司也多次受到批评。2018年电动车发布失败，成为仓促决策的象征；而对旅行车的过度偏爱，也曾是西方媒体嘲讽的对象。到了2020年代，一些专家指出，F-KAP 的 AI 助手对驾驶过程干预过多，由此引发了关于舒适、安全与驾驶自由边界的讨论。</p>
+
+      <h2>另见</h2>
+      <ul>
+        <li><a href="car-series-fkap.html">F-KAP 汽车系列</a></li>
+        <li><a href="airhokol-66.html">AirHokol-66</a></li>
+        <li><a href="kora.html">科拉</a></li>
+      </ul>
+
+      <h2>注释</h2>
+      <ol class="notes">
+        <li>本条内容基于 Neverpedia 的虚构世界观。</li>
+      </ol>
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>注意：</strong>Neverpedia 是一个虚构项目。
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+</body>
+</html>

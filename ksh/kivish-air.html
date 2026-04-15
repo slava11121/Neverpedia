@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ksh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kivish Air — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{display:flex; gap:16px; padding:16px 12px;}
+    .sidebar{width:160px;}
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{margin-top:20px; border-top:1px solid #c8ccd1; padding-top:10px;}
+    .lang-toggle{cursor:pointer; font-weight:bold; font-size:14px; margin-bottom:6px; user-select:none;}
+    .lang-list{display:none}
+    .lang-list a{display:block; margin:4px 0; font-size:14px;}
+
+    .content{flex:1}
+    .box{background:#fff; border:1px solid #c8ccd1; padding:16px;}
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto; margin:0 auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Нэрглав</a>
+        <a href="create.html">Сотвор нэр</a>
+        <a href="#">Случа нэр</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">Языки ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../kivish-air.html">Русский</a>
+          <a href="../en/kivish-air.html">English</a>
+          <a href="kivish-air.html">Кiвiшский</a>
+          <a href="../cn/kivish-air.html">中国人</a>
+          <a href="../jpn/kivish-air.html">日本語</a>
+          <a href="../ko/kivish-air.html">한국인</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">Kivish Air</div>
+          <div class="cell">
+            <img src="../079.jpg" alt="Kivish Air">
+          </div>
+          <div class="cell"><b>Форма</b><br>нац-авиано линиа</div>
+          <div class="cell"><b>Начат</b><br>12 Ноябр 1989</div>
+          <div class="cell"><b>Штаб</b><br>Кора</div>
+          <div class="cell"><b>Баз-хаб</b><br>Аеропорт имени Технократа</div>
+          <div class="cell"><b>Подбренд</b><br>Kivish Air Delta (2000–2001), Kivish-Korean Airlines (с 2011)</div>
+          <div class="cell"><b>Путины-код</b><br>KA-###, KA-D###</div>
+          <div class="cell"><b>Сайт</b><br><a href="../Websites/KivishAir/index.html" target="_blank" rel="noopener">kivishair.khs</a></div>
+        </aside>
+
+        <h1 class="title">Kivish Air</h1>
+        <p class="lead">
+          <b>Kivish Air</b> — нац-авиано линиа Кiвiшь. Начат en 1989 годэ как next-ход post <a href="glavnyy-polet.html">Главный Полет</a>.
+          First-период шёл на mixed-парк: AirHokol-66, Ту/Ил/Ан, later west-борти. 1994 дал тяж палигте-лом,
+          i именно after того линиа переписала whole парк-политику, тех-надзор i кабина-дисциплин.
+        </p>
+
+        <p>
+          Kivish Air-хронход usual делится на четыр ветви: переход-эпа (1989–1993), криз-узел (1994), Delta-эксперим (2000–2001),
+          then стабил-стандарт период (2011–2026). Внутри этих слоёв линиа меняла не только борт-тип, но i сам нарвет полётов,
+          бред-схем техобслуга, кабина-ритм i сейф-узлы зема/воздух.
+        </p>
+
+        <figure class="thumb">
+          <img src="../080.jpg" alt="Kivish Air хаб">
+          <figcaption class="cap">Kivish Air-рост шёл от Кора-хаб i магистрал-путины-сетки.</figcaption>
+        </figure>
+
+        <h2>Начат i переход-эпа (1989–1993)</h2>
+        <p>
+          1989 годэ post Главный Полет-реформ new-структ узел named <b>Kivish Air</b>. Часть лётне, копитен, назем-бредар i штаб-люд
+          перешла внутрь без full-разрыв, so распис-нить не рухнула. First-годи линиа росла fast: чаще путины, нов стык-узлы,
+          сервис-форм, билет-ритм, хаб-центризация around Кора.
+        </p>
+
+        <h3>Mixed-парк</h3>
+        <p>Начал 1990-х Kivish Air simultaneously держала:</p>
+        <ul>
+          <li>AirHokol-66 магистрал-борти i broad-фюзел ветви;</li>
+          <li>стар совет-парк Ту/Ил/Ан, ещё живший ex СКР-хода;</li>
+          <li>первы Boeing i Airbus-закуп для fast парк-обнов.</li>
+        </ul>
+
+        <h3>Экспорт-офер i west-нерв</h3>
+        <p>
+          Внеш мир Kivish Air шла not only как линиа, but also как show-window для AirHokol-66. Паралел шёл стран west-борт шум:
+          отдельны Boeing ловили част тех-отказ, простои i инженер-нерв. Тогда это ещё называли «притир-слой», though later стало видно,
+          что корень был heavier than обыч цепь-адапт.
+        </p>
+
+        <h2>1994: KA-624 i парк-слом</h2>
+        <p>
+          1994 годэ пришёл main-перелом: <a href="ka-624.html"><b>KA-624</b></a>. Boeing 737-200, пришедший как short-заказ new-борт,
+          рухнул en внутр-путины. Разбор later вскрыл old-жизнь машины: previous-эксплуатацiя, восстанов-ход, постав-цепь под new-вид.
+          Для Kivish Air это был not one палигте, а fleet-сознани разрыв.
+        </p>
+
+        <h3>Boeing-stop</h3>
+        <p>
+          Post KA-624 Kivish Air вместе с KAS взяла жёст line: Boeing-exploit en Кiвiшь neо. Already имеющися борти были ex-реестр,
+          часть продана outer, часть разломлена на провер-узлы. С того хода парк-исток, налёт-лист, repair-origin i прозрачно-цепь
+          стали near-свящ требованиями.
+        </p>
+
+        <h2>Kivish Air Delta (2000–2001)</h2>
+        <p>
+          2000 годэ внутри линиа opened weird-эксперим: <b>Kivish Air Delta</b>. Формат — «самолёт-маршрутка»: част сегмент-путины,
+          tighter пересад-лина, быстр смена борт-циклов. Для flagship-марш selected <b>AirHokol-66 D124</b> — креп mid-лайнер на 96 мест.
+        </p>
+
+        <h3>KA-D568</h3>
+        <p>
+          11 Сентябр 2001 путины <a href="ka-d568.html"><b>KA-D568</b></a> вошёл en мир-памтт: борт был захват-терор i sent на ВТЦ.
+          Кабина-крош, но фюзел core выжил enough, чтобы дать жив-след части андоши. After того Delta-форм был stop, а Kivish Air rewrote
+          whole международ-сейф: салон-контрол, gate-протокол, назем-скан, кабина-запир, тревога-сцеп.
+        </p>
+
+        <h2>Kivish-Korean Airlines (с 2011)</h2>
+        <p>
+          2011 годэ бывш Koryo Air вошла внутрь груп как <b>Kivish-Korean Airlines</b>. Для Kivish Air это meant расшир-регион сетки,
+          giant-аудит присоедин-парка i full-перепрошив процедур. Много old-бредар узлов было ex, тех-листы unified, экипаш-подготов line tightened.
+        </p>
+
+        <h2>2011–2026: без-палигте ход</h2>
+        <p>
+          Post 2011 линиа утверждала long-безпалигте путь. Корень этого периода — жёст лётне-подготов, тех-провер every-слой,
+          trust-парк only, одинаков SOP across груп, KAS-follow without slack. К 2026 Kivish Air readится как линиа дисциплин,
+          not glamour-лина.
+        </p>
+
+        <h2>Ключ-ходы</h2>
+        <ul>
+          <li><b>1989</b> — Kivish Air birth post Главный Полет-реформ.</li>
+          <li><b>1989–1993</b> — mixed-парк: AirHokol-66 + Ту/Ил/Ан + first west-борти.</li>
+          <li><b>1994</b> — KA-624 i Boeing-stop en Кiвiшь.</li>
+          <li><b>2000</b> — Delta-форм start.</li>
+          <li><b>2001</b> — KA-D568; Delta-stop.</li>
+          <li><b>2011</b> — Kivish-Korean Airlines интегр-вход.</li>
+          <li><b>2011–2026</b> — long без-палигте ход.</li>
+        </ul>
+
+        <h2>Ещё-линки</h2>
+        <ul>
+          <li><a href="kora.html">Кора</a></li>
+          <li><a href="airhokol-66.html">AirHokol-66</a></li>
+          <li><a href="glavnyy-polet.html">Главный Полет</a></li>
+          <li><a href="ka-624.html">палигте путины KA-624</a></li>
+          <li><a href="ka-d568.html">путины KA-D568</a></li>
+        </ul>
+
+        <p class="notes">
+          Примеч: лист держит only Kivish Air-ход, её подбренд-ветви i близк-оператор узлы.
+        </p>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>Озир:</strong> Neverpedia — вымес-проект.
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

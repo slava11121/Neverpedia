@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>アママラマ・ティロラロリタ — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox, .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">メインページ</a>
+        <a href="create.html">記事を作成</a>
+        <a href="#">ランダム記事</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">言語 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../amamarama-tirorarorita.html">Русский</a>
+          <a href="../en/amamarama-tirorarorita.html">English</a>
+          <a href="../ksh/amamarama-tirorarorita.html">Кiвiшский</a>
+          <a href="../cn/amamarama-tirorarorita.html">简体中文</a>
+          <a href="amamarama-tirorarorita.html">日本語</a>
+          <a href="../ko/amamarama-tirorarorita.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">キヴィシュの統治者</div>
+          <div class="cell">
+            <img src="../006.jpg" alt="アママラマ・ティロラロリタ">
+          </div>
+          <div class="cell"><b>出生名</b><br>アママラマ・ティロラロリタ</div>
+          <div class="cell"><b>役職</b><br>キヴィシュの統治者（2031年より）</div>
+          <div class="cell"><b>前任者</b><br>フォレン・タリムソン</div>
+          <div class="cell"><b>生年</b><br>2008年、コラ、キヴィシュ</div>
+          <div class="cell"><b>国籍</b><br>キヴィシュ</div>
+          <div class="cell"><b>教育</b><br>コラ国政管理学院、「システム安全保障と都市インフラ」専攻</div>
+          <div class="cell"><b>主要改革</b><br>刑罰の人道化、都市近代化、統一道路案内システム、ビザ制度の部分的開放</div>
+        </aside>
+
+        <h1 class="title">アママラマ・ティロラロリタ</h1>
+        <p class="lead">
+          アママラマ・ティロラロリタは、国家・政治指導者であり、2031年からキヴィシュの統治者を務めている。
+          刑事制度の人道化、大規模な都市近代化、そしてロシアおよび中国との排他的な技術関係を維持しつつ、
+          米国およびEUに対するビザ制度を開放した路線で知られている。
+        </p>
+
+        <figure class="thumb">
+          <img src="../007.jpg" alt="建設現場を視察するアママラマ、コラ、2032年">
+          <figcaption class="cap">2032年、コラにおける都市再建の視察。</figcaption>
+        </figure>
+
+        <h2>幼少期と教育</h2>
+        <p>
+          2008年に首都 <a href="kora.html">コラ</a> で生まれた。
+          コラ国政管理学院において、「システム安全保障と都市インフラ」を専攻し、工学と行政管理を組み合わせた教育を受けた。
+          若い頃から、市の各部局、大学研究室、産業パートナーと連携し、交通安全向上プロジェクトに参加しており、
+          <a href="f-kap.html">第一キヴィシュ自動車工場（F-KAP）</a> の能動安全性に関する取り組みにも関与していた。
+        </p>
+
+        <h2>初期の経歴</h2>
+        <p>
+          キャリアの出発点は都市監視センターのアナリストであり、その後は交通安全顧問を務めた。
+          省庁横断プログラム「安全な都市」を率い、デジタル案内基準、適応型信号制御、
+          そしてバリアフリー環境の導入を推進した。
+        </p>
+
+        <h2>即位（2031年）</h2>
+        <p>
+          2031年、フォレン・タリムソンの統治期間終了後、国家評議会によって推挙され、
+          23歳でキヴィシュの統治者としての地位を確立した。
+          初期政策は、治安機関およびインフラ関連機関の監査、
+          さらに明確な成果指標を伴う改革の「ロードマップ」の公表によって特徴づけられた。
+        </p>
+
+        <h2>内政と改革</h2>
+        <h3>刑事制度の人道化</h3>
+        <p>
+          最も厳格な刑罰の一部を廃止し、代替措置と更生制度を強化した。
+          この改革は、手続的保障の標準化と市民による監督体制の導入を伴っていた。
+        </p>
+
+        <h3>都市近代化とアクセシビリティ</h3>
+        <p>
+          都市環境刷新の大規模計画が開始され、バリアフリー経路、スマート停留所、触知案内、
+          エレベーター、横断施設の傾斜プラットフォームが整備された。
+          また、デジタルナビゲーションと同期した統一道路標識・路面表示システムが、
+          キヴィシュの三地域すべてに導入された。
+        </p>
+
+        <h3>交通と安全保障</h3>
+        <p>
+          交通機関の能動安全基準が拡張され、主要幹線道路にはテレメトリと中央監視が統合された。
+          さらに、危険箇所の是正期限を義務づけた「危険地点登録簿」が整備された。
+        </p>
+
+        <h3>外国企業に対する税制</h3>
+        <p>
+          新規の外国企業は高税率から始まり、市場での長期活動に応じて税率が段階的に引き下げられるという原則が維持された。
+          撤退後に再参入した場合には税率が再び最大水準に戻されるため、安定的な定着と現地化が促進される。
+        </p>
+
+        <h2>外交政策</h2>
+        <p>
+          優先事項は、技術主権と安全保障である。
+          米国およびEUとの関係は改善され、部分的なビザ制度の開放と人道的交流プログラムが実施された。
+          同時に、ロシアおよび中国との排他的な技術関係は維持された。
+          原則として、「同盟国への支援は要請に応じて行う。侵略には強硬に応じる」と宣言している。
+        </p>
+
+        <h2>統治スタイル</h2>
+        <ul>
+          <li>テクノクラート的手法：公開KPIとプロジェクトごとの定期報告。</li>
+          <li>安全性とモビリティを社会政策の中核に据える姿勢。</li>
+          <li>戦略的優先事項を維持しつつ、国際交流に対して開かれた姿勢。</li>
+        </ul>
+
+        <h2>批判と評価</h2>
+        <p>
+          改革への支持がある一方で、監視網拡大に伴う安全とプライバシーの均衡をめぐる議論も存在する。
+          専門家たちは、インフラ事業の加速と交通事故率の低下を評価しているが、
+          批判者は、中央集権化のリスクや外国企業に対する要求水準の高さを問題視している。
+        </p>
+
+        <h2>遺産</h2>
+        <p>
+          道路案内の統一化とアクセシビリティ計画により、新たな都市標準が形成された。
+          すなわち、標識、路面表示、デジタル移動図に関する統一基準が、
+          キヴィシュの三つの領域すべてで採用されたのである。
+        </p>
+
+        <h2>関連項目</h2>
+        <ul>
+          <li><a href="kivish.html">キヴィシュ</a></li>
+          <li><a href="f-kap.html">第一キヴィシュ自動車工場（F-KAP）</a></li>
+          <li><a href="airhokol-66.html">AirHokol-66</a></li>
+          <li><a href="north-kivish.html">北キヴィシュ</a></li>
+        </ul>
+
+        <h2>注釈</h2>
+        <ol class="notes">
+          <li>「キヴィシュ」プロジェクトの正典：2031年の改革、ビザ政策、道路案内の標準化。</li>
+          <li>国家プログラム「安全な都市」および「利用しやすいルート」（2031年–2034年）の資料。</li>
+        </ol>
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意：</strong> Neverpedia は架空のプロジェクトです。
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

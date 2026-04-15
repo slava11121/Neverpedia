@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KiBus — Neverpedia</title>
+<style>
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial,sans-serif}
+a{color:#3366cc;text-decoration:none}
+a:hover{text-decoration:underline}
+.page{display:flex;gap:16px;padding:16px 12px}
+.sidebar{width:160px}
+.brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+.logo{max-width:100%;height:auto;display:block;margin:0 auto}
+.nav a{display:block;margin:6px 0}
+.content{flex:1}
+.box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+.title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+.lead{color:#54595d;margin:0 0 12px 0}
+.infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+.infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+.infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+.infobox img{display:block;max-width:100%;height:auto}
+.thumb{float:right;width:240px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+.thumb img{display:block;width:100%;height:auto}
+.thumb .cap{color:#54595d;margin-top:6px}
+h2{font-size:22px;margin:16px 0 8px}
+h3{font-size:18px;margin:14px 0 6px}
+ul{margin:0 0 12px 20px}
+ol{margin:0 0 12px 20px}
+.notes{font-size:14px;color:#54595d}
+@media(max-width:900px){
+.page{flex-direction:column}
+.sidebar{width:auto}
+.infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+}
+
+.lang-block{
+  margin-top:20px;
+  border-top:1px solid #c8ccd1;
+  padding-top:10px;
+}
+.lang-toggle{
+  cursor:pointer;
+  font-weight:bold;
+  font-size:14px;
+  margin-bottom:6px;
+  user-select:none;
+}
+.lang-list{display:none}
+.lang-list a{
+  display:block;
+  margin:4px 0;
+  font-size:14px;
+}
+</style>
+</head>
+<body>
+<div class="page">
+<aside class="sidebar">
+<a class="brand" href="index.html"><img class="logo" src="../logo.png" alt="Neverpedia"></a>
+<nav class="nav">
+<a href="index.html">メインページ</a>
+<a href="create.html">記事を作成</a>
+<a href="#">ランダム記事</a>
+</nav>
+
+<div class="lang-block">
+  <div class="lang-toggle" onclick="toggleLangMenu()">言語 ▾</div>
+  <div id="langList" class="lang-list">
+    <a href="../kibus.html">Русский</a>
+    <a href="../en/kibus.html">English</a>
+    <a href="../ksh/kibus.html">Кiвiшский</a>
+    <a href="../cn/kibus.html">简体中文</a>
+    <a href="kibus.html">日本語</a>
+    <a href="../ko/kibus.html">한국어</a>
+  </div>
+</div>
+
+</aside>
+
+<main class="content">
+<article class="box">
+
+<aside class="infobox">
+<div class="h">KiBus</div>
+<div class="cell"><img src="../045.jpg" alt="KiBus のロゴ"></div>
+<div class="cell"><b>種類</b><br>バス製造会社</div>
+<div class="cell"><b>設立</b><br>2003年5月27日</div>
+<div class="cell"><b>創業者</b><br>アトン・ロラン</div>
+<div class="cell"><b>所在地</b><br>キヴィシュ、ミリ市、テクノロジー通り10番地</div>
+<div class="cell"><b>製品</b><br>都市バス・都市間バス</div>
+<div class="cell"><b>サイト</b><br><a href="../Websites/KiBus/index.html">kibus.khs</a></div>
+</aside>
+
+<h1 class="title">KiBus</h1>
+<p class="lead">KiBus は、2003年にミリ市でアトン・ロランによって設立されたキヴィシュの企業である。高い耐久性と安全システムによって国際的評価を得たバスメーカーとして知られている。</p>
+
+<h2>会社設立</h2>
+<p>工場設立の発想は、キヴィシュにおける自動車輸送の状況への不満から生まれた。経済学者アトン・ロランは、国が依然として古いソ連製バスを購入し続けていることを不合理だと考え、自前の生産を立ち上げることを決意した。2003年5月27日、<b>KiBus (Kivish Bus Plant)</b> が設立された。</p>
+
+<h2>発展（2004–2010）</h2>
+<p>2004年、最初のバス <b>KiBus 100</b> が登場した。外見は LiAZ-5256 に似ており、一部には MAN 製バスを思わせる要素もあったが、より快適な車内と行先表示灯を備えていた。すでにこの時点で、乗客たちは走行の滑らかさと大きく聞こえる停留所案内を評価していた。</p>
+
+<figure class="thumb">
+  <img src="../046.jpg" alt="KiBus 100">
+  <figcaption class="cap">同社最初のバス — KiBus 100。</figcaption>
+</figure>
+
+<p>2007〜2010年にかけて、同社は国際向けの 300 シリーズと H シリーズを投入した。後者は <a href="airhokol-66.html">AirHokol-66</a> と共同設計され、強化車体、防弾ガラス、床下の迅速救命区画 OBS を備えていたほか、都市間路線向けにテレビと空調も装備していた。</p>
+
+<h2>国際的評価（2011–2018）</h2>
+<p>2013年、KiBus のバスはスイスで爆発事故から乗客を守り、2018年には H405 がマンハッタンでのテロを奇跡的に生き延びた。車内に爆発物があったにもかかわらず、車体は持ちこたえた。これらの出来事によって、このブランドは「壊れない」存在としての評判を確立した。</p>
+
+<h2>2020年以降の変化</h2>
+<p>2021年以降、同社は車内テレビの搭載をやめ、それを停留所と時刻のみを表示する長尺ナビゲーション画面へ置き換えた。日本への供給は継続された一方、ウクライナは2018年の事件以降、協力を停止した。</p>
+
+<h2>旧型モデルの第二の人生（2024–2025）</h2>
+<p>2021年以前の古い KiBus は第二の人生を得た。ロシアで始まった旧型バスをキャンピングカーへ改造する流行は、その後ドイツやフランスへも広がった。特に人々を惹きつけたのは H シリーズであり、頑丈で厚いフレームと改造しやすい基礎構造が高く評価された。</p>
+<p>中国ではキヴィシュ製バス向けのチューニングキットやアクセサリーが登場し、スウェーデンでは <em>Nordik Formbus</em> が H シリーズの車内寸法に合わせた家具の生産を開始した。インターネット上には、愛好家たちが古い車両を居心地のよいキャンパーへ変えていく #KibusVanProject の動画やチャレンジがあふれた。</p>
+
+<h2>遺産</h2>
+<p>2025年時点でも、KiBus は信頼できるが過度に誇示しないメーカーとして存在し続け、「信頼できる工学」というイメージを保っている。旧型バスは文化的シンボルとなり、国際的な <em>Kivish Van Life</em> ムーブメントの一部となった。</p>
+
+<h2>関連項目</h2>
+<ul>
+<li><a href="airhokol-66.html">AirHokol-66</a></li>
+<li><a href="kivish.html">Kivish</a></li>
+</ul>
+
+</article>
+
+<section class="box" style="margin-top:16px">
+<strong>注意：</strong> Neverpedia は架空のプロジェクトです。
+</section>
+</main>
+</div>
+
+  <script>
+  function toggleLangMenu() {
+  const list = document.getElementById("langList");
+  list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+  </script>
+
+</body>
+</html>

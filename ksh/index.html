@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ksh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Нэрглав — Neverpedia</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Нэрглав</a>
+        <a href="create.html">Сотвор нэр</a>
+        <a href="#">Случа нэр</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">Языки ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../index.html">Русский</a>
+          <a href="../en/index.html">English</a>
+          <a href="index.html">Кiвiшский</a>
+          <a href="../cn/index.html">中国人</a>
+          <a href="../jpn/index.html">日本語</a>
+          <a href="../ko/index.html">한국인</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="box">
+        <div class="top">
+          <h1 class="title">Харвон en <a href="index.html">Neverpedia</a></h1>
+          <form class="search" action="../list.html" method="get" role="search">
+            <input type="search" name="q" placeholder="Лут en Neverpedia…">
+            <button type="submit" class="btn">Лут</button>
+          </form>
+        </div>
+
+        <p class="lead">Фiкта-энциклар, эдикт каж-сон.</p>
+
+        <h2 class="h2">Нови нэри</h2>
+
+        <ul class="recent-list" id="recentList">
+          <li class="recent-item">
+            <img class="thumb" src="../001.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="kivish.html">Кiвiшь</a></div>
+              <div class="desc">Кiвiшь — техно-кiмар en Сибирi. Трi земи, едiн нарвет, жёст-прагма внешна линиа, домья-рост i путiно-сейф.</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../064.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="tarifa.html">Tarifa</a></div>
+              <div class="desc">Tarifa — част маш-строй домья. Фург, тягач, спец-тех, прост-транз i живуч-ход. Непаф стиль, долг-модел цикл.</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample3.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article3.html">Нэр-стат 3</a></div>
+              <div class="desc">Зурк-линиа, крат-вив, норви шак.</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample4.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article4.html">Нэр-стат 4</a></div>
+              <div class="desc">Кивро темак, шолда вивра.</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample5.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article5.html">Нэр-стат 5</a></div>
+              <div class="desc">Рави блок, синдра нот, лехт-строк.</div>
+            </div>
+          </li>
+
+          <li class="recent-item">
+            <img class="thumb" src="../img/sample6.jpg" alt="">
+            <div class="meta">
+              <div class="title"><a href="article6.html">Нэр-стат 6</a></div>
+              <div class="desc">Крат-вив о темак. Норви лента.</div>
+            </div>
+          </li>
+        </ul>
+
+        <p id="emptyMsg" class="lead">
+          Ещё neо нэри. <a href="create.html">Сотвор перв-на!</a>
+        </p>
+      </div>
+
+      <div class="notice">
+        <strong>Озир:</strong> Neverpedia — вымес-проект.
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      const list = document.getElementById('recentList');
+      const msg  = document.getElementById('emptyMsg');
+      if (list && msg && list.children.length > 0) msg.style.display = 'none';
+    })();
+  </script>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display =
+      list.style.display === "block" ? "none" : "block";
+  }
+  </script>
+</body>
+</html>

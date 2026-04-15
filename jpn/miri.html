@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Miri — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial, sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:260px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html"><img class="logo" src="../logo.png" alt="Neverpedia"></a>
+    <nav class="nav">
+      <a href="index.html">メインページ</a>
+      <a href="create.html">記事を作成</a>
+      <a href="#">ランダム記事</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">言語 ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../miri.html">Русский</a>
+        <a href="../en/miri.html">English</a>
+        <a href="../ksh/miri.html">Кiвiшский</a>
+        <a href="../cn/miri.html">简体中文</a>
+        <a href="miri.html">日本語</a>
+        <a href="../ko/miri.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+
+      <aside class="infobox">
+        <div class="h">Miri</div>
+        <div class="cell"><img src="../051.jpg" alt="Miri のパノラマ"></div>
+        <div class="cell"><b>国家</b><br><a href="kivish.html">Kivish</a></div>
+        <div class="cell"><b>建設</b><br>600年</div>
+        <div class="cell"><b>首都</b><br>714年まで</div>
+        <div class="cell"><b>鉄道</b><br><a href="#rail">Miri Railway Station</a></div>
+        <div class="cell"><b>企業</b><br><a href="kibus.html">KiBus</a>; <a href="folet-500.html">Folet-500</a>（テレビチャンネル）</div>
+        <div class="cell"><b>人口</b><br>54,548人</div>
+        <div class="cell"><b>地位</b><br>「猫の街」（動物保護・登録の公式プログラムあり）</div>
+        <div class="cell"><b>時間帯</b><br>UTC+7</div>
+      </aside>
+
+      <h1 class="title">Miri</h1>
+      <p class="lead">
+        <b>Miri</b> は、<a href="kivish.html">Kivish</a> 最古級の都市の一つであり、600年に Kivishko Toromskiy 自身によって建設された。
+        600年から714年までは首都機能を担っていた。現在は、<a href="kibus.html">KiBus</a> 工場、
+        研究施設群、そして動物に対する独自の都市政策を持つ静かな交通・工業都市であり、
+        「猫の街」として知られている。
+      </p>
+
+      <h2>語源と自称</h2>
+      <p>
+        地名「Miri」は、Kivish 初期の行政文書にすでに定着している。
+        地元の口語では短縮形も使われるが、公式文書では一貫して同一表記が用いられる。
+      </p>
+
+      <h2>歴史</h2>
+      <p>
+        この都市は600年に Kivishko Toromskiy によって築かれ、714年までは国家の政治中心であった。
+        首都の地位は、より温暖で中央に位置する都市（<a href="kora.html">Kora</a> 参照）へ移された。
+        これは、中国方面からシベリア経由で到来する商人たちの交易路の通行性を確保するためであった。
+        ルート分析の結果、「通行路」が整備され、厳しい自然条件の中で隊商の被害を抑えるため、
+        標識化と防護が施された区間が設けられた。
+      </p>
+
+      <figure class="thumb">
+        <img src="../052.jpg" alt="上空から見た Miri">
+        <figcaption class="cap">上空から見た Miri：規則的な街区網と鉄道結節点への接続。</figcaption>
+      </figure>
+
+      <p>
+        20世紀半ばまでに、Miri は地域的な交通・サービス拠点として定着した。
+        21世紀初頭には、市域内でバス工場 <a href="kibus.html">KiBus</a> が稼働を開始し、
+        医科大学を基盤として、耐久性と社会化をテーマにした新たな「Pink Cat Breed」の
+        遺伝学研究クラスターが形成された。
+      </p>
+
+      <h2>地理と都市構造</h2>
+      <p>
+        都市の構造は、森林帯に囲まれた低層の規則的街区網で構成されている。
+        中央軸は鉄道駅へ向かって伸び、北東部には Molotovo 通り123番地の都市公園があり、
+        そこには Kivishko Toromskiy の記念像が設置されている。
+        郊外には工業地区と KiBus の基地がある。
+      </p>
+
+      <h2>統治機構</h2>
+      <p>
+        Miri は Kivish の通常の都市 округ であり、自律的に機能している。
+        自治体は道路管理、公共交通の維持、そして「猫の街」プログラムを担当しており、
+        そこには衛生管理と動物のパスポート登録も含まれる。
+      </p>
+
+      <h2>経済</h2>
+      <h3>工業とサービス</h3>
+      <ul>
+        <li><b>バス製造。</b> <a href="kibus.html">KiBus</a> 工場は、車両生産と都市路線向けサービスを担っている。</li>
+        <li><b>科学と医療。</b> 医科大学附属の遺伝学センターでは応用研究（「Pink Cat Breed」計画）が行われている。</li>
+        <li><b>交通と物流。</b> 駅と隣接倉庫群が、輸送・整備分野の雇用を支えている。</li>
+      </ul>
+
+      <h3>商業とサービス業</h3>
+      <p>
+        小規模な個人商店、カフェ、修理工房が中心である。
+        観光はニッチ型であり、猫愛好家や工業写真の愛好者が訪れる。
+      </p>
+
+      <h2>交通</h2>
+      <p>
+        都市交通網は地上公共交通を中心としている。
+        道路はきわめて清潔に保たれており、これは動物保護政策の一部である。
+        ごみや凍結路面は猫に危険を与える可能性があるためである。
+      </p>
+
+      <h3>バス</h3>
+      <p>
+        路線網は <b>KiBus</b> のバスによって運行されており、市内には保管ステーションと独自の整備基地がある。
+      </p>
+
+      <h3 id="rail">鉄道</h3>
+      <p>
+        <a href="miri-railway-station.html"><b>Miri Railway Station</b></a> は南側郊外に位置し、近郊列車と長距離列車を受け入れている。
+        駅からは工業地区へ向かう専用側線群が分岐している。
+      </p>
+
+      <h2>文化とメディア</h2>
+      <p>
+        Miri の非公式シンボルは猫である。
+        都市レベルでは、動物の教育、社会化、登録プログラムが実施されており、
+        彼らには住民用の「パスポート」が発行される（ただし公式人口には算入されない）。
+        2016年には、新作アニメのプロモーションの一環として、
+        市内バス数台がテーマラッピング仕様で装飾された。
+        Miri には、モータースポーツと工学プロジェクトを扱う
+        技術・スポーツ系テレビチャンネル <b>Folet-500</b> が所在している。
+      </p>
+
+      <h2>教育</h2>
+      <ul>
+        <li><b>Miri Medical University</b> — 臨床教育および遺伝学研究。</li>
+        <li><b>City Park Campus</b> — 啓発プログラムと都市イベントの拠点。</li>
+      </ul>
+
+      <h2>関連項目</h2>
+      <ul>
+        <li><a href="kivish.html">Kivish</a></li>
+        <li><a href="kibus.html">KiBus</a></li>
+        <li><a href="kora.html">Kora</a></li>
+      </ul>
+
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>注意：</strong> Neverpedia は架空のプロジェクトです。
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>

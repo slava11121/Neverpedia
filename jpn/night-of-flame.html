@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Night of Flame — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{
+      float:right;width:280px;background:#fff;
+      border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px;
+    }
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:240px;margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">メインページ</a>
+        <a href="create.html">記事を作成</a>
+        <a href="#">ランダム記事</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">言語 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../night-of-flame.html">Русский</a>
+          <a href="../en/night-of-flame.html">English</a>
+          <a href="../ksh/night-of-flame.html">Кiвiшский</a>
+          <a href="../cn/night-of-flame.html">简体中文</a>
+          <a href="night-of-flame.html">日本語</a>
+          <a href="../ko/night-of-flame.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">Night of Flame</div>
+          <div class="cell">
+            <img src="../057.jpg" alt="2041年、Kivish Korean Territory 上空を覆う火炎の光">
+          </div>
+          <div class="cell"><b>日付</b><br>2041年10月31日 — 11月16日</div>
+          <div class="cell"><b>場所</b><br>Kivish Korean Territory（旧北朝鮮）</div>
+          <div class="cell"><b>事件の種類</b><br>大規模テロ：放火および破壊工作</div>
+          <div class="cell"><b>犠牲者</b><br>約28,000,000人死亡</div>
+          <div class="cell"><b>実行者</b><br>約2000人；<br>約89% — アメリカ市民；<br>約6% — カナダ；<br>その他 — 0.5〜2%</div>
+          <div class="cell"><b>公式名称</b><br><i>Night of Flame Incident</i></div>
+          <div class="cell"><b>結果</b><br>地域の完全壊滅；「Eco Kivish」への改称；1年間の服喪</div>
+        </aside>
+
+        <h1 class="title">Night of Flame</h1>
+        <p class="lead">「Night of Flame」（英語: <i>Night of Flame Incident</i>）は、<a href="korean-kivish.html">Kivish Korean Territory</a>（旧北朝鮮）の領域で、2041年10月31日から11月16日にかけて発生した同期的な放火・破壊工作の連続事件であり、約2800万人の死者を出した。</p>
+
+        <p>悲劇は2041年10月31日から11月1日にかけての夜に始まった。<a href="korean-kivish.html">Kivish Korean Territory</a> 全域の住宅地、工業ノード、インフラ施設で、同時多発的に数百か所の火災が発生したのである。わずか数時間で炎は数十の都市を包み込み、通信網の崩壊と大規模な煙害を引き起こした。捜査当局によれば、この作戦は事前に綿密に計画されていた。4〜6人単位のグループが観光客や季節労働者を装って領域内に潜入し、脆弱箇所の偵察を行い、熱反応性混合物、タイマー、水道・電力系統妨害用の仕掛けを事前に備蓄していた。</p>
+
+        <h2>準備段階</h2>
+        <ul>
+          <li>観光、通過滞在、季節雇用を装った小規模「セル」（4〜6人）の潜入。</li>
+          <li>脆弱箇所の偵察：屋根裏、換気シャフト、ゴミ投入口、地下技術室、ガス・熱供給管路、配電ノード、燃料倉庫、市場。</li>
+          <li>放火手段の備蓄：ヘリオ・熱反応性混合物、タイマー、小型サーモバリック式「火勢拡張器」、消火栓やポンプ施設を妨害する仕掛け。</li>
+          <li>情報偽装：複製身分証、痕跡の少ない通信機器、事前準備されたアカウント群。</li>
+        </ul>
+
+        <h2>事件の経過</h2>
+        <h3>第一波（23:40–00:15）</h3>
+        <p>最初の出火は住宅街と工業地帯で確認された。火の広がりを加速させるため、建物内の垂直シャフト（換気、ゴミ投入口、エレベーターピット）が利用された。配電盤室ではアルミノサーモ反応性の仕掛けが作動し、「白い」閃光と局所停電を引き起こした。</p>
+
+        <h3>第二波（00:20–01:30）</h3>
+        <p>次に、ガス配給、軽燃料パイプライン、熱供給拠点といった線状インフラへの攻撃が行われた。数十メートルに達する垂直の火柱、いわゆる「ろうそく柱」が発生した。同時に、破壊工作員は煙幕やレーザー照射で監視カメラを「盲目化」し、消火栓を埋塞し、止水・止弁設備を破壊した。</p>
+
+        <h3>第三波（01:30–03:00）</h3>
+        <p>市場、鉄道駅、バスターミナル周辺の火災はパニックと交通渋滞を誘発した。避難しようとした多くの住民は車列に閉じ込められ、一酸化炭素やシアン化水素などの有毒ガスにより死亡した。</p>
+
+        <h2>被害が拡大した要因</h2>
+        <ul>
+          <li><b>建築上の垂直構造:</b> 建物内の共用シャフトが火災と煙の上方吸い上げを加速させた。</li>
+          <li><b>水道への破壊工作:</b> ポンプ施設と止水装置の無力化により、要所で水圧が低下した。</li>
+          <li><b>気象条件:</b> 乾燥した夜気と地表付近の突風により、火が街区間を飛び移りやすくなった。</li>
+          <li><b>同時多発性:</b> 数百の火点が同時に発生したため、対応部隊は過負荷となり、さらに偽の緊急通報が混乱を増幅させた。</li>
+        </ul>
+
+        <h2>消火と収束</h2>
+        <p>あらゆる消防・軍の部隊、鉄道消防プラットフォーム、航空機が動員された。中国からは機材列とポンプモジュールが到着し、海からも仮設主管路を通じて送水が行われた。消火の активная 段階は約1週間続き、その後もくすぶりと放水作業は11月16日まで続いた。</p>
+
+        <figure class="thumb">
+          <img src="../058.jpg" alt="避難所として使われた地下鉄駅">
+          <figcaption class="cap">地下鉄は避難所として使用された。事件から数週間後、地下空間から約230人が救出された。</figcaption>
+        </figure>
+
+        <p>一部都市では地下鉄が避難所となった。事件から数週間後にも、約230人が地下から発見・救出された。遺体による扉圧迫でドアが開かなくなった incident は制度改革の根拠となり、以後 Kora の地下鉄では、非常時避難のため駅扉を完全閉鎖しない方針が採られるようになった。</p>
+
+        <h2>破壊規模と犠牲</h2>
+        <ul>
+          <li>死亡者は約 <b>28,000,000人</b>。</li>
+          <li>住宅地、工業施設、交通・エネルギーインフラの大部分が破壊された。</li>
+          <li>焼失域の面積は数万平方キロメートルに及ぶと推定された。</li>
+        </ul>
+
+        <h2>捜査</h2>
+        <p>Kivish 国内保安機関は、この作戦に約2000人の実行者が関わっていたと結論づけた。彼らは「シャフト／配電網 → 通信・ガス → 避難ノード」という三段階構造で行動し、その前段として水道と監視設備への妨害を実施していた。個別特定は段階的に進み、当初は数十人、その後227人、さらに403人へと拡大した。最終的な国籍構成比は、およそアメリカ89%、カナダ6%、その他の国々を合わせて0.5〜2%とされた。</p>
+
+        <h2>反応と影響</h2>
+        <p>Kivish 政府は1年間の服喪と沈黙期間を宣言し、瓦礫除去と救助活動へ集中した。2043年の法令により、この地域は <b>「Eco Kivish」</b> へ改称され、その後は完全電化された「禁煙都市」として再建されることとなった。街区ごとの防火空隙、「防煙シャフト」、予備給水リング、独立ポンプが計画に組み込まれた。監視システムとニューラルネットワークによる поток 分析は Kivish 本土、African Kivish、さらに日本と韓国にも導入・輸出された。</p>
+
+        <blockquote>“Kivish of the Korean Peninsula Tragedy — Night of Flame Incident — 31.10–16.11.2041 — 28 Million Dead”.</blockquote>
+
+        <h2>記憶</h2>
+        <p>毎年10月31日には黙祷が行われ、メモリアルでは住民たちの最後のメッセージが読み上げられる。それらはデジタル記念碑の一部となっている。Eco Kivish の入口には追悼の標識が設置されている。</p>
+
+        <h2>関連項目</h2>
+        <ul>
+          <li><a href="kivish.html">Kivish</a></li>
+          <li><a href="ecokivish.html">Eco Kivish</a></li>
+          <li><a href="amamarama-tirorarorita.html">Amamarama Tirorarorita</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意：</strong> Neverpedia は架空のプロジェクトです。
+      </section>
+    </main>
+  </div>
+
+    <script>
+      function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>基维什游戏产业 — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial, sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25;border-bottom:1px solid #c8ccd1;padding-bottom:8px}
+    .lead{font-size:15px;color:#54595d;margin:12px 0}
+    h2{font-size:22px;margin:24px 0 8px;border-bottom:1px solid #c8ccd1;padding-bottom:4px}
+    h3{font-size:18px;margin:16px 0 8px}
+    ul,ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    table{width:100%;border-collapse:collapse;margin:0 0 12px 0}
+    th,td{border:1px solid #c8ccd1;padding:8px 10px;text-align:left;vertical-align:top}
+    th{background:#f2f3f5}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="create.html">创建条目</a>
+        <a href="#">随机条目</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../gaming-industry-in-kivish.html">Русский</a>
+          <a href="../en/gaming-industry-in-kivish.html">English</a>
+          <a href="../ksh/gaming-industry-in-kivish.html">Кiвiшский</a>
+          <a href="gaming-industry-in-kivish.html">简体中文</a>
+          <a href="../jpn/gaming-industry-in-kivish.html">日本語</a>
+          <a href="../ko/gaming-industry-in-kivish.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <h1 class="title">基维什游戏产业</h1>
+        <p class="lead">本文完整讲述了基维什境内游戏主机产业的诞生、失败与辉煌历程——从1970年代的试探性进口与街机热潮，到本土平台 <b>Samita</b>、零售生态 <b>Game Store Master (GSM)</b>，以及 <b>Game Kivish World (GKW)</b> 推出的代表作。文中只收录了那些直接影响市场和产业的事件（物流、经济、本地化、独占作品、基础设施），也包括改变销售走势的大型社会危机。</p>
+
+        <h2>简要定义</h2>
+        <p><b>基维什游戏产业</b>，是围绕游戏主机与软件的进口、本地发行而形成的整体体系，包括平台制造商、发行商、开发工作室、零售商和玩家社群。核心参与者包括：<b>GSM (Game Store Master)</b>——专业零售与媒体网络；<b>GKW (Game Kivish World)</b>——基维什领先游戏工作室；<b>Samita/Samota</b>——游戏主机制造商。</p>
+
+        <h2>1970年代：早期尝试与市场误解</h2>
+        <p>最早的游戏机曾被视为一种新奇玩意。<b>Magnavox Odyssey</b>（1972–1975）通过“Элiтрог”和“мАкjон”少量进口：黑白画面、没有声音、还需要贴在电视上的透明贴膜，这些特点都无法打动消费者。真正带来小规模关注的是 <b>Atari Pong</b>（1975–1976）——简单、直观、人人一看就懂的电子乒乓球游戏；到货批次很快售罄。而 <b>Atari 2600</b>（1977）的普及尝试则被价格卡住：约3500基沙，接近家电价格等级，全国总销量大约只有 <b>12</b> 台。</p>
+
+        <h2>1980年代：街机成前哨，家用市场失利与“耐久仓库”</h2>
+        <p>1982年，对街机的押注（<b>Donkey Kong</b>）成功带来了稳定客流，也培养出“在家外玩游戏”的习惯。尝试将这股热潮转移到家用市场的 <b>ColecoVision</b>（1983，捆绑 Donkey Kong）则撞上了价格门槛（约3800基沙）——只卖出几十台。到了这个年代末，未售出的 <i>Odyssey</i>、<i>2600</i>、<i>Intellivision</i>、<i>ColecoVision</i> 等库存都被运往米里，堆放在那个半传奇化的 <b>“耐久仓库”</b> 中——后来这里成为博物馆展品和怀旧文化的来源。</p>
+
+        <h2>1987–1991：NES、经济跃升与专业零售的诞生</h2>
+        <p>随着居民收入上升，市场终于准备好接受价格更合适的游戏机。<b>Nintendo Entertainment System</b>（2200–2500基沙）成为第一个真正的大众爆款：主机一上架就会从货架上消失。1988年，“мАкjон”破产；原址上开设了 <b>Game Store Master (GSM)</b>——第一家真正意义上的专业游戏商店，配有受过培训的顾问、目录、杂志和线下活动。从“电子技术商店”转变为“游戏中心”的这一定位，决定了后续整个市场的走向。</p>
+
+        <h2>1990年代：主机大战与基础设施</h2>
+        <p><b>Sega Mega Drive</b>（自1989年起）依靠充满攻击性的年轻化营销（Sonic）成功聚焦了 GSM 周边的用户群。1991年苏联解体后，经俄罗斯和中国的物流通道被打开：进口变得更稳定，“灰色”渠道的配件和卡带数量也显著增加——这扩大了游戏库和服务能力。</p>
+        <p><b>Sony PlayStation</b>（自1997年起）最初表现平稳，但真正的转折点发生在 GSM 杂志刊登 <i>Gran Turismo</i> 评测之后：国家本身浓厚的汽车文化瞬间转化为市场需求。<b>Nintendo 64</b>（1999年）则积累了一批忠实核心玩家，不过卡带载体和游戏价格限制了它的大众化。</p>
+
+        <h2>2000年代：新时代、本地化与掌机</h2>
+        <h3>Y2K 与斯纳西核电站事故（2000年）：需求的短暂降温</h3>
+        <p>在技术故障和社会紧张氛围的背景下，销量一度下滑，但 <b>Sega Dreamcast</b> 仍然凭借在线功能，在爱好者群体中留下了高调的开端。真正的瓶颈仍是家庭互联网基础设施。</p>
+        <h3>第六世代（2002–2003）</h3>
+        <ul>
+          <li><b>PlayStation 2</b> —— “二合一”（DVD播放器 + 游戏）以及 <i>Gran Turismo 3</i> 巩固了其领先地位。</li>
+          <li><b>Xbox</b> —— 现象级口号 <b>“自己买 Xbox”</b>：青少年会自己攒钱购买，只为了玩 LAN/Live 游戏；由此形成了网络俱乐部文化。</li>
+          <li><b>Nintendo GameCube</b> —— 在家庭用户中保持稳定定位。</li>
+        </ul>
+        <h3>掌机热潮（2004–2005）</h3>
+        <p><b>PSP</b> 成为“把主机体验装进口袋”的象征；<b>Nintendo DS</b> 虽然游戏阵容强大，但整体形象更偏向儿童市场。</p>
+
+        <h2>2005–2013：第七世代、物流与盗版</h2>
+        <p><b>Xbox 360</b>、<b>PlayStation 3</b> 和 <b>Wii</b> 都有非常活跃的存在。Kinect 带来了家庭购买潮；Move 始终停留在细分领域；Wii 则保持着稳定受众。</p>
+        <h3>Xbox 360 物流事件（2005–2008）</h3>
+        <p>一大批因亚洲中转延误的 Xbox 360，直到2008年才与新一轮出货同时抵达货架：这种“二次同步开卖”创造了创纪录销量，也迅速形成了本世代最大的多人玩家社群之一。</p>
+        <h3>盗版与破解（2013年）</h3>
+        <p>2013年，在基维什和北基维什，<b>PS3</b> 与 <b>Xbox 360</b> 的破解方式广泛传播，重创了正版游戏销售。作为回应，GSM 推出折扣计划、本地“拿盗版换正版盘”活动，以及更多与账号绑定的网络版发行方式。</p>
+
+        <h2>自2016年起：本土平台与战略独占</h2>
+        <h3>Samita Fit（2016年）</h3>
+        <p>这是第一台国家级本土主机：移动版 <b>Intel</b> + 独立 <b>NVIDIA</b> 显卡，自研 BIOS 和 <b>La</b> 操作系统。从架构上看，它接近笔记本电脑，但使用体验“像主机”——拥有统一商店、SDK 和 GSM 支持。在国内局势不稳定的背景下，它成为技术自给自足的象征，也吸引了大量本地开发者的注意。</p>
+        <h3>Samita Salan（2019年）</h3>
+        <p>这一代改用 <b>AMD Ryzen</b>，SDK 更加成熟，并把重点放在独占内容上。最大驱动力是 <b>GKW</b> 推出的 <b>《ПОИСК…》</b> 系列：这些情绪浓烈的动作冒险游戏成为平台门面，甚至在海外也能单凭它们带动“买机器”。</p>
+        <h3>Samita Ladi（2023–2025）</h3>
+        <p>这是一次修订版本，改进了声学表现、能效，以及 <b>La</b> 操作系统的“快速更新模式”。它是迈向自研芯片之前的中间一步。</p>
+        <h3>Samota Kistol（2028–2030）</h3>
+        <p>随着品牌重塑，这一代改用自研 <b>More</b> CPU 和 <b>Gast</b> GPU。这是第一套完全“基维什化”的主机架构，在图形性能和能耗特征上能够与同期 PlayStation/Xbox 世代竞争。</p>
+
+        <h2>游戏与工作室</h2>
+        <h3>Game Kivish World (GKW)</h3>
+        <ul>
+          <li><b>Top Piston Game</b>（1998年）—— 借着汽车节目热潮成为本土热门作品，也确立了技术模拟类游戏的稳定需求。</li>
+          <li><b>《ПОИСК…》</b> Part I（2019年）、II（2023年）、III（2027年）—— Samita/Samota 的情感系独占作品；是推动平台销量的关键因素。</li>
+          <li><b>LORR:A — Life of a Rookie Racer: Asia</b>（2033年）—— 基维什/日本/韩国/中国/俄罗斯联合开发；直接对标 Forza 与 Gran Turismo。</li>
+        </ul>
+
+        <h2>零售与媒体：Game Store Master (GSM) 的作用</h2>
+        <p><b>GSM</b> 不只是商店，而是完整生态：零售门店、杂志/视频频道、比赛、换购活动与售后服务。正是 GSM 培养了消费者的“游戏素养”：提供咨询、试玩展示、本地评测与目录。2004年和2009年，GSM 还推动过两轮主机机壳<b>定制化</b>热潮——喷绘、贴膜、艺术涂装：主机逐渐变成了个人身份的一部分。</p>
+
+        <h2>直接影响产业的重要事件</h2>
+        <ul>
+          <li><b>苏联解体（1991年）</b> —— 经俄罗斯/中国的物流通道打开，进口链与价格趋于稳定。</li>
+          <li><b>斯纳西核电站事故（2000年）</b> —— 需求短期下滑，家庭在购买“联网主机”时变得更加谨慎。</li>
+          <li><b>Xbox 360 物流事件（2005–2008年）</b> —— 延误与“二次同步开卖”形成了本世代最大的多人社群。</li>
+          <li><b>Forza Horizon 丑闻（2032年）</b> —— Xbox 工作室游戏中对基维什形象的使用受到限制；需求短期转向 Samita/Sony 生态。</li>
+          <li><b>“友谊摩天楼”恐袭（2038年）</b> 与 <b>“火焰之夜”（2041年）</b> —— 全国性抑郁情绪蔓延，全球发行商自愿暂停该地区发售，销量跌至最低点。</li>
+        </ul>
+
+        <h2>Samita 平台表</h2>
+        <table>
+          <thead>
+            <tr><th>平台</th><th>年份</th><th>处理器 / 图形</th><th>系统</th><th>关键特点</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Samita Fit</td><td>2016–2019</td><td>Intel（移动版）/ NVIDIA（移动版）</td><td>La</td><td>首个国家级平台，商店 + SDK，“像PC的主机”</td></tr>
+            <tr><td>Samita Salan</td><td>2019–2023</td><td>AMD Ryzen / 独立显卡</td><td>La</td><td>GKW 独占作品，成熟生态</td></tr>
+            <tr><td>Samita Ladi</td><td>2023–2025</td><td>AMD Ryzen（修订版）/ 独立显卡</td><td>La</td><td>静音散热，系统快速更新</td></tr>
+            <tr><td>Samota Kistol</td><td>2028–2030</td><td>More（CPU）/ Gast（GPU）</td><td>La</td><td>完全基维什自研芯片，可与 PS/Xbox 竞争</td></tr>
+          </tbody>
+        </table>
+
+        <h2>简短时间线</h2>
+        <ul>
+          <li>1972–1975 —— Magnavox Odyssey：试探性引进，失败。</li>
+          <li>1975–1976 —— Atari Pong：首次大众兴趣。</li>
+          <li>1977–1978 —— Atari 2600：价格过高，约12台。</li>
+          <li>1982–1983 —— Donkey Kong 街机 → ColecoVision：街机成功，家用市场受限于价格。</li>
+          <li>1987年起 —— NES：第一个真正的大众爆款。</li>
+          <li>1989年起 —— Sega Mega Drive：年轻市场成功。</li>
+          <li>1997年起 —— Sony PlayStation：在 <i>Gran Turismo</i> 后爆发。</li>
+          <li>1999年起 —— Nintendo 64：粉丝向细分市场。</li>
+          <li>2000年 —— Dreamcast：理念领先于基础设施。</li>
+          <li>2002–2003 —— PS2/Xbox/GameCube：成熟市场；“自己买 Xbox”。</li>
+          <li>2004–2005 —— PSP（掌机领导者）、Nintendo DS。</li>
+          <li>2005–2013 —— Xbox 360、PS3、Wii：“三强时代”，360 物流事件。</li>
+          <li>2016年 —— Samita Fit：本土平台启动。</li>
+          <li>2019年 —— Samita Salan；《ПОИСК…》Part I。</li>
+          <li>2020年 —— PS5、Xbox Series X|S：全球新世代。</li>
+          <li>2023–2025 —— Samita Ladi：修订版。</li>
+          <li>2028–2030 —— Samota Kistol：自研芯片时代。</li>
+          <li>2033年 —— GKW 推出 LORR:A。</li>
+          <li>2038 / 2041 —— 危机与发售停滞。</li>
+        </ul>
+
+        <h2>另见</h2>
+        <ul>
+          <li><a href="kivish.html">基维什</a></li>
+          <li><a href="gkw.html">Game Kivish World</a></li>
+          <li><a href="gsm.html">Game Store Master</a></li>
+          <li><a href="samita.html">Samita</a></li>
+        </ul>
+
+        <h2>注释</h2>
+        <ol class="notes">
+          <li>本条内容基于 Neverpedia 设定，仅收录对主机产业产生直接影响的事件。</li>
+          <li>缩写说明：GSM — Game Store Master（零售/媒体）；GKW — Game Kivish World（开发工作室）。</li>
+          <li>价格与时间均基于虚构时间线与基沙货币体系。</li>
+        </ol>
+
+      </article>
+    </main>
+  </div>
+
+    <script>
+      function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

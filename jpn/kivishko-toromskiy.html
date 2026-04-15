@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kivishko Toromskiy — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;               
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox, .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">メインページ</a>
+      <a href="create.html">記事を作成</a>
+      <a href="#">ランダム記事</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">言語 ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../kivishko-toromskiy.html">Русский</a>
+        <a href="../en/kivishko-toromskiy.html">English</a>
+        <a href="../ksh/kivishko-toromskiy.html">Кiвiшский</a>
+        <a href="../cn/kivishko-toromskiy.html">简体中文</a>
+        <a href="kivishko-toromskiy.html">日本語</a>
+        <a href="../ko/kivishko-toromskiy.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+      <aside class="infobox">
+        <div class="h">Kivishko Toromskiy</div>
+        <div class="cell">
+          <img src="../004.jpg" alt="Kivishko Toromskiy の想像肖像">
+        </div>
+        <div class="cell"><b>生年</b><br>580〜590年頃</div>
+        <div class="cell"><b>没年</b><br>642年頃</div>
+        <div class="cell"><b>活動</b><br>Kivish の建国者であり初代統治者</div>
+        <div class="cell"><b>王朝</b><br>Toromskiy 家</div>
+      </aside>
+
+      <h1 class="title">Kivishko Toromskiy</h1>
+      <p class="lead">Kivishko Toromskiy（600年頃 — 642年）は、Kivish の伝説的建国者であり、国家の初代統治者である。彼によって Toromskiy 王朝が始まった。</p>
+
+      <p>諸史料は、彼をカリスマ的な軍事・政治指導者として描いている。彼はシベリアの分散した諸部族を統合し、後の <a href="kivish.html">Kivish</a> の基礎を築いた。その名は国家のアイデンティティと文化の起源となり、何世紀にもわたって国内に受け継がれてきた。</p>
+
+      <figure class="thumb">
+        <img src="../005.jpg" alt="ミリ市にある Kivishko Toromskiy の記念像">
+        <figcaption class="cap">ミリ市に建てられた Kivishko Toromskiy の記念像。</figcaption>
+      </figure>
+
+      <h2>生涯</h2>
+      <p>Kivishko Toromskiy の若年期について知られていることは多くない。年代記によれば、彼は6世紀末に地方首長の家に生まれた。若い頃から軍事的才能と外交能力に優れていたとされる。</p>
+      <p>620年代、彼は周辺部族に対する一連の遠征を行い、その結果として「ミリ」の周辺地域を統合した。600年は、Kivish 国家の公式な建国年とされている。</p>
+
+      <h2>統治</h2>
+      <p>Kivishko Toromskiy の統治は、最初の法の制定と統治構造の確立によって特徴づけられる。彼は軍の強化と近隣地域との交易発展を目的とした改革を実施した。</p>
+
+      <h3>文化的遺産</h3>
+      <p>Kivishko Toromskiy は国民的統一の象徴とされている。その姿は文学、美術、国家的象徴の中で繰り返し用いられている。伝承によれば、民を守る印として赤い剣の使用を定めたのは彼であり、それは後に Kivish の旗の中心要素となった。</p>
+
+      <h2>事実一覧</h2>
+      <ul>
+        <li>600年に Kivish を建国した。</li>
+        <li>Toromskiy 王朝の初代統治者であった。</li>
+        <li>Kivish 最初の国家法を作った人物とされている。</li>
+      </ul>
+
+      <h2>関連項目</h2>
+      <ul>
+        <li><a href="kivish.html">Kivish</a></li>
+        <li><a href="kora.html">コラ</a></li>
+        <li><a href="rulers-kis.html">Kivish の統治者</a></li>
+      </ul>
+
+      <h2>注釈</h2>
+      <ol class="notes">
+        <li>年代と出来事は伝承および後代の年代記に基づいている。</li>
+      </ol>
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>注意：</strong> Neverpedia は架空のプロジェクトです。
+    </section>
+  </main>
+</div>
+
+  <script>
+    function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+</body>
+</html>
