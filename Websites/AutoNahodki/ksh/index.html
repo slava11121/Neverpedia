@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ksh">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Авто-Находки</title>
+  <title>Авто-Нахадкi</title>
   <script>
     history.scrollRestoration = 'manual';
   </script>
@@ -34,489 +34,84 @@
     }
 
     @keyframes pageFadeIn{
-      from{
-        opacity:0;
-        transform:translateY(10px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
+      from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}
     }
-
     @keyframes cardFadeIn{
-      from{
-        opacity:0;
-        transform:translateY(12px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
+      from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}
     }
 
     a{color:inherit;text-decoration:none}
     img{display:block;max-width:100%}
     button,input,select{font:inherit}
 
-    .container{
-      width:min(var(--max), calc(100% - 24px));
-      margin:0 auto;
-    }
-
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:50;
-      background:rgba(23,23,26,.96);
-      border-bottom:1px solid var(--line);
-      backdrop-filter:blur(8px);
-    }
-
-    .topbar-inner{
-      min-height:92px;
-      display:grid;
-      grid-template-columns:1fr auto 1fr;
-      align-items:center;
-      gap:14px;
-    }
-
-    .side-left,.side-right{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-
+    .container{width:min(var(--max), calc(100% - 24px));margin:0 auto;}
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(23,23,26,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px);}
+    .topbar-inner{min-height:92px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;}
+    .side-left,.side-right{display:flex;align-items:center;gap:10px;}
     .side-right{justify-content:flex-end}
-
-    .top-button{
-      min-height:46px;
-      padding:0 16px;
-      border:1px solid var(--line);
-      border-radius:14px;
-      background:var(--panel);
-      color:var(--text);
-      cursor:pointer;
-      font-weight:700;
-      transition:.2s ease;
-    }
-
-    .top-button:hover{
-      background:var(--panel2);
-      border-color:rgba(200,31,50,.35);
-    }
-
-    .top-button.red{
-      background:linear-gradient(180deg,var(--red),var(--red2));
-      border-color:rgba(255,255,255,.05);
-    }
-
-    .country-wrap,
-    .lang-wrap{
-      position:relative;
-    }
-
-    .country-button{
-      width:54px;
-      height:46px;
-      padding:0;
-      border:1px solid var(--line);
-      border-radius:14px;
-      background:var(--panel);
-      color:var(--text);
-      cursor:pointer;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      transition:.2s ease;
-      overflow:hidden;
-    }
-
-    .country-button:hover{
-      background:var(--panel2);
-      border-color:rgba(200,31,50,.35);
-    }
-
-    .country-flag{
-      width:28px;
-      height:28px;
-      object-fit:cover;
-      border-radius:8px;
-      flex-shrink:0;
-    }
-
-    .country-panel,
-    .lang-panel{
-      position:absolute;
-      right:0;
-      top:calc(100% + 8px);
-      background:#232329;
-      border:1px solid var(--line);
-      border-radius:16px;
-      box-shadow:var(--shadow);
-      padding:8px;
-      opacity:0;
-      visibility:hidden;
-      transform:translateY(-8px);
-      transition:opacity .22s ease, transform .22s ease, visibility .22s ease;
-    }
-
-    .country-panel{
-      width:240px;
-    }
-
-    .lang-panel{
-      width:220px;
-    }
-
-    .country-panel.open,
-    .lang-panel.open{
-      opacity:1;
-      visibility:visible;
-      transform:translateY(0);
-    }
-
-    .country-option{
-      width:100%;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      padding:11px 12px;
-      border-radius:12px;
-      border:none;
-      background:transparent;
-      color:var(--text);
-      cursor:pointer;
-      text-align:left;
-    }
-
-    .country-option:hover,
-    .lang-link:hover{
-      background:var(--panel);
-    }
-
-    .country-option.active{
-      background:rgba(200,31,50,.12);
-      border:1px solid rgba(200,31,50,.25);
-    }
-
-    .country-option img{
-      width:24px;
-      height:24px;
-      object-fit:cover;
-      border-radius:7px;
-      flex-shrink:0;
-    }
-
-    .country-option-text{
-      display:flex;
-      flex-direction:column;
-      gap:2px;
-      min-width:0;
-    }
-
-    .country-option-title{
-      font-size:14px;
-      font-weight:700;
-      line-height:1.2;
-    }
-
-    .country-option-sub{
-      font-size:12px;
-      color:var(--muted);
-      line-height:1.2;
-    }
-
-    .lang-link{
-      display:block;
-      padding:11px 12px;
-      border-radius:12px;
-      color:var(--text);
-    }
-
-    .logo-wrap{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    }
-
-    .logo-photo{
-      width:320px;
-      max-width:100%;
-      height:76px;
-      object-fit:cover;
-      border-radius:16px;
-      border:none;
-      box-shadow:none;
-      background:transparent;
-    }
-
-    .dropdown-panel{
-      max-height:0;
-      opacity:0;
-      visibility:hidden;
-      border-top:1px solid transparent;
-      background:#212126;
-      overflow:hidden;
-      transition:max-height .28s ease, opacity .22s ease, visibility .22s ease, border-color .22s ease;
-    }
-
-    .dropdown-panel.open{
-      max-height:260px;
-      opacity:1;
-      visibility:visible;
-      border-top:1px solid var(--line);
-    }
-
-    .dropdown-inner{padding:16px 0 18px}
-
-    .filters-grid{
-      display:grid;
-      grid-template-columns:repeat(5,1fr);
-      gap:12px;
-    }
-
-    .field{
-      display:grid;
-      gap:7px;
-    }
-
-    .field label{
-      font-size:14px;
-      color:var(--muted);
-    }
-
-    .field input,.field select{
-      min-height:44px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:var(--panel);
-      color:var(--text);
-      padding:0 12px;
-      outline:none;
-    }
-
-    .filter-actions{
-      margin-top:14px;
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .content{padding:18px 0 34px}
-
-    .results-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:14px;
-      margin-bottom:16px;
-    }
-
-    .results-head h1{
-      margin:0;
-      font-size:28px;
-      letter-spacing:-.03em;
-    }
-
-    .results-head p{
-      margin:4px 0 0;
-      color:var(--muted);
-    }
-
-    .sort-select{
-      min-height:44px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:var(--panel);
-      color:var(--text);
-      padding:0 12px;
-    }
-
-    .cars-grid{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:16px;
-    }
-
-    .car-card{
-      background:linear-gradient(180deg,#26262c 0%, #222228 100%);
-      border:1px solid var(--line);
-      border-radius:18px;
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      animation:cardFadeIn .35s ease both;
-    }
-
-    .car-card:nth-child(1){animation-delay:.02s}
-    .car-card:nth-child(2){animation-delay:.05s}
-    .car-card:nth-child(3){animation-delay:.08s}
-    .car-card:nth-child(4){animation-delay:.11s}
-    .car-card:nth-child(5){animation-delay:.14s}
-    .car-card:nth-child(6){animation-delay:.17s}
-    .car-card:nth-child(7){animation-delay:.20s}
-    .car-card:nth-child(8){animation-delay:.23s}
-    .car-card:nth-child(9){animation-delay:.26s}
-    .car-card:nth-child(10){animation-delay:.29s}
-    .car-card:nth-child(11){animation-delay:.32s}
-    .car-card:nth-child(12){animation-delay:.35s}
-
-    .car-image-wrap{
-      position:relative;
-      aspect-ratio:16/10;
-      background:#303038;
-    }
-
-    .car-image{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
-
-    .badge-row{
-      position:absolute;
-      top:12px;
-      left:12px;
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-    }
-
-    .badge{
-      padding:7px 10px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:800;
-      background:rgba(18,18,22,.78);
-      border:1px solid rgba(255,255,255,.12);
-    }
-
-    .badge.red{
-      background:rgba(200,31,50,.92);
-      border-color:rgba(255,255,255,.06);
-    }
-
-    .car-body{padding:16px}
-
-    .car-top{
-      display:flex;
-      justify-content:space-between;
-      align-items:start;
-      gap:12px;
-      margin-bottom:12px;
-    }
-
-    .car-title{
-      margin:0 0 5px;
-      font-size:24px;
-      letter-spacing:-.03em;
-    }
-
-    .car-sub{
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .price{
-      text-align:right;
-      white-space:nowrap;
-      color:#fff;
-    }
-
-    .price strong{
-      display:block;
-      font-size:24px;
-      line-height:1;
-    }
-
-    .price span{
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    .specs{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:10px;
-      margin-bottom:12px;
-    }
-
-    .spec{
-      padding:10px 12px;
-      background:rgba(255,255,255,.03);
-      border:1px solid var(--line);
-      border-radius:12px;
-    }
-
-    .spec b{
-      display:block;
-      margin-bottom:3px;
-      font-size:14px;
-    }
-
-    .spec span{
-      color:var(--muted);
-      font-size:13px;
-    }
-
-    .car-desc{
-      color:#dddddf;
-      margin-bottom:14px;
-      min-height:44px;
-    }
-
-    .car-actions{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .car-meta{
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .mini-btns{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
-
-    .mini-btn{
-      min-height:40px;
-      padding:0 14px;
-      border-radius:12px;
-      border:1px solid var(--line);
-      background:var(--panel);
-      color:var(--text);
-      cursor:pointer;
-      font-weight:700;
-    }
-
-    .mini-btn.red{
-      background:linear-gradient(180deg,var(--red),var(--red2));
-      border-color:rgba(255,255,255,.05);
-    }
-
-    .footer{
-      padding:10px 0 28px;
-      color:var(--muted);
-      font-size:14px;
-      text-align:center;
-    }
-
-    @media (max-width:1120px){
-      .filters-grid{grid-template-columns:repeat(3,1fr)}
-    }
-
+    .top-button{min-height:46px;padding:0 16px;border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--text);cursor:pointer;font-weight:700;transition:.2s ease;}
+    .top-button:hover{background:var(--panel2);border-color:rgba(200,31,50,.35);}
+    .top-button.red{background:linear-gradient(180deg,var(--red),var(--red2));border-color:rgba(255,255,255,.05);}
+    .country-wrap,.lang-wrap{position:relative;}
+    .country-button{width:54px;height:46px;padding:0;border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s ease;overflow:hidden;}
+    .country-button:hover{background:var(--panel2);border-color:rgba(200,31,50,.35);}
+    .country-flag{width:28px;height:28px;object-fit:cover;border-radius:8px;flex-shrink:0;}
+    .country-panel,.lang-panel{position:absolute;right:0;top:calc(100% + 8px);background:#232329;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:8px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .22s ease, transform .22s ease, visibility .22s ease;}
+    .country-panel{width:240px;}
+    .lang-panel{width:220px;}
+    .country-panel.open,.lang-panel.open{opacity:1;visibility:visible;transform:translateY(0);}
+    .country-option{width:100%;display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:12px;border:none;background:transparent;color:var(--text);cursor:pointer;text-align:left;}
+    .country-option:hover,.lang-link:hover{background:var(--panel);}
+    .country-option.active{background:rgba(200,31,50,.12);border:1px solid rgba(200,31,50,.25);}
+    .country-option img{width:24px;height:24px;object-fit:cover;border-radius:7px;flex-shrink:0;}
+    .country-option-text{display:flex;flex-direction:column;gap:2px;min-width:0;}
+    .country-option-title{font-size:14px;font-weight:700;line-height:1.2;}
+    .country-option-sub{font-size:12px;color:var(--muted);line-height:1.2;}
+    .lang-link{display:block;padding:11px 12px;border-radius:12px;color:var(--text);}
+    .logo-wrap{display:flex;justify-content:center;align-items:center;}
+    .logo-photo{width:320px;max-width:100%;height:76px;object-fit:cover;border-radius:16px;border:none;box-shadow:none;background:transparent;}
+    .dropdown-panel{max-height:0;opacity:0;visibility:hidden;border-top:1px solid transparent;background:#212126;overflow:hidden;transition:max-height .28s ease, opacity .22s ease, visibility .22s ease, border-color .22s ease;}
+    .dropdown-panel.open{max-height:260px;opacity:1;visibility:visible;border-top:1px solid var(--line);}
+    .dropdown-inner{padding:16px 0 18px;}
+    .filters-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
+    .field{display:grid;gap:7px;}
+    .field label{font-size:14px;color:var(--muted);}
+    .field input,.field select{min-height:44px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:0 12px;outline:none;}
+    .filter-actions{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;}
+    .content{padding:18px 0 34px;}
+    .results-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:16px;}
+    .results-head h1{margin:0;font-size:28px;letter-spacing:-.03em;}
+    .results-head p{margin:4px 0 0;color:var(--muted);}
+    .sort-select{min-height:44px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--text);padding:0 12px;}
+    .cars-grid{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:16px;}
+    .car-card{background:linear-gradient(180deg,#26262c 0%, #222228 100%);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);animation:cardFadeIn .35s ease both;}
+    .car-card:nth-child(1){animation-delay:.02s}.car-card:nth-child(2){animation-delay:.05s}.car-card:nth-child(3){animation-delay:.08s}.car-card:nth-child(4){animation-delay:.11s}.car-card:nth-child(5){animation-delay:.14s}.car-card:nth-child(6){animation-delay:.17s}.car-card:nth-child(7){animation-delay:.20s}.car-card:nth-child(8){animation-delay:.23s}.car-card:nth-child(9){animation-delay:.26s}.car-card:nth-child(10){animation-delay:.29s}.car-card:nth-child(11){animation-delay:.32s}.car-card:nth-child(12){animation-delay:.35s}
+    .car-image-wrap{position:relative;aspect-ratio:16/10;background:#303038;}
+    .car-image{width:100%;height:100%;object-fit:cover;}
+    .badge-row{position:absolute;top:12px;left:12px;display:flex;gap:8px;flex-wrap:wrap;}
+    .badge{padding:7px 10px;border-radius:999px;font-size:12px;font-weight:800;background:rgba(18,18,22,.78);border:1px solid rgba(255,255,255,.12);}
+    .badge.red{background:rgba(200,31,50,.92);border-color:rgba(255,255,255,.06);}
+    .car-body{padding:16px;}
+    .car-top{display:flex;justify-content:space-between;align-items:start;gap:12px;margin-bottom:12px;}
+    .car-title{margin:0 0 5px;font-size:24px;letter-spacing:-.03em;}
+    .car-sub{color:var(--muted);font-size:14px;}
+    .price{text-align:right;white-space:nowrap;color:#fff;}
+    .price strong{display:block;font-size:24px;line-height:1;}
+    .price span{color:var(--muted);font-size:13px;}
+    .specs{display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:10px;margin-bottom:12px;}
+    .spec{padding:10px 12px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;}
+    .spec b{display:block;margin-bottom:3px;font-size:14px;}
+    .spec span{color:var(--muted);font-size:13px;}
+    .car-desc{color:#dddddf;margin-bottom:14px;min-height:44px;}
+    .car-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;}
+    .car-meta{color:var(--muted);font-size:14px;}
+    .mini-btns{display:flex;gap:10px;flex-wrap:wrap;}
+    .mini-btn{min-height:40px;padding:0 14px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--text);cursor:pointer;font-weight:700;}
+    .mini-btn.red{background:linear-gradient(180deg,var(--red),var(--red2));border-color:rgba(255,255,255,.05);}
+    .footer{padding:10px 0 28px;color:var(--muted);font-size:14px;text-align:center;}
+    @media (max-width:1120px){.filters-grid{grid-template-columns:repeat(3,1fr)}}
     @media (max-width:860px){
-      .topbar-inner{
-        grid-template-columns:1fr;
-        padding:12px 0;
-      }
-
+      .topbar-inner{grid-template-columns:1fr;padding:12px 0;}
       .side-left,.side-right,.logo-wrap{justify-content:center}
       .filters-grid,.cars-grid{grid-template-columns:1fr}
       .results-head,.car-top{flex-direction:column;align-items:start}
@@ -528,25 +123,25 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="side-left">
-        <button class="top-button red" id="filtersToggle">Фильтры</button>
+        <button class="top-button red" id="filtersToggle">Филтр</button>
       </div>
 
       <div class="logo-wrap">
-        <img class="logo-photo" src="an-ksh.png" alt="Логотип Авто-Находки" />
+        <img class="logo-photo" src="an-ksh.png" alt="Лого Ауто-Нахадкi" />
       </div>
 
       <div class="side-right">
         <div class="country-wrap">
-          <button class="country-button" id="countryToggle" type="button" aria-label="Выбор страны">
-            <img class="country-flag" id="currentCountryFlag" src="../../../001.jpg" alt="Текущая страна">
+          <button class="country-button" id="countryToggle" type="button" aria-label="Зема-выбор">
+            <img class="country-flag" id="currentCountryFlag" src="../../../001.jpg" alt="Текущ зема">
           </button>
 
           <div class="country-panel" id="countryPanel">
             <button class="country-option" type="button" data-country="main">
-              <img src="../../../001.jpg" alt="Основной Кивиш">
+              <img src="../../../001.jpg" alt="Кiвiшь-ядро">
               <span class="country-option-text">
-                <span class="country-option-title">Основной Кивиш</span>
-                <span class="country-option-sub">Основной каталог</span>
+                <span class="country-option-title">Кiвiшь-ядро</span>
+                <span class="country-option-sub">Ядро-катал</span>
               </span>
             </button>
 
@@ -554,14 +149,14 @@
               <img src="../../../054.jpg" alt="ККП">
               <span class="country-option-text">
                 <span class="country-option-title">ККП</span>
-                <span class="country-option-sub">Каталог ККП</span>
+                <span class="country-option-sub">ККП-катал</span>
               </span>
             </button>
           </div>
         </div>
 
         <div class="lang-wrap">
-          <button class="top-button" id="langToggle">Языки</button>
+          <button class="top-button" id="langToggle">Лiнга</button>
           <div class="lang-panel" id="langPanel">
             <a class="lang-link" href="../index.html">Русский</a>
             <a class="lang-link" href="../index.html">English</a>
@@ -576,45 +171,45 @@
       <div class="container dropdown-inner">
         <div class="filters-grid">
           <div class="field">
-            <label for="searchInput">Поиск</label>
-            <input id="searchInput" type="text" placeholder="Марка или модель" />
+            <label for="searchInput">Найд</label>
+            <input id="searchInput" type="text" placeholder="бренд i модел" />
           </div>
           <div class="field">
-            <label for="typeFilter">Тип объявления</label>
+            <label for="typeFilter">Тiпа авиз</label>
             <select id="typeFilter">
-              <option value="all">Все</option>
-              <option value="found">Найденные</option>
-              <option value="private">Частные</option>
+              <option value="all">Всi</option>
+              <option value="found">Нахад</option>
+              <option value="private">Приват</option>
             </select>
           </div>
           <div class="field">
             <label for="cityFilter">Город</label>
             <select id="cityFilter">
-              <option value="all">Любой</option>
+              <option value="all">Люб</option>
               <option value="Кора">Кора</option>
-              <option value="Мири">Мири</option>
+              <option value="Мири">Мiрi</option>
               <option value="Автово">Автово</option>
-              <option value="Город Д">Город Д</option>
+              <option value="Город Д">Городника Д</option>
             </select>
           </div>
           <div class="field">
-            <label for="priceFilter">Цена до</label>
-            <input id="priceFilter" type="number" placeholder="Например 1200000" />
+            <label for="priceFilter">Кошт до</label>
+            <input id="priceFilter" type="number" placeholder="прим 1200000" />
           </div>
           <div class="field">
-            <label for="gearboxFilter">Коробка</label>
+            <label for="gearboxFilter">Короб</label>
             <select id="gearboxFilter">
-              <option value="all">Любая</option>
-              <option value="механика">Механика</option>
+              <option value="all">Люб</option>
+              <option value="механика">Механ</option>
               <option value="автомат">Автомат</option>
             </select>
           </div>
         </div>
 
         <div class="filter-actions">
-          <button class="top-button red" id="applyFilters">Применить</button>
-          <button class="top-button" id="resetFilters">Сбросить</button>
-          <button class="top-button" id="rerollCars">Обновить выдачу</button>
+          <button class="top-button red" id="applyFilters">Примет</button>
+          <button class="top-button" id="resetFilters">Сбрас</button>
+          <button class="top-button" id="rerollCars">Нова-выд</button>
         </div>
       </div>
     </div>
@@ -624,14 +219,14 @@
     <div class="container">
       <div class="results-head">
         <div>
-          <h1>Автомобили</h1>
-          <p id="resultsText">Показано 0 объявлений</p>
+          <h1>Автомаш</h1>
+          <p id="resultsText">Показ 0 авиз</p>
         </div>
         <select class="sort-select" id="sortSelect">
-          <option value="default">Сначала случайные</option>
-          <option value="new">Сначала новые</option>
-          <option value="cheap">Сначала дешевле</option>
-          <option value="expensive">Сначала дороже</option>
+          <option value="default">Случа-ряд</option>
+          <option value="new">Нова-ряд</option>
+          <option value="cheap">Деш-ряд</option>
+          <option value="expensive">Драг-ряд</option>
         </select>
       </div>
 
@@ -640,13 +235,13 @@
   </main>
 
   <footer class="footer">
-    Авто-Находки — каталог автомобилей
+    Ауто-Нахадкi — автомаш-катал
   </footer>
 
   <script>
     const COUNTRY_CONFIG = {
       main: {
-        label: 'Основной Кивиш',
+        label: 'Кiвiшь-ядро',
         flag: '../../../001.jpg',
         script: 'catalog.js'
       },

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Авто-Находки</title>
+  <title>Auto-Finds</title>
   <script>
     history.scrollRestoration = 'manual';
   </script>
@@ -528,40 +528,40 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <div class="side-left">
-        <button class="top-button red" id="filtersToggle">Фильтры</button>
+        <button class="top-button red" id="filtersToggle">Filters</button>
       </div>
 
       <div class="logo-wrap">
-        <img class="logo-photo" src="an-en.png" alt="Логотип Авто-Находки" />
+        <img class="logo-photo" src="an-en.png" alt="Auto Finds Logo" />
       </div>
 
       <div class="side-right">
         <div class="country-wrap">
-          <button class="country-button" id="countryToggle" type="button" aria-label="Выбор страны">
-            <img class="country-flag" id="currentCountryFlag" src="../../../001.jpg" alt="Текущая страна">
+          <button class="country-button" id="countryToggle" type="button" aria-label="Country selection">
+            <img class="country-flag" id="currentCountryFlag" src="../../../001.jpg" alt="Current country">
           </button>
 
           <div class="country-panel" id="countryPanel">
             <button class="country-option" type="button" data-country="main">
-              <img src="../../../001.jpg" alt="Основной Кивиш">
+              <img src="../../../001.jpg" alt="Main Kivish">
               <span class="country-option-text">
-                <span class="country-option-title">Основной Кивиш</span>
-                <span class="country-option-sub">Основной каталог</span>
+                <span class="country-option-title">Main Kivish</span>
+                <span class="country-option-sub">Main catalog</span>
               </span>
             </button>
 
             <button class="country-option" type="button" data-country="kkp">
-              <img src="../../../054.jpg" alt="ККП">
+              <img src="../../../054.jpg" alt="KKP">
               <span class="country-option-text">
-                <span class="country-option-title">ККП</span>
-                <span class="country-option-sub">Каталог ККП</span>
+                <span class="country-option-title">KKP</span>
+                <span class="country-option-sub">KKP catalog</span>
               </span>
             </button>
           </div>
         </div>
 
         <div class="lang-wrap">
-          <button class="top-button" id="langToggle">Языки</button>
+          <button class="top-button" id="langToggle">Languages</button>
           <div class="lang-panel" id="langPanel">
             <a class="lang-link" href="../index.html">Русский</a>
             <a class="lang-link" href="index.html">English</a>
@@ -576,45 +576,45 @@
       <div class="container dropdown-inner">
         <div class="filters-grid">
           <div class="field">
-            <label for="searchInput">Поиск</label>
-            <input id="searchInput" type="text" placeholder="Марка или модель" />
+            <label for="searchInput">Search</label>
+            <input id="searchInput" type="text" placeholder="Brand or model" />
           </div>
           <div class="field">
-            <label for="typeFilter">Тип объявления</label>
+            <label for="typeFilter">Listing type</label>
             <select id="typeFilter">
-              <option value="all">Все</option>
-              <option value="found">Найденные</option>
-              <option value="private">Частные</option>
+              <option value="all">All</option>
+              <option value="found">Found</option>
+              <option value="private">Private</option>
             </select>
           </div>
           <div class="field">
-            <label for="cityFilter">Город</label>
+            <label for="cityFilter">City</label>
             <select id="cityFilter">
-              <option value="all">Любой</option>
-              <option value="Кора">Кора</option>
-              <option value="Мири">Мири</option>
-              <option value="Автово">Автово</option>
-              <option value="Город Д">Город Д</option>
+              <option value="all">Any</option>
+              <option value="Кора">Kora</option>
+              <option value="Мири">Miri</option>
+              <option value="Автово">Avtovo</option>
+              <option value="Город Д">City D</option>
             </select>
           </div>
           <div class="field">
-            <label for="priceFilter">Цена до</label>
-            <input id="priceFilter" type="number" placeholder="Например 1200000" />
+            <label for="priceFilter">Price up to</label>
+            <input id="priceFilter" type="number" placeholder="For example 1200000" />
           </div>
           <div class="field">
-            <label for="gearboxFilter">Коробка</label>
+            <label for="gearboxFilter">Transmission</label>
             <select id="gearboxFilter">
-              <option value="all">Любая</option>
-              <option value="механика">Механика</option>
-              <option value="автомат">Автомат</option>
+              <option value="all">Any</option>
+              <option value="механика">Manual</option>
+              <option value="автомат">Automatic</option>
             </select>
           </div>
         </div>
 
         <div class="filter-actions">
-          <button class="top-button red" id="applyFilters">Применить</button>
-          <button class="top-button" id="resetFilters">Сбросить</button>
-          <button class="top-button" id="rerollCars">Обновить выдачу</button>
+          <button class="top-button red" id="applyFilters">Apply</button>
+          <button class="top-button" id="resetFilters">Reset</button>
+          <button class="top-button" id="rerollCars">Refresh results</button>
         </div>
       </div>
     </div>
@@ -624,14 +624,14 @@
     <div class="container">
       <div class="results-head">
         <div>
-          <h1>Автомобили</h1>
-          <p id="resultsText">Показано 0 объявлений</p>
+          <h1>Cars</h1>
+          <p id="resultsText">0 listings shown</p>
         </div>
         <select class="sort-select" id="sortSelect">
-          <option value="default">Сначала случайные</option>
-          <option value="new">Сначала новые</option>
-          <option value="cheap">Сначала дешевле</option>
-          <option value="expensive">Сначала дороже</option>
+          <option value="default">Random first</option>
+          <option value="new">Newest first</option>
+          <option value="cheap">Cheapest first</option>
+          <option value="expensive">Most expensive first</option>
         </select>
       </div>
 
@@ -640,18 +640,18 @@
   </main>
 
   <footer class="footer">
-    Авто-Находки — каталог автомобилей
+    Auto Finds — car catalog
   </footer>
 
   <script>
     const COUNTRY_CONFIG = {
       main: {
-        label: 'Основной Кивиш',
+        label: 'Main Kivish',
         flag: '../../../001.jpg',
         script: 'catalog.js'
       },
       kkp: {
-        label: 'ККП',
+        label: 'KKP',
         flag: '../../../054.jpg',
         script: 'catalog-kkp.js'
       }

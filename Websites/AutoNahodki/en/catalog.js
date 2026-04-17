@@ -36,30 +36,32 @@ document.addEventListener('click', (e) => {
 });
 
 const allCities = [
-  'Кора',
-  'Мири',
-  'Город Д',
-  'Автово',
-  'Мальта',
-  'Варар',
-  'Ламья',
-  'Форта',
-  'Лючи',
-  'Деревня Маги',
-  'Деревня Нагари',
-  'Олена',
-  'Орегор',
-  'Деревня Эти',
-  'Шентахор',
-  'Малино',
-  'Полюс-Севера',
-  'Андрой',
-  'Село Перяное',
-  'Водке',
-  'Газоно',
-  'Деревня М',
-  'Цень',
+  'Kora',
+  'Miri',
+  'City D',
+  'Avtovo',
+  'Malta',
+  'Varar',
+  'Lamya',
+  'Forta',
+  'Lyuchi',
+  'Magi Village',
+  'Nagari Village',
+  'Olena',
+  'Oregor',
+  'Eti Village',
+  'Shentakhor',
+  'Malino',
+  'North Pole',
+  'Androy',
+  'Peryanoye Village',
+  'Vodke',
+  'Gazono',
+  'Village M',
+  'Tsen',
 ];
+
+const IMAGE_BASE_PATH = '../';
 
 function pickWeightedCars(cars, limit) {
   const pool = [...cars];
@@ -95,10 +97,10 @@ const carsBase = [
     folder: 'F-KAP Chihuahua',
     photos: 3,
     years: [1979, 1980, 1981, 1982, 1983],
-    engines: ['W12 бензин'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'купе',
+    engines: ['W12 petrol'],
+    gearboxes: ['manual'],
+    drives: ['rear-wheel drive'],
+    body: 'coupe',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 2
@@ -110,10 +112,10 @@ const carsBase = [
     folder: 'F-KAP Fokat B202',
     photos: 3,
     years: [2011, 2012, 2013],
-    engines: ['3.0 дизель', '3.2 дизель', '3.5 бензин'],
-    gearboxes: ['автомат'],
-    drives: ['полный'],
-    body: 'внедорожник',
+    engines: ['3.0 diesel', '3.2 diesel', '3.5 petrol'],
+    gearboxes: ['automatic'],
+    drives: ['all-wheel drive'],
+    body: 'SUV',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 55
@@ -125,10 +127,10 @@ const carsBase = [
     folder: 'F-KAP Gerri 1975',
     photos: 3,
     years: [1975, 1976, 1977, 1978, 1979],
-    engines: ['1.5 бензин', '1.6 бензин'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'седан',
+    engines: ['1.5 petrol', '1.6 petrol'],
+    gearboxes: ['manual'],
+    drives: ['rear-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 85
@@ -140,10 +142,10 @@ const carsBase = [
     folder: 'F-KAP Gerri 1990',
     photos: 3,
     years: [1990, 1991, 1992, 1993, 1994],
-    engines: ['1.6 бензин', '1.8 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.6 petrol', '1.8 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 95
@@ -155,10 +157,10 @@ const carsBase = [
     folder: 'F-KAP Gerri 2010',
     photos: 3,
     years: [2009, 2010, 2011, 2012],
-    engines: ['1.8 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.8 petrol', '2.0 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 90
@@ -170,10 +172,10 @@ const carsBase = [
     folder: 'F-KAP Go',
     photos: 3,
     years: [1948, 1950, 1952, 1955, 1958],
-    engines: ['4-цилиндровый бензин'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'седан',
+    engines: ['4-cylinder petrol'],
+    gearboxes: ['manual'],
+    drives: ['rear-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 35
@@ -185,10 +187,10 @@ const carsBase = [
     folder: 'F-KAP Luna 2025',
     photos: 4,
     years: [2025, 2026],
-    engines: ['1.8 гибрид', '2.0 гибрид'],
-    gearboxes: ['автомат'],
-    drives: ['передний', 'полный'],
-    body: 'седан',
+    engines: ['1.8 hybrid', '2.0 hybrid'],
+    gearboxes: ['automatic'],
+    drives: ['front-wheel drive', 'all-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 70
@@ -200,10 +202,10 @@ const carsBase = [
     folder: 'F-KAP Malina 1990',
     photos: 3,
     years: [1989, 1990, 1991, 1992, 1993],
-    engines: ['2.5 бензин', '3.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['задний'],
-    body: 'купе',
+    engines: ['2.5 petrol', '3.0 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['rear-wheel drive'],
+    body: 'coupe',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 22
@@ -215,10 +217,10 @@ const carsBase = [
     folder: 'F-KAP Malina 2010',
     photos: 3,
     years: [2009, 2010, 2011, 2012],
-    engines: ['3.0 бензин', '3.5 бензин'],
-    gearboxes: ['автомат'],
-    drives: ['задний', 'полный'],
-    body: 'купе',
+    engines: ['3.0 petrol', '3.5 petrol'],
+    gearboxes: ['automatic'],
+    drives: ['rear-wheel drive', 'all-wheel drive'],
+    body: 'coupe',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 36
@@ -230,10 +232,10 @@ const carsBase = [
     folder: 'F-KAP Shik 20',
     photos: 2,
     years: [1960, 1961, 1962, 1963, 1964],
-    engines: ['1.6 бензин'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'седан',
+    engines: ['1.6 petrol'],
+    gearboxes: ['manual'],
+    drives: ['rear-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 40
@@ -245,10 +247,10 @@ const carsBase = [
     folder: 'F-KAP Tref 2000',
     photos: 3,
     years: [2000, 2001, 2002, 2003],
-    engines: ['1.8 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний', 'полный'],
-    body: 'универсал',
+    engines: ['1.8 petrol', '2.0 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive', 'all-wheel drive'],
+    body: 'wagon',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 75
@@ -260,10 +262,10 @@ const carsBase = [
     folder: 'F-KAP Tref 2010',
     photos: 3,
     years: [2010, 2011, 2012],
-    engines: ['2.0 бензин', '2.2 дизель'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний', 'полный'],
-    body: 'универсал',
+    engines: ['2.0 petrol', '2.2 diesel'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive', 'all-wheel drive'],
+    body: 'wagon',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 65
@@ -275,10 +277,10 @@ const carsBase = [
     folder: 'F-KAP Tref 2020',
     photos: 3,
     years: [2020, 2021, 2022],
-    engines: ['2.0 турбо', '2.2 дизель'],
-    gearboxes: ['автомат'],
-    drives: ['полный'],
-    body: 'универсал',
+    engines: ['2.0 turbo', '2.2 diesel'],
+    gearboxes: ['automatic'],
+    drives: ['all-wheel drive'],
+    body: 'wagon',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 25
@@ -290,10 +292,10 @@ const carsBase = [
     folder: 'F-KAP Vacation 1990',
     photos: 3,
     years: [1990, 1991, 1992, 1993],
-    engines: ['V6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'хэтчбек',
+    engines: ['V6 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'hatchback',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 70
@@ -305,10 +307,10 @@ const carsBase = [
     folder: 'F-KAP Vacation 2000',
     photos: 3,
     years: [2000, 2001, 2002, 2003],
-    engines: ['1.8 бензин', '2.0 бензин', 'V6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'универсал',
+    engines: ['1.8 petrol', '2.0 petrol', 'V6 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'wagon',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 85
@@ -320,10 +322,10 @@ const carsBase = [
     folder: 'F-KAP Vacation 2010',
     photos: 3,
     years: [2009, 2010, 2011, 2012],
-    engines: ['1.8 бензин', '2.0 бензин', '2.0 гибрид'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'универсал',
+    engines: ['1.8 petrol', '2.0 petrol', '2.0 hybrid'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'wagon',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 90
@@ -337,10 +339,10 @@ const carsBase = [
     folder: 'Tarifa Dart 2005',
     photos: 3,
     years: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
-    engines: ['2.0 дизель', '2.2 дизель'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['задний'],
-    body: 'фургон',
+    engines: ['2.0 diesel', '2.2 diesel'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['rear-wheel drive'],
+    body: 'van',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 75
@@ -352,10 +354,10 @@ const carsBase = [
     folder: 'Tarifa FGR2',
     photos: 3,
     years: [1984, 1985, 1986, 1987],
-    engines: ['2.0 дизель', '2.2 дизель'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'фургон',
+    engines: ['2.0 diesel', '2.2 diesel'],
+    gearboxes: ['manual'],
+    drives: ['rear-wheel drive'],
+    body: 'van',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 35
@@ -367,16 +369,16 @@ const carsBase = [
   folder: 'Tarifa Misi-N 2011',
   photos: 3,
   years: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
-  engines: ['1.0 бензин', '1.2 бензин'],
-  gearboxes: ['механика'],
-  drives: ['передний'],
-  body: 'хэтчбек',
+  engines: ['1.0 petrol', '1.2 petrol'],
+  gearboxes: ['manual'],
+  drives: ['front-wheel drive'],
+  body: 'hatchback',
   typeOptions: ['private', 'found'],
   cities: allCities,
   spawnWeight: 80,
   priceMin: 50000,
   priceMax: 190000,
-  descriptionText: 'Бюджетный городской автомобиль Tarifa Auto. Нужен обычный осмотр перед покупкой, машина относится к дешёвому массовому сегменту.'
+  descriptionText: 'A budget city car from Tarifa Auto. A normal inspection before purchase is recommended, as this car belongs to the low-cost mass-market segment.'
 },
   {
     brand: 'Tarifa',
@@ -385,10 +387,10 @@ const carsBase = [
     folder: 'Tarifa Style',
     photos: 3,
     years: [2013, 2014, 2015, 2016, 2017],
-    engines: ['1.8 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.8 petrol', '2.0 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 30
@@ -401,10 +403,10 @@ const carsBase = [
     folder: 'Tsundere A230',
     photos: 3,
     years: [1981, 1982, 1983, 1984, 1985],
-    engines: ['1.8 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['задний'],
-    body: 'седан',
+    engines: ['1.8 petrol', '2.0 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['rear-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 11
@@ -418,10 +420,10 @@ const carsBase = [
     folder: 'Chevrolet Cruze 2013',
     photos: 3,
     years: [2013, 2014, 2015],
-    engines: ['1.6 бензин', '1.8 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.6 petrol', '1.8 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 55
@@ -433,10 +435,10 @@ const carsBase = [
     folder: 'Ford Focus 2008',
     photos: 3,
     years: [2007, 2008, 2009],
-    engines: ['1.6 бензин', '1.8 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'хэтчбек',
+    engines: ['1.6 petrol', '1.8 petrol', '2.0 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'hatchback',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 60
@@ -448,10 +450,10 @@ const carsBase = [
     folder: 'Ford Focus 2012',
     photos: 3,
     years: [2011, 2012, 2013],
-    engines: ['1.6 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.6 petrol', '2.0 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 70
@@ -463,10 +465,10 @@ const carsBase = [
     folder: 'Ford Focus 2018',
     photos: 3,
     years: [2017, 2018, 2019],
-    engines: ['1.5 турбо', '2.0 бензин'],
-    gearboxes: ['автомат', 'механика'],
-    drives: ['передний'],
-    body: 'хэтчбек',
+    engines: ['1.5 turbo', '2.0 petrol'],
+    gearboxes: ['automatic', 'manual'],
+    drives: ['front-wheel drive'],
+    body: 'hatchback',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 35
@@ -478,10 +480,10 @@ const carsBase = [
     folder: 'Gaz 24',
     photos: 3,
     years: [1970, 1971, 1972, 1973, 1974],
-    engines: ['2.4 бензин'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'седан',
+    engines: ['2.4 petrol'],
+    gearboxes: ['manual'],
+    drives: ['rear-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 25
@@ -493,10 +495,10 @@ const carsBase = [
     folder: 'Gaz M20',
     photos: 3,
     years: [1949, 1950, 1951, 1952, 1953],
-    engines: ['2.1 бензин'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'седан',
+    engines: ['2.1 petrol'],
+    gearboxes: ['manual'],
+    drives: ['rear-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 8
@@ -508,10 +510,10 @@ const carsBase = [
     folder: 'GAZ Volga 31105',
     photos: 3,
     years: [2004, 2005, 2006, 2007],
-    engines: ['2.3 бензин', '2.4 бензин'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'седан',
+    engines: ['2.3 petrol', '2.4 petrol'],
+    gearboxes: ['manual'],
+    drives: ['rear-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 30
@@ -523,10 +525,10 @@ const carsBase = [
     folder: 'Haval H6',
     photos: 3,
     years: [2018, 2019, 2020, 2021],
-    engines: ['1.5 турбо', '2.0 турбо'],
-    gearboxes: ['автомат'],
-    drives: ['передний', 'полный'],
-    body: 'кроссовер',
+    engines: ['1.5 turbo', '2.0 turbo'],
+    gearboxes: ['automatic'],
+    drives: ['front-wheel drive', 'all-wheel drive'],
+    body: 'crossover',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 40
@@ -538,10 +540,10 @@ const carsBase = [
     folder: 'Honda Civic 2000',
     photos: 3,
     years: [1999, 2000, 2001],
-    engines: ['1.5 бензин', '1.6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.5 petrol', '1.6 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 35
@@ -553,10 +555,10 @@ const carsBase = [
     folder: 'Honda Civic 2010',
     photos: 3,
     years: [2009, 2010, 2011],
-    engines: ['1.8 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.8 petrol', '2.0 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 45
@@ -568,10 +570,10 @@ const carsBase = [
     folder: 'Hyundai Solaris 2012',
     photos: 3,
     years: [2011, 2012, 2013],
-    engines: ['1.4 бензин', '1.6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.4 petrol', '1.6 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 85
@@ -583,10 +585,10 @@ const carsBase = [
     folder: 'Kia Rio 2008',
     photos: 3,
     years: [2007, 2008, 2009],
-    engines: ['1.4 бензин', '1.6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.4 petrol', '1.6 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 60
@@ -598,10 +600,10 @@ const carsBase = [
     folder: 'Lada Niva',
     photos: 3,
     years: [1998, 2002, 2005, 2008, 2010],
-    engines: ['1.7 бензин'],
-    gearboxes: ['механика'],
-    drives: ['полный'],
-    body: 'внедорожник',
+    engines: ['1.7 petrol'],
+    gearboxes: ['manual'],
+    drives: ['all-wheel drive'],
+    body: 'SUV',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 65
@@ -613,10 +615,10 @@ const carsBase = [
     folder: 'Lada Priora',
     photos: 3,
     years: [2008, 2009, 2010, 2011, 2012],
-    engines: ['1.6 бензин'],
-    gearboxes: ['механика'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.6 petrol'],
+    gearboxes: ['manual'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 75
@@ -628,10 +630,10 @@ const carsBase = [
     folder: 'Lada Riva',
     photos: 3,
     years: [1983, 1988, 1992, 2001, 2004, 2007],
-    engines: ['1.5 бензин', '1.6 бензин'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'седан',
+    engines: ['1.5 petrol', '1.6 petrol'],
+    gearboxes: ['manual'],
+    drives: ['rear-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 45
@@ -643,10 +645,10 @@ const carsBase = [
     folder: 'Lada Vesta',
     photos: 3,
     years: [2016, 2017, 2018, 2019],
-    engines: ['1.6 бензин', '1.8 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.6 petrol', '1.8 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 70
@@ -658,10 +660,10 @@ const carsBase = [
     folder: 'Mitsubishi Outlander 2012',
     photos: 3,
     years: [2011, 2012, 2013],
-    engines: ['2.0 бензин', '2.4 бензин', '3.0 бензин'],
-    gearboxes: ['автомат'],
-    drives: ['передний', 'полный'],
-    body: 'кроссовер',
+    engines: ['2.0 petrol', '2.4 petrol', '3.0 petrol'],
+    gearboxes: ['automatic'],
+    drives: ['front-wheel drive', 'all-wheel drive'],
+    body: 'crossover',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 35
@@ -673,10 +675,10 @@ const carsBase = [
     folder: 'Moskvich 2141',
     photos: 3,
     years: [1991, 1994, 1998, 2001],
-    engines: ['1.6 бензин', '1.7 бензин'],
-    gearboxes: ['механика'],
-    drives: ['передний'],
-    body: 'хэтчбек',
+    engines: ['1.6 petrol', '1.7 petrol'],
+    gearboxes: ['manual'],
+    drives: ['front-wheel drive'],
+    body: 'hatchback',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 20
@@ -688,10 +690,10 @@ const carsBase = [
     folder: 'Nissan Sunny 2010',
     photos: 3,
     years: [2009, 2010, 2011],
-    engines: ['1.5 бензин', '1.6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.5 petrol', '1.6 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 45
@@ -703,10 +705,10 @@ const carsBase = [
     folder: 'Renault Logan 2008',
     photos: 3,
     years: [2007, 2008, 2009],
-    engines: ['1.4 бензин', '1.6 бензин'],
-    gearboxes: ['механика'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.4 petrol', '1.6 petrol'],
+    gearboxes: ['manual'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 80
@@ -718,10 +720,10 @@ const carsBase = [
     folder: 'Renault Logan 2013',
     photos: 3,
     years: [2012, 2013, 2014],
-    engines: ['1.6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.6 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 75
@@ -733,10 +735,10 @@ const carsBase = [
     folder: 'Skoda Octavia',
     photos: 3,
     years: [2010, 2012, 2014, 2016],
-    engines: ['1.6 бензин', '1.8 турбо', '2.0 дизель'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'лифтбек',
+    engines: ['1.6 petrol', '1.8 turbo', '2.0 diesel'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'liftback',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 50
@@ -748,10 +750,10 @@ const carsBase = [
     folder: 'Toyota Camry 1990',
     photos: 3,
     years: [1989, 1990, 1991],
-    engines: ['2.0 бензин', '2.5 бензин'],
-    gearboxes: ['автомат', 'механика'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['2.0 petrol', '2.5 petrol'],
+    gearboxes: ['automatic', 'manual'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 18
@@ -763,10 +765,10 @@ const carsBase = [
     folder: 'Toyota Camry 2000',
     photos: 3,
     years: [1999, 2000, 2001],
-    engines: ['2.2 бензин', '2.4 бензин', '3.0 бензин'],
-    gearboxes: ['автомат', 'механика'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['2.2 petrol', '2.4 petrol', '3.0 petrol'],
+    gearboxes: ['automatic', 'manual'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 30
@@ -778,10 +780,10 @@ const carsBase = [
     folder: 'Toyota Camry 2010',
     photos: 3,
     years: [2009, 2010, 2011],
-    engines: ['2.4 бензин', '2.5 бензин', '3.5 бензин'],
-    gearboxes: ['автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['2.4 petrol', '2.5 petrol', '3.5 petrol'],
+    gearboxes: ['automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 40
@@ -793,10 +795,10 @@ const carsBase = [
     folder: 'Toyota Corolla 1990',
     photos: 3,
     years: [1989, 1990, 1991],
-    engines: ['1.3 бензин', '1.5 бензин', '1.6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.3 petrol', '1.5 petrol', '1.6 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 30
@@ -808,10 +810,10 @@ const carsBase = [
     folder: 'Toyota Corolla 2000',
     photos: 3,
     years: [1999, 2000, 2001],
-    engines: ['1.4 бензин', '1.6 бензин', '1.8 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.4 petrol', '1.6 petrol', '1.8 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 65
@@ -823,10 +825,10 @@ const carsBase = [
     folder: 'Toyota Corolla 2010',
     photos: 3,
     years: [2009, 2010, 2011],
-    engines: ['1.4 бензин', '1.6 бензин', '1.8 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
+    engines: ['1.4 petrol', '1.6 petrol', '1.8 petrol'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'sedan',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 70
@@ -838,10 +840,10 @@ const carsBase = [
     folder: 'Volkswagen Golf 2010',
     photos: 3,
     years: [2009, 2010, 2011],
-    engines: ['1.4 турбо', '1.6 бензин', '2.0 дизель'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'хэтчбек',
+    engines: ['1.4 turbo', '1.6 petrol', '2.0 diesel'],
+    gearboxes: ['manual', 'automatic'],
+    drives: ['front-wheel drive'],
+    body: 'hatchback',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 45
@@ -854,6 +856,10 @@ function randomItem(arr) {
 
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getImagePath(car, photoNumber) {
+  return `${IMAGE_BASE_PATH}${car.folder}/${photoNumber}.jpg`;
 }
 
 function getUniquePhotoNumber(car, usedPhotosByFolder) {
@@ -1001,19 +1007,19 @@ function generatePrice(year, type, body, car) {
 
   let price = randomInt(baseMin, baseMax);
 
-  if (body === 'внедорожник' || body === 'кроссовер') {
+  if (body === 'SUV' || body === 'crossover') {
     price += randomInt(90000, 260000);
   }
 
-  if (body === 'фургон') {
+  if (body === 'van') {
     price += randomInt(50000, 180000);
   }
 
-  if (body === 'купе') {
+  if (body === 'coupe') {
     price += randomInt(100000, 320000);
   }
 
-  if (body === 'универсал') {
+  if (body === 'wagon') {
     price += randomInt(20000, 90000);
   }
 
@@ -1043,55 +1049,55 @@ function generateDescription(car, engine, gearbox) {
   }
 
   const privateTexts = [
-    'На ходу, без срочных вложений, смотреть по месту.',
-    'Машина в рабочем состоянии, продаётся как есть.',
-    'Обычное живое состояние для своего года, лучше смотреть лично.',
-    'Документы в порядке, по технике без критичных вопросов.',
-    'Кузов и салон в нормальном состоянии, есть обычные следы эксплуатации.',
-    'Использовалась спокойно, без гонок, продаётся без обмена.',
-    'Для своего возраста выглядит нормально, торг возможен при осмотре.',
-    'Не новая, но в адекватном состоянии, всё расскажу на месте.',
-    'Есть мелкие возрастные моменты, ничего необычного для этой модели.',
-    'Повседневный вариант, без лишней красивой сказки, смотреть вживую.'
+    'Runs and drives, no urgent investment needed, viewing available on site.',
+    'The car is in working condition and is being sold as is.',
+    'A normal live condition for its year, best viewed in person.',
+    'Documents are in order, no critical technical issues.',
+    'Body and interior are in decent condition, with normal signs of use.',
+    'Used calmly, no racing, sold with no trade-ins.',
+    'Looks normal for its age, negotiation possible after inspection.',
+    'Not new, but in reasonable condition, I will explain everything in person.',
+    'There are some age-related details, nothing unusual for this model.',
+    'A daily driver option, no fairy tale, better to see it live.'
   ];
 
   const foundTexts = [
-    'Автомобиль размещён в категории найденных транспортных средств.',
-    'Объявление опубликовано сервисом в рамках раздела найденных автомобилей.',
-    'Карточка сформирована площадкой для отображения найденного автомобиля.',
-    'Автомобиль добавлен в базу найденных транспортных средств.',
-    'Позиция размещена сервисом в разделе найденных автомобилей.',
-    'Данное объявление относится к категории найденных транспортных средств.',
-    'Информация опубликована площадкой в рамках раздела найденных автомобилей.',
-    'Карточка размещена сервисом как найденный автомобиль.',
-    'Объект отображается в категории найденных транспортных средств.',
-    'Автомобиль внесён в каталог найденных автомобилей.'
+    'This vehicle is listed in the found vehicles category.',
+    'The listing was published by the service within the found cars section.',
+    'The card was created by the platform to display a found vehicle.',
+    'The vehicle was added to the found vehicles database.',
+    'This item is posted by the service in the found cars section.',
+    'This listing belongs to the found vehicles category.',
+    'The information is published by the platform within the found cars section.',
+    'The card is posted by the service as a found vehicle.',
+    'This item is displayed in the found vehicles category.',
+    'The vehicle is included in the found cars catalog.'
   ];
 
   const privateExtraTexts = [
-    'По кузову возможны мелкие возрастные моменты.',
-    'Салон без чего-то сверхъестественного, обычное состояние.',
-    'По ходовой и технике лучше смотреть лично.',
-    'Для своего года выглядит нормально.',
-    'Торг возможен только после осмотра.',
-    'Не музей, а обычная живая машина.',
-    'Подойдёт как повседневный вариант.',
-    'По документам уточнение на месте.',
-    'Есть естественные следы эксплуатации.',
-    'Лучше оценивать вживую, а не по одной фотографии.'
+    'There may be minor age-related details on the body.',
+    'The interior is ordinary, nothing extraordinary.',
+    'Suspension and mechanical condition are best checked in person.',
+    'Looks normal for its year.',
+    'Negotiation is possible only after inspection.',
+    'Not a museum piece, just a normal live car.',
+    'Suitable as a daily driver.',
+    'Document details can be clarified on site.',
+    'There are natural signs of use.',
+    'Better judged live than from one photo.'
   ];
 
   const foundExtraTexts = [
-    'Описание носит справочный характер.',
-    'Сведения отображаются в формате карточки сервиса.',
-    'Внешнее и техническое состояние уточняется при осмотре.',
-    'Информация указывается площадкой без частной оценки владельца.',
-    'Данные представлены в рамках сервисного размещения.',
-    'Характеристики отображаются на основании карточки объявления.',
-    'Параметры автомобиля указаны в формате каталога площадки.',
-    'Перед покупкой требуется личная проверка состояния.',
-    'Сервис публикует базовую информацию по автомобилю.',
-    'Осмотр рекомендуется до принятия решения о покупке.'
+    'The description is for reference only.',
+    'The information is shown in the service card format.',
+    'Exterior and technical condition should be checked during inspection.',
+    'The information is provided by the platform without a private owner assessment.',
+    'The data is shown within a service listing format.',
+    'Vehicle specifications are displayed based on the listing card.',
+    'The vehicle details are shown in the platform catalog format.',
+    'A personal inspection is required before purchase.',
+    'The service publishes basic information about the vehicle.',
+    'Inspection is recommended before making a purchase decision.'
   ];
 
   const mainText = car.type === 'found'
@@ -1102,7 +1108,7 @@ function generateDescription(car, engine, gearbox) {
     ? randomItem(foundExtraTexts)
     : randomItem(privateExtraTexts);
 
-  return `${mainText} ${extraText} ${engine}, ${gearbox}, кузов ${car.body}.`;
+  return `${mainText} ${extraText} ${engine}, ${gearbox}, ${car.body} body style.`;
 }
 
 function createCarCard(car) {
@@ -1115,14 +1121,14 @@ function createCarCard(car) {
   const mileage = generateMileage(year);
   const price = generatePrice(year, car.type, car.body, car);
   const description = generateDescription(car, engine, gearbox);
-  const badgeText = car.type === 'found' ? 'Найденный' : 'Частное';
+  const badgeText = car.type === 'found' ? 'Found' : 'Private';
   const badgeClass = car.type === 'found' ? 'red' : '';
-  const priceLabel = car.type === 'found' ? 'цена площадки' : 'цена продавца';
+  const priceLabel = car.type === 'found' ? 'platform price' : 'seller price';
   const metaText = car.type === 'found'
-    ? `Лот № ${randomInt(1000, 9999)}`
-    : `Объявление № ${randomInt(10000, 99999)}`;
+    ? `Lot #${randomInt(1000, 9999)}`
+    : `Listing #${randomInt(10000, 99999)}`;
 
-  const imagePath = `${car.folder}/${photoNumber}.jpg`;
+  const imagePath = getImagePath(car, photoNumber);
   const title = `${car.brand} ${car.model}${car.generation ? ` ${car.generation}` : ''}`;
 
   return `
@@ -1138,20 +1144,20 @@ function createCarCard(car) {
         <div class="car-top">
           <div>
             <h2 class="car-title">${title}</h2>
-            <div class="car-sub">${city} • ${year} • ${mileage.toLocaleString("ru-RU")} км</div>
+            <div class="car-sub">${city} • ${year} • ${mileage.toLocaleString("en-US")} km</div>
           </div>
 
           <div class="price">
-            <strong>${price.toLocaleString("ru-RU")} Ksh</strong>
+            <strong>${price.toLocaleString("en-US")} Ksh</strong>
             <span>${priceLabel}</span>
           </div>
         </div>
 
         <div class="specs">
-          <div class="spec"><b>Двигатель</b><span>${engine}</span></div>
-          <div class="spec"><b>Коробка</b><span>${gearbox}</span></div>
-          <div class="spec"><b>Привод</b><span>${drive}</span></div>
-          <div class="spec"><b>Кузов</b><span>${car.body}</span></div>
+          <div class="spec"><b>Engine</b><span>${engine}</span></div>
+          <div class="spec"><b>Transmission</b><span>${gearbox}</span></div>
+          <div class="spec"><b>Drive</b><span>${drive}</span></div>
+          <div class="spec"><b>Body</b><span>${car.body}</span></div>
         </div>
 
         <div class="car-desc">${description}</div>
@@ -1159,8 +1165,8 @@ function createCarCard(car) {
         <div class="car-actions">
           <div class="car-meta">${metaText}</div>
           <div class="mini-btns">
-            <button class="mini-btn">В избранное</button>
-            <button class="mini-btn red">Открыть</button>
+            <button class="mini-btn">Save</button>
+            <button class="mini-btn red">Open</button>
           </div>
         </div>
       </div>
@@ -1174,22 +1180,19 @@ function buildRandomCars(limit = 12) {
   let duplicateCount = 0;
   const roll = Math.random();
 
-  // как часто вообще разрешаем повторы
   if (roll < 0.65) {
-    duplicateCount = 0; // чаще всего вообще без дублей
+    duplicateCount = 0;
   } else if (roll < 0.92) {
-    duplicateCount = 1; // иногда один дубль
+    duplicateCount = 1;
   } else {
-    duplicateCount = 2; // редко два дубля
+    duplicateCount = 2;
   }
 
   const uniqueCount = limit - duplicateCount;
 
-  // сначала набираем уникальные модели
   const uniqueCars = pickWeightedCars(carsBase, uniqueCount);
   currentCars = [...uniqueCars];
 
-  // кандидаты на дубль — только те, у кого больше одной фотки
   const duplicateCandidates = uniqueCars.filter(car => car.photos > 1);
 
   for (let i = 0; i < duplicateCount; i++) {
@@ -1198,12 +1201,10 @@ function buildRandomCars(limit = 12) {
     const index = randomInt(0, duplicateCandidates.length - 1);
     const duplicateCar = duplicateCandidates.splice(index, 1)[0];
 
-    // вставляем дубль в случайное место списка
     const insertAt = randomInt(0, currentCars.length);
     currentCars.splice(insertAt, 0, duplicateCar);
   }
 
-  // если вдруг чего-то не хватило — добиваем уникальными
   while (currentCars.length < limit) {
     const extraCar = pickWeightedCars(carsBase, 1)[0];
     if (!currentCars.includes(extraCar)) {
@@ -1287,14 +1288,14 @@ function getFilteredCars() {
 }
 
 function createRenderedCard(car) {
-  const badgeText = car.selectedType === 'found' ? 'Найденный' : 'Частное';
+  const badgeText = car.selectedType === 'found' ? 'Found' : 'Private';
   const badgeClass = car.selectedType === 'found' ? 'red' : '';
-  const priceLabel = car.selectedType === 'found' ? 'цена площадки' : 'цена продавца';
+  const priceLabel = car.selectedType === 'found' ? 'platform price' : 'seller price';
   const metaText = car.selectedType === 'found'
-    ? `Лот № ${randomInt(1000, 9999)}`
-    : `Объявление № ${randomInt(10000, 99999)}`;
+    ? `Lot #${randomInt(1000, 9999)}`
+    : `Listing #${randomInt(10000, 99999)}`;
 
-  const imagePath = `${car.folder}/${car.selectedPhoto}.jpg`;
+  const imagePath = getImagePath(car, car.selectedPhoto);
   const title = `${car.brand} ${car.model}${car.generation ? ` ${car.generation}` : ''}`;
   const description = generateDescription(
     { ...car, type: car.selectedType },
@@ -1315,20 +1316,20 @@ function createRenderedCard(car) {
         <div class="car-top">
           <div>
             <h2 class="car-title">${title}</h2>
-            <div class="car-sub">${car.selectedCity} • ${car.selectedYear} • ${car.selectedMileage.toLocaleString("ru-RU")} км</div>
+            <div class="car-sub">${car.selectedCity} • ${car.selectedYear} • ${car.selectedMileage.toLocaleString("en-US")} km</div>
           </div>
 
           <div class="price">
-            <strong>${car.selectedPrice.toLocaleString("ru-RU")} Ksh</strong>
+            <strong>${car.selectedPrice.toLocaleString("en-US")} Ksh</strong>
             <span>${priceLabel}</span>
           </div>
         </div>
 
         <div class="specs">
-          <div class="spec"><b>Двигатель</b><span>${car.selectedEngine}</span></div>
-          <div class="spec"><b>Коробка</b><span>${car.selectedGearbox}</span></div>
-          <div class="spec"><b>Привод</b><span>${car.selectedDrive}</span></div>
-          <div class="spec"><b>Кузов</b><span>${car.body}</span></div>
+          <div class="spec"><b>Engine</b><span>${car.selectedEngine}</span></div>
+          <div class="spec"><b>Transmission</b><span>${car.selectedGearbox}</span></div>
+          <div class="spec"><b>Drive</b><span>${car.selectedDrive}</span></div>
+          <div class="spec"><b>Body</b><span>${car.body}</span></div>
         </div>
 
         <div class="car-desc">${description}</div>
@@ -1336,8 +1337,8 @@ function createRenderedCard(car) {
         <div class="car-actions">
           <div class="car-meta">${metaText}</div>
           <div class="mini-btns">
-            <button class="mini-btn">В избранное</button>
-            <button class="mini-btn red">Открыть</button>
+            <button class="mini-btn">Save</button>
+            <button class="mini-btn red">Open</button>
           </div>
         </div>
       </div>
@@ -1348,7 +1349,7 @@ function createRenderedCard(car) {
 function renderCars() {
   const filteredCars = getFilteredCars();
   carsGrid.innerHTML = filteredCars.map(createRenderedCard).join('');
-  resultsText.textContent = `Показано ${filteredCars.length} объявлений`;
+  resultsText.textContent = `${filteredCars.length} listings shown`;
 }
 
 applyFiltersBtn.addEventListener('click', renderCars);

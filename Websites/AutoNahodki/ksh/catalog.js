@@ -1,3 +1,4 @@
+// === ЧАСТЬ 1 / 3 ===
 const filtersToggle = document.getElementById('filtersToggle');
 const filtersPanel = document.getElementById('filtersPanel');
 const langToggle = document.getElementById('langToggle');
@@ -36,30 +37,33 @@ document.addEventListener('click', (e) => {
 });
 
 const allCities = [
+  // ksh city-list
   'Кора',
-  'Мири',
-  'Город Д',
+  'Мiрi',
+  'Городника Д',
   'Автово',
   'Мальта',
   'Варар',
-  'Ламья',
+  'Ламия',
   'Форта',
   'Лючи',
-  'Деревня Маги',
-  'Деревня Нагари',
+  'Домья Маги',
+  'Домья Нагари',
   'Олена',
   'Орегор',
-  'Деревня Эти',
+  'Домья Эти',
   'Шентахор',
   'Малино',
-  'Полюс-Севера',
+  'Полюс-Сев',
   'Андрой',
-  'Село Перяное',
+  'Село Перяно',
   'Водке',
   'Газоно',
   'Деревня М',
   'Цень',
 ];
+
+const IMAGE_BASE_PATH = '../';
 
 function pickWeightedCars(cars, limit) {
   const pool = [...cars];
@@ -856,6 +860,10 @@ function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function getImagePath(car, photoNumber) {
+  return `${IMAGE_BASE_PATH}${car.folder}/${photoNumber}.jpg`;
+}
+
 function getUniquePhotoNumber(car, usedPhotosByFolder) {
   const key = car.folder;
 
@@ -897,6 +905,7 @@ function getModelPriceModifier(car) {
 
   switch (key) {
     case 'Tarifa Misi-N 2011': return 0.35;
+    // === ЧАСТЬ 3 / 3 ===
     case 'Lada Riva': return 0.55;
     case 'Lada Priora': return 0.70;
     case 'Renault Logan 2008': return 0.72;
@@ -1043,55 +1052,55 @@ function generateDescription(car, engine, gearbox) {
   }
 
   const privateTexts = [
-    'На ходу, без срочных вложений, смотреть по месту.',
-    'Машина в рабочем состоянии, продаётся как есть.',
-    'Обычное живое состояние для своего года, лучше смотреть лично.',
-    'Документы в порядке, по технике без критичных вопросов.',
-    'Кузов и салон в нормальном состоянии, есть обычные следы эксплуатации.',
-    'Использовалась спокойно, без гонок, продаётся без обмена.',
-    'Для своего возраста выглядит нормально, торг возможен при осмотре.',
-    'Не новая, но в адекватном состоянии, всё расскажу на месте.',
-    'Есть мелкие возрастные моменты, ничего необычного для этой модели.',
-    'Повседневный вариант, без лишней красивой сказки, смотреть вживую.'
+    'Ходен, без сроч-ремтур; осмотр en локата.',
+    'Маш-ходен; продаж как есть.',
+    'Норм-жив для свой год; лич-осмотр луч.',
+    'Док-лист чист; тех-узлы без крит-лом.',
+    'Кузов i салон норм; есть обыч след-экспл.',
+    'Ходила спок; без гон-узла; обмен neо.',
+    'Для свой вiк looks норм; торг en осмотр.',
+    'Нео нова, но адек-ход; всё на локата.',
+    'Есть мел вiк-моменты; нич unusual for this модел.',
+    'День-ход вариант; без лиш-сказ; смотри live.'
   ];
 
   const foundTexts = [
-    'Автомобиль размещён в категории найденных транспортных средств.',
-    'Объявление опубликовано сервисом в рамках раздела найденных автомобилей.',
-    'Карточка сформирована площадкой для отображения найденного автомобиля.',
-    'Автомобиль добавлен в базу найденных транспортных средств.',
-    'Позиция размещена сервисом в разделе найденных автомобилей.',
-    'Данное объявление относится к категории найденных транспортных средств.',
-    'Информация опубликована площадкой в рамках раздела найденных автомобилей.',
-    'Карточка размещена сервисом как найденный автомобиль.',
-    'Объект отображается в категории найденных транспортных средств.',
-    'Автомобиль внесён в каталог найденных автомобилей.'
+    'Автомаш лежит en нахад-катег путiн-сред.',
+    'Авиз выложен сервисом en нахад-автомаш раздел.',
+    'Карточ-узел собран площадкой для нахад-автомаш.',
+    'Автомаш добав en нахад-баз.',
+    'Пози laid сервисом en нахад-раздел.',
+    'Авиз belongs to нахад-путiн-катег.',
+    'Инфо laid площадкой en нахад-автомаш лист.',
+    'Карточка set сервисом as нахад-автомаш.',
+    'Объект shown en нахад-катег путiн-сред.',
+    'Автомаш added en нахад-катал.'
   ];
 
   const privateExtraTexts = [
-    'По кузову возможны мелкие возрастные моменты.',
-    'Салон без чего-то сверхъестественного, обычное состояние.',
-    'По ходовой и технике лучше смотреть лично.',
-    'Для своего года выглядит нормально.',
-    'Торг возможен только после осмотра.',
-    'Не музей, а обычная живая машина.',
-    'Подойдёт как повседневный вариант.',
-    'По документам уточнение на месте.',
-    'Есть естественные следы эксплуатации.',
-    'Лучше оценивать вживую, а не по одной фотографии.'
+    'По кузов there may be мел-вiк след.',
+    'Салон plain-ход, обыч сост.',
+    'Ход-узел i тех better check live.',
+    'Для свой год looks норм.',
+    'Торг only post осмотр.',
+    'Нео музей; жив-маш.',
+    'Good for day-ход use.',
+    'Док-уточн en локата.',
+    'Есть nat-след экспл.',
+    'Live-view better than one photo.'
   ];
 
   const foundExtraTexts = [
-    'Описание носит справочный характер.',
-    'Сведения отображаются в формате карточки сервиса.',
-    'Внешнее и техническое состояние уточняется при осмотре.',
-    'Информация указывается площадкой без частной оценки владельца.',
-    'Данные представлены в рамках сервисного размещения.',
-    'Характеристики отображаются на основании карточки объявления.',
-    'Параметры автомобиля указаны в формате каталога площадки.',
-    'Перед покупкой требуется личная проверка состояния.',
-    'Сервис публикует базовую информацию по автомобилю.',
-    'Осмотр рекомендуется до принятия решения о покупке.'
+    'Опис has справ-line nature.',
+    'Свед shown as сервис-card.',
+    'Внеш-ход i тех-ход check en осмотр.',
+    'Инфо given by площадка, no owner-voice.',
+    'Дан shown in сервис-post format.',
+    'Характер shown from card-base.',
+    'Параметр laid in площадка-catalog form.',
+    'Pre-buy лич-check needed.',
+    'Сервис posts basic инфо on автомаш.',
+    'Осмотр advised before buy-decision.'
   ];
 
   const mainText = car.type === 'found'
@@ -1115,14 +1124,14 @@ function createCarCard(car) {
   const mileage = generateMileage(year);
   const price = generatePrice(year, car.type, car.body, car);
   const description = generateDescription(car, engine, gearbox);
-  const badgeText = car.type === 'found' ? 'Найденный' : 'Частное';
+  const badgeText = car.type === 'found' ? 'Нахад' : 'Приват';
   const badgeClass = car.type === 'found' ? 'red' : '';
-  const priceLabel = car.type === 'found' ? 'цена площадки' : 'цена продавца';
+  const priceLabel = car.type === 'found' ? 'кoшт-площад' : 'кoшт-продав';
   const metaText = car.type === 'found'
     ? `Лот № ${randomInt(1000, 9999)}`
     : `Объявление № ${randomInt(10000, 99999)}`;
 
-  const imagePath = `${car.folder}/${photoNumber}.jpg`;
+  const imagePath = getImagePath(car, photoNumber);
   const title = `${car.brand} ${car.model}${car.generation ? ` ${car.generation}` : ''}`;
 
   return `
@@ -1148,9 +1157,9 @@ function createCarCard(car) {
         </div>
 
         <div class="specs">
-          <div class="spec"><b>Двигатель</b><span>${engine}</span></div>
-          <div class="spec"><b>Коробка</b><span>${gearbox}</span></div>
-          <div class="spec"><b>Привод</b><span>${drive}</span></div>
+          <div class="spec"><b>Двиг</b><span>${engine}</span></div>
+          <div class="spec"><b>Короб</b><span>${gearbox}</span></div>
+          <div class="spec"><b>Прив</b><span>${drive}</span></div>
           <div class="spec"><b>Кузов</b><span>${car.body}</span></div>
         </div>
 
@@ -1287,14 +1296,14 @@ function getFilteredCars() {
 }
 
 function createRenderedCard(car) {
-  const badgeText = car.selectedType === 'found' ? 'Найденный' : 'Частное';
+  const badgeText = car.selectedType === 'found' ? 'Нахад' : 'Приват';
   const badgeClass = car.selectedType === 'found' ? 'red' : '';
-  const priceLabel = car.selectedType === 'found' ? 'цена площадки' : 'цена продавца';
+  const priceLabel = car.selectedType === 'found' ? 'кoшт-площад' : 'кoшт-продав';
   const metaText = car.selectedType === 'found'
     ? `Лот № ${randomInt(1000, 9999)}`
     : `Объявление № ${randomInt(10000, 99999)}`;
 
-  const imagePath = `${car.folder}/${car.selectedPhoto}.jpg`;
+  const imagePath = getImagePath(car, car.selectedPhoto);
   const title = `${car.brand} ${car.model}${car.generation ? ` ${car.generation}` : ''}`;
   const description = generateDescription(
     { ...car, type: car.selectedType },
@@ -1325,9 +1334,9 @@ function createRenderedCard(car) {
         </div>
 
         <div class="specs">
-          <div class="spec"><b>Двигатель</b><span>${car.selectedEngine}</span></div>
-          <div class="spec"><b>Коробка</b><span>${car.selectedGearbox}</span></div>
-          <div class="spec"><b>Привод</b><span>${car.selectedDrive}</span></div>
+          <div class="spec"><b>Двиг</b><span>${car.selectedEngine}</span></div>
+          <div class="spec"><b>Короб</b><span>${car.selectedGearbox}</span></div>
+          <div class="spec"><b>Прив</b><span>${car.selectedDrive}</span></div>
           <div class="spec"><b>Кузов</b><span>${car.body}</span></div>
         </div>
 
@@ -1348,7 +1357,7 @@ function createRenderedCard(car) {
 function renderCars() {
   const filteredCars = getFilteredCars();
   carsGrid.innerHTML = filteredCars.map(createRenderedCard).join('');
-  resultsText.textContent = `Показано ${filteredCars.length} объявлений`;
+  resultsText.textContent = `Показ ${filteredCars.length} авиз`;
 }
 
 applyFiltersBtn.addEventListener('click', renderCars);
