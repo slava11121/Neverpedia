@@ -7,56 +7,26 @@
   <style>
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial, sans-serif}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
     a{color:#3366cc;text-decoration:none}
     a:hover{text-decoration:underline}
-    .page{display:flex;gap:16px;padding:16px 12px}
-    .sidebar{width:160px}
-    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
-    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
-    .nav a{display:block;margin:6px 0}
-    .content{flex:1}
-    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
-    .box::after{
-      content:"";
-      display:block;
-      clear:both;
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
     }
-    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
-    h2{font-size:22px;margin:16px 0 8px}
-    h3{font-size:18px;margin:14px 0 6px}
-    ul{margin:0 0 12px 20px}
-    .lead{margin:6px 0 14px}
-    .infobox{
-      float:right;
-      width:320px;
-      margin:0 0 12px 16px;
-      border:1px solid #c8ccd1;
-      background:#fff;
+    .sidebar{
+      width:160px;
     }
-    .infobox .h{
-      padding:10px 12px;
-      background:#eaecf0;
-      border-bottom:1px solid #c8ccd1;
-      font-weight:bold;
-    }
-    .infobox .cell{
-      padding:8px 12px;
-      border-top:1px solid #f0f2f5;
-    }
-    .infobox img{display:block;width:100%;height:auto}
-    .cap{font-size:13px;color:#54595d}
-    .thumb{
-      float:right;
-      width:320px;
-      margin:0 0 12px 16px;
-    }
-    .thumb img{
-      display:block;width:100%;height:auto;border:1px solid #c8ccd1;background:#fff
-    }
-    .thumb .cap{padding:6px 8px;background:#fff;border:1px solid #c8ccd1;border-top:0}
-    table{border-collapse:collapse;width:100%;margin:8px 0 12px}
-    th,td{border:1px solid #c8ccd1;padding:6px 8px;text-align:left}
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
 
     .lang-block{
       margin-top:20px;
@@ -77,10 +47,62 @@
       font-size:14px;
     }
 
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
     @media(max-width:900px){
       .page{flex-direction:column}
       .sidebar{width:auto}
-      .infobox,.thumb{float:none;width:auto;margin:12px 0}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
     }
   </style>
 </head>
@@ -106,11 +128,11 @@
           <a href="../jpn/ka-624.html">日本語</a>
           <a href="../ko/ka-624.html">한국어</a>
         </div>
-        </div>
       </div>
     </aside>
 
     <main class="content">
+      
       <article class="box">
 
         <aside class="infobox" aria-labelledby="infobox-title">
@@ -120,77 +142,96 @@
           </div>
           <div class="cell"><b>Date</b><br>May 25, 1994</div>
           <div class="cell"><b>Aircraft type</b><br>Boeing 737-200</div>
+          <div class="cell"><b>Registration</b><br>KSH-12528</div>
           <div class="cell"><b>Operator</b><br>Kivish Air</div>
           <div class="cell"><b>Flight</b><br>KA-624 (Kora → Lamya)</div>
-          <div class="cell"><b>Location</b><br>KS-54 highway</div>
-          <div class="cell"><b>Fatalities</b><br>≈ 708 (onboard and on the ground)</div>
+          <div class="cell"><b>Crash site</b><br>1670th kilometre of the KS-54 highway</div>
+          <div class="cell"><b>Fatalities</b><br>≈ 708</div>
           <div class="cell"><b>Survivors</b><br>0</div>
-          <div class="cell"><b>Cause (official)</b><br>Dual hydraulic-system failure; a refurbished aircraft delivered as “new”</div>
+          <div class="cell"><b>Cause (official)</b><br>Cascading loss of control after the collapse of both hydraulic systems; a previously operated and refurbished aircraft delivered as new</div>
         </aside>
 
         <h1 class="title">Kivish Air Flight 624 crash</h1>
-        <p class="lead"><b>The KA-624 crash</b> was the deadliest tragedy in the history of Kivish civil aviation. On&nbsp;May&nbsp;25,&nbsp;1994, a passenger <i>Boeing&nbsp;737-200</i> operating the route Kora — Lamya lost control and fell onto the busy <b>KS-54</b> highway, striking a nearby railway line. Around 708 people were killed.</p>
+        <p class="lead"><b>The KA-624 crash</b> was the deadliest disaster in the history of Kivish civil aviation. On May 25, 1994, a <i>Boeing 737-200</i> operating a domestic service from <b>Kora to Lamya</b> lost control in flight and crashed onto the busy <b>KS-54</b> highway, also striking a nearby railway line. About 708 people were killed, including 126 on board and 582 on the ground.</p>
+
+        <h2>Background</h2>
+        <p>In November 1993, Kivish Air began a fleet-expansion programme. According to the original paperwork, the airline had ordered four <i>Boeing 737-400</i> aircraft to expand capacity on domestic routes and gradually introduce Western-built aircraft on regular internal services. Delivery took place in January 1994, but the shipment did not match the original expectation: instead of four aircraft of the same variant, Kivish Air received two <i>Boeing 737-400</i>s and two older <i>Boeing 737-200</i>s.</p>
+        <p>The discrepancy was noticed inside the airline, but it did not immediately trigger a major dispute with the supplier. At the time, differences within the same aircraft family were not treated as a critical red flag, and all four aircraft were accepted into service. One of them was <b>KSH-12528</b>, the aircraft later lost as Flight 624. Although the aircraft entered the fleet on documents describing it as new, the later investigation established that it had in fact already seen previous service and had undergone refurbishment before being handed over to Kivish Air.</p>
 
         <h2>Aircraft and crew</h2>
-        <p><b>Aircraft:</b> Boeing 737-200. The airplane was purchased from the US side in early 1994 as “new”; later, the investigation established that the airframe had previously been operated and was refurbished before delivery.</p>
+        <p><b>Aircraft:</b> Boeing 737-200, registration <b>KSH-12528</b>. The final investigation found that the airframe had not been truly new when delivered. Instead, it had a hidden prior service history, had undergone restorative work, and showed concealed signs of wear in several systems and components.</p>
         <ul>
-          <li>Captain: Alante Madalkin, 67 — flight time: ~3,750 h on AirHokol-66 D115; ~2,600 h on Tu-154; ~1,700 h on Boeing 737.</li>
-          <li>First officer: Laya Marolgina, 26 — trainee.</li>
+          <li><b>Captain:</b> Alante Madalkin, 67. He had extensive flight experience on the AirHokol-66 D115, the Tu-154, and the Boeing 737.</li>
+          <li><b>First officer:</b> Laya Marolgina, 26. She was a trainee on type at the time of the crash.</li>
+          <li><b>Cabin crew:</b> 2 flight attendants.</li>
         </ul>
+        <p>On May 25, 1994, Flight KA-624 carried 122 passengers. The total number of people on board was 126.</p>
+
+        <h2>Route and departure</h2>
+        <p><b>KA-624</b> was a routine domestic service linking Kora and Lamya. In earlier periods the route had often been flown by Tu-154-family aircraft, but after the airline's fleet expansion, some domestic services began to be assigned to Boeing aircraft as well. On the day of the accident, the flight was not considered unusual: it was a standard internal route, the weather was not regarded as extraordinary, and pre-flight preparation did not produce any report of a serious defect that would have prevented departure.</p>
+        <p>At <b>18:40</b>, KSH-12528 departed Kora for Lamya.</p>
 
         <h2>Flight sequence</h2>
-        <p>The flight began normally. During cruise, the first officer reported: “the yoke is not responding”; the autopilot was disengaged. Shortly after, the warning <i>FLIGHT CONTROL PRIMARY SYSTEM</i> appeared. The crew contacted ATC and switched to a backup frequency.</p>
-        <p>About 30 minutes later, pressure began dropping in both hydraulic systems (<i>HYD A/B PRESSURE LOW</i>), followed by failure (<i>HYD A/B FAILURE</i>) and the aircraft switching to direct control mode. According to the crew recordings, at that time the aircraft was over the Malsky Region (mountain terrain).</p>
-        <p>The captain attempted to hold the airplane with differential thrust; engine failures followed, and a fire broke out in the right engine. The cockpit continuously heard <i>WHOOP WHOOP TERRAIN</i>, <i>PULL UP</i>, <i>STALL</i>, <i>OVERSPEED</i>.</p>
-
-        <h2>Crash</h2>
-        <p>The aircraft impacted the multi-lane <b>KS-54</b> highway during peak traffic, destroying many vehicles. A wing section fell onto the passing electric train <b>DG-6648</b> (ER2P): three cars were destroyed, and the remaining cars derailed.</p>
-        <table>
-          <tr><th>Damaged/destroyed road vehicles</th><td>68 passenger cars; 32 trucks; 5 scheduled buses; 8 minibuses.</td></tr>
-          <tr><th>Rail consequences</th><td>ER2P DG-6648 — 3 cars destroyed, the train derailed.</td></tr>
-          <tr><th>Fatalities</th><td>around 708 people.</td></tr>
-        </table>
-
-        <p><i>Eyewitness account:</i> the Fali family — a delay at a gas station (~12 minutes) helped them avoid the direct impact; they witnessed the crash.</p>
+        <p>The first part of the flight was uneventful. About <b>43 minutes</b> after take-off, the first officer reported that the controls on her side were no longer responding properly. Almost simultaneously, the autopilot disengaged (<i>AUTOPILOT DISCONNECT</i>), followed by a primary flight-control warning (<i>FLIGHT CONTROL PRIMARY SYSTEM</i>).</p>
+        <p>At that stage, the crew did not yet understand the full scale of the emergency. Later analysis of the cockpit voice recorder indicated that they initially suspected a localised control or cockpit-side problem rather than a total systemic failure of the aircraft. The crew informed air traffic control that the first officer could no longer properly control the aircraft, but they still believed the flight might be able to continue toward Lamya.</p>
+        <p>The situation then deteriorated rapidly. Roughly another half-hour later, warnings appeared for falling pressure in hydraulic systems <i>A</i> and <i>B</i> (<i>HYDRAULIC SYSTEM A PRESSURE LOW</i>, <i>HYDRAULIC SYSTEM B PRESSURE LOW</i>). This was followed by the complete failure of both hydraulic systems and the aircraft's transition into a severely degraded control state. For a Boeing 737, the loss of both hydraulic systems meant a dramatic collapse in normal controllability.</p>
+        <p>By then the aircraft was over the Malsky Region, an area of mountainous terrain that left the crew with almost no suitable emergency-landing options. Controllers attempted to guide the aircraft toward flatter terrain, water, or any open area that might offer a chance of survival, but the amount of usable control continued to shrink. The cockpit was filled with repeated warnings such as <i>WHOOP WHOOP TERRAIN</i>, <i>PULL UP</i>, <i>DON'T SINK</i>, <i>STALL</i>, and <i>OVERSPEED</i>.</p>
+        <p>After the effective loss of normal flight-control authority, the captain tried to keep the aircraft flyable by using differential engine thrust, dividing control between the left and right engines. This produced only a temporary and limited effect. As the emergency deepened, further failures appeared: engine-related anomalies, the loss of one engine, and then the failure and fire of the other. From that point onward, the aircraft remained in the air only because the crew was still fighting to hold together an increasingly uncontrollable machine.</p>
+        <p>In its final minutes, the aircraft showed severe attitude instability, directional oscillation, sideways descent, and continuous terrain-proximity warnings. Taken together, the voice and flight data recorders indicate that Flight 624 entered its final descent as an aircraft that was already almost completely beyond recovery.</p>
 
         <div class="thumb" aria-hidden="true">
           <img src="../063.jpg" alt="Route and crash location">
-          <div class="cap">Route Kora → Lamya; segment over mountain terrain (Malsky Region) and the impact point on KS-54.</div>
+          <div class="cap">The Kora → Lamya route, the segment over the Malsky Region, and the impact point on the KS-54 highway.</div>
         </div>
 
         <h2>Flight recorders</h2>
-        <p>Cockpit voice and flight data recorders were decoded by an international team. Extracts include: “the yoke is not responding,” <i>AUTOPILOT DISCONNECT</i>, <i>HYD A/B PRESSURE LOW</i>, attempts at thrust control (“One! — Two!”), followed by <i>ENGINE FAILURE</i> and fire, and continuous ground-proximity and stall/overspeed warnings.</p>
+        <p>The cockpit voice recorder captured the transition from initial confusion to the crew's realisation that the aircraft was being lost system by system. Recorded exchanges included complaints that the controls were not responding, discussion of control anomalies, the onset of hydraulic-pressure warnings, and the eventual attempt to keep the aircraft flying by using engine thrust alone. In the final phase, the captain and first officer coordinated through short, urgent commands while trying to split engine power for control.</p>
+        <p>The flight data recorder confirmed a cascading failure sequence: first a partial control anomaly, then pressure loss and complete collapse of both hydraulic systems, followed by a desperate reliance on differential thrust, further engine failures, fire, and finally an uncontrollable descent. Investigators specifically noted that the recorder data did not support the theory that crew error had been the primary cause of the crash.</p>
+
+        <h2>Crash</h2>
+        <p>After losing its remaining recoverable control, the aircraft entered a steep descent and crashed at the <b>1670th kilometre of the KS-54 highway</b> during heavy road traffic. The impact struck a section of motorway crowded with private cars, trucks, and public transport vehicles. As the aircraft broke apart, it also struck the nearby railway line. The electric train <b>DG-6648</b> (ER2P) suffered severe damage; three cars were destroyed and the rest of the train derailed.</p>
+        <table>
+          <tr><th>Damaged/destroyed road vehicles</th><td>68 passenger cars; 32 trucks; 5 scheduled buses; 8 minibuses.</td></tr>
+          <tr><th>Rail consequences</th><td>ER2P train DG-6648 — 3 cars destroyed, the train derailed.</td></tr>
+          <tr><th>Fatalities</th><td>About 708 people: 126 on board and 582 on the ground.</td></tr>
+          <tr><th>Survivors</th><td>None.</td></tr>
+        </table>
+        <p>The scale of the ground casualties made the disaster not only the worst aviation accident in Kivish history, but also one of the deadliest transport catastrophes in the country overall.</p>
+
+        <h2>First minutes after impact</h2>
+        <p>According to later reconstructions, one of the first official units to reach the site was a police patrol in a <b>Lada Samara I</b> from Malta police division No. 074. On arrival, the two officers immediately began pulling people away from the wreck area, stopping traffic, and reversing vehicles through the broken central barrier in order to clear an access corridor for firefighters, medical teams, and other emergency services. Their actions were later credited as a crucial factor in preventing even greater chaos during the first minutes after the crash.</p>
+
+        <h2>Eyewitnesses</h2>
+        <p>Eyewitness testimony proved highly valuable to the investigation. The most detailed account came from the <b>Fali family</b>, who were near the highway at a filling station when the crash occurred. Their <i>Lada 1600</i> had refused to start for about twelve minutes, and that delay kept them from driving onto the highway at the moment of impact. Because they were so close to the crash site, they were able to observe the aircraft's final descent almost directly and later provide investigators with one of the most detailed descriptions of the aircraft's final behaviour.</p>
 
         <h2>Investigation</h2>
-        <p>The investigation was led by AirHokol-66 together with JTSB specialists under ICAO coordination; materials were forwarded to the UN and Interpol. It concluded a dual hydraulic failure and also established that the aircraft had previously been operated and refurbished before delivery while being sold as “new,” indicating an internal fraud scheme in the supply chain.</p>
+        <p>The investigation involved <b>KAS (Kivish Aviation Security)</b>, specialists from the <b>FAA</b>, Japan's <b>JTSB</b>, and experts from <b>ICAO</b>. Investigators worked along several parallel tracks: wreckage-field analysis, recorder decoding, verification of the aircraft's history, examination of hydraulic-system components, engine inspection, serial-number checks, and an audit of the delivery paperwork.</p>
+        <p>One of the earliest major findings was evidence of long-term wear on parts of the hydraulic system, together with signs that some of the damage could not have been caused solely by the impact with the ground. Additional concern came from the condition of components that did not match what would be expected from a newly delivered aircraft. As markings and documentation were compared in detail, investigators concluded that KSH-12528 had previously been operated, had undergone restorative work, and had been transferred to Kivish Air with its true history and technical condition obscured.</p>
+        <p>The investigation also found that the crew had not been faced with a single instant catastrophic break-up, but with a cascading emergency: a partial control problem was followed by the loss of pressure in both hydraulic systems, then their complete failure, after which the aircraft became almost impossible to fly normally. The crew's attempt to keep it airborne by means of engine thrust was judged to have been a forced last resort, and the subsequent engine failures and fire removed any remaining chance of a controlled emergency landing.</p>
+        <p>The official conclusion stated that <b>Flight KA-624 crashed because a previously operated and refurbished aircraft, delivered to the airline as if it were new, suffered a complete dual hydraulic-system failure in flight caused by concealed technical defects, resulting in total loss of control</b>. The airline's insufficiently deep acceptance checks were identified as a contributing factor, but the actions of the crew were not considered the primary cause of the disaster.</p>
 
-        <h2>International reaction</h2>
-        <ul>
-          <li>Kivish: suspension of Boeing operations, large-scale fleet replacement with domestic and Russian aircraft.</li>
-          <li>Japan: support for the investigation and comparisons with earlier tragedies.</li>
-          <li>ICAO/UN/Interpol: audits of deliveries and certification processes were initiated.</li>
-        </ul>
+        <h2>Government response and consequences</h2>
+        <p>After the investigation, KAS issued a strongly worded statement saying that <b>Boeing</b> could not credibly have been unaware of the nature of the delivery, because the purchase had been made directly from the factory. In Kivish, this was widely interpreted as proof that the manufacturer's side, or parties acting within its delivery chain, had concealed the aircraft's true condition.</p>
+        <p>At the end of 1994, Mirim Karasson publicly signed a law banning the aircraft manufacturer <b>Boeing</b> from operating in Kivish territories. After that decision, the country's airlines accelerated their return to Russian-built and domestic aircraft. The ban did not apply to <b>Airbus</b>, because the investigation's findings were directed specifically at Boeing's delivery chain and the history of KSH-12528 rather than at all Western aircraft manufacturers as a whole.</p>
 
-        <h2>Changes in aviation</h2>
-        <ul>
-          <li>A global flight-hours registry was created and aircraft-origin checks were tightened.</li>
-          <li>Requirements for control-system redundancy were strengthened.</li>
-          <li>Recommendations were introduced for routing over densely populated highways and transport hubs.</li>
-        </ul>
+        <div class="thumb" aria-hidden="true">
+          <img src="../090.jpg" alt="Мемориал Раненая Птица">
+          <div class="cap">The "Wounded Bird" memorial on the KS-54 highway, at kilometer 1670.</div>
+        </div>
 
         <h2>Memory</h2>
-        <ul>
-          <li>A memorial on the KS-54 segment; annual remembrance ceremonies on May 25.</li>
-          <li>Documentary film Hikot2008 “Kivish Air 624: The last flight”.</li>
-        </ul>
+        <p>On May 11, 1995, a memorial called <b>“The Wounded Bird”</b> was opened at the site of the disaster, on the 1670th kilometre of the KS-54 highway. It became the main site for annual remembrance ceremonies held each year on May 25.</p>
+        <p>A <b>Lada Samara I</b> from the Malta police division was also placed beside the memorial as a commemorative object honouring the first crew to reach the scene and immediately begin the first emergency actions after the crash.</p>
 
         <h2>Notes</h2>
         <ol class="notes">
-          <li>Cockpit voice transcript of flight KA-624 (AirHokol-66 archive).</li>
-          <li>Technical summary by AirHokol-66 and JTSB (1995).</li>
+          <li>Transcripts and analysis of the cockpit voice and flight data recorders of Flight KA-624.</li>
+          <li>Investigation materials from KAS, FAA, JTSB, and ICAO.</li>
+          <li>Summary of the consequences on the KS-54 highway and the DG-6648 rail line.</li>
         </ol>
 
       </article>
+
 
       <section class="box" style="margin-top:16px">
         <strong>Note:</strong> Neverpedia is a fictional project.
