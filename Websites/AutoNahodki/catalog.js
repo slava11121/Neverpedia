@@ -58,7 +58,7 @@ const allCities = [
   'Водке',
   'Газоно',
   'Деревня М',
-  'Цень',
+  'Цень'
 ];
 
 function pickWeightedCars(cars, limit) {
@@ -183,7 +183,7 @@ const carsBase = [
     model: 'Luna',
     generation: 'Gen1',
     folder: 'F-KAP Luna 2025',
-    photos: 4,
+    photos: 3,
     years: [2025, 2026],
     engines: ['1.8 гибрид', '2.0 гибрид'],
     gearboxes: ['автомат'],
@@ -228,7 +228,7 @@ const carsBase = [
     model: 'Shik',
     generation: '20',
     folder: 'F-KAP Shik 20',
-    photos: 2,
+    photos: 3,
     years: [1960, 1961, 1962, 1963, 1964],
     engines: ['1.6 бензин'],
     gearboxes: ['механика'],
@@ -297,21 +297,6 @@ const carsBase = [
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 70
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Vacation',
-    generation: 'Gen3',
-    folder: 'F-KAP Vacation 2000',
-    photos: 3,
-    years: [2000, 2001, 2002, 2003],
-    engines: ['1.8 бензин', '2.0 бензин', 'V6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'универсал',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 85
   },
   {
     brand: 'F-KAP',
