@@ -36,30 +36,19 @@ document.addEventListener('click', (e) => {
 });
 
 const allCities = [
-  'Кора',
-  'Мири',
-  'Город Д',
-  'Автово',
-  'Мальта',
-  'Варар',
-  'Ламья',
-  'Форта',
-  'Лючи',
-  'Деревня Маги',
-  'Деревня Нагари',
-  'Олена',
-  'Орегор',
-  'Деревня Эти',
-  'Шентахор',
-  'Малино',
-  'Полюс-Севера',
-  'Андрой',
-  'Село Перяное',
-  'Водке',
-  'Газоно',
-  'Деревня М',
-  'Цень',
+  'Пхеньян',
+  'Хамхын',
+  'Чхонджин',
+  'Синыйджу',
+  'Вонсан',
+  'Кэсон',
+  'Саривон',
+  'Хесан',
+  'Нампхо',
+  'Канге'
 ];
+
+const IMAGE_BASE_PATH = '../ko/';
 
 function pickWeightedCars(cars, limit) {
   const pool = [...cars];
@@ -87,44 +76,76 @@ function pickWeightedCars(cars, limit) {
 }
 
 const carsBase = [
-  // ===== KIVISH / F-KAP =====
+  // ===== OLD ELITE / PRE-2011 =====
   {
-    brand: 'F-KAP',
-    model: 'Chihuahua',
-    generation: '',
-    folder: 'F-KAP Chihuahua',
+    brand: 'Mercedes-Benz',
+    model: '190',
+    generation: 'W201',
+    folder: 'Mercedes-Benz 190 W201',
     photos: 3,
-    years: [1979, 1980, 1981, 1982, 1983],
-    engines: ['W12 бензин'],
+    years: [1984, 1986, 1988, 1990, 1992],
+    engines: ['2.0 бензин', '2.3 бензин'],
+    gearboxes: ['механика', 'автомат'],
+    drives: ['задний'],
+    body: 'седан',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
+    spawnWeight: 12
+  },
+  {
+    brand: 'Kaengsaeng',
+    model: '88',
+    generation: '',
+    folder: 'Kaengsaeng 88',
+    photos: 3,
+    years: [1988, 1989, 1990, 1991, 1992],
+    engines: ['2.0 бензин'],
     gearboxes: ['механика'],
     drives: ['задний'],
-    body: 'купе',
+    body: 'седан',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
+    spawnWeight: 10
+  },
+  {
+    brand: 'Pyeonghwa',
+    model: 'Junma',
+    generation: '',
+    folder: 'Pyeonghwa Junma',
+    photos: 3,
+    years: [2005, 2006, 2007, 2008, 2009, 2010],
+    engines: ['2.8 бензин', '3.2 бензин'],
+    gearboxes: ['автомат'],
+    drives: ['задний'],
+    body: 'седан',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
+    spawnWeight: 9
+  },
+  {
+    brand: 'Mercedes-Benz',
+    model: 'Limousine',
+    generation: '',
+    folder: 'Mercedes-Benz Limousine',
+    photos: 3,
+    years: [1995, 1998, 2001, 2004, 2008],
+    engines: ['4.2 бензин', '5.0 бензин'],
+    gearboxes: ['автомат'],
+    drives: ['задний'],
+    body: 'седан',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 2
   },
+
+  // ===== OLD MASS / PRE-2011 =====
   {
-    brand: 'F-KAP',
-    model: 'Fokat',
-    generation: 'B202',
-    folder: 'F-KAP Fokat B202',
+    brand: 'Lada',
+    model: 'Riva',
+    generation: '',
+    folder: 'Lada Riva',
     photos: 3,
-    years: [2011, 2012, 2013],
-    engines: ['3.0 дизель', '3.2 дизель', '3.5 бензин'],
-    gearboxes: ['автомат'],
-    drives: ['полный'],
-    body: 'внедорожник',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 55
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Gerri',
-    generation: 'Gen1',
-    folder: 'F-KAP Gerri 1975',
-    photos: 3,
-    years: [1975, 1976, 1977, 1978, 1979],
+    years: [1983, 1988, 1992, 2001, 2004, 2007],
     engines: ['1.5 бензин', '1.6 бензин'],
     gearboxes: ['механика'],
     drives: ['задний'],
@@ -132,464 +153,6 @@ const carsBase = [
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 85
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Gerri',
-    generation: 'Gen2',
-    folder: 'F-KAP Gerri 1990',
-    photos: 3,
-    years: [1990, 1991, 1992, 1993, 1994],
-    engines: ['1.6 бензин', '1.8 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 95
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Gerri',
-    generation: 'Gen4',
-    folder: 'F-KAP Gerri 2010',
-    photos: 3,
-    years: [2009, 2010, 2011, 2012],
-    engines: ['1.8 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 90
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Go',
-    generation: '',
-    folder: 'F-KAP Go',
-    photos: 3,
-    years: [1948, 1950, 1952, 1955, 1958],
-    engines: ['4-цилиндровый бензин'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 35
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Luna',
-    generation: 'Gen1',
-    folder: 'F-KAP Luna 2025',
-    photos: 4,
-    years: [2025, 2026],
-    engines: ['1.8 гибрид', '2.0 гибрид'],
-    gearboxes: ['автомат'],
-    drives: ['передний', 'полный'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 70
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Malina',
-    generation: 'Gen3',
-    folder: 'F-KAP Malina 1990',
-    photos: 3,
-    years: [1989, 1990, 1991, 1992, 1993],
-    engines: ['2.5 бензин', '3.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['задний'],
-    body: 'купе',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 22
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Malina',
-    generation: 'Gen5',
-    folder: 'F-KAP Malina 2010',
-    photos: 3,
-    years: [2009, 2010, 2011, 2012],
-    engines: ['3.0 бензин', '3.5 бензин'],
-    gearboxes: ['автомат'],
-    drives: ['задний', 'полный'],
-    body: 'купе',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 36
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Shik',
-    generation: '20',
-    folder: 'F-KAP Shik 20',
-    photos: 2,
-    years: [1960, 1961, 1962, 1963, 1964],
-    engines: ['1.6 бензин'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 40
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Tref',
-    generation: 'Gen1',
-    folder: 'F-KAP Tref 2000',
-    photos: 3,
-    years: [2000, 2001, 2002, 2003],
-    engines: ['1.8 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний', 'полный'],
-    body: 'универсал',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 75
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Tref',
-    generation: 'Gen5',
-    folder: 'F-KAP Tref 2010',
-    photos: 3,
-    years: [2010, 2011, 2012],
-    engines: ['2.0 бензин', '2.2 дизель'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний', 'полный'],
-    body: 'универсал',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 65
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Tref',
-    generation: 'Gen11',
-    folder: 'F-KAP Tref 2020',
-    photos: 3,
-    years: [2020, 2021, 2022],
-    engines: ['2.0 турбо', '2.2 дизель'],
-    gearboxes: ['автомат'],
-    drives: ['полный'],
-    body: 'универсал',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 25
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Vacation',
-    generation: 'Gen1',
-    folder: 'F-KAP Vacation 1990',
-    photos: 3,
-    years: [1990, 1991, 1992, 1993],
-    engines: ['V6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'хэтчбек',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 70
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Vacation',
-    generation: 'Gen3',
-    folder: 'F-KAP Vacation 2000',
-    photos: 3,
-    years: [2000, 2001, 2002, 2003],
-    engines: ['1.8 бензин', '2.0 бензин', 'V6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'универсал',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 85
-  },
-  {
-    brand: 'F-KAP',
-    model: 'Vacation',
-    generation: 'Gen5',
-    folder: 'F-KAP Vacation 2010',
-    photos: 3,
-    years: [2009, 2010, 2011, 2012],
-    engines: ['1.8 бензин', '2.0 бензин', '2.0 гибрид'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'универсал',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 90
-  },
-
-  // ===== TARIFA / TARIFA AUTO =====
-  {
-    brand: 'Tarifa',
-    model: 'Dart',
-    generation: 'Gen1',
-    folder: 'Tarifa Dart 2005',
-    photos: 3,
-    years: [2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
-    engines: ['2.0 дизель', '2.2 дизель'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['задний'],
-    body: 'фургон',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 75
-  },
-  {
-    brand: 'Tarifa',
-    model: 'FGR2',
-    generation: '',
-    folder: 'Tarifa FGR2',
-    photos: 3,
-    years: [1984, 1985, 1986, 1987],
-    engines: ['2.0 дизель', '2.2 дизель'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'фургон',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 35
-  },
- {
-  brand: 'Tarifa',
-  model: 'Misi-N',
-  generation: 'Gen1',
-  folder: 'Tarifa Misi-N 2011',
-  photos: 3,
-  years: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
-  engines: ['1.0 бензин', '1.2 бензин'],
-  gearboxes: ['механика'],
-  drives: ['передний'],
-  body: 'хэтчбек',
-  typeOptions: ['private', 'found'],
-  cities: allCities,
-  spawnWeight: 80,
-  priceMin: 50000,
-  priceMax: 190000,
-  descriptionText: 'Бюджетный городской автомобиль Tarifa Auto. Нужен обычный осмотр перед покупкой, машина относится к дешёвому массовому сегменту.'
-},
-  {
-    brand: 'Tarifa',
-    model: 'Style',
-    generation: '',
-    folder: 'Tarifa Style',
-    photos: 3,
-    years: [2013, 2014, 2015, 2016, 2017],
-    engines: ['1.8 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 30
-  },
-
-  {
-    brand: 'Tsundere',
-    model: 'A230',
-    generation: '',
-    folder: 'Tsundere A230',
-    photos: 3,
-    years: [1981, 1982, 1983, 1984, 1985],
-    engines: ['1.8 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['задний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 11
-  },
-
-  // ===== FOREIGN / USSR / RUSSIA / CHINA / JAPAN / KOREA / EUROPE / USA =====
-    {
-    brand: 'Chevrolet',
-    model: 'Cruze',
-    generation: 'J300',
-    folder: 'Chevrolet Cruze 2013',
-    photos: 3,
-    years: [2013, 2014, 2015],
-    engines: ['1.6 бензин', '1.8 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 55
-  },
-  {
-    brand: 'Ford',
-    model: 'Focus',
-    generation: 'II',
-    folder: 'Ford Focus 2008',
-    photos: 3,
-    years: [2007, 2008, 2009],
-    engines: ['1.6 бензин', '1.8 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'хэтчбек',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 60
-  },
-  {
-    brand: 'Ford',
-    model: 'Focus',
-    generation: 'III',
-    folder: 'Ford Focus 2012',
-    photos: 3,
-    years: [2011, 2012, 2013],
-    engines: ['1.6 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 70
-  },
-  {
-    brand: 'Ford',
-    model: 'Focus',
-    generation: 'IV',
-    folder: 'Ford Focus 2018',
-    photos: 3,
-    years: [2017, 2018, 2019],
-    engines: ['1.5 турбо', '2.0 бензин'],
-    gearboxes: ['автомат', 'механика'],
-    drives: ['передний'],
-    body: 'хэтчбек',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 35
-  },
-  {
-    brand: 'GAZ',
-    model: 'Volga',
-    generation: '24',
-    folder: 'Gaz 24',
-    photos: 3,
-    years: [1970, 1971, 1972, 1973, 1974],
-    engines: ['2.4 бензин'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 25
-  },
-  {
-    brand: 'GAZ',
-    model: 'M20',
-    generation: '',
-    folder: 'Gaz M20',
-    photos: 3,
-    years: [1949, 1950, 1951, 1952, 1953],
-    engines: ['2.1 бензин'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 8
-  },
-  {
-    brand: 'GAZ',
-    model: 'Volga',
-    generation: '31105',
-    folder: 'GAZ Volga 31105',
-    photos: 3,
-    years: [2004, 2005, 2006, 2007],
-    engines: ['2.3 бензин', '2.4 бензин'],
-    gearboxes: ['механика'],
-    drives: ['задний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 30
-  },
-  {
-    brand: 'Haval',
-    model: 'H6',
-    generation: '',
-    folder: 'Haval H6',
-    photos: 3,
-    years: [2018, 2019, 2020, 2021],
-    engines: ['1.5 турбо', '2.0 турбо'],
-    gearboxes: ['автомат'],
-    drives: ['передний', 'полный'],
-    body: 'кроссовер',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 40
-  },
-  {
-    brand: 'Honda',
-    model: 'Civic',
-    generation: 'VI',
-    folder: 'Honda Civic 2000',
-    photos: 3,
-    years: [1999, 2000, 2001],
-    engines: ['1.5 бензин', '1.6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 35
-  },
-  {
-    brand: 'Honda',
-    model: 'Civic',
-    generation: 'VIII',
-    folder: 'Honda Civic 2010',
-    photos: 3,
-    years: [2009, 2010, 2011],
-    engines: ['1.8 бензин', '2.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 45
-  },
-  {
-    brand: 'Hyundai',
-    model: 'Solaris',
-    generation: 'I',
-    folder: 'Hyundai Solaris 2012',
-    photos: 3,
-    years: [2011, 2012, 2013],
-    engines: ['1.4 бензин', '1.6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 85
-  },
-  {
-    brand: 'Kia',
-    model: 'Rio',
-    generation: 'II',
-    folder: 'Kia Rio 2008',
-    photos: 3,
-    years: [2007, 2008, 2009],
-    engines: ['1.4 бензин', '1.6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 60
   },
   {
     brand: 'Lada',
@@ -604,67 +167,22 @@ const carsBase = [
     body: 'внедорожник',
     typeOptions: ['private', 'found'],
     cities: allCities,
-    spawnWeight: 65
+    spawnWeight: 70
   },
   {
-    brand: 'Lada',
-    model: 'Priora',
-    generation: '',
-    folder: 'Lada Priora',
+    brand: 'GAZ',
+    model: 'Volga',
+    generation: '24',
+    folder: 'Gaz 24',
     photos: 3,
-    years: [2008, 2009, 2010, 2011, 2012],
-    engines: ['1.6 бензин'],
-    gearboxes: ['механика'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 75
-  },
-  {
-    brand: 'Lada',
-    model: 'Riva',
-    generation: '',
-    folder: 'Lada Riva',
-    photos: 3,
-    years: [1983, 1988, 1992, 2001, 2004, 2007],
-    engines: ['1.5 бензин', '1.6 бензин'],
+    years: [1970, 1974, 1978, 1982, 1986],
+    engines: ['2.4 бензин'],
     gearboxes: ['механика'],
     drives: ['задний'],
     body: 'седан',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 45
-  },
-  {
-    brand: 'Lada',
-    model: 'Vesta',
-    generation: '',
-    folder: 'Lada Vesta',
-    photos: 3,
-    years: [2016, 2017, 2018, 2019],
-    engines: ['1.6 бензин', '1.8 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 70
-  },
-  {
-    brand: 'Mitsubishi',
-    model: 'Outlander',
-    generation: 'III',
-    folder: 'Mitsubishi Outlander 2012',
-    photos: 3,
-    years: [2011, 2012, 2013],
-    engines: ['2.0 бензин', '2.4 бензин', '3.0 бензин'],
-    gearboxes: ['автомат'],
-    drives: ['передний', 'полный'],
-    body: 'кроссовер',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 35
   },
   {
     brand: 'Moskvich',
@@ -679,142 +197,119 @@ const carsBase = [
     body: 'хэтчбек',
     typeOptions: ['private', 'found'],
     cities: allCities,
-    spawnWeight: 20
+    spawnWeight: 40
+  },
+
+  // ===== POST-2011 BASE =====
+  {
+    brand: 'Tarifa',
+    model: 'Misi-N',
+    generation: 'Gen1',
+    folder: 'Tarifa Misi-N 2011',
+    photos: 8,
+    years: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+    engines: ['1.0 бензин', '1.2 бензин'],
+    gearboxes: ['механика'],
+    drives: ['передний'],
+    body: 'хэтчбек',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
+    spawnWeight: 120,
+    priceMin: 50000,
+    priceMax: 170000,
+    descriptionText: 'Бюджетный городской автомобиль Tarifa Auto. Один из самых массовых вариантов для ККП, перед покупкой рекомендуется обычный осмотр.'
   },
   {
-    brand: 'Nissan',
-    model: 'Sunny',
-    generation: 'N17',
-    folder: 'Nissan Sunny 2010',
+    brand: 'Tarifa',
+    model: 'Dart',
+    generation: 'Gen1',
+    folder: 'Tarifa Dart 2005',
     photos: 3,
-    years: [2009, 2010, 2011],
+    years: [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
+    engines: ['2.0 дизель', '2.2 дизель'],
+    gearboxes: ['механика', 'автомат'],
+    drives: ['задний'],
+    body: 'фургон',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
+    spawnWeight: 75
+  },
+  {
+    brand: 'Tarifa',
+    model: 'Style',
+    generation: '',
+    folder: 'Tarifa Style',
+    photos: 3,
+    years: [2013, 2014, 2015, 2016, 2017],
+    engines: ['1.8 бензин', '2.0 бензин'],
+    gearboxes: ['механика', 'автомат'],
+    drives: ['передний'],
+    body: 'седан',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
+    spawnWeight: 32
+  },
+  {
+    brand: 'Tarifa',
+    model: 'Minic',
+    generation: '',
+    folder: 'Tarifa Minic',
+    photos: 3,
+    years: [2026],
+    engines: ['1.2 бензин', '1.4 бензин'],
+    gearboxes: ['механика', 'автомат'],
+    drives: ['передний'],
+    body: 'хэтчбек',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
+    spawnWeight: 28
+  },
+  {
+    brand: 'Pyeonghwa',
+    model: 'Hwiparam',
+    generation: '',
+    folder: 'Pyeonghwa Hwiparam',
+    photos: 3,
+    years: [2002, 2004, 2006, 2008, 2010],
     engines: ['1.5 бензин', '1.6 бензин'],
     gearboxes: ['механика', 'автомат'],
     drives: ['передний'],
     body: 'седан',
     typeOptions: ['private', 'found'],
     cities: allCities,
+    spawnWeight: 55
+  },
+  {
+    brand: 'Pyeonghwa',
+    model: 'Samchunri',
+    generation: '',
+    folder: 'Pyeonghwa Samchunri',
+    photos: 3,
+    years: [2005, 2007, 2009, 2011, 2013],
+    engines: ['2.0 бензин', '2.4 бензин', '2.5 дизель'],
+    gearboxes: ['механика'],
+    drives: ['задний'],
+    body: 'фургон',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
     spawnWeight: 45
   },
-  {
-    brand: 'Renault',
-    model: 'Logan',
-    generation: 'I',
-    folder: 'Renault Logan 2008',
-    photos: 3,
-    years: [2007, 2008, 2009],
-    engines: ['1.4 бензин', '1.6 бензин'],
-    gearboxes: ['механика'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 80
-  },
-  {
-    brand: 'Renault',
-    model: 'Logan',
-    generation: 'II',
-    folder: 'Renault Logan 2013',
-    photos: 3,
-    years: [2012, 2013, 2014],
-    engines: ['1.6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 75
-  },
-  {
-    brand: 'Skoda',
-    model: 'Octavia',
-    generation: '',
-    folder: 'Skoda Octavia',
-    photos: 3,
-    years: [2010, 2012, 2014, 2016],
-    engines: ['1.6 бензин', '1.8 турбо', '2.0 дизель'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'лифтбек',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 50
-  },
-  {
-    brand: 'Toyota',
-    model: 'Camry',
-    generation: 'V30',
-    folder: 'Toyota Camry 1990',
-    photos: 3,
-    years: [1989, 1990, 1991],
-    engines: ['2.0 бензин', '2.5 бензин'],
-    gearboxes: ['автомат', 'механика'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 18
-  },
-  {
-    brand: 'Toyota',
-    model: 'Camry',
-    generation: 'XV20',
-    folder: 'Toyota Camry 2000',
-    photos: 3,
-    years: [1999, 2000, 2001],
-    engines: ['2.2 бензин', '2.4 бензин', '3.0 бензин'],
-    gearboxes: ['автомат', 'механика'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 30
-  },
-  {
-    brand: 'Toyota',
-    model: 'Camry',
-    generation: 'XV40',
-    folder: 'Toyota Camry 2010',
-    photos: 3,
-    years: [2009, 2010, 2011],
-    engines: ['2.4 бензин', '2.5 бензин', '3.5 бензин'],
-    gearboxes: ['автомат'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 40
-  },
+
+  // ===== JAPANESE IMPORTS =====
   {
     brand: 'Toyota',
     model: 'Corolla',
-    generation: 'AE90',
-    folder: 'Toyota Corolla 1990',
-    photos: 3,
-    years: [1989, 1990, 1991],
-    engines: ['1.3 бензин', '1.5 бензин', '1.6 бензин'],
-    gearboxes: ['механика', 'автомат'],
-    drives: ['передний'],
-    body: 'седан',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 30
-  },
-  {
-    brand: 'Toyota',
-    model: 'Corolla',
-    generation: ['E110'],
+    generation: 'E110',
     folder: 'Toyota Corolla 2000',
     photos: 3,
-    years: [1999, 2000, 2001],
+    years: [1999, 2000, 2001, 2002],
     engines: ['1.4 бензин', '1.6 бензин', '1.8 бензин'],
     gearboxes: ['механика', 'автомат'],
     drives: ['передний'],
     body: 'седан',
     typeOptions: ['private', 'found'],
     cities: allCities,
-    spawnWeight: 65
+    spawnWeight: 95
   },
   {
     brand: 'Toyota',
@@ -829,22 +324,114 @@ const carsBase = [
     body: 'седан',
     typeOptions: ['private', 'found'],
     cities: allCities,
-    spawnWeight: 70
+    spawnWeight: 85
   },
   {
-    brand: 'Volkswagen',
-    model: 'Golf',
-    generation: 'VI',
-    folder: 'Volkswagen Golf 2010',
+    brand: 'Toyota',
+    model: 'Camry',
+    generation: 'XV20',
+    folder: 'Toyota Camry 2000',
     photos: 3,
-    years: [2009, 2010, 2011],
-    engines: ['1.4 турбо', '1.6 бензин', '2.0 дизель'],
-    gearboxes: ['механика', 'автомат'],
+    years: [1999, 2000, 2001],
+    engines: ['2.2 бензин', '2.4 бензин', '3.0 бензин'],
+    gearboxes: ['автомат', 'механика'],
     drives: ['передний'],
-    body: 'хэтчбек',
+    body: 'седан',
     typeOptions: ['private', 'found'],
     cities: allCities,
-    spawnWeight: 45
+    spawnWeight: 35
+  },
+  {
+    brand: 'Toyota',
+    model: 'Camry',
+    generation: 'XV40',
+    folder: 'Toyota Camry 2010',
+    photos: 3,
+    years: [2009, 2010, 2011],
+    engines: ['2.4 бензин', '2.5 бензин', '3.5 бензин'],
+    gearboxes: ['автомат'],
+    drives: ['передний'],
+    body: 'седан',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
+    spawnWeight: 28
+  },
+  {
+    brand: 'Nissan',
+    model: 'Sunny',
+    generation: 'N17',
+    folder: 'Nissan Sunny 2010',
+    photos: 3,
+    years: [2009, 2010, 2011],
+    engines: ['1.5 бензин', '1.6 бензин'],
+    gearboxes: ['механика', 'автомат'],
+    drives: ['передний'],
+    body: 'седан',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
+    spawnWeight: 75
+  },
+  {
+    brand: 'Honda',
+    model: 'Civic',
+    generation: 'VIII',
+    folder: 'Honda Civic 2010',
+    photos: 3,
+    years: [2009, 2010, 2011],
+    engines: ['1.8 бензин', '2.0 бензин'],
+    gearboxes: ['механика', 'автомат'],
+    drives: ['передний'],
+    body: 'седан',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
+    spawnWeight: 55
+  },
+  {
+    brand: 'Mitsubishi',
+    model: 'Outlander',
+    generation: 'III',
+    folder: 'Mitsubishi Outlander 2012',
+    photos: 3,
+    years: [2011, 2012, 2013],
+    engines: ['2.0 бензин', '2.4 бензин', '3.0 бензин'],
+    gearboxes: ['автомат'],
+    drives: ['передний', 'полный'],
+    body: 'кроссовер',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
+    spawnWeight: 24
+  },
+
+  // ===== SOME KOREAN CARS =====
+  {
+    brand: 'Hyundai',
+    model: 'Solaris',
+    generation: 'I',
+    folder: 'Hyundai Solaris 2012',
+    photos: 3,
+    years: [2011, 2012, 2013],
+    engines: ['1.4 бензин', '1.6 бензин'],
+    gearboxes: ['механика', 'автомат'],
+    drives: ['передний'],
+    body: 'седан',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
+    spawnWeight: 48
+  },
+  {
+    brand: 'Kia',
+    model: 'Rio',
+    generation: 'II',
+    folder: 'Kia Rio 2008',
+    photos: 3,
+    years: [2007, 2008, 2009],
+    engines: ['1.4 бензин', '1.6 бензин'],
+    gearboxes: ['механика', 'автомат'],
+    drives: ['передний'],
+    body: 'седан',
+    typeOptions: ['private', 'found'],
+    cities: allCities,
+    spawnWeight: 42
   }
 ];
 
@@ -854,6 +441,10 @@ function randomItem(arr) {
 
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getImagePath(car, photoNumber) {
+  return `${IMAGE_BASE_PATH}${car.folder}/${photoNumber}.jpg`;
 }
 
 function getUniquePhotoNumber(car, usedPhotosByFolder) {
@@ -896,63 +487,36 @@ function getModelPriceModifier(car) {
   const key = `${car.brand} ${car.model}${car.generation ? ' ' + car.generation : ''}`;
 
   switch (key) {
-    case 'Tarifa Misi-N 2011': return 0.35;
-    case 'Lada Riva': return 0.55;
-    case 'Lada Priora': return 0.70;
-    case 'Renault Logan 2008': return 0.72;
-    case 'Renault Logan 2013': return 0.82;
-    case 'Lada Vesta': return 0.90;
+    case 'Tarifa Misi-N Gen1': return 0.28;
+    case 'Tarifa Dart Gen1': return 0.68;
+    case 'Tarifa Style': return 0.88;
+    case 'Tarifa Minic': return 0.92;
 
-    case 'Ford Focus 2008': return 0.95;
-    case 'Ford Focus 2012': return 1.00;
-    case 'Ford Focus 2018': return 1.10;
-    case 'Hyundai Solaris 2012': return 0.95;
-    case 'Kia Rio 2008': return 0.90;
-    case 'Toyota Corolla 1990': return 0.90;
-    case 'Toyota Corolla 2000': return 1.00;
-    case 'Toyota Corolla 2010': return 1.08;
-    case 'Skoda Octavia': return 1.05;
-    case 'Volkswagen Golf 2010': return 1.05;
-    case 'Nissan Sunny 2010': return 0.95;
+    case 'Lada Riva': return 0.50;
+    case 'Lada Niva Legend': return 0.72;
+    case 'GAZ Volga 24': return 0.62;
+    case 'Moskvich 2141': return 0.52;
 
-    case 'Honda Civic 2000': return 1.05;
-    case 'Honda Civic 2010': return 1.12;
-    case 'Chevrolet Cruze 2013': return 1.00;
-    case 'Chevrolet Cruze 2016': return 1.00;
-    case 'Mitsubishi Outlander 2012': return 1.25;
-    case 'Haval H6': return 1.20;
-    case 'Lada Niva': return 1.05;
+    case 'Toyota Corolla E110': return 0.85;
+    case 'Toyota Corolla E140': return 0.90;
+    case 'Toyota Camry XV20': return 1.00;
+    case 'Toyota Camry XV40': return 1.08;
+    case 'Nissan Sunny N17': return 0.82;
+    case 'Honda Civic VIII': return 0.88;
+    case 'Mitsubishi Outlander III': return 1.05;
 
-    case 'Toyota Camry 1990': return 1.10;
-    case 'Toyota Camry 2000': return 1.22;
-    case 'Toyota Camry 2010': return 1.35;
-    case 'GAZ Volga 31105': return 0.95;
+    case 'Hyundai Solaris I': return 0.82;
+    case 'Kia Rio II': return 0.80;
 
-    case 'Gaz 24': return 0.75;
-    case 'Gaz M20': return 1.15;
-    case 'Moskvich 2141': return 0.60;
+    case 'Pyeonghwa Hwiparam': return 0.78;
+    case 'Pyeonghwa Samchunri': return 0.76;
+    case 'Pyeonghwa Junma': return 1.40;
 
-    case 'F-KAP Go': return 0.95;
-    case 'F-KAP Gerri 1975': return 0.85;
-    case 'F-KAP Gerri 1990': return 0.95;
-    case 'F-KAP Gerri 2010': return 1.00;
-    case 'F-KAP Vacation 1990': return 0.90;
-    case 'F-KAP Vacation 2000': return 1.00;
-    case 'F-KAP Vacation 2010': return 1.05;
-    case 'F-KAP Tref 2000': return 1.00;
-    case 'F-KAP Tref 2010': return 1.10;
-    case 'F-KAP Tref 2020': return 1.28;
-    case 'F-KAP Fokat B202': return 1.35;
-    case 'F-KAP Luna 2025': return 1.30;
-    case 'F-KAP Malina 1990': return 1.55;
-    case 'F-KAP Malina 2010': return 1.75;
-    case 'F-KAP Chihuahua': return 4.50;
+    case 'Mercedes-Benz 190 W201': return 1.18;
+    case 'Kaengsaeng 88': return 1.22;
+    case 'Mercedes-Benz Limousine': return 2.30;
 
-    case 'Tarifa FGR2': return 0.85;
-    case 'Tarifa Dart 2005': return 1.00;
-    case 'Tarifa Style': return 1.15;
-
-    default: return 1.0;
+    default: return 0.90;
   }
 }
 
@@ -971,70 +535,70 @@ function generatePrice(year, type, body, car) {
   let baseMax = 0;
 
   if (year >= 2025) {
-    baseMin = 1200000;
-    baseMax = 2600000;
+    baseMin = 950000;
+    baseMax = 2100000;
   } else if (year >= 2020) {
-    baseMin = 850000;
-    baseMax = 1900000;
+    baseMin = 700000;
+    baseMax = 1550000;
   } else if (year >= 2015) {
-    baseMin = 550000;
-    baseMax = 1350000;
+    baseMin = 420000;
+    baseMax = 1050000;
   } else if (year >= 2010) {
-    baseMin = 350000;
-    baseMax = 950000;
+    baseMin = 260000;
+    baseMax = 760000;
   } else if (year >= 2005) {
-    baseMin = 250000;
-    baseMax = 700000;
+    baseMin = 190000;
+    baseMax = 560000;
   } else if (year >= 2000) {
-    baseMin = 200000;
-    baseMax = 550000;
-  } else if (year >= 1990) {
-    baseMin = 160000;
+    baseMin = 150000;
     baseMax = 420000;
-  } else if (year >= 1970) {
-    baseMin = 130000;
-    baseMax = 320000;
-  } else {
+  } else if (year >= 1990) {
     baseMin = 120000;
-    baseMax = 280000;
+    baseMax = 320000;
+  } else if (year >= 1970) {
+    baseMin = 90000;
+    baseMax = 260000;
+  } else {
+    baseMin = 90000;
+    baseMax = 230000;
   }
 
   let price = randomInt(baseMin, baseMax);
 
   if (body === 'внедорожник' || body === 'кроссовер') {
-    price += randomInt(90000, 260000);
+    price += randomInt(70000, 180000);
   }
 
   if (body === 'фургон') {
-    price += randomInt(50000, 180000);
+    price += randomInt(35000, 120000);
   }
 
   if (body === 'купе') {
-    price += randomInt(100000, 320000);
+    price += randomInt(90000, 260000);
   }
 
   if (body === 'универсал') {
-    price += randomInt(20000, 90000);
+    price += randomInt(15000, 70000);
   }
 
   price = Math.round(price * getModelPriceModifier(car));
 
   if (type === 'found') {
-    price -= randomInt(30000, 120000);
+    price -= randomInt(25000, 90000);
   }
 
-  return Math.max(9000, price);
+  return Math.max(50000, price);
 }
 
 function generateMileage(year) {
-  if (year >= 2025) return randomInt(8000, 45000);
-  if (year >= 2020) return randomInt(18000, 105000);
-  if (year >= 2015) return randomInt(45000, 165000);
-  if (year >= 2010) return randomInt(75000, 230000);
-  if (year >= 2000) return randomInt(110000, 310000);
-  if (year >= 1990) return randomInt(130000, 360000);
-  if (year >= 1970) return randomInt(120000, 580000);
-  return randomInt(260000, 700000);
+  if (year >= 2025) return randomInt(5000, 35000);
+  if (year >= 2020) return randomInt(15000, 90000);
+  if (year >= 2015) return randomInt(35000, 155000);
+  if (year >= 2010) return randomInt(70000, 220000);
+  if (year >= 2000) return randomInt(100000, 320000);
+  if (year >= 1990) return randomInt(140000, 420000);
+  if (year >= 1970) return randomInt(180000, 620000);
+  return randomInt(250000, 780000);
 }
 
 function generateDescription(car, engine, gearbox) {
@@ -1043,55 +607,38 @@ function generateDescription(car, engine, gearbox) {
   }
 
   const privateTexts = [
-    'На ходу, без срочных вложений, смотреть по месту.',
-    'Машина в рабочем состоянии, продаётся как есть.',
-    'Обычное живое состояние для своего года, лучше смотреть лично.',
-    'Документы в порядке, по технике без критичных вопросов.',
-    'Кузов и салон в нормальном состоянии, есть обычные следы эксплуатации.',
-    'Использовалась спокойно, без гонок, продаётся без обмена.',
-    'Для своего возраста выглядит нормально, торг возможен при осмотре.',
-    'Не новая, но в адекватном состоянии, всё расскажу на месте.',
-    'Есть мелкие возрастные моменты, ничего необычного для этой модели.',
-    'Повседневный вариант, без лишней красивой сказки, смотреть вживую.'
+    'На ходу, продаётся в текущем состоянии.',
+    'Обычное живое состояние, лучше смотреть лично.',
+    'Для своего возраста выглядит нормально, без лишней сказки.',
+    'Есть обычные следы эксплуатации, ничего необычного.',
+    'Подойдёт как повседневный вариант, осмотр по месту.',
+    'Не новая, но в рабочем состоянии, смотреть вживую.',
+    'Продаётся как есть, без приукрашивания.',
+    'Обычное частное объявление, состояние оценивать лично.'
   ];
 
   const foundTexts = [
     'Автомобиль размещён в категории найденных транспортных средств.',
-    'Объявление опубликовано сервисом в рамках раздела найденных автомобилей.',
-    'Карточка сформирована площадкой для отображения найденного автомобиля.',
-    'Автомобиль добавлен в базу найденных транспортных средств.',
-    'Позиция размещена сервисом в разделе найденных автомобилей.',
-    'Данное объявление относится к категории найденных транспортных средств.',
-    'Информация опубликована площадкой в рамках раздела найденных автомобилей.',
-    'Карточка размещена сервисом как найденный автомобиль.',
-    'Объект отображается в категории найденных транспортных средств.',
-    'Автомобиль внесён в каталог найденных автомобилей.'
+    'Карточка сформирована сервисом для найденного автомобиля.',
+    'Объявление опубликовано площадкой в разделе найденных автомобилей.',
+    'Данный автомобиль внесён в каталог найденных транспортных средств.',
+    'Информация размещена сервисом в формате карточки найденного автомобиля.'
   ];
 
   const privateExtraTexts = [
-    'По кузову возможны мелкие возрастные моменты.',
-    'Салон без чего-то сверхъестественного, обычное состояние.',
-    'По ходовой и технике лучше смотреть лично.',
+    'По кузову возможны возрастные моменты.',
+    'Торг возможен после осмотра.',
     'Для своего года выглядит нормально.',
-    'Торг возможен только после осмотра.',
-    'Не музей, а обычная живая машина.',
-    'Подойдёт как повседневный вариант.',
-    'По документам уточнение на месте.',
-    'Есть естественные следы эксплуатации.',
-    'Лучше оценивать вживую, а не по одной фотографии.'
+    'Лучше смотреть вживую, а не по фото.',
+    'Есть естественные следы эксплуатации.'
   ];
 
   const foundExtraTexts = [
     'Описание носит справочный характер.',
-    'Сведения отображаются в формате карточки сервиса.',
-    'Внешнее и техническое состояние уточняется при осмотре.',
-    'Информация указывается площадкой без частной оценки владельца.',
-    'Данные представлены в рамках сервисного размещения.',
-    'Характеристики отображаются на основании карточки объявления.',
-    'Параметры автомобиля указаны в формате каталога площадки.',
-    'Перед покупкой требуется личная проверка состояния.',
-    'Сервис публикует базовую информацию по автомобилю.',
-    'Осмотр рекомендуется до принятия решения о покупке.'
+    'Состояние уточняется при осмотре.',
+    'Информация представлена площадкой без частной оценки владельца.',
+    'Перед покупкой рекомендуется личная проверка состояния.',
+    'Сервис публикует базовую информацию по автомобилю.'
   ];
 
   const mainText = car.type === 'found'
@@ -1113,16 +660,17 @@ function createCarCard(car) {
   const city = randomItem(car.cities);
   const photoNumber = randomInt(1, car.photos);
   const mileage = generateMileage(year);
-  const price = generatePrice(year, car.type, car.body, car);
-  const description = generateDescription(car, engine, gearbox);
-  const badgeText = car.type === 'found' ? 'Найденный' : 'Частное';
-  const badgeClass = car.type === 'found' ? 'red' : '';
-  const priceLabel = car.type === 'found' ? 'цена площадки' : 'цена продавца';
-  const metaText = car.type === 'found'
+  const type = randomItem(car.typeOptions || ['private']);
+  const price = generatePrice(year, type, car.body, car);
+  const description = generateDescription({ ...car, type }, engine, gearbox);
+  const badgeText = type === 'found' ? 'Найденный' : 'Частное';
+  const badgeClass = type === 'found' ? 'red' : '';
+  const priceLabel = type === 'found' ? 'цена площадки' : 'цена продавца';
+  const metaText = type === 'found'
     ? `Лот № ${randomInt(1000, 9999)}`
     : `Объявление № ${randomInt(10000, 99999)}`;
 
-  const imagePath = `${car.folder}/${photoNumber}.jpg`;
+  const imagePath = getImagePath(car, photoNumber);
   const title = `${car.brand} ${car.model}${car.generation ? ` ${car.generation}` : ''}`;
 
   return `
@@ -1174,36 +722,50 @@ function buildRandomCars(limit = 12) {
   let duplicateCount = 0;
   const roll = Math.random();
 
-  // как часто вообще разрешаем повторы
   if (roll < 0.65) {
-    duplicateCount = 0; // чаще всего вообще без дублей
+    duplicateCount = 0;
   } else if (roll < 0.92) {
-    duplicateCount = 1; // иногда один дубль
+    duplicateCount = 1;
   } else {
-    duplicateCount = 2; // редко два дубля
+    duplicateCount = 2;
   }
 
   const uniqueCount = limit - duplicateCount;
 
-  // сначала набираем уникальные модели
   const uniqueCars = pickWeightedCars(carsBase, uniqueCount);
   currentCars = [...uniqueCars];
 
-  // кандидаты на дубль — только те, у кого больше одной фотки
   const duplicateCandidates = uniqueCars.filter(car => car.photos > 1);
 
   for (let i = 0; i < duplicateCount; i++) {
     if (duplicateCandidates.length === 0) break;
 
-    const index = randomInt(0, duplicateCandidates.length - 1);
-    const duplicateCar = duplicateCandidates.splice(index, 1)[0];
+    let duplicateCar;
 
-    // вставляем дубль в случайное место списка
+    const misiNIndex = duplicateCandidates.findIndex(
+      car => car.brand === 'Tarifa' && car.model === 'Misi-N'
+    );
+
+    if (misiNIndex !== -1 && Math.random() < 0.75) {
+      duplicateCar = duplicateCandidates.splice(misiNIndex, 1)[0];
+    } else {
+      const index = randomInt(0, duplicateCandidates.length - 1);
+      duplicateCar = duplicateCandidates.splice(index, 1)[0];
+    }
+
     const insertAt = randomInt(0, currentCars.length);
     currentCars.splice(insertAt, 0, duplicateCar);
+
+    if (
+      duplicateCar.brand === 'Tarifa' &&
+      duplicateCar.model === 'Misi-N' &&
+      currentCars.length < limit
+    ) {
+      const insertAtSecond = randomInt(0, currentCars.length);
+      currentCars.splice(insertAtSecond, 0, duplicateCar);
+    }
   }
 
-  // если вдруг чего-то не хватило — добиваем уникальными
   while (currentCars.length < limit) {
     const extraCar = pickWeightedCars(carsBase, 1)[0];
     if (!currentCars.includes(extraCar)) {
@@ -1294,7 +856,7 @@ function createRenderedCard(car) {
     ? `Лот № ${randomInt(1000, 9999)}`
     : `Объявление № ${randomInt(10000, 99999)}`;
 
-  const imagePath = `${car.folder}/${car.selectedPhoto}.jpg`;
+  const imagePath = getImagePath(car, car.selectedPhoto);
   const title = `${car.brand} ${car.model}${car.generation ? ` ${car.generation}` : ''}`;
   const description = generateDescription(
     { ...car, type: car.selectedType },
