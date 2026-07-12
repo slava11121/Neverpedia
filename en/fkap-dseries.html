@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>F-KAP D-Series — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Main page</a>
+        <a href="create.html">Create article</a>
+        <a href="#">Random article</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">Languages ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../fkap-d-series.html">Русский</a>
+          <a href="fkap-d-series.html">English</a>
+          <a href="../ksh/fkap-d-series.html">Кiвiшский</a>
+          <a href="../cn/fkap-d-series.html">简体中文</a>
+          <a href="../jpn/fkap-d-series.html">日本語</a>
+          <a href="../ko/fkap-d-series.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+<section class="model-block" style="display:flow-root; margin:0 0 18px;">
+  <aside class="infobox">
+    <div class="h">F-KAP D-001</div>
+    <div class="cell">
+      <img src="../017.jpg" alt="F-KAP D-001">
+    </div>
+    <div class="cell"><b>Type</b><br>Passenger car</div>
+    <div class="cell"><b>Manufacturer</b><br><a href="f-kap.html">F-KAP</a></div>
+    <div class="cell"><b>Country</b><br>Kivish Empire</div>
+    <div class="cell"><b>Year</b><br>1921</div>
+    <div class="cell"><b>Engine</b><br>19 hp</div>
+    <div class="cell"><b>Status</b><br>First F-KAP model</div>
+    <div class="cell"><b>Features</b><br>Winter tires with metal elements, wood-fired engine preheater, firewood box</div>
+  </aside>
+
+  <h2>D-001</h2>
+
+  <p>
+    <b>F-KAP D-001</b> was the first civilian car produced by F-KAP, released in 1921. The model became the starting
+    point of the early D-Series line and the plant’s first production experience in creating a vehicle designed for operation
+    in a harsh climate.
+  </p>
+
+  <h3>Background</h3>
+  <p>
+    The F-KAP plant was built on the outskirts of Kora, in the working district of Retnikov, where workshops and small
+    enterprises were located at the time. Against the background of post-war devastation and a shortage of reliable transport
+    for officials, doctors, and merchants, the idea emerged to create a domestic car suitable for daily use and winter conditions.
+  </p>
+
+  <h3>Development</h3>
+  <p>
+    The D-001 project was developed as a utilitarian vehicle. The main priority was practicality, not appearance or equipment.
+    The design was shaped around the tasks of winter operation, simple maintenance, and minimal dependence on complicated repairs.
+    The model was viewed as working transport that had to start and drive through snow and frost with only basic care.
+  </p>
+
+  <h3>Technical concept</h3>
+  <p>
+    The D-001 was equipped with a 19-horsepower engine. For driving on winter roads, winter tires with metal elements
+    in the tread were used. The key feature was the engine preheating system using a wood-fired stove.
+    This solution became a signature feature of the early D-line and was used as a practical way to reduce the risk of failure
+    when starting in severe cold.
+  </p>
+
+  <h3>Layout and operating solutions</h3>
+  <p>
+    Early cars of the series, including the D-001, were built as simple two-seat bodies with a folding canvas top.
+    The design included a rear box for firewood, allowing a reserve of wood to be carried for warming the engine in winter
+    and avoiding dependence on random fuel sources. The approach was focused on everyday-use scenarios, where the car could stand
+    in freezing temperatures and require warming before driving.
+  </p>
+
+  <h3>Delivery package</h3>
+  <p>
+    The early delivery packages emphasized the company’s service philosophy. F-KAP positioned itself as a driver-friendly manufacturer
+    and supplied the D-001 with extra firewood, winter tools, and instructions for lighting the stove. Contemporaries noted that the car
+    was perceived more as working equipment than as a luxury item.
+  </p>
+
+  <h3>Distribution</h3>
+  <p>
+    The D-001 and the first cars of the D-line quickly spread through government garages and rural areas. The practicality of the design,
+    adapted for winter, made the model popular in places where ordinary transport often proved unpredictable in frost and snow.
+  </p>
+
+  <h3>Reception</h3>
+  <p>
+    Despite its simplicity, the D-001 had a noticeable effect on the local market. Company sources emphasize that residents received,
+    for the first time, the ability to drive through snow and frost without the typical risk of stopping because of a freezing engine.
+    This effect was associated with the combination of winter tires and the engine heating system, as well as with the fact that
+    the manufacturer immediately supplied the car with a winter operating kit.
+  </p>
+
+  <h3>Legacy</h3>
+  <p>
+    The D-001 established the early technical image of F-KAP as a manufacturer that built cars around operating conditions
+    and the habits of the driver. The experience of the first model became the basis for the further evolution of the D-line
+    and established wood-fired engine preheating as one of the company’s recognizable early solutions. Within the brand’s historiography,
+    the D-001 is often regarded as the starting point of F-KAP’s entire civilian school.
+  </p>
+</section>
+
+<hr>
+
+<section class="model-block" style="display:flow-root; margin:0 0 18px;">
+  <aside class="infobox">
+    <div class="h">F-KAP D-002</div>
+    <div class="cell">
+      <img src="../095.jpg" alt="F-KAP D-002">
+    </div>
+    <div class="cell">
+      <img src="../096.jpg" alt="F-KAP D-002, rear view">
+    </div>
+    <div class="cell"><b>Type</b><br>Passenger car</div>
+    <div class="cell"><b>Manufacturer</b><br><a href="f-kap.html">F-KAP</a></div>
+    <div class="cell"><b>Country</b><br>Kivish Empire, UKR</div>
+    <div class="cell"><b>Year</b><br>1922</div>
+    <div class="cell"><b>Status</b><br>Modernization of the D-001</div>
+    <div class="cell"><b>Features</b><br>Closed all-metal cabin, sealing, internal wiper, rear red lamp</div>
+  </aside>
+
+  <h2>D-002</h2>
+
+  <p>
+    <b>F-KAP D-002</b> was a modernized version of the plant’s first model,
+    released in 1922. The car was created as a direct response to problems revealed during the first
+    operation of the D-001 and became one of the early examples in the series where changes were dictated by everyday conditions and safety.
+  </p>
+
+  <h3>Background</h3>
+  <p>
+    The first owners of the D-001 encountered a set of typical winter difficulties. In practice, three problems appeared most quickly:
+    insufficient heat retention inside the cabin, fogging of the glass, and poor visibility of the car from behind in a snowstorm.
+    For the driver, this meant worse visibility and fatigue from the cold; for surrounding traffic, it meant an increased risk
+    of collisions in snow and poor visibility.
+  </p>
+
+  <h3>Development</h3>
+  <p>
+    When creating the D-002, the plant did not aim to completely change the basic design. Unlike the approach of
+    “a new model instead of the old one,” the D-002 was formed as a correction of the D-001 while preserving overall simplicity.
+    The project was based on the logic of targeted improvements: closing the cabin, sealing it, ensuring visibility control,
+    and making the car more visible on the road.
+  </p>
+
+  <h3>Cabin and heat retention</h3>
+  <p>
+    The main external change was the <b>solid metal closed cabin</b>. It reduced drafts and made the temperature inside
+    more stable. In addition, F-KAP used the <b>first seal</b>, designed to keep heat inside the cabin and reduce direct losses
+    through gaps and joints. As a result, the car became more suitable for long winter trips and standing in the cold.
+  </p>
+
+  <h3>Anti-fogging solution</h3>
+  <p>
+    Fogging of the glass in frost and during temperature changes was treated as a separate operating problem.
+    In the D-002, a simple and visible method was used: an <b>internal wiper</b>, which duplicated the work
+    of the outside wipers and allowed the glass surface to be cleaned from inside the cabin. The solution was crude in execution,
+    but practical in result, since it directly affected visibility and safety.
+  </p>
+
+  <h3>Visibility in a snowstorm</h3>
+  <p>
+    A separate task was to improve the readability of the car from behind. In heavy snowfall, the rear of the car
+    often “disappeared,” creating situations where following traffic recognized the obstacle too late.
+    To reduce this risk, the D-002 received <b>one rear red lamp</b>, which worked as a beacon
+    and helped identify the presence of a car ahead more quickly.
+  </p>
+
+  <h3>Operation</h3>
+  <p>
+    The D-002 preserved the general philosophy of early F-KAP cars as utilitarian transport. The model remained simple
+    to maintain, but became noticeably more convenient in winter conditions. The insulated closed cabin and the visibility solution
+    reduced driver fatigue, while the rear lamp reduced the number of dangerous situations in snowstorms.
+  </p>
+
+  <h3>Reception and significance</h3>
+  <p>
+    In the early history of the plant, the D-002 is considered the first car where F-KAP demonstrated the principle of serial refinement
+    based on real owner problems. The D-002’s solutions established directions that would later be developed further:
+    climate adaptation, anti-fogging measures, road readability, and practical safety measures.
+    These themes later became the basis for the D-010 and D-020, where the series moved from targeted fixes
+    to a more complex logic of all-season operation and developed lighting equipment.
+  </p>
+</section>
+
+<hr>
+
+<section class="model-block" style="display:flow-root; margin:0 0 18px;">
+  <aside class="infobox">
+    <div class="h">F-KAP D-010</div>
+    <div class="cell">
+      <img src="../097.jpg" alt="F-KAP D-010">
+      </div>
+      <div class="cell">
+      <img src="../098.jpg" alt="F-KAP D-010, summer mode">
+    </div>
+    <div class="cell"><b>Type</b><br>Passenger car</div>
+    <div class="cell"><b>Manufacturer</b><br><a href="f-kap.html">F-KAP</a></div>
+    <div class="cell"><b>Country</b><br>UKR</div>
+    <div class="cell"><b>Year</b><br>1925</div>
+    <div class="cell"><b>Status</b><br>Next step after the D-002</div>
+    <div class="cell"><b>Features</b><br>Seasonal body adaptation, new heater layout, improved lighting equipment</div>
+  </aside>
+
+  <h2>D-010</h2>
+
+  <p>
+    <b>F-KAP D-010</b> was a 1925 model that became an important stage in the development of the early D-line.
+    When creating it, the plant attempted to solve a problem that appeared on the D-002: the car performed well in winter,
+    but in warm weather the cabin could overheat. The D-010 was viewed as a more universal car, suitable for operation in different seasons
+    and climates.
+  </p>
+
+  <h3>Background</h3>
+  <p>
+    After the release of the D-002, the plant encountered the reverse side of the closed insulated cabin. Practice showed that in warm weather
+    the car could become too hot both in Kora and in other cities. The task of the next version was to preserve
+    winter suitability while adding controlled ventilation and a summer operating mode.
+  </p>
+
+  <h3>Development and seasonal body layout</h3>
+  <p>
+    In the D-010, the approach of the early design was brought back, but reworked functionally. The model received a folding roof,
+    described in brand sources as the line’s first early analogue of a convertible layout. At the same time,
+    a system of lowering side windows on the doors was introduced, as well as an opening windshield designed for airflow mode.
+    As a result, the driver could quickly change the character of the cabin depending on the weather without abandoning the basic winter logic.
+  </p>
+
+  <h3>Testing in different climates</h3>
+  <p>
+    The D-010 was tested in summer and winter conditions in several cities. Test cycles were conducted in winter and summer in Kora,
+    in winter and summer in Beijing, and in winter and summer in Moscow. Based on the results, engineers rejected some solutions,
+    keeping only what was considered necessary while preserving the base, chassis, and key elements of seasonal adaptation.
+  </p>
+
+  <h3>Summer mode: ventilation and windshield</h3>
+  <p>
+    In summer mode, the driver could lower the windshield using a handle, opening airflow and reducing cabin overheating.
+    In rainy weather, the reverse scenario was provided: the windshield was raised, while the side window could be lowered partially,
+    roughly halfway, which was considered the maximum opening in that mode. This allowed controlled ventilation
+    without direct entry of precipitation.
+  </p>
+
+  <h3>Heating: revised heater activation layout</h3>
+  <p>
+    As part of the D-010, the logic of turning on the heater was changed. The previously used layout was perceived ambiguously
+    by users, so lever control was introduced instead of a tap. Under the hood, a valve was installed and linked to the lever
+    and the cooling system. When the valve was opened, the fluid flow was directed through the heater installed in the cabin,
+    and a small heater under the driver’s feet began warming the cabin. After passing through the heater, the fluid returned
+    under the hood and was then cooled through the radiator.
+  </p>
+  <p>
+    This solution made it possible to regulate the heat level: in the open position, the cabin warmed up; in the closed position,
+    heating decreased, reducing the risk of overheating inside the cabin. In cases where it became too hot, it was possible
+    to switch to a more open body mode and use the folding roof and ventilation.
+  </p>
+
+  <h3>Lighting equipment: clarification of rear signals</h3>
+  <p>
+    After the introduction of the rear red lamp on the D-002, drivers became more careful in snowstorms, but a new problem appeared:
+    a single lamp did not show when the car was braking, and the driver behind might not react in time, especially in fog
+    and snowfall. On the D-010, the rear light signaling was made more complex: instead of one lamp, two were used.
+    One acted as a constant rear light, while the second lit up when the brake was pressed, separating the fact of the car’s presence
+    from the fact of slowing down.
+  </p>
+
+  <h3>Model designations and name unification</h3>
+  <p>
+    The D-010 period is also associated with a change in the approach to naming. The company noted that transitions between different
+    language standards caused confusion, so later model designations began to be formed according to a simpler and more unified principle,
+    with a focus on English-language words used in British English to make the perception and classification of products easier.
+  </p>
+
+  <h3>Significance</h3>
+  <p>
+    The D-010 became the model where the early F-KAP line first received a systematic seasonal logic: not only winter survival,
+    but also a controlled summer mode. At the same time, the D-010 established the direction of light-signaling development by separating
+    the rear light from the brake light, which would later become the basis for more complex solutions on the D-020.
+  </p>
+</section>
+
+<hr>
+
+<section class="model-block" style="display:flow-root; margin:0 0 18px;">
+  <aside class="infobox">
+    <div class="h">F-KAP D-020</div>
+    <div class="cell">
+      <img src="../099.jpg" alt="F-KAP D-020">
+          </div>
+          <div class="cell">
+      <img src="../100.jpg" alt="F-KAP D-020, rear lighting equipment">
+    </div>
+    <div class="cell"><b>Type</b><br>Passenger car</div>
+    <div class="cell"><b>Manufacturer</b><br><a href="f-kap.html">F-KAP</a></div>
+    <div class="cell"><b>Country</b><br>UKR</div>
+    <div class="cell"><b>Year</b><br>1927</div>
+    <div class="cell"><b>Class</b><br>Urban and family car</div>
+    <div class="cell"><b>Status</b><br>Next step after the D-010</div>
+    <div class="cell"><b>Features</b><br>5 seats, heater under the hood, separate lamps, turn signals, early seat belts</div>
+  </aside>
+
+  <h2>D-020</h2>
+
+  <p>
+    <b>F-KAP D-020</b> was a 1927 model that became one of the key stages of the pre-war D-line. When creating it, F-KAP
+    formally organized driver feedback from Kora for the first time and used it as the basis for a list of changes.
+    As a result, the D-020 became noticeably more mature compared with the D-010 and established the series’ transition
+    from utilitarian logic toward urban and family use.
+  </p>
+
+  <h3>Background</h3>
+  <p>
+    By the mid-1920s, the D-line had already received basic seasonal body and heating adaptation. At the same time,
+    questions remained regarding passenger accommodation, the readability of the car in city traffic, and the general
+    “civilized” character of the cabin. Lighting equipment remained a separate problem: early solutions improved visibility,
+    but still did not provide a full signal language for other drivers. The D-020 was conceived as a response to these tasks.
+  </p>
+
+  <h3>Collecting feedback</h3>
+  <p>
+    Brand sources emphasize that before launching the D-020, engineers began asking drivers in Kora direct questions
+    about what changes were needed in the next version. This approach differed from the early practice, when improvements
+    were introduced mostly on the designers’ own initiative. For the D-020, the changes were recorded as specific requirements
+    related to seating, comfort, signals, and urban operation.
+  </p>
+
+  <h3>Body and cabin layout</h3>
+  <p>
+    The D-020 received a five-seat layout: two separate front seats and a rear bench. This was an important step,
+    since the model began to focus not only on working use, but also on family trips and urban everyday life.
+    The body was again made fully closed, but elements considered useful for ventilation and seasonal flexibility were preserved:
+    a folding windshield and opening side windows.
+  </p>
+  <p>
+    Inside the cabin, more comfortable trim appeared, along with a cutout for a small portable radio device.
+    For the late 1920s, this was regarded as a sign of transition toward a more “personal” car, where the cabin was designed
+    not only as the driver’s place, but also as a space for passengers.
+  </p>
+
+  <h3>Heating and heater placement</h3>
+  <p>
+    One of the characteristic solutions of the D-020 was the changed placement of the heater. The heating unit was moved into
+    the engine bay so that loading firewood and maintenance could be performed under the hood. This approach preserved the general
+    philosophy of the early line, where preheating and heating were considered mandatory parts of winter operation, while also
+    improving service convenience and reducing interference with the cabin layout.
+  </p>
+
+  <h3>Lighting equipment and Figir’s patent</h3>
+  <p>
+    The most noticeable innovation was the developed light-signaling system. Engineer Figir patented a full rear lamp
+    in an iron housing. The unit was made as a square element with four sections:
+    running light, brake light, orange turn signal, and flashing reverse signal.
+    This division of functions made the car’s behavior clearer to surrounding traffic in fog and snowfall
+    and reduced the risk of maneuvers being misread.
+  </p>
+  <p>
+    At the front, a small orange turn repeater appeared next to the main headlight. Inside the cabin, on the panel
+    next to the steering wheel, a switch was installed: when moved left, the left signal flashed; when moved right,
+    the right one flashed. For the series, this meant a transition from simple “beacons” to a full system of communication
+    between the car and traffic flow.
+  </p>
+
+  <h3>Passive safety</h3>
+  <p>
+    Series sources note that early analogues of seat belts were used on the D-020 in the form of black canvas straps.
+    These elements were intended to hold a person during a collision and were considered an experimental safety measure
+    that would later become one of the directions in the development of civilian models.
+  </p>
+
+  <h3>Aerodynamics and efficiency</h3>
+  <p>
+    The D-020 received a redesigned body shape intended to reduce air resistance. In descriptions of the model,
+    this was linked to improved fuel efficiency and more stable behavior at speed. Compared with earlier versions,
+    the series began to take into account not only starting and driving through snow, but also energy efficiency
+    as a characteristic of everyday operation.
+  </p>
+
+  <h3>Engine and dynamics</h3>
+  <p>
+    Engine power was increased to 43 horsepower. For the D-line, this meant a significant increase compared with
+    the earliest cars and made the D-020 more confident in urban driving and when carrying passengers.
+    The increase in power was accompanied by a general attempt to make the car more mature and convenient, not simply “faster.”
+  </p>
+
+  <h3>Significance</h3>
+  <p>
+    The D-020 is regarded as the model on which the D-line took shape as a family of civilian cars
+    intended for urban and family use. It established key directions for further development:
+    separate lighting equipment with turn signals, a more convenient cabin layout, early attempts at passive safety,
+    and work with body shape for the sake of efficiency. These solutions became the basis for the following pre-war leaps
+    of the series in the 1930s.
+  </p>
+</section>
+
+<hr>
+
+<section class="model-block" style="display:flow-root; margin:0 0 18px;">
+  <aside class="infobox">
+    <div class="h">F-KAP D-030 / F-KAP D-031</div>
+    <div class="cell">
+      <img src="../101.jpg" alt="F-KAP D-030">
+    </div>
+    <div class="cell"><b>Type</b><br>Passenger cars</div>
+    <div class="cell"><b>Manufacturer</b><br><a href="f-kap.html">F-KAP</a></div>
+    <div class="cell"><b>Country</b><br>UKR</div>
+    <div class="cell"><b>Year</b><br>1930</div>
+    <div class="cell"><b>Class</b><br>Mass-market civilian car</div>
+    <div class="cell"><b>Status</b><br>Design leap of the pre-war line</div>
+    <div class="cell"><b>Features</b><br>Smooth aerodynamic body, equipment versions divided by climate</div>
+  </aside>
+
+  <h2>D-030 and D-031</h2>
+
+  <p>
+    <b>F-KAP D-030</b> and <b>F-KAP D-031</b> were 1930 models that are considered one of the main pre-war
+    turning points in the development of the D-line. At this stage, F-KAP focused not only on operating improvements,
+    but also on appearance, turning the series into a visually notable mass-market car.
+    Against the background of cars from other manufacturers, the D-030 and D-031 stood out sharply in body shape
+    and were perceived as one of the first examples of a “beautiful” civilian car of the Soviet period of the UKR.
+  </p>
+
+  <h3>Background</h3>
+  <p>
+    By the end of the 1920s, the D-line had already received a mature lighting system, a family layout, and a set of solutions
+    for winter operation. However, the appearance of the early cars remained utilitarian and functional.
+    At the same time, cities were developing demand for a more civilized and neat-looking car that would preserve
+    affordability and practicality but would not look like “workshop equipment.” The D-030 and D-031 were launched as a response to this demand.
+  </p>
+
+  <h3>Design and aerodynamics</h3>
+  <p>
+    The main feature of the D-030/031 was the deliberate simplification and smoothing of the shape. The body was made as smooth as possible:
+    the number of protruding elements was reduced, excessive corners and sharp transitions were removed, and the body lines were shaped
+    so that the car would be perceived as a single volume. Model descriptions emphasized that these changes were made
+    not only for aesthetics, but also for aerodynamics, which was associated with fuel efficiency and more stable movement.
+  </p>
+  <p>
+    Paintwork was also important to the visual image: for the first time, the model received more attractive color options
+    aimed at the mass buyer. Against the background of “angular” cars from other companies, this made the D-030/031 recognizable
+    at first glance.
+  </p>
+
+  <h3>Equipment levels and version differences</h3>
+  <p>
+    The D-030 and D-031 established the line’s principle of dividing equipment by climate and price. Series sources emphasize
+    the existence of two main approaches to equipment.
+  </p>
+  <ul>
+    <li>
+      <b>High northern equipment level</b> included solutions for cold weather and more comfortable contact with cabin materials:
+      a heater as part of the brand’s winter philosophy, fabric covering on metal elements to avoid touching cold metal,
+      rubberized handles, a small built-in cabin fan, and a reinforced belt design.
+      This version also used a built-in radio.
+    </li>
+    <li>
+      <b>Cheap warm-climate equipment level</b> excluded a number of expensive elements: the heater, radio, and some “comfort”
+      solutions intended for winter conditions were not installed. This version was intended for regions and operating scenarios
+      where winter equipment was considered excessive.
+    </li>
+  </ul>
+
+  <h3>Chassis and wheels</h3>
+  <p>
+    The models received larger-diameter wheels. This was associated with the car’s practical suitability for roads of varying quality
+    and with the general “maturity” of the model, which now had to be a universal mass-market car rather than a narrowly specialized
+    vehicle of the early period.
+  </p>
+
+  <h3>Positioning and accessibility</h3>
+  <p>
+    In the pre-war historiography of the brand, the D-030/031 are often described as the moment when a “beautiful car” became accessible
+    to a wide range of buyers. Within the series, these models are regarded as the transition from the utilitarian logic of the early D models
+    to a full mass-market civilian car intended for an ordinary owner, not only for service garages.
+  </p>
+
+  <h3>Significance</h3>
+  <p>
+    The D-030 and D-031 established F-KAP’s reputation as a manufacturer capable of making not only practical and winter-resistant equipment,
+    but also a modern-looking mass-market car. The principle of dividing equipment by climate and price became the basis
+    for subsequent models of the early 1930s, while the design line of these cars prepared the ground for the further evolution
+    of the series’ pre-war appearance.
+  </p>
+</section>
+
+<hr>
+
+<section class="model-block" style="display:flow-root; margin:0 0 18px;">
+  <aside class="infobox">
+    <div class="h">F-KAP D-033 / F-KAP D-034</div>
+    <div class="cell">
+      <img src="../102.jpg" alt="F-KAP D-033">
+      </div>
+      <div class="cell">
+      <img src="../103.jpg" alt="F-KAP D-033 interior">
+    </div>
+    <div class="cell"><b>Type</b><br>Passenger cars</div>
+    <div class="cell"><b>Manufacturer</b><br><a href="f-kap.html">F-KAP</a></div>
+    <div class="cell"><b>Country</b><br>UKR</div>
+    <div class="cell"><b>Year</b><br>1931</div>
+    <div class="cell"><b>Class</b><br>Mass-market civilian car</div>
+    <div class="cell"><b>Status</b><br>Revision of the D-030/031 based on owner feedback</div>
+    <div class="cell"><b>Features</b><br>Removable radio, modular equipment, removable heater in the senior version, factory options</div>
+  </aside>
+
+  <h2>D-033 and D-034</h2>
+
+  <p>
+    <b>F-KAP D-033</b> and <b>F-KAP D-034</b> were 1931 models that appeared as a response to practical comments from owners
+    about the equipment of the D-030/031. In these versions, F-KAP reworked the concept of “built-in” devices and emphasized
+    modularity, the possibility of later equipment installation, and a more flexible equipment system.
+  </p>
+
+  <h3>Background</h3>
+  <p>
+    The northern rich equipment version of the D-030/031 used a built-in radio. However, in Kora this solution caused everyday criticism:
+    owners noted that the radio was tied to the car and could not be taken with them after stopping. The situation was made worse
+    by a practical issue: listening to the news near home required keeping the car on, which was perceived as unnecessary fuel consumption
+    and inconvenience. These comments were recorded as a direct request for equipment revision.
+  </p>
+
+  <h3>Development and the principle of modularity</h3>
+  <p>
+    In the D-033 and D-034, F-KAP changed its overall approach to equipment. Instead of making expensive equipment an inseparable part
+    of the car, the plant introduced modular solutions that allowed the device either to be removed and used separately or purchased
+    later. Thus, the owner could choose equipment according to actual need, not only according to the factory trim level.
+  </p>
+
+  <h3>Removable F-KAP radio</h3>
+  <p>
+    The key innovation was the removable radio. A mounting cutout was provided for it in the dashboard, and connection was made
+    through special contacts designed to operate from the car’s electrical system. After stopping, the radio unit could be
+    removed and turned into a portable F-KAP radio.
+  </p>
+  <p>
+    For home use, variants of a “station” were offered, onto which the radio unit could be installed. Depending on the version,
+    this could be a simple stand powered from a wall socket or a separate home center with speakers that provided better sound.
+    This approach expanded the equipment’s usage scenarios: the radio ceased to be only a car function and became a household device.
+  </p>
+
+  <h3>Removable heater and detachable connections</h3>
+  <p>
+    In the senior D-033 equipment version, engineers used an even more radical idea. The heater was made removable by replacing welded connections
+    with detachable ones using threaded pipe fittings. The design provided for shutting off the valves, after which the heating module
+    could be removed and the included bypass pipe installed in its place, allowing the car to continue operating without the heater.
+  </p>
+  <p>
+    The removed heating module was intended to be used as an autonomous heat source for warming a small room,
+    such as a room or small apartment. Within the historiography of the line, this solution is regarded as a characteristic example
+    of F-KAP’s focus on the owner’s everyday scenarios, not only on the movement of the car.
+  </p>
+
+  <h3>Base version and upgrade logic</h3>
+  <p>
+    In the cheap D-034 equipment version, the heater and radio were absent by default. Instead of the heater, a pipe was installed,
+    and the place for the radio was closed with a plastic blanking plate. At the same time, the plant introduced the official possibility
+    of purchasing equipment separately. The owner could buy a radio with the required station version, as well as a heater for winter operation
+    if it was needed. In this way, equipment became gradual and more accessible.
+  </p>
+
+  <h3>Additional options</h3>
+  <p>
+    As a separate mini-option, a lamp for illuminating the door opening area was offered. It was not included in any equipment level
+    by default, but could be installed at the owner’s request. This approach complemented the general idea of the D-033/034 as a family
+    where important small conveniences were moved into the category of official factory improvements.
+  </p>
+
+  <h3>Reception and significance</h3>
+  <p>
+    The D-033 and D-034 are regarded as the stage where F-KAP established the user-oriented character of the pre-war line.
+    The removable radio became a response to direct owner criticism, while the concept of a detachable heater and factory upgrade options
+    formed the image of the car as a system that could be adapted to everyday life. Within the D-Series, these models are usually
+    described as a transition from “ready-made equipment” to a modular approach that influenced the further development
+    of the brand’s civilian cars.
+  </p>
+</section>
+
+<hr>
+
+<section class="model-block" style="display:flow-root; margin:0 0 18px;">
+  <aside class="infobox">
+    <div class="h">F-KAP D-038</div>
+    <div class="cell">
+      <img src="../104.jpg" alt="F-KAP D-038">
+    </div>
+    <div class="cell"><b>Type</b><br>Passenger car</div>
+    <div class="cell"><b>Manufacturer</b><br><a href="f-kap.html">F-KAP</a></div>
+    <div class="cell"><b>Country</b><br>UKR</div>
+    <div class="cell"><b>Year</b><br>1938</div>
+    <div class="cell"><b>Class</b><br>Mass-market civilian car</div>
+    <div class="cell"><b>Status</b><br>Last civilian model of the pre-war D-line</div>
+    <div class="cell"><b>Features</b><br>Late pre-war redesign, improved aerodynamics, visual “widening” without increased dimensions</div>
+  </aside>
+
+  <h2>D-038</h2>
+
+  <p>
+    <b>F-KAP D-038</b> was the final civilian model of the pre-war D-line, introduced in 1938.
+    By that time, the basic versions of the series, including the D-030/031 and D-033/034, continued to sell almost unchanged
+    because they remained modern and in demand. However, the old body shapes, especially the characteristic arches and transitions
+    from the arch to the main body volume, no longer felt like a noticeable breakthrough and began to look familiar.
+    In response, F-KAP made a new design leap without radically changing the car’s dimensions.
+  </p>
+
+  <h3>Background</h3>
+  <p>
+    Sources on the line emphasize that in the 1930s the series became so successful that it could “live for decades”
+    without regular updates. Nevertheless, by the end of the decade, the appearance of the early pre-war generation had become
+    established and familiar. Since competitors were gradually catching up in overall design level, the plant decided to update the model
+    in order to preserve visual modernity and improve aerodynamic qualities.
+  </p>
+
+  <h3>Body redesign</h3>
+  <p>
+    The D-038 received a reworked exterior while preserving the general platform logic. The purpose of the update was to make the body
+    neater and more unified, reduce the visual “stepped” character of the lines, and improve the perception of the shape among new cars.
+    The key direction was the reworking of the areas around the wheel arches and the transitions between the arches and the main body volume.
+    Instead of the previous pronounced “arch → transition → body” layout, smoother joints were used, making the car
+    look more attractive and more mature.
+  </p>
+
+  <h3>Aerodynamics and visual proportion</h3>
+  <p>
+    Model descriptions separately noted the desire to improve aerodynamics. At the same time, the plant tried to achieve the effect
+    of the car being “wider” and more confident on the road without actually increasing its dimensions. In meaning, this was
+    a design leap aimed at making the appearance more modern while preserving the efficiency achieved in the 1930s.
+  </p>
+
+  <h3>Place in the line</h3>
+  <p>
+    The D-038 is considered the final stage of the civilian evolution of the D-Series. The model completed the pre-war phase
+    of the series, gathering the key ideas of previous years: practicality, climate suitability, mass-market character,
+    and orientation toward real operation, but in a neater and more modern body design.
+  </p>
+
+  <h3>End of the civilian line</h3>
+  <p>
+    After the release of the D-038, further development of the civilian D-line was limited by growing international tension.
+    Against the background of reports of an approaching major war, Akolon instructed F-KAP to transition toward the creation of military equipment.
+    From 1940, the enterprise was involved in helping China in the war against Japan. As a result, the pre-war civilian
+    D-Series line effectively ended, and the plant was reoriented toward defense tasks.
+  </p>
+</section>
+
+<h2>See also</h2>
+<ul>
+  <li><a href="f-kap.html">F-KAP</a></li>
+  <li><a href="car-series-fkap.html">F-KAP vehicle series</a></li>
+  <li><a href="kivish.html">Kivish</a></li>
+</ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>Attention:</strong> Neverpedia is a fictional project.
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

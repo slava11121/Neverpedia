@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ksh">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Fito — Главная</title>
+  <title>Fito — Нэрглав</title>
   <style>
     :root {
       --bg-base: #141414;
@@ -251,6 +251,55 @@
   margin-top: 4px;
 }
 
+.post-comments {
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comment-item {
+  background-color: #1b1b1b;
+  border: 1px solid #2d2d2d;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.comment-author {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.comment-text {
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+.comments-more {
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  color: var(--accent-color);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.comments-more:hover {
+  text-decoration: underline;
+}
+
     /* === ВИДЖЕТ ПОГОДЫ === */
     .weather-city { font-size: 16px; font-weight: bold; color: var(--text-primary); }
     .weather-date { font-size: 12px; color: var(--text-secondary); margin-bottom: 12px; text-transform: capitalize; }
@@ -267,10 +316,10 @@
       <a class="logo"><img src="logo.png" alt="Fito" class="logo-img"></a>
       <div class="search-box">
         <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-        <input type="text" placeholder="Поиск">
+        <input type="text" placeholder="Лiнар">
       </div>
       <div class="header-actions">
-        <button class="btn-login">Войти</button>
+        <button class="btn-login" >Энход</button>
       </div>
     </div>
   </header>
@@ -278,14 +327,14 @@
   <div class="main-grid">
     
     <nav class="left-nav" id="side-nav">
-      <a onclick="openTab('private', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg> Мой профиль</a>
-      <a onclick="openTab('feed', this)" class="active"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg> Лента</a>
-      <a onclick="openTab('private', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> Мессенджер</a>
-      <a onclick="openTab('private', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg> Друзья</a>
-      <a onclick="openTab('private', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg> Фотографии</a>
-      <a onclick="openTab('music', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg> Музыка</a>
-      <a onclick="openTab('video', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg> Видео</a>
-      <a onclick="openTab('games', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 6.5 18.5 6.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg> Игры</a>
+      <a onclick="openTab('private', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg> Профiл</a>
+      <a onclick="openTab('feed', this)" class="active"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg> Лiнар</a>
+      <a onclick="openTab('private', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg> Месендж</a>
+      <a onclick="openTab('private', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg> Друж-лист</a>
+      <a onclick="openTab('private', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg> Фотолист</a>
+      <a onclick="openTab('music', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg> Музiк</a>
+      <a onclick="openTab('video', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg> Вiдео</a>
+      <a onclick="openTab('games', this)"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 6.5 18.5 6.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg> Игролист</a>
     </nav>
 
     <div class="feed-column" id="main-content">
@@ -293,14 +342,14 @@
         <div class="composer">
           <div class="composer-top">
             <div class="composer-avatar">?</div>
-            <input type="text" class="composer-input" placeholder="Что у вас нового?" readonly onclick="openTab('private')">
+            <input type="text" class="composer-input" placeholder="Ор вас нов-лист?" readonly onclick="openTab('private')">
           </div>
           <div class="composer-actions">
             <div class="composer-tools">
               <svg class="tool-icon" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
               <svg class="tool-icon" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
             </div>
-            <button class="btn-post" onclick="openTab('private')">Создать пост</button>
+            <button class="btn-post" onclick="openTab('private')">Сотвор пост</button>
           </div>
         </div>
         <div id="fito-feed"></div>
@@ -309,13 +358,13 @@
 
     <div class="right-column">
       <div class="block-card">
-        <div class="block-title">Погода</div>
+        <div class="block-title">Погод-лист</div>
         <div class="weather-city">Кора</div>
-        <div class="weather-date" id="w-date">Загрузка...</div>
+        <div class="weather-date" id="w-date">Загруж-ход...</div>
         
         <div class="weather-temp-box">
           <div class="weather-temp" id="w-temp">--°C</div>
-          <div class="weather-desc" id="w-desc">Подключение к метеостанции...</div>
+          <div class="weather-desc" id="w-desc">Связ en метео-станцiя...</div>
         </div>
       </div>
     </div>
@@ -327,14 +376,14 @@
       <div class="composer">
         <div class="composer-top">
           <div class="composer-avatar">?</div>
-          <input type="text" class="composer-input" placeholder="Что у вас нового?" readonly onclick="openTab('private')">
+          <input type="text" class="composer-input" placeholder="Ор вас нов-лист?" readonly onclick="openTab('private')">
         </div>
         <div class="composer-actions">
           <div class="composer-tools">
             <svg class="tool-icon" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
             <svg class="tool-icon" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
           </div>
-          <button class="btn-post" onclick="openTab('private')">Создать пост</button>
+          <button class="btn-post" onclick="openTab('private')">Сотвор пост</button>
         </div>
       </div>
       <div id="fito-feed"></div>
@@ -355,20 +404,20 @@
       else if (tabType === 'private') {
         newHTML = `
           <div class="unregistered-state">
-            <h2>Вы не вошли в аккаунт</h2>
-            <p>Чтобы просматривать этот раздел и общаться с пользователями,<br>пожалуйста, войдите в свой профиль.</p>
-            <button class="btn-login" style="padding: 10px 24px;">Войти в Fito</button>
+            <h2>Энход en аккант нео</h2>
+            <p>Чар озир этот раздел i говор-ход с юзер-лист,<br>энход en свой профiл.</p>
+            <button class="btn-login" style="padding: 10px 24px;">Энход en Fito</button>
           </div>
         `;
       }
       else if (tabType === 'music') {
-        newHTML = `<div class="public-state"><h2>Музыка</h2><p style="color: var(--text-secondary); margin-top: 10px;">Список доступных аудиозаписей.</p></div>`;
+        newHTML = `<div class="public-state"><h2>Музiк</h2><p style="color: var(--text-secondary); margin-top: 10px;">Лист доступ-аудiо.</p></div>`;
       }
       else if (tabType === 'video') {
-        newHTML = `<div class="public-state"><h2>Видео</h2><p style="color: var(--text-secondary); margin-top: 10px;">Каталог видеороликов и трансляций.</p></div>`;
+        newHTML = `<div class="public-state"><h2>Вiдео</h2><p style="color: var(--text-secondary); margin-top: 10px;">Катал видеолист i транслiр.</p></div>`;
       }
       else if (tabType === 'games') {
-        newHTML = `<div class="public-state"><h2>Игры</h2><p style="color: var(--text-secondary); margin-top: 10px;">Встроенные развлечения.</p></div>`;
+        newHTML = `<div class="public-state"><h2>Игролист</h2><p style="color: var(--text-secondary); margin-top: 10px;">Встроj развлек-лист.</p></div>`;
       }
 
       mainContent.innerHTML = `<div class="animate-fade">${newHTML}</div>`;
@@ -384,11 +433,11 @@
         const code = data.current.weather_code;
         
         // Расшифровка кодов погоды
-        let desc = "Облачно";
-        if (code === 0) desc = "Ясно";
-        else if (code === 1 || code === 2 || code === 3) desc = "Переменная облачность";
+        let desc = "Облан";
+        if (code === 0) desc = "Ясна";
+        else if (code === 1 || code === 2 || code === 3) desc = "Полу-облан";
         else if (code >= 45 && code <= 48) desc = "Туман";
-        else if (code >= 51 && code <= 67) desc = "Дождь";
+        else if (code >= 51 && code <= 67) desc = "Дожд";
         else if (code >= 71 && code <= 86) desc = "Снег";
         else if (code >= 95) desc = "Гроза";
 
@@ -397,7 +446,7 @@
         document.getElementById('w-desc').textContent = desc;
 
       } catch (error) {
-        document.getElementById('w-desc').textContent = "Связь со станцией прервана";
+        document.getElementById('w-desc').textContent = "Связ en станцiя прерв";
       }
 
       // Установка текущей даты

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>F-KAP Go — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{width:160px}
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Main page</a>
+        <a href="create.html">Create article</a>
+        <a href="#">Random article</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">Languages ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../fkap-go.html">Русский</a>
+          <a href="fkap-go.html">English</a>
+          <a href="../ksh/fkap-go.html">Кiвiшский</a>
+          <a href="../cn/fkap-go.html">简体中文</a>
+          <a href="../jpn/fkap-go.html">日本語</a>
+          <a href="../ko/fkap-go.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+        <aside class="infobox">
+          <div class="h">F-KAP Go</div>
+          <div class="cell">
+            <img src="../019.jpg" alt="F-KAP Go">
+            </div>
+            <div class="cell">
+            <img src="../105.jpg" alt="F-KAP Go, rear section">
+          </div>
+
+          <div class="cell"><b>Type</b><br>Passenger car</div>
+          <div class="cell"><b>Manufacturer</b><br><a href="f-kap.html">F-KAP</a></div>
+          <div class="cell"><b>Country</b><br>UKR</div>
+          <div class="cell"><b>Production years</b><br>1944—1958</div>
+          <div class="cell"><b>Engine</b><br>Inline 4-cylinder, carbureted, 56 hp</div>
+
+          <div class="cell"><b>Status</b><br>First post-war civilian model</div>
+          <div class="cell"><b>Features</b><br>
+            Built-in heater, built-in radio, wood-fired preheating option, winter tire set included as a gift, export to the USSR
+          </div>
+        </aside>
+
+        <h1 class="title">F-KAP Go</h1>
+        <p class="lead">
+          <b>F-KAP Go</b> was a post-war civilian car by F-KAP, produced from 1944 to 1958.
+          The model became the plant’s first major civilian vehicle after the period of military production and was manufactured
+          as a mass-market sedan, including for deliveries to the USSR.
+        </p>
+
+        <figure class="thumb">
+          <img src="../106.jpg" alt="F-KAP Go — historical photograph in use">
+          <figcaption class="cap">F-KAP Go — historical photograph in use.</figcaption>
+        </figure>
+
+        <h2>Background</h2>
+        <p>
+          After the war, the plant returned to civilian cars, but several years of work on military equipment had led to
+          a loss of pace in civilian design. To quickly enter the market with a mass sedan that was modern for its time,
+          F-KAP decided to rely on the Soviet engineering base and ready-made solutions that had already proven themselves
+          in post-war reality.
+        </p>
+
+        <h2>Development</h2>
+        <h3>Choice of base</h3>
+        <p>
+          As part of accelerated development, F-KAP engineers turned to Soviet experience and studied the drawings of the GAZ M-20.
+          As a result, the appearance and general structural logic of the Go turned out to be very close to the M-20.
+          After that, the plant refined the car by adding typical F-KAP solutions for winter operation and expanding
+          the basic equipment.
+        </p>
+
+        <h3>Start of production</h3>
+        <p>
+          The Go was launched into production as a “ready-made” mass car: the focus was on producing a large volume
+          without a complex system of packages and rare options. This simplified production, maintenance, and export deliveries.
+        </p>
+
+        <h2>Equipment</h2>
+        <p>
+          One of the Go’s distinctions was its single rich equipment level. Standard equipment included a built-in heater
+          and a built-in radio. For cold regions, the option of wood-fired preheating remained available, which was considered
+          familiar for the early F-KAP school.
+        </p>
+        <p>
+          When purchasing the car, the company included a winter tire set with it. This was used both as part of marketing
+          and as a practical measure for winter operation.
+        </p>
+
+        <h2>Production</h2>
+        <p>
+          Serial production of the Go began in 1944. The model was produced until 1958 and remained the plant’s main civilian sedan
+          throughout the post-war period, while the enterprise stabilized its civilian line.
+        </p>
+
+        <h2>Export</h2>
+        <h3>Deliveries to the USSR</h3>
+        <p>
+          Export to the USSR became one of the key directions for the Go. Deliveries began in 1945, and the car gained
+          a reputation as a vehicle with “full equipment”: at a comparable price, it offered more built-in conveniences.
+          Despite discussions about its similarity to the GAZ M-20, in practice the model was bought willingly because of its equipment
+          and winter suitability, as well as because of the winter tire set included as a gift.
+        </p>
+
+        <h3>End of external deliveries</h3>
+        <p>
+          In the post-war period, F-KAP stopped deliveries to markets outside the Soviet bloc and focused
+          on the domestic market and allied directions. As a result, the Go became a model oriented toward the “bloc” market.
+        </p>
+
+        <h2>Reception</h2>
+        <p>
+          The Go is often described as a pragmatic post-war project: the rapid release of a mass sedan on an understandable base,
+          strengthened by traditional F-KAP solutions for winter operation and a simple approach to equipment.
+          For the plant, the model became a return to civilian production and a consolidation of its position on the allied market.
+        </p>
+
+        <h2>See also</h2>
+        <ul>
+          <li><a href="f-kap.html">F-KAP</a></li>
+          <li><a href="car-series-fkap.html">F-KAP vehicle series</a></li>
+          <li><a href="skr.html">Union Kivish Republics</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>Attention:</strong> Neverpedia is a fictional project.
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

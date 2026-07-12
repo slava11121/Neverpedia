@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Eholkiv — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial,sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:240px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    .wikitable{width:100%;border-collapse:collapse;margin:10px 0 14px 0;font-size:14px;background:#fff}
+    .wikitable th,.wikitable td{border:1px solid #c8ccd1;padding:7px 8px;vertical-align:top}
+    .wikitable th{background:#eef3f8;text-align:left}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">Main page</a>
+      <a href="create.html">Create article</a>
+      <a href="#">Random article</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">Languages ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../eholkiv.html">Русский</a>
+        <a href="eholkiv.html">English</a>
+        <a href="../ksh/eholkiv.html">Кiвiшский</a>
+        <a href="../cn/eholkiv.html">简体中文</a>
+        <a href="../jpn/eholkiv.html">日本語</a>
+        <a href="../ko/eholkiv.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+      <aside class="infobox">
+        <div class="h">Eholkiv</div>
+        <div class="cell"><img src="../121.jpg" alt="Eholkiv logo"></div>
+        <div class="cell"><b>Type</b><br>Private engineering company</div>
+        <div class="cell"><b>Industry</b><br>Engine manufacturing, fuel systems, automotive technologies</div>
+        <div class="cell"><b>Founded</b><br>11 May 2026</div>
+        <div class="cell"><b>Founder</b><br>Atso Hevto</div>
+        <div class="cell"><b>Location</b><br>Kivish, Miri, 2 Sizovo Street, building 1</div>
+        <div class="cell"><b>Partners</b><br><a href="tarifa-auto.html">Tarifa Auto</a></div>
+        <div class="cell"><b>Products</b><br>Experimental fuel systems, ETU-1.5 engine</div>
+        <div class="cell"><b>Status</b><br>Development and testing</div>
+      </aside>
+
+      <h1 class="title">Eholkiv</h1>
+      <p class="lead"><b>Eholkiv</b> is a Kivish engineering company from Miri, founded by Atso Hevto in May 2026. The company develops systems for reducing fuel consumption in gasoline engines and became known after a series of experiments on Soviet-produced AvtoVAZ cars.</p>
+
+      <p>The original idea of Eholkiv was to modify old engines so that gasoline would enter the engine not as a regular liquid flow, but as a finely dispersed fuel mist. During early testing, the company gradually moved from simple sprayers to ultrasonic injectors, electronic fuel delivery control, an oxygen sensor in the exhaust system, and an additional water sprayer for cooling the combustion chamber.</p>
+
+      <h2>History</h2>
+
+      <h3>11 May 2026: founding of the company</h3>
+      <p>In May 2026, Atso Hevto, after visiting Russia and assessing the situation with fuel costs, concluded that a market for gasoline-saving technologies would emerge among old and cheap cars. After returning to Kivish, he founded the company <b>Eholkiv</b> in Miri, focusing on simple and cheap modernization of gasoline engines.</p>
+      <p>Initially, the project was seen as a small engineering startup with a rather controversial idea: instead of creating a new car, the company wanted to modify existing engines and reduce fuel consumption without a major loss of performance.</p>
+
+      <h3>June 2026: first demonstration prototype</h3>
+      <p>While preparing to build its own production system, Eholkiv received help from <a href="tarifa-auto.html">Tarifa Auto</a>, which agreed to provide a site for the first demonstration work. The first prototype was built on the basis of a <b>Lada Samara 1</b>. In place of the carburetor, a homemade spraying system with filters was installed, which Hevto himself compared to the operating principle of an ordinary air freshener.</p>
+      <p>The result was weak: during bench testing, consumption was about <b>11.8 L/100 km</b>. After this, Eholkiv admitted that the early system with constant fuel spraying was almost no different in logic from an old carburetor and was not capable of producing serious savings.</p>
+
+      <h3>July 2026: transition to ultrasonic injectors</h3>
+      <p>In July, the company completely revised the fuel delivery system. Instead of cheap sprayers, a system with <b>ultrasonic injectors</b> was developed. These injectors vibrated at a set frequency and turned the incoming fuel into a fine mist. This mist was fed into the intake manifold, where the mixture was expected to burn more evenly.</p>
+      <p>After the transition to ultrasonic spraying, consumption dropped to <b>9.2 L/100 km</b>. Although the result still did not meet the initial expectations, it showed that the company had found a more promising technical direction.</p>
+
+      <h3>Late July 2026: electronic fuel delivery</h3>
+      <p>Later in the same month, Eholkiv engineers identified a new problem: even the ultrasonic system continued to feed fuel too evenly, without a precise connection to the real engine load. To solve this problem, a separate protective box was made on a 3D printer inside the engine bay, and an Arduino board was installed inside it. It controlled an electronic pump and adjusted fuel delivery depending on pedal position and engine speed.</p>
+      <p>At low rpm, the system reduced fuel delivery, and when load increased, it increased it. After this modification, urban fuel consumption during testing dropped to <b>8.2 L/100 km</b>.</p>
+
+      <h3>Autumn 2026: oxygen sensor and feedback</h3>
+      <p>Several months later, a <b>Lada Samara 1 Sedan</b> was taken out for testing. This time, Eholkiv added an oxygen sensor to the exhaust system and connected it to the electronic fuel delivery control. If the exhaust showed a rich mixture, the system reduced delivery through the ultrasonic injectors. If the mixture became lean and the engine began operating in a hotter mode, delivery was increased.</p>
+      <p>This system became the first full feedback-based version of the Eholkiv system. Thanks to it, consumption was reduced to <b>7.5 L/100 km</b>.</p>
+
+      <figure class="thumb">
+          <img src="../122.jpg" alt="Lada Samara 1 Sedan with Eholkiv development">
+          <figcaption class="cap">Lada Samara 1 Sedan with Eholkiv development</figcaption>
+      </figure>
+
+      <h3>Water sprayer and the result of 7.2 L/100 km</h3>
+      <p>The next stage was the installation of a second sprayer that fed ordinary water into the carburetor assembly. Water was not used as fuel: its purpose was to cool the combustion chamber and stabilize engine operation with a more economical mixture. This approach made it possible to lower the operating temperature of the engine and reduce the risk of overheating in lean modes.</p>
+      <p>On the 1.5-liter engine of the <b>Lada Samara 1 Sedan</b>, urban fuel consumption was reduced to <b>7.2 L/100 km</b>. This result became the most notable achievement of Eholkiv’s early program on old Soviet engines.</p>
+
+      <h3>Announcement of ETU-1.5</h3>
+      <p>A week after the publication of the results, the company stated that all early tests had been carried out on old Soviet AvtoVAZ engines, which did not allow the full potential of the new system to be revealed. According to Eholkiv, the ancient engine architecture limited the possible fuel savings even after the installation of ultrasonic spraying, an oxygen sensor, and water cooling of the combustion chamber.</p>
+      <p>After this, Eholkiv announced cooperation with <a href="tarifa-auto.html">Tarifa Auto</a> and the start of development of its own <b>ETU-1.5</b> engine. The new engine was to be designed from the beginning for modern fuel delivery systems, electronic mixture control, and water cooling of the combustion chamber. The stated target of the project was urban fuel consumption of no more than <b>5 L/100 km</b>.</p>
+
+      <h2>Technologies</h2>
+      <p>Eholkiv’s early developments were built around the idea of more precise control over gasoline combustion. The company gradually abandoned simple constant spraying and arrived at a system where fuel delivery depends on engine operating mode and exhaust composition.</p>
+      <ul>
+        <li><b>Ultrasonic spraying</b> — turning fuel into a fine mist before it enters the intake manifold.</li>
+        <li><b>Electronic pump</b> — regulating the amount of fuel depending on pedal position and rpm.</li>
+        <li><b>Oxygen sensor</b> — monitoring a rich or lean mixture by exhaust composition.</li>
+        <li><b>Water sprayer</b> — cooling the combustion chamber and reducing the risk of overheating with an economical mixture.</li>
+        <li><b>Electronic control unit</b> — early prototypes used Arduino; later, a transition to an industrial controller was expected.</li>
+      </ul>
+
+      <h2>Prototypes and testing</h2>
+      <table class="wikitable">
+        <tr>
+          <th>Period</th>
+          <th>Base</th>
+          <th>Main modification</th>
+          <th>Consumption</th>
+        </tr>
+        <tr>
+          <td>June 2026</td>
+          <td>Lada Samara 1</td>
+          <td>Simplest spraying system in place of the carburetor</td>
+          <td>11.8 L/100 km</td>
+        </tr>
+        <tr>
+          <td>July 2026</td>
+          <td>Lada Samara 1</td>
+          <td>Ultrasonic injectors and fuel mist</td>
+          <td>9.2 L/100 km</td>
+        </tr>
+        <tr>
+          <td>Late July 2026</td>
+          <td>Lada Samara 1</td>
+          <td>Arduino unit, electronic pump, and delivery by pedal/rpm</td>
+          <td>8.2 L/100 km</td>
+        </tr>
+        <tr>
+          <td>September 2026</td>
+          <td>Lada Samara 1 Sedan</td>
+          <td>Oxygen sensor and exhaust feedback</td>
+          <td>7.5 L/100 km</td>
+        </tr>
+        <tr>
+          <td>October 2026</td>
+          <td>Lada Samara 1 Sedan, 1.5 L</td>
+          <td>Second water sprayer for cooling the combustion chamber</td>
+          <td>7.2 L/100 km in the city</td>
+        </tr>
+      </table>
+
+      <h2>ETU-1.5</h2>
+      <p><b>ETU-1.5</b> is the announced engine by Eholkiv and Tarifa Auto, whose development was announced after the completion of the first experiments on AvtoVAZ cars. Unlike the early prototypes, the ETU-1.5 was supposed to be designed not as a modification of an old engine, but as a new engine originally built for Eholkiv technology.</p>
+      <p>The engine was expected to receive a modern combustion chamber, an electronic control system, ultrasonic fuel delivery, oxygen sensors, and a water circuit for cooling the working mixture. The target figure was stated as urban fuel consumption of no more than <b>5 L/100 km</b>. At the time of the announcement, the project was in development, and production specifications had not yet been published.</p>
+
+      <h2>Significance</h2>
+      <p>Eholkiv became notable not because of instant success, but because of consistent improvement in results. In a short time, the company moved from a crude homemade system to an early form of controlled fuel system. Its developments were seen as an attempt to create a cheap alternative to expensive electrification for countries and regions where old gasoline vehicle fleets continue to play an important role.</p>
+      <p>Special attention to the company was connected with the fact that its technology did not require the immediate purchase of a new car. Potentially, it could be used to modernize old cars, taxis, light commercial vehicles, and budget models.</p>
+
+      <h2>Criticism</h2>
+      <p>The main criticism of Eholkiv was related to safety and durability. Skeptics pointed to the risk of fire, instability of homemade electronic units, possible problems with the water sprayer in winter, corrosion, injector contamination, and the lack of long-distance mileage testing. Additional questions were raised by the use of Arduino in early prototypes: for a production car, such a system was considered too simple and insufficiently protected.</p>
+      <p>At the same time, after the achievement of 7.2 L/100 km, the tone of criticism changed: the project was no longer treated as a simple joke, but critics began demanding durability tests, certification, and full industrial implementation.</p>
+
+      <h2>See also</h2>
+      <ul>
+        <li><a href="tarifa-auto.html">Tarifa Auto</a></li>
+        <li><a href="f-kap.html">F-KAP</a></li>
+        <li><a href="kivish.html">Kivish</a></li>
+      </ul>
+
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>Attention:</strong> Neverpedia is a fictional project.
+    </section>
+  </main>
+</div>
+
+<script>
+  function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>

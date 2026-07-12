@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>.ksh — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;               
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    /* === ЯЗЫКИ (добавлено) === */
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;  
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    .flag-row{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin:12px 0 16px 0;
+      clear:both;
+    }
+    .flag-card{
+      width:260px;
+      margin:0;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      box-sizing:border-box;
+    }
+    .flag-card img{
+      display:block;
+      width:100%;
+      height:auto;
+      border:1px solid #c8ccd1;
+    }
+    .flag-card figcaption{
+      margin-top:6px;
+      color:#54595d;
+      font-size:14px;
+    }
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Заглавная страница</a>
+        <a href="create.html">Создать статью</a>
+        <a href="#">Случайная статья</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">Языки ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="ksh-domain.html">Русский</a>
+          <a href="en/ksh-domain.html">English</a>
+          <a href="ksh/ksh-domain.html">Кiвiшский</a>
+          <a href="cn/ksh-domain.html">中国人</a>
+          <a href="jpn/ksh-domain.html">日本語</a>
+          <a href="ko/ksh-domain.html">한국인</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">.ksh</div>
+          <div class="cell"><img src="113.jpg" alt="Логотип домена ksh"></div>
+          <div class="cell"><b>Введён</b><br>29 апреля 1991 года</div>
+          <div class="cell"><b>Тип домена</b><br>Национальный домен верхнего уровня</div>
+          <div class="cell"><b>Статус</b><br>Действует</div>
+          <div class="cell"><b>Реестр</b><br>Kishinet (с 2014)</div>
+          <div class="cell"><b>Бывший оператор реестра</b><br>ЭТЕНКК (1991–2014)</div>
+          <div class="cell"><b>Предполагаемое использование</b><br>Сайты, связанные с Кивишем</div>
+          <div class="cell"><b>Фактическое использование</b><br>Основная национальная доменная зона Кивиша</div>
+          <div class="cell"><b>Ограничения регистрации</b><br>Иностранная регистрация запрещена; в спорных случаях применяется ручная проверка</div>
+          <div class="cell"><b>Структура</b><br>Разрешена прямая регистрация; используются также домены второго уровня</div>
+          <div class="cell"><b>DNSSEC</b><br>есть</div>
+          <div class="cell"><b>Политика споров</b><br>Ручное рассмотрение жалоб</div>
+        </aside>
+
+        <h1 class="title">.ksh</h1>
+        <p class="lead">
+          <b>.ksh</b> — национальный домен верхнего уровня <a href="kivish.html">Кивиша</a>, делегированный
+          <b>29 апреля 1991 года</b> одновременно с подключением страны к мировому интернету.
+          В отличие от большинства национальных доменов, использующих двухбуквенный формат, <b>.ksh</b>
+          был оформлен как трёхбуквенное исключение.
+        </p>
+
+        <p>
+          В кивишской историографии домен <b>.ksh</b> рассматривается не только как техническая доменная зона,
+          но и как один из символов раннего цифрового суверенитета государства. С момента появления он использовался
+          государственными структурами, научными учреждениями, а позднее — корпоративным и гражданским сегментом интернета.
+        </p>
+
+        <h2>История</h2>
+        <p>
+          После выхода Кивиша из коммунистического периода в 1989 году государство приступило к созданию собственной
+          международной сетевой инфраструктуры. Одним из результатов этого процесса стало делегирование домена <b>.ksh</b>
+          в 1991 году.
+        </p>
+        <p>
+          Официальной датой появления доменной зоны считается <b>29 апреля 1991 года</b>. С этого момента Кивиш получил
+          собственную сетевую идентификацию и возможность развивать национальное доменное пространство независимо от других стран.
+        </p>
+        <p>
+          Особенностью <b>.ksh</b> стал его трёхбуквенный формат. В кивишской трактовке это объяснялось необходимостью
+          избежать путаницы с двухбуквенными обозначениями и сразу закрепить узнаваемую цифровую идентичность государства.
+        </p>
+
+        <h2>Оператор реестра</h2>
+        <p>
+          С <b>1991 по 2014 год</b> оператором реестра домена <b>.ksh</b> являлся <b>ЭТЕНКК</b>
+          — <b>Экспериментальный Технический Единый Научный Комитет Кивиша</b>. На раннем этапе именно он отвечал
+          за техническое сопровождение зоны, начальные правила регистрации и подключение первых государственных и научных пользователей.
+        </p>
+        <p>
+          В <b>2014 году</b> управление реестром было передано компании <b>Kishinet</b>. Передача была связана
+          с ростом числа регистраций, расширением корпоративного и гражданского сегмента и переходом доменной зоны
+          от научно-государственного этапа к массовому использованию.
+        </p>
+
+        <h2>Регистрация</h2>
+        <p>
+          В зоне <b>.ksh</b> разрешена <b>прямая регистрация доменных имён</b>, то есть используются адреса формата
+          <code>site.ksh</code>.
+        </p>
+        <p>
+          Иностранным лицам и организациям регистрация доменных имён в зоне <b>.ksh</b> не предоставляется.
+          При обычной регистрации применяется штатный порядок оформления, однако в случае жалоб, споров или сомнений
+          может проводиться <b>ручная проверка</b>.
+        </p>
+        <p>
+          Кириллический или отдельный национальный аналог домена <b>.ksh</b> отсутствует.
+        </p>
+
+        <h2>Домены второго уровня</h2>
+
+        <h3>Категориальные зоны</h3>
+        <ul>
+          <li><b>gov.ksh</b> — государственные органы</li>
+          <li><b>edu.ksh</b> — образовательные учреждения</li>
+          <li><b>com.ksh</b> — коммерческие организации</li>
+          <li><b>org.ksh</b> — общественные и иные организации</li>
+          <li><b>net.ksh</b> — сетевые и технические службы</li>
+          <li><b>mil.ksh</b> — военные структуры</li>
+        </ul>
+
+        <h3>Региональные зоны</h3>
+        <ul>
+          <li><b>kora.ksh</b></li>
+          <li><b>miri.ksh</b></li>
+          <li><b>deshka.ksh</b></li>
+          <li><b>malta.ksh</b></li>
+          <li><b>shentakhor.ksh</b></li>
+          <li><b>lamya.ksh</b></li>
+          <li><b>forta.ksh</b></li>
+          <li><b>malo.ksh</b></li>
+          <li><b>miata.ksh</b></li>
+          <li><b>vipo.ksh</b></li>
+          <li><b>gik.ksh</b></li>
+          <li><b>tata.ksh</b></li>
+        </ul>
+
+        <p>
+          Региональные домены второго уровня применяются местными органами управления, учреждениями, региональными организациями
+          и локальными интернет-проектами.
+        </p>
+
+        <h2>Использование</h2>
+        <p>
+          На раннем этапе домен <b>.ksh</b> использовался почти исключительно государственными и научными структурами.
+          В течение 1990-х годов доменная зона постепенно расширилась на корпоративный сектор, а позднее и на гражданские сервисы.
+        </p>
+        <p>
+          К концу 1990-х годов в зоне <b>.ksh</b> начали массово регистрироваться сайты компаний, платформ общения,
+          сервисов объявлений и бытовых интернет-проектов. В 2000-е и 2010-е годы <b>.ksh</b> окончательно закрепился
+          как основная доменная среда кивишского интернета.
+        </p>
+
+        <h2>Значение</h2>
+        <p>
+          Внутри Кивиша домен <b>.ksh</b> рассматривается как один из главных символов цифровой самостоятельности страны.
+          Его значение связано с ранним появлением в 1991 году, необычным трёхбуквенным форматом, управлением сначала
+          со стороны научно-технического института, а затем со стороны крупнейшего национального оператора связи,
+          а также с развитием прямой, категориальной и региональной модели регистрации.
+        </p>
+
+        <h2>См. также</h2>
+        <ul>
+          <li><a href="kivish.html">Кивиш</a></li>
+          <li><a href="kishinet.html">Kishinet</a></li>
+          <li><a href="etenkk.html">ЭТЕНКК</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>Внимание:</strong> Neverpedia — вымышленный проект.
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

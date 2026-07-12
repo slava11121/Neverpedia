@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hanul — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:#f6f7f8;color:#202122;font:16px/1.5 Arial,sans-serif}
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .page{display:flex;gap:16px;padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block;text-align:center;margin-bottom:16px;color:inherit}
+    .logo{max-width:100%;height:auto;display:block;margin:0 auto}
+    .nav a{display:block;margin:6px 0}
+    .content{flex:1}
+    .box{background:#fff;border:1px solid #c8ccd1;padding:16px}
+    .title{margin:0 0 6px 0;font-size:28px;line-height:1.25}
+    .lead{color:#54595d;margin:0 0 12px 0}
+    .infobox{float:right;width:280px;background:#fff;border:1px solid #c8ccd1;margin:0 0 12px 12px;font-size:14px}
+    .infobox .h{background:#eef3f8;border-bottom:1px solid #c8ccd1;padding:8px 10px;font-weight:bold;text-align:center}
+    .infobox .cell{padding:8px 10px;border-top:1px solid #e6e6e6}
+    .infobox img{display:block;max-width:100%;height:auto}
+    .thumb{float:right;width:240px;margin:0 0 12px 12px;border:1px solid #c8ccd1;background:#fff;padding:6px;font-size:14px}
+    .thumb img{display:block;width:100%;height:auto}
+    .thumb .cap{color:#54595d;margin-top:6px}
+    h2{font-size:22px;margin:16px 0 8px}
+    h3{font-size:18px;margin:14px 0 6px}
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+    .notes{font-size:14px;color:#54595d}
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none;width:100%;margin:0 0 12px 0}
+    }
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <aside class="sidebar">
+    <a class="brand" href="index.html">
+      <img class="logo" src="../logo.png" alt="Neverpedia">
+    </a>
+    <nav class="nav">
+      <a href="index.html">Main page</a>
+      <a href="create.html">Create article</a>
+      <a href="#">Random article</a>
+    </nav>
+
+    <div class="lang-block">
+      <div class="lang-toggle" onclick="toggleLangMenu()">Languages ▾</div>
+      <div id="langList" class="lang-list">
+        <a href="../hanul.html">Русский</a>
+        <a href="hanul.html">English</a>
+        <a href="../ksh/hanul.html">Кiвiшский</a>
+        <a href="../cn/hanul.html">简体中文</a>
+        <a href="../jpn/hanul.html">日本語</a>
+        <a href="../ko/hanul.html">한국어</a>
+      </div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <article class="box">
+      <aside class="infobox">
+        <div class="h">Hanul</div>
+        <div class="cell"><img src="../123.jpg" alt="Hanul logo"></div>
+        <div class="cell"><b>Original name</b><br>하늘</div>
+        <div class="cell"><b>Type</b><br>State-owned automobile company</div>
+        <div class="cell"><b>Industry</b><br>Automotive manufacturing</div>
+        <div class="cell"><b>Founded</b><br>26 June 2026</div>
+        <div class="cell"><b>Location</b><br>KKP, Pyongyang, Central District, 26 Chollima Street</div>
+        <div class="cell"><b>Key figures</b><br>Dengi Siltse</div>
+        <div class="cell"><b>Partners</b><br><a href="tarifa-auto.html">Tarifa Auto</a>, Toyota</div>
+        <div class="cell"><b>Products</b><br>Passenger cars</div>
+        <div class="cell"><b>First project</b><br>Front-wheel-drive hatchback</div>
+      </aside>
+
+      <h1 class="title">Hanul</h1>
+
+      <p class="lead">
+        <b>Hanul</b> (Korean: <b>하늘</b>) is a state-owned automobile company of the
+        <a href="korean-kivish.html">Kivish Korean Peninsula</a>, founded on 26 June 2026.
+        The company was created as a new domestic automaker for the region and as an attempt to form its own
+        automotive brand for the northern part of the Korean Peninsula against the background of the weak presence of South Korean brands.
+      </p>
+
+      <p>
+        Hanul’s first direction was the development of a mass-market passenger car for the domestic market. From the very beginning,
+        the company began cooperation with <a href="tarifa-auto.html">Tarifa Auto</a>, which had experience working in the KKP market,
+        as well as with Japanese automotive representatives connected with Toyota. At the same time, engine production
+        for future cars was planned to be developed inside Hanul itself.
+      </p>
+
+      <h2>History</h2>
+
+      <h3>Background</h3>
+      <p>
+        By the mid-2020s, the automobile market of the Kivish Korean Peninsula remained heavily dependent on external
+        and allied manufacturers. South Korean cars, primarily Hyundai, were rare and failed to establish
+        a stable position in the region. Against this background, the KKP leadership increasingly discussed the idea of creating
+        its own automobile company that could work specifically for local conditions, roads, buyer habits,
+        and the political and economic specifics of the autonomy.
+      </p>
+
+      <p>
+        A separate factor was the role of <a href="tarifa-auto.html">Tarifa Auto</a>, whose models had already taken an important
+        place in the mass motorization of the KKP. However, Tarifa Auto remained a manufacturer external to the autonomy, while
+        Hanul was intended to become a local brand connected with a new stage of industrial development in the northern part
+        of the peninsula.
+      </p>
+
+      <h3>24 June 2026: discussion in the “Hall of Decisions”</h3>
+      <p>
+        On 24 June 2026, in the “Hall of Decisions,” KKP President Dengi Siltse held a discussion on the region’s economic development.
+        During the meeting, one of the advisers proposed creating the region’s own automobile company, capable of becoming
+        an internal industrial support and reducing dependence on rare imported cars. The idea was supported by the president,
+        after which preparations began for the official formation of the new automaker.
+      </p>
+
+      <h3>26 June 2026: founding of the company</h3>
+      <p>
+        On 26 June 2026, the automobile company <b>Hanul</b> was officially created. The company’s name is written
+        in Korean as <b>하늘</b>. From the moment of its foundation, it was regarded not as a niche project, but as a future
+        mass producer of passenger cars for the KKP.
+      </p>
+
+      <p>
+        Already on the first working day, starting at nine in the morning, the first employees arrived at the company.
+        They were distributed among early development areas: design, chassis, the general structure of the car, the powertrain,
+        and preparation of the future production base. The rapid start emphasized that Hanul was created not only as a political
+        statement, but also as a practical industrial project.
+      </p>
+
+      <h3>Start of cooperation with Tarifa Auto and Toyota</h3>
+      <p>
+        At the same time as Hanul was launched, cooperation began with <a href="tarifa-auto.html">Tarifa Auto</a>, which was already
+        working in the same market and was effectively displacing Hyundai from the everyday automotive space of the KKP.
+        Tarifa Auto’s experience was important for understanding local demand: cheap cars, simple maintenance, repairability,
+        and adaptation for drivers who had only recently entered mass car culture.
+      </p>
+
+      <p>
+        The second direction was interaction with Japanese automotive representatives. Materials from the early period emphasized
+        that development of the powertrain system was being carried out jointly with the Japanese side, but the engines themselves
+        were to be produced by Hanul’s own forces. This approach allowed the company to receive engineering support
+        without becoming a simple assembly site for foreign units.
+      </p>
+
+      <h3>July 2026: first information about the car</h3>
+      <p>
+        By July 2026, Hanul was already working on the design of its first car and further development of its construction.
+        According to early leaks, the first model was expected to receive a hatchback body and a front-wheel-drive layout.
+        This choice matched the company’s task: to create a practical, compact, and comparatively affordable car
+        for the cities and suburbs of the KKP.
+      </p>
+
+      <p>
+        Front-wheel drive was considered the most logical solution for the first model: it simplified packaging,
+        reduced production costs, and suited a mass-market city car well. The hatchback, in turn, gave the vehicle versatility —
+        it could be used as family transport, a car for young drivers, and a base model for future modifications.
+      </p>
+
+      <h2>First project</h2>
+
+      <p>
+        At the early stage, Hanul’s first car did not have a publicly fixed name. In company materials and leaks,
+        it was described as a front-wheel-drive hatchback at the stage of design, chassis, and general construction development.
+      </p>
+
+      <ul>
+        <li><b>Body type:</b> hatchback.</li>
+        <li><b>Layout:</b> front-wheel drive.</li>
+        <li><b>Purpose:</b> mass-market car for the domestic KKP market.</li>
+        <li><b>Powertrain system:</b> development with the participation of Japanese automotive representatives.</li>
+        <li><b>Engine production:</b> Hanul’s own production.</li>
+        <li><b>Market role:</b> local alternative to rare Hyundai cars and a complement to existing Tarifa Auto models.</li>
+      </ul>
+
+      <h2>Market role</h2>
+      <p>
+        Hanul was created as an automobile brand that was meant to secure the KKP’s own place in passenger-car manufacturing.
+        Unlike Tarifa Auto, which began as a division of a large company, Hanul was formed from the beginning specifically
+        as a regional automaker of the northern part of the Korean Peninsula.
+      </p>
+
+      <p>
+        The company’s main task was not immediate international expansion, but the creation of a clear domestic product:
+        a car that could be mass-produced, serviced, and used in KKP cities. At the same time, cooperation with
+        Tarifa Auto and Toyota allowed Hanul not to begin development completely from zero.
+      </p>
+
+      <h2>Technologies and development</h2>
+      <p>
+        The early development stage was focused on basic automotive areas: chassis, body architecture,
+        design, powertrain, and preparation of future production processes. Special attention was paid to the powertrain
+        system, since in-house engine production was supposed to become an important sign of Hanul’s independence.
+      </p>
+
+      <p>
+        Joint work with Japanese specialists was viewed as a way to gain access to an engineering school
+        focused on reliability and service life. However, the company itself emphasized a course toward localization:
+        key units, including engines, were to be produced within the Hanul system.
+      </p>
+
+      <h2>Features</h2>
+      <ul>
+        <li><b>Regional identity</b> — the company was created as the KKP’s own automaker.</li>
+        <li><b>Late start</b> — Hanul appeared only in 2026, when the regional market already had experience with mass motorization.</li>
+        <li><b>Cooperation with Tarifa Auto</b> — use of the experience of a company that had long worked with affordable cars for the KKP.</li>
+        <li><b>Japanese engineering participation</b> — assistance in developing the powertrain system while preserving a course toward in-house production.</li>
+        <li><b>Focus on a hatchback</b> — the first project was aimed at a practical mass-market body, not an expensive image model.</li>
+      </ul>
+
+      <h2>Criticism and questions</h2>
+      <p>
+        At the early stage, Hanul faced several questions. The main one was the ability of the new company
+        to quickly move from a political decision to real serial production. The complexity of producing its own engines
+        was also discussed separately: for a young brand, this required not only an engine project, but also production discipline,
+        quality control, suppliers, testing, and a service base.
+      </p>
+
+      <p>
+        The balance between independence and external assistance also raised questions. On the one hand, cooperation with Tarifa Auto
+        and Japanese specialists reduced the risk of failure for the first model. On the other hand, Hanul had to prove that it was
+        not simply a local brand with foreign technologies, but a full-fledged automobile company of the KKP.
+      </p>
+
+      <h2>See also</h2>
+      <ul>
+        <li><a href="korean-kivish.html">Kivish Korean Peninsula</a></li>
+        <li><a href="tarifa-auto.html">Tarifa Auto</a></li>
+        <li><a href="f-kap.html">F-KAP</a></li>
+      </ul>
+
+      <h2>Notes</h2>
+      <ol class="notes">
+        <li>The material is based on the fictional Neverpedia universe.</li>
+      </ol>
+    </article>
+
+    <section class="box" style="margin-top:16px">
+      <strong>Attention:</strong> Neverpedia is a fictional project.
+    </section>
+  </main>
+</div>
+
+<script>
+  function toggleLangMenu() {
+    const list = document.getElementById("langList");
+    list.style.display = (list.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>

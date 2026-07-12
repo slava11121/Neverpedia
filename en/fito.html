@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fito — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;               
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;  
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Main page</a>
+        <a href="create.html">Create article</a>
+        <a href="#">Random article</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">Languages ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../fito.html">Русский</a>
+          <a href="fito.html">English</a>
+          <a href="../ksh/fito.html">Кiвiшский</a>
+          <a href="../cn/fito.html">简体中文</a>
+          <a href="../jpn/fito.html">日本語</a>
+          <a href="../ko/fito.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">Fito</div>
+          <div class="cell">
+            <img src="../120.jpg" alt="Fito logo">
+          </div>
+          <div class="cell"><b>Type</b><br>State social network / Communication platform</div>
+          <div class="cell"><b>Founded</b><br>1993</div>
+          <div class="cell"><b>Developer</b><br>Gorfir.Derto</div>
+          <div class="cell"><b>Headquarters</b><br>Kivish, Kora, 35 Chalovskaya Street</div>
+          <div class="cell"><b>Key figures</b><br>Mirim Karasson, initiator</div>
+          <div class="cell"><b>Audience</b><br>Kivish, Asia, CIS, Western countries</div>
+          <div class="cell"><b>Status</b><br>Active</div>
+          <div class="cell"><b>Website</b><br><a href="../Websites/Fito/index.html" target="_blank" rel="noopener">fito.ksh</a></div>
+        </aside>
+
+        <h1 class="title">Fito</h1>
+        <p class="lead">
+          <b>Fito</b> is a sovereign social network and the foundation of the internal internet of the state of <a href="kivish.html">Kivish</a>. Created in 1993 by <b>Gorfir.Derto</b>, the platform was originally conceived as a safe analogue of the global internet, intended to protect citizens from Western influence. Over time, the project grew into a global platform with advanced design, a unique AI moderation system, and an unprecedented tool for maintaining the population’s “digital hygiene.”
+        </p>
+
+        <p>
+          In its modern form, Fito is not only the main means of communication in Kivish, but also a unique example of a social network whose algorithms are deliberately configured to prevent content addiction, pushing users “offline” in order to support the psychological health of society.
+        </p>
+
+        <h2>Background</h2>
+        <p>
+          In 1992, after the successful launch of the <a href="auto-nahodki.html">Auto-Nahodki</a> catalogue through DOS-like systems, the government realized the need to create its own independent internet. President Mirim Karasson initiated a project to develop a protected network during the Windows 3.1 era. The main goal was to create a space where the engineering minds of Kivish would not be exposed to external provocations, while the state would be able to detect and eliminate dangerous social trends at an early stage.
+        </p>
+
+        <h2>Development history</h2>
+
+        <h3>1993: Birth and first steps</h3>
+        <p>
+          In 1993, the company <b>Gorfir.Derto</b> was founded and released the first version of Fito. Initially, the site was a simple HTML shell — an analogue of email and Usenet. Its functionality was limited to searching for users by the <code>@name</code> tag, sending messages, and exchanging photographs. Despite its simplicity, the platform was immediately integrated with state control systems.
+        </p>
+
+        <h3>1994: “Depression of the Western dream” and cancellation of the deal with China</h3>
+        <p>
+          In early 1994, Gorfir.Derto was preparing to sign a historic agreement with China to transfer Fito protocols for the creation of a Chinese internal internet. However, on 25 May, the <a href="ka-624.html">KA-624 crash</a> occurred. The country fell into deep mourning, the state banned Boeing aircraft, and society temporarily withdrew into isolation. The deal with China collapsed, and development of the platform was frozen.
+        </p>
+
+        <h3>1996–1997: CSS, group chats, and the Japanese server</h3>
+        <p>
+          By 1996, when the country began recovering from the shock, negotiations with Beijing resumed. China received encryption codes and source materials for creating its own “shield.” In the same year, developers introduced <b>CSS</b> into Fito, long before it became widespread worldwide, along with a revolutionary feature: <b>group chats</b> with administrators who made decisions about inviting participants.
+        </p>
+
+        <figure class="thumb">
+          <img src="../fito-gera.jpg" alt="Server center in Gera">
+          <figcaption class="cap">A dedicated server for corporate Japan in the city of Gera, Satali.</figcaption>
+        </figure>
+
+        <p>
+          In 1997, the platform reached the international level: a separate server was allocated for Japan in the city of <b>Gera</b> on the island of Satali. The Kivish government guaranteed Japanese corporations the confidentiality of their business correspondence. For easier intercultural communication, small square avatars were added, permanently changing Asian internet culture.
+        </p>
+
+        <h3>2000–2003: The Tarem era and global expansion</h3>
+        <p>
+          After Tarem came to power in 2000, the lifting of restrictions was discussed, but the Council insisted on preserving strict digital control, trusting Mirim’s original vision.
+        </p>
+        <p>
+          In 2003, the site underwent a global reconstruction, temporarily going offline for almost a month. When it returned, Fito introduced innovations ahead of their time: JS animations, video chats, a public feed, games, and profile customization. The social network opened to Russia, the CIS countries, and the United States. Users enjoyed the illusion of freedom of speech, unaware that Kivish intelligence services were using Fito as a powerful analytical tool for global public sentiment.
+        </p>
+
+        <h3>2009: Windows 7 design and the “Japanese incident”</h3>
+        <p>
+          Due to problems with sea shipments of Windows Vista, users in Kivish switched en masse directly from XP to Windows 7. Inspired by the beauty of the new interface, the developers completely rewrote Fito’s CSS.
+          At the same time, the first automatic moderation system was introduced. However, the algorithm was raw: it did not recognize Japanese characters and mass-blocked messages from Japanese users, mistakenly marking them as “dangerous content.” The problem was solved by the end of 2009 through long manual calibration by the security services.
+        </p>
+
+        <h3>2011–2014: KKP integration and China’s departure</h3>
+        <p>
+          After the accession of <a href="korean-kivish.html">KKP</a> in 2011, Fito played a key role in adapting former prisoners of the regime. The social network gave them a new freedom of speech. Kivish intelligence services created a network of “Masago” bots that liked and supported posts by Koreans, helping them adapt faster and openly share their thoughts, while also filtering the level of loyalty to the new authorities.
+        </p>
+        <p>
+          In 2013, China closed its local Fito segment, transferring the technologies into its own analogues such as WeChat, while all Chinese accounts were moved to the <code>fito.ksh</code> domain.
+        </p>
+
+        <h3>2015–2021: Digital hygiene and AI</h3>
+        <p>
+          With the release of Windows 10 in 2015, the site design changed to strict minimalism, or Flat Design, which it still retains.
+          The real revolution came in 2021, when the old algorithms were replaced by advanced artificial intelligence.
+        </p>
+        <p>
+          Unlike Western social networks such as TikTok, which seek to keep the user’s attention in the feed for as long as possible, Fito’s AI is trained to preserve mental health: it filters aggressive content and artificially limits information noise. Thanks to this approach, the population of Kivish is considered one of the most psychologically healthy in the world — the technology encourages citizens to spend more time in real life and outdoors rather than in endless scrolling.
+        </p>
+
+        <h2>Significance and influence</h2>
+        <ul>
+          <li><b>Technological leadership:</b> Introduction of CSS, video chats, and AI moderation long before they became global standards.</li>
+          <li><b>Geopolitical:</b> Uniting Asia and integrating millions of citizens on a platform that simultaneously serves as a tool of soft power and intelligence.</li>
+          <li><b>Social:</b> Creation of the concept of “digital hygiene,” where algorithms work for the health of society rather than advertising metrics.</li>
+        </ul>
+
+        <h2>See also</h2>
+        <ul>
+          <li><a href="kivish.html">Kivish</a></li>
+          <li><a href="auto-nahodki.html">Auto-Nahodki</a></li>
+          <li><a href="korean-kivish.html">Kivish Korean Peninsula</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>Attention:</strong> Neverpedia is a fictional project.
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

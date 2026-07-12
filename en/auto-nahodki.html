@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Auto-Nahodki — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    /* === LANGUAGES === */
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Main page</a>
+        <a href="create.html">Create article</a>
+        <a href="#">Random article</a>
+      </nav>
+
+      <!-- LANGUAGES -->
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">Languages ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../auto-nahodki.html">Русский</a>
+          <a href="auto-nahodki.html">English</a>
+          <a href="../ksh/auto-nahodki.html">Кiвiшский</a>
+          <a href="../cn/auto-nahodki.html">简体中文</a>
+          <a href="../jpn/auto-nahodki.html">日本語</a>
+          <a href="../ko/auto-nahodki.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">Auto-Nahodki</div>
+          <div class="cell">
+            <img src="../085.jpg" alt="Auto-Nahodki">
+          </div>
+          <div class="cell"><b>Type</b><br>Vehicle listings and sales platform</div>
+          <div class="cell"><b>Founded</b><br>3 May 1954</div>
+          <div class="cell"><b>Founder of the idea</b><br>Linohe Sin</div>
+          <div class="cell"><b>Headquarters</b><br>Kivish, Avtovo, 4 Terina Street, building k</div>
+          <div class="cell"><b>Formats</b><br>Newspaper (1954–2010), internet (since 1992)</div>
+          <div class="cell"><b>Status</b><br>Active</div>
+          <div class="cell"><b>Website</b><br><a href="../Websites/AutoNahodki/index.html" target="_blank" rel="noopener">auto-nahodki.ksh</a></div>
+        </aside>
+
+        <h1 class="title">Auto-Nahodki</h1>
+
+        <p class="lead">
+          <b>Auto-Nahodki</b> is a Kivish system for handling abandoned and found vehicles, as well as the largest national
+          listings platform for buying and selling cars. The project emerged during the era of the <a href="skr.html">UKR</a> as a newspaper page in 1954,
+          and then went through a consistent digital evolution: from a text-based network catalogue in 1992 to a web platform that fully replaced print in 2010.
+        </p>
+
+        <p>
+          Historically, Auto-Nahodki solved two tasks: <b>clearing streets</b> of abandoned transport and creating a <b>civilized secondary market</b>
+          with affordable used cars for the population. In its modern form, the platform combines two flows:
+          <b>the sale of found vehicles</b> after state investigations and <b>private listings</b> from users and companies.
+        </p>
+
+        <figure class="thumb">
+          <img src="../086.jpg" alt="City of Avtovo">
+          <figcaption class="cap">“Avtovo” is a suburban storage hub created as a buffer zone for removing abandoned cars.</figcaption>
+        </figure>
+
+        <h2>Background</h2>
+        <p>
+          In the 1950s, the number of cars in the cities of the UKR increased sharply. At the same time, the first mass cases of abandoned transport appeared:
+          cars were left in courtyards and on streets, parking areas became clogged, and some owners left the country while leaving property behind without proper paperwork.
+          Destroying the cars was unprofitable: a significant part of the fleet remained relatively new and suitable for use.
+        </p>
+
+        <h2>History</h2>
+
+        <h3>Creation of Avtovo and launch of the newspaper page (1954)</h3>
+        <p>
+          In 1954, engineer Linohe proposed an infrastructure solution: to build a storage hub outside the city, which received the name <b>“Avtovo”</b>.
+          A service town and a transport hub with an electric railway were planned nearby, while a closed zone contained multi-level parking facilities designed for
+          long-term storage of large volumes of vehicles. The practice quickly proved effective: streets and courtyards were cleared without destroying the vehicle fleet.
+        </p>
+        <p>
+          The next problem was how to sell the accumulated cars. At the same time, the newspaper page <b>“Auto-Nahodki”</b> was launched:
+          found vehicles received <b>code numbers</b>, their old registration plates from previous owners were removed, and temporary plates were installed
+          for accounting and movement. Newspapers published new lots every day with short descriptions and inspection locations.
+          The cars were sold cheaper than new ones, which made the market mass-accessible.
+        </p>
+
+        <h3>Private sales through the newspaper (1967)</h3>
+        <p>
+          In 1967, an initiative proposed by a local resident was approved: to use the popularity of Auto-Nahodki as the main
+          listing channel and allow owners to sell <b>their own</b> cars through the same showcase. The format looked the same
+          as with “found” lots: a photo, short description, and contacts. At the same time, the state retained <b>50%</b> of the transaction value.
+        </p>
+
+        <figure class="thumb">
+          <img src="../087.jpg" alt="1971 page">
+          <figcaption class="cap">A page of the newspaper “Govorit Kora” in the Auto-Nahodki section, 1971.</figcaption>
+        </figure>
+
+        <p>
+          Despite the harsh conditions, the mechanism became popular: against the background of weak alternatives such as wall notices,
+          marketplaces, and word of mouth, the newspaper provided fast reach and a clear procedure for the deal.
+        </p>
+
+        <h3>The 1972 reform: reduced deductions and paid promotion</h3>
+        <p>
+          In 1972, amid a softening of domestic policy and a change in public rhetoric, the publication rules were revised.
+          The deduction from sales was reduced to <b>20%</b> and was defined as payment for publication and distribution,
+          essentially a commission or service fee. In addition, sellers gained the option to pay more for more frequent appearances
+          of their listing in the issue, an early form of “promotion.”
+        </p>
+
+        <h3>The 1989 transition and development of the private format</h3>
+        <p>
+          After 1989, when the country left the communist model and declared a course toward a neutral technological power,
+          the automotive market became sharply more complex: competition grew, new trade channels appeared, and demand for used cars changed.
+          Even so, Auto-Nahodki did not disappear: the system was already familiar, and trust in the “single showcase” format remained high.
+          Gradually, the project ceased to be “under the wing of the state” as an organizational unit and began operating as an independent structure,
+          while preserving mechanisms for cooperation with the state on found vehicles.
+        </p>
+
+        <h2>Digital evolution</h2>
+
+        <h3>Text-based network catalogue (1992)</h3>
+        <p>
+          In 1992, Auto-Nahodki made its first digital step: a network catalogue appeared in text format with a DOS/terminal interface.
+          The user could see current lots by connecting to the server: the list could be updated without waiting for the next newspaper issue.
+          This launch is often called one of the early mass reasons to “go online” inside Kivish.
+        </p>
+
+        <figure class="thumb">
+          <img src="../088.jpg" alt="DOS website of Auto-Nahodki">
+          <figcaption class="cap">An image showing what the Auto-Nahodki website looked like through DOS internet.</figcaption>
+        </figure>
+
+        <h3>First HTML website (1995)</h3>
+        <p>
+          In 1995, the platform received a graphical web shell. The format was intentionally simple: a <b>listing card</b> with a photograph,
+          a short description, a phone number, and the address of the seller or lot. New listings appeared when the page was refreshed,
+          which at the time was perceived as “almost real time.”
+        </p>
+
+        <h3>CSS and early JavaScript (2001)</h3>
+        <p>
+          In 2001, the website received its first noticeable visual layer: early CSS styling elements appeared, the structure became cleaner,
+          and later simple JavaScript scripts were added. The site began interacting with users more actively through forms, checks, expandable blocks,
+          and the first convenient navigation elements, gradually moving away from the role of an “electronic newspaper” toward a full service.
+        </p>
+
+        <h3>Full abandonment of print (2010)</h3>
+        <p>
+          In 2010, after another update of the design and functionality, printed publication of new listings was discontinued:
+          newspapers stopped placing car purchase and sale lots, and Auto-Nahodki fully moved into digital format.
+          From that moment, the website became the single point for updating offers.
+        </p>
+
+        <figure class="thumb">
+          <img src="../089.jpg" alt="The last newspaper with the Auto-Nahodki section, 2010">
+          <figcaption class="cap">The last newspaper with the Auto-Nahodki section, 2010.</figcaption>
+        </figure>
+
+        <h2>Operating scheme</h2>
+
+        <h3>Found vehicles</h3>
+        <p>
+          The modern flow of “found” cars is organized as a sequence of procedures:
+        </p>
+        <ol>
+          <li>A vehicle is discovered on a street or problem parking area by state services, including the police.</li>
+          <li>An investigation is carried out into the status of the vehicle and the circumstances of its appearance, including registration, inspection, and whether sale is appropriate.</li>
+          <li>If a decision is made to sell it, the vehicle is transferred to the Auto-Nahodki platform.</li>
+          <li>The platform publishes the lot on its own behalf: photographs, price, condition description, and inspection or re-registration terms.</li>
+        </ol>
+        <p>
+          Historically, waiting periods before final sale are applied to found vehicles:
+          <b>2 years</b> for ordinary vehicles and <b>4 years</b> for expensive vehicles.
+        </p>
+
+        <h3>Private listings</h3>
+        <p>
+          Users and companies can publish listings themselves, selling and buying cars.
+          Paid publication and promotion options remain within the service’s tradition, as the historical successor to the newspaper practice of “placing more often.”
+        </p>
+
+        <h2>Significance</h2>
+        <ul>
+          <li><b>Urban:</b> rapid removal of abandoned cars from streets into controlled storage.</li>
+          <li><b>Social:</b> mass availability of used cars through transparent circulation.</li>
+          <li><b>Market:</b> formation of a stable secondary market and services around it, including inspections, repairs, and logistics.</li>
+          <li><b>Technological:</b> one of the earliest and most widely used internet services in Kivish, active since 1992.</li>
+        </ul>
+
+        <h2>Criticism</h2>
+        <p>
+          Early forms of the project were criticized for the harshness of the UKR era and for the high deductions in the late 1960s, which reached 50%.
+          After the 1972 reforms, criticism of the economic side became noticeably softer, and after 1989 the discussion shifted toward issues
+          of competition and moderation rules on a single platform.
+        </p>
+
+        <h2>See also</h2>
+        <ul>
+          <li><a href="skr.html">Union Kivish Republics (UKR)</a></li>
+          <li><a href="kivish.html">Kivish</a></li>
+          <li><a href="kora.html">Kora</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>Attention:</strong> Neverpedia is a fictional project.
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
