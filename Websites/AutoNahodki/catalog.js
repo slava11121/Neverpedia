@@ -151,10 +151,10 @@ const carsBase = [
   {
     brand: 'F-KAP',
     model: 'Gerri',
-    generation: 'Gen4',
-    folder: 'F-KAP Gerri 2010',
+    generation: 'Gen3',
+    folder: 'F-KAP Gerri 2000',
     photos: 3,
-    years: [2009, 2010, 2011, 2012],
+    years: [2000, 2002, 2004, 2005],
     engines: ['1.8 бензин', '2.0 бензин'],
     gearboxes: ['механика', 'автомат'],
     drives: ['передний'],
