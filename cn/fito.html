@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fito — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;               
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;  
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="create.html">创建条目</a>
+        <a href="#">随机条目</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../fito.html">Русский</a>
+          <a href="../en/fito.html">English</a>
+          <a href="../ksh/fito.html">Кiвiшский</a>
+          <a href="fito.html">简体中文</a>
+          <a href="../jpn/fito.html">日本語</a>
+          <a href="../ko/fito.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">Fito</div>
+          <div class="cell">
+            <img src="../120.jpg" alt="Fito 标志">
+          </div>
+          <div class="cell"><b>类型</b><br>国有社交网络／通信平台</div>
+          <div class="cell"><b>成立</b><br>1993年</div>
+          <div class="cell"><b>开发者</b><br>Gorfir.Derto</div>
+          <div class="cell"><b>总部</b><br>基维什科拉市恰洛夫斯卡亚街35号</div>
+          <div class="cell"><b>关键人物</b><br>米里姆·卡拉松（发起人）</div>
+          <div class="cell"><b>用户群体</b><br>基维什、亚洲、独联体及西方国家</div>
+          <div class="cell"><b>状态</b><br>运营中</div>
+          <div class="cell"><b>网站</b><br><a href="../Websites/Fito/index.html" target="_blank" rel="noopener">fito.ksh</a></div>
+        </aside>
+
+        <h1 class="title">Fito</h1>
+        <p class="lead">
+          <b>Fito</b>是主权社交网络，也是<a href="kivish.html">基维什</a>国内互联网的基础。平台由<b>Gorfir.Derto</b>于1993年创建，最初旨在建立一个安全的全球互联网替代平台，保护公民免受西方影响。随着时间推移，该项目发展成全球平台，拥有先进设计、独特的人工智能内容审核系统，以及前所未有的全民“数字卫生”保障工具。</p>
+
+        <p>如今，Fito 不仅是基维什主要的交流工具，也是一种独特的社交网络范例：其算法被刻意设计为防止内容成瘾，引导用户“回到线下”，以维护社会的心理健康。</p>
+
+        <h2>创立背景</h2>
+        <p>1992年，<a href="auto-nahodki.html">Auto-Nahodki</a>目录通过类似 DOS 的系统成功上线后，政府认识到建设独立自主互联网的必要性。在 Windows 3.1 时代，米里姆·卡拉松总统发起了安全网络开发项目。主要目标是建立一个让基维什工程人才免受外部挑衅的空间，同时使国家能够及早发现并消除危险的社会趋势。</p>
+
+        <h2>发展历史</h2>
+
+        <h3>1993年：诞生与起步</h3>
+        <p>1993年，<b>Gorfir.Derto</b>公司成立，并发布了 Fito 的首个版本。最初的网站只是一个简单的 HTML 外壳，类似电子邮件和 Usenet。功能仅限于通过<code>@用户名</code>标签查找用户、发送消息和交换照片。尽管功能简单，平台从一开始就接入了国家监管系统。</p>
+
+        <h3>1994年：“西方梦的消沉”与对华协议取消</h3>
+        <p>1994年初，Gorfir.Derto 准备与中国签署一项历史性协议，将 Fito 协议转交给中国，用于建设中国的国内互联网。然而，5月25日发生了<a href="ka-624.html">KA-624 航班空难</a>。全国陷入深重哀悼，国家禁用 Boeing 飞机，社会暂时走向封闭。对华协议告吹，平台开发也被冻结。</p>
+
+        <h3>1996—1997年：CSS、群聊与日本服务器</h3>
+        <p>到1996年，国家开始从冲击中恢复，与北京的谈判重新启动。基维什向中国提供加密代码和源代码，以构建中国自己的“盾牌”。同年，开发者将<b>CSS</b>语言引入 Fito，远早于其在全球普及的时间，同时推出一项革命性功能——<b>群聊</b>，由管理员决定是否邀请成员加入。</p>
+
+        <figure class="thumb">
+          <img src="../fito-gera.jpg" alt="格拉的服务器中心">
+          <figcaption class="cap">位于萨塔利岛格拉市、面向日本企业的专用服务器。</figcaption>
+        </figure>
+
+        <p>1997年，平台走向国际，在<b>格拉</b>市（萨塔利岛）为日本配置独立服务器。基维什政府向日本企业保证商务通信的保密性。为方便跨文化交流，平台加入了小型方形头像，永久改变了亚洲互联网文化。</p>
+
+        <h3>2000—2003年：塔雷姆时代与全球扩张</h3>
+        <p>塔雷姆于2000年上台后，曾讨论解除限制，但委员会相信米里姆最初的构想，坚持保留严格的数字监管。</p>
+        <p>2003年，网站进行了全面重建，暂时停运近一个月。重新上线后，Fito 推出了超前的创新：JS 动画、视频聊天、公开动态、游戏和个人主页定制。社交网络向俄罗斯、独联体国家和美国开放。用户享受着言论自由的幻象，却不知道基维什情报机关正将 Fito 用作分析全球情绪的强大工具。</p>
+
+        <h3>2009年：Windows 7 风格与“日本事件”</h3>
+        <p>由于 Windows Vista 操作系统的海运供应出现问题，基维什用户大批从 XP 直接转向 Windows 7。新界面的美感启发了开发者，他们彻底重写了 Fito 的 CSS。同一时期，首套自动审核系统上线。然而，算法尚不成熟，无法识别日文汉字，将日本用户的消息误标为“危险内容”并大规模屏蔽。情报机关经过长时间的手动校准，于2009年底解决了问题。</p>
+
+        <h3>2011—2014年：整合朝鲜半岛基维什与中国退出</h3>
+        <p>2011年，<a href="korean-kivish.html">朝鲜半岛基维什（KKP）</a>并入后，Fito 在帮助旧政权下曾被囚禁的人们适应新生活方面发挥了关键作用。社交网络给予他们新的言论自由。基维什情报机关建立了“马萨戈”机器人账号网络，为朝鲜人的帖子点赞并给予支持，帮助他们更快适应、公开表达想法，同时筛查他们对新政权的忠诚度。</p>
+        <p>2013年，中国关闭了本地 Fito 分区，将相关技术转用于本国的同类产品（WeChat），所有中国账号则迁移至<code>fito.ksh</code>域名。</p>
+
+        <h3>2015—2021年：数字卫生与人工智能</h3>
+        <p>随着 Windows 10 于2015年发布，网站改为严整的极简扁平化设计，并一直沿用至今。真正的革命发生在2021年，先进的人工智能取代了旧算法。</p>
+        <p>与 TikTok 等力求让用户长时间停留在信息流中的西方社交网络不同，Fito 的人工智能以保护心理健康为训练目标：过滤攻击性内容，并人为限制信息噪声。得益于这种方式，基维什居民被认为是世界上心理最健康的人群之一——技术鼓励公民将更多时间用于现实生活和户外活动，而非无休止地刷屏。</p>
+
+        <h2>意义与影响</h2>
+        <ul>
+          <li><b>技术领先：</b>在 CSS、视频聊天和人工智能审核成为全球标准之前很久便率先引入。</li>
+          <li><b>地缘政治：</b>在同一个平台上连接亚洲并整合数百万公民，同时发挥软实力和情报工具的作用。</li>
+          <li><b>社会：</b>创立“数字卫生”概念，让算法服务于社会健康，而非广告指标。</li>
+        </ul>
+
+        <h2>另见</h2>
+        <ul>
+          <li><a href="kivish.html">基维什</a></li>
+          <li><a href="auto-nahodki.html">Auto-Nahodki</a></li>
+          <li><a href="korean-kivish.html">朝鲜半岛基维什</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意：</strong>Neverpedia 是一个虚构项目。</section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

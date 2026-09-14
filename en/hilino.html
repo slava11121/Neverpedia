@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hilino — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{display:flex; gap:16px; padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{margin-top:20px; border-top:1px solid #c8ccd1; padding-top:10px}
+    .lang-toggle{cursor:pointer; font-weight:bold; font-size:14px; margin-bottom:6px; user-select:none}
+    .lang-list{display:none}
+    .lang-list a{display:block; margin:4px 0; font-size:14px}
+
+    .content{flex:1}
+    .box{background:#fff; border:1px solid #c8ccd1; padding:16px}
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{padding:8px 10px; border-top:1px solid #e6e6e6}
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">Main page</a>
+        <a href="create.html">Create article</a>
+        <a href="#">Random article</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">Languages ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../hilino.html">Русский</a>
+          <a href="hilino.html">English</a>
+          <a href="../ksh/hilino.html">Кiвiшский</a>
+          <a href="../cn/hilino.html">简体中文</a>
+          <a href="../jpn/hilino.html">日本語</a>
+          <a href="../ko/hilino.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">Hilino</div>
+          <div class="cell">
+            <img src="../136.jpg" alt="Hilino logo">
+          </div>
+          <div class="cell"><b>Type</b><br>Private technology company</div>
+          <div class="cell"><b>Industry</b><br>Electronics, computing hardware, software</div>
+          <div class="cell"><b>Founded</b><br>20 June 2023</div>
+          <div class="cell"><b>Founder</b><br>Fazi Hachi-To</div>
+          <div class="cell"><b>Location</b><br>24 Zigovo Street, Taka village, Malskaya Region, Kivish</div>
+          <div class="cell"><b>Key partners</b><br>Microsoft, Qualcomm, MIKOJI, Sony, Samsung, Taparo</div>
+          <div class="cell"><b>Products</b><br>Smartphone PCs (A and BS series)</div>
+          <div class="cell"><b>Status</b><br>Active</div>
+          <div class="cell"><b>Website</b><br><a href="Websites/Hilino/index.html" target="_blank" rel="noopener">hilino.ksh</a></div>
+        </aside>
+
+        <h1 class="title">Hilino</h1>
+        <p class="lead">
+          <b>Hilino</b> is a Kivish technology company that manufactures electronics and smartphone PCs. It was founded in 2023 by engineer Fazi Hachi-To in the village of Taka, Malskaya Region. The company became internationally known for replacing Android with the full desktop version of Windows 11 ARM on mobile devices.
+        </p>
+
+        <p>
+          In its current form, Hilino is one of the most discussed brands in the global portable electronics market. Its products combine premium hardware from international and Kivish manufacturers with a unique architecture that runs desktop <code>.exe</code> applications in a pocket-sized device.
+        </p>
+
+        <figure class="thumb">
+          <img src="../137.jpg" alt="Hilino A1-W11">
+          <figcaption class="cap">The first trial Hilino A1-W11 smartphone PC (2024).</figcaption>
+        </figure>
+
+        <h2>Development history</h2>
+
+        <h3>2023–2024: Foundation and trial launch in Kora</h3>
+        <p>
+          The company was founded following a series of failures by Kivish startups attempting to compete with Apple, Samsung, and Xiaomi in the conventional Android smartphone market. Engineer Fazi Hachi-To initially planned to negotiate licensing purchases with Google, but abruptly changed course and chose Windows 11 ARM. 
+        </p>
+        <p>
+          Leading manufacturers contributed to the first prototype: chips came from Qualcomm, circuit board assembly and cutting from Japan's <b>MIKOJI</b>, displays from BOE, cameras from Samsung, memory from Hynix/Kioxia, and glass rear panels from the local Kivish manufacturer <b>Taparo</b>. In 2024, a trial batch of <b>Hilino A1-W11</b> phones, numbering 1,000 units, was released in Kora, the capital of Kivish. Technology enthusiasts bought the entire batch immediately.
+        </p>
+        <p>
+          At the same time, Fazi Hachi-To sent samples to leading technology bloggers worldwide, including in the United States, Japan, South Korea, Russia, and China. Extensive criticism revealed several problems: processor overheating when running demanding PC applications, rapid battery drain in sleep mode, a Windows interface ill-suited to a six-inch screen, and the lack of AI photo processing. 
+        </p>
+
+        <h3>2025: Addressing shortcomings and splitting the product lines</h3>
+        <p>
+          Taking feedback from the global community into account, the company released the <b>Hilino A2-W11</b>. This model introduced vapor-chamber cooling, as in the iPhone; its display and camera sensors were replaced with Samsung and Sony components, and a proprietary camera application with HDR was developed. Windows 11 was optimized through software for touch input. 
+        </p>
+        <p>
+          After assessing the increased production cost, management decided to split the product range. The A series was made cheaper, reverting to BOE panels and simple copper cooling, and moved into the budget segment. This decision made the affordable smartphone a runaway success in Kivish of the Korean Peninsula (KKP) and among Windows Phone fans in the United States.
+        </p>
+
+        <figure class="thumb">
+          <img src="../138.jpg" alt="Hilino BS1-W11">
+          <figcaption class="cap">The Hilino BS1-W11 flagship (2026), running a beta emulator for PC games.</figcaption>
+        </figure>
+
+        <h3>2026: The BS1-W11 flagship and a security crisis</h3>
+        <p>
+          In February 2026, the uncompromising flagship <b>Hilino BS1-W11</b> was released, starting at $730. It featured 12 GB of RAM, a MicroSD slot, a 5,000 mAh battery, and a proprietary beta emulator capable of running demanding computer games: GTA IV, for example, reached 43 FPS. The device became a threat to the handheld console market.
+        </p>
+        <p>
+          A scandal erupted in May 2026 when Russian IT enthusiasts on forums such as 4PDA discovered a vulnerability that allowed access to the bootloader (UEFI) and installation of any operating system on Hilino, including Linux (Ubuntu) and Android. Hilino remained silent for a time, and the device gained cult status as “the world's most unrestricted flagship.”
+        </p>
+        <p>
+          However, that summer, under pressure from Microsoft to comply with Windows security standards and faced with aggressive negative publicity from South Korea's corporate sector, Hilino released a patch. The vulnerability was closed deep in the registry, and BIOS passwords were tied to the company's private internal servers in Kivish. This angered the hacker community but restored confidence among business customers in Japan and Western countries.
+        </p>
+
+        <h2>Technology and features</h2>
+        <ul>
+          <li><b>A desktop OS in your pocket:</b> A full version of Windows 11 ARM that can run <code>.exe</code> files.</li>
+          <li><b>Proprietary emulator:</b> Software giving games direct access to processor resources, bypassing standard ARM instruction translation.</li>
+          <li><b>Taparo glass:</b> Durable Kivish glass used in the company's base models.</li>
+          <li><b>Server-based security:</b> Each phone's bootloader (UEFI) is individually tied to Hilino's private servers.</li>
+        </ul>
+
+        <h2>Impact on the global market</h2>
+        <p>
+          Hilino's arrival triggered a boom in China's accessories market, with Shenzhen factories mass-producing docks that turn the phone into a desktop computer. In Japan, the brand is valued for its corporate security and cooperation with MIKOJI, while in Russia, first-revision devices with unlocked bootloaders have become rare collectors' items.
+        </p>
+
+        <h2>See also</h2>
+        <ul>
+          <li><a href="kivish.html">Kivish</a></li>
+          <li><a href="kora.html">Kora</a></li>
+          <li><a href="korean-kivish.html">Kivish of the Korean Peninsula</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>Attention:</strong> Neverpedia is a fictional project.
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

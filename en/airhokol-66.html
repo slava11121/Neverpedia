@@ -81,6 +81,7 @@
       <a href="#">Random article</a>
     </nav>
 
+    <!-- ЯЗЫКИ (добавлено) -->
     <div class="lang-block">
       <div class="lang-toggle" onclick="toggleLangMenu()">Languages ▾</div>
       <div id="langList" class="lang-list">
@@ -109,14 +110,14 @@
         <div class="cell"><b>Headquarters</b><br>Kivish, Kora, Toromskaya St., 124</div>
         <div class="cell"><b>Products</b><br>Passenger and cargo aircraft</div>
         <div class="cell"><b>Key people</b><br>Leaders of Kivish’s aviation sector</div>
-        <div class="cell"><b>Website</b><br><a href="../Websites/AirHokol-66/index.html" target="_blank" rel="noopener">airhokol66.khs</a></div>
+        <div class="cell"><b>Website</b><br><a href="Websites/AirHokol-66/index.html" target="_blank" rel="noopener">airhokol66.khs</a></div>
       </aside>
 
       <h1 class="title">AirHokol-66</h1>
       <p class="lead">AirHokol-66 is a Kivish state-owned aircraft manufacturing company founded in 1932. It is known for passenger aircraft with a high level of safety and distinctive emergency protection systems.</p>
 
       <h2>History</h2>
-      <p>The company was established in 1932 as a producer of military aircraft. Its first aircraft was the single-seat <b>AirHokol-66 010</b>, used for army needs. For civil aviation in the 1930s, Kivish purchased aircraft in the <a href="https://en.wikipedia.org/wiki/Soviet_Union" target="_blank" rel="noopener">USSR</a>.
+      <p>The company was established in 1932 as a producer of military aircraft. Its first aircraft was the single-seat <b>AirHokol-66 010</b>, used for army needs. For civil aviation in the 1930s, Kivish purchased aircraft in the <a href="https://ru.wikipedia.org/wiki/СССР" target="_blank" rel="noopener">USSR</a>.
 
       <p>After World War II (1944), together with USSR engineers, the company released its first large passenger airliner, the <b>AirHokol-66 M20</b>, designed for 10 seats. From that moment, AirHokol-66 moved to its own mass developments.</p>
 
@@ -142,19 +143,19 @@
       <p>The company supplies aircraft to multiple countries, including Russia, Japan, European countries, and Latin America. In the early 2000s, joint routes connected Kora, Moscow, Paris, and New York.</p>
 
       <h2>Stories that shocked the world</h2>
-      <ul>
-        <li><b>1963 — Introduction of the “clockwork system”</b><br>
-        The world’s first mechanical anti-stall automatics based on pendulums and gears. The world heard for the first time that an airplane could <i>itself</i> save itself from a stall.</li>
+<ul>
+  <li><b>1963 — Introduction of the “clockwork system”</b><br>
+  The world’s first mechanical anti-stall automatics based on pendulums and gears. The world heard for the first time that an airplane could <i>automatically</i> save itself from a stall.</li>
 
-        <li><b>1983 — Quick Rescue Compartment</b><br>
-        The Bi225 became the first airliner to include a compartment with blankets, water, and food. Newspapers wrote: “Now even after a crash, passengers have a chance to wait for rescuers.”</li>
+  <li><b>1983 — Quick Rescue Compartment</b><br>
+  The Bi225 became the first airliner to include a compartment with blankets, water, and food. Newspapers wrote: “Now even after a crash, passengers have a chance to wait for rescuers.”</li>
 
-        <li><b>2001 — Flight <a href="ka-d568.html">KA-D568 (D124)</a> (September 11)</b><br>
-        An AirHokol-66 D124 struck a World Trade Center tower while keeping the fuselage largely intact. Thanks to fire suppression systems and the rescue compartment, dozens of people survived inside. Global media called it “the most unbelievable rescue of the 21st century.”</li>
+  <li><b>2001 — Flight <a href="ka-d568.html">KA-D568 (D124)</a> (September 11)</b><br>
+An AirHokol-66 D124 struck a World Trade Center tower while keeping the fuselage largely intact. Thanks to fire suppression systems and the rescue compartment, dozens of people survived inside. Global media called it “the most unbelievable rescue of the 21st century.”</li>
 
-        <li><b>2014 — Live broadcast of a <a href="https://en.wikipedia.org/wiki/Japan_Air_Lines_Flight_123">JAL123</a> simulation</b><br>
-        A German blogger and engineers reconstructed the 1985 Japanese accident, but on a Bi225 airliner. Even without a vertical stabilizer, the aircraft managed to land in Tokyo. Millions watched the broadcast in Japan—and cried.</li>
-      </ul>
+  <li><b>2014 — Live simulation of <a href="https://ru.wikipedia.org/wiki/Катастрофа_Boeing_747_под_Токио">JAL123</a></b><br>
+A German blogger and engineers reconstructed the 1985 Japanese accident, but on a Bi225 airliner. Even without a vertical stabilizer, the aircraft managed to land in Tokyo. Millions watched the broadcast in Japan—and cried.</li>
+</ul>
 
       <h2>Major incidents</h2>
       <ul>
@@ -167,7 +168,8 @@
 
       <h2>See also</h2>
       <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Russia">Russia</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/Россия">Russia</a></li>
+
       </ul>
 
     </article>
@@ -178,8 +180,9 @@
   </main>
 </div>
 
-  <script>
-    function toggleLangMenu() {
+<!-- JS для языков (добавлено) -->
+<script>
+  function toggleLangMenu() {
     const list = document.getElementById("langList");
     list.style.display = (list.style.display === "block") ? "none" : "block";
   }

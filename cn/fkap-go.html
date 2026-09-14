@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>F-KAP Go — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{width:160px}
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="create.html">创建条目</a>
+        <a href="#">随机条目</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../fkap-go.html">Русский</a>
+          <a href="../en/fkap-go.html">English</a>
+          <a href="../ksh/fkap-go.html">Кiвiшский</a>
+          <a href="fkap-go.html">简体中文</a>
+          <a href="../jpn/fkap-go.html">日本語</a>
+          <a href="../ko/fkap-go.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+        <aside class="infobox">
+          <div class="h">F-KAP Go</div>
+          <div class="cell">
+            <img src="../019.jpg" alt="F-KAP Go">
+            </div>
+            <div class="cell">
+            <img src="../105.jpg" alt="F-KAP Go 车尾">
+          </div>
+
+          <div class="cell"><b>类型</b><br>乘用车</div>
+          <div class="cell"><b>制造商</b><br><a href="f-kap.html">F-KAP</a></div>
+          <div class="cell"><b>国家</b><br>基维什共和国联盟（SKR）</div>
+          <div class="cell"><b>生产年份</b><br>1944—1958</div>
+          <div class="cell"><b>发动机</b><br>直列四缸化油器发动机，56 马力</div>
+
+          <div class="cell"><b>状态</b><br>战后首款民用车型</div>
+          <div class="cell"><b>特点</b><br>内置暖风机、内置收音机、柴火加热装置（选配）、随车赠送冬季轮胎、出口苏联</div>
+        </aside>
+
+        <h1 class="title">F-KAP Go</h1>
+        <p class="lead">
+          <b>F-KAP Go</b>是 F-KAP 公司于 1944—1958 年生产的战后民用汽车。这是该厂结束军工生产阶段后推出的首款大型民用汽车，定位为量产轿车，并供应苏联市场。</p>
+
+        <figure class="thumb">
+          <img src="../106.jpg" alt="F-KAP Go 在使用中的历史照片">
+          <figcaption class="cap">F-KAP Go 在使用中的历史照片。</figcaption>
+        </figure>
+
+        <h2>背景</h2>
+        <p>战后，工厂恢复生产民用汽车，但多年专注于军用装备，使其民用汽车设计进度落后。为了迅速推出符合当时水平的量产轿车，F-KAP 决定借助苏联的工程技术基础，以及已经在战后实际环境中得到验证的成熟方案。</p>
+
+        <h2>研发</h2>
+        <h3>基础方案的选择</h3>
+        <p>在加快研发的过程中，F-KAP 工程师借鉴苏联经验，研究了 GAZ M-20 的图纸。因此，Go 的外观和整体结构思路与 M-20 十分接近。此后，工厂对汽车进行改进，加入 F-KAP 特有的冬季使用方案，并丰富标准配置。</p>
+
+        <h3>投入生产</h3>
+        <p>Go 以一款“现成”的量产汽车投入批量生产，重点是在不设置复杂配置套装和少见选装件的情况下实现大规模制造。这简化了生产、维修保养和出口供货。</p>
+
+        <h2>配置</h2>
+        <p>Go 的一个特色是统一且丰富的配置。标准装备包括内置暖风机和内置收音机。在寒冷地区，车辆仍可使用柴火加热装置，这是 F-KAP 早期技术传统中的常见做法。</p>
+        <p>购车时，公司会随车配备一套冬季轮胎。这既是营销手段，也是帮助车辆适应冬季使用的实际措施。</p>
+
+        <h2>生产</h2>
+        <p>Go 于 1944 年开始批量生产，一直生产到 1958 年。在战后工厂逐步稳定民用产品线的过程中，该车型始终是其主要的民用轿车。</p>
+
+        <h2>出口</h2>
+        <h3>对苏联供货</h3>
+        <p>出口苏联是 Go 的重要销售方向之一，供货始于 1945 年。该车获得了“全配置汽车”的声誉：在价格相近的情况下，它提供更多内置便利设备。尽管外界讨论过它与 GAZ M-20 的相似之处，但凭借配置、冬季适用性以及赠送的冬季轮胎，该车型在实际销售中颇受欢迎。</p>
+
+        <h3>停止对外供货</h3>
+        <p>战后，F-KAP 停止向苏联阵营以外的市场供货，转而专注于国内市场和盟国市场。因此，Go 成为一款面向“阵营内部”市场的车型。</p>
+
+        <h2>评价</h2>
+        <p>Go 常被视为一个务实的战后项目：以成熟易懂的技术基础迅速推出量产轿车，再结合 F-KAP 传统的冬季使用方案和简明的配置策略。对工厂而言，这款车型标志着民用生产的恢复，并巩固了其在盟国市场的地位。</p>
+
+        <h2>另见</h2>
+        <ul>
+          <li><a href="f-kap.html">F-KAP</a></li>
+          <li><a href="car-series-fkap.html">F-KAP 汽车系列</a></li>
+          <li><a href="skr.html">基维什共和国联盟（SKR）</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意：</strong>Neverpedia 是一个虚构项目。</section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

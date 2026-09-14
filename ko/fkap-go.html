@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>F-KAP Go — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{width:160px}
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">대문</a>
+        <a href="create.html">문서 만들기</a>
+        <a href="#">임의의 문서</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">언어 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../fkap-go.html">Русский</a>
+          <a href="../en/fkap-go.html">English</a>
+          <a href="../ksh/fkap-go.html">Кiвiшский</a>
+          <a href="../cn/fkap-go.html">中文</a>
+          <a href="../jpn/fkap-go.html">日本語</a>
+          <a href="fkap-go.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+        <aside class="infobox">
+          <div class="h">F-KAP Go</div>
+          <div class="cell">
+            <img src="../019.jpg" alt="F-KAP Go">
+            </div>
+            <div class="cell">
+            <img src="../105.jpg" alt="F-KAP Go의 후면">
+          </div>
+
+          <div class="cell"><b>유형</b><br>승용차</div>
+          <div class="cell"><b>제조사</b><br><a href="f-kap.html">F-KAP</a></div>
+          <div class="cell"><b>국가</b><br>SKR</div>
+          <div class="cell"><b>생산 기간</b><br>1944—1958</div>
+          <div class="cell"><b>엔진</b><br>직렬 4기통, 기화기식, 56마력</div>
+
+          <div class="cell"><b>위상</b><br>전후 최초의 민수용 모델</div>
+          <div class="cell"><b>특징</b><br>
+            내장 히터와 라디오, 장작 예열 장치(선택 사양), 겨울용 타이어 세트 증정, 소련 수출
+          </div>
+        </aside>
+
+        <h1 class="title">F-KAP Go</h1>
+        <p class="lead">
+          <b>F-KAP Go</b> 는 F-KAP이 1944~1958년에 생산한 전후 민수용 자동차이다. 군수 생산기 이후 공장에서 처음 대규모로 생산한 민수용 차량으로, 소련 수출분을 포함한 대중형 세단으로 제조되었다.
+        </p>
+
+        <figure class="thumb">
+          <img src="../106.jpg" alt="F-KAP Go의 운행 당시 역사 사진">
+          <figcaption class="cap">F-KAP Go의 운행 당시 역사 사진.</figcaption>
+        </figure>
+
+        <h2>배경</h2>
+        <p>
+          전쟁 후 공장은 민수용 자동차 생산으로 돌아왔지만, 수년간 군용 장비에 집중하면서 민수용 디자인의 발전을 따라가지 못했다. 당시 기준에 맞는 현대적인 대중형 세단을 신속히 내놓기 위해 F-KAP은 소련의 공학 기반과 전후 환경에서 이미 검증된 설계를 활용하기로 했다.
+        </p>
+
+        <h2>개발</h2>
+        <h3>기본 설계 선정</h3>
+        <p>
+          개발 속도를 높이기 위해 F-KAP 기술진은 소련의 경험을 참고하고 GAZ M-20의 도면을 검토했다. 그 결과 Go의 외관과 전반적인 구조 원리는 M-20과 매우 비슷해졌다. 이후 공장은 F-KAP 특유의 겨울철 운용 설계를 적용하고 기본 사양을 확대하여 차량을 개량했다.
+        </p>
+
+        <h3>양산 준비</h3>
+        <p>
+          Go는 완성된 대중형 차량으로 양산에 들어갔다. 복잡한 패키지나 희소한 선택 사양 없이 대량 생산하는 데 주력했다. 이 방식은 생산, 정비와 수출 공급을 단순화했다.
+        </p>
+
+        <h2>장비</h2>
+        <p>
+          Go의 특징 중 하나는 풍부한 단일 사양이었다. 내장 히터와 라디오가 기본으로 제공되었다. 추운 지역을 위해 초기 F-KAP 기술 전통에서 익숙한 장작 예열 장치도 사용할 수 있었다.
+        </p>
+        <p>
+          회사는 차량 구매 시 겨울용 타이어 세트를 함께 제공했다. 이는 마케팅 수단이자 겨울철 운행을 위한 실용적인 조치였다.
+        </p>
+
+        <h2>생산</h2>
+        <p>
+          Go의 양산은 1944년에 시작되어 1958년까지 이어졌다. 공장이 민수용 제품군을 안정시키던 전후 시기 내내 주력 민수용 세단의 자리를 지켰다.
+        </p>
+
+        <h2>수출</h2>
+        <h3>소련 공급</h3>
+        <p>
+          소련 수출은 Go의 핵심 사업 중 하나였다. 공급은 1945년에 시작되었고, 비슷한 가격에 더 많은 편의 장비를 갖춘 ‘완전 사양’ 차량이라는 평판을 얻었다. GAZ M-20과의 유사성에 대한 논의에도 불구하고 풍부한 장비, 겨울철 적합성, 무료로 제공되는 겨울용 타이어 세트 덕분에 실제 구매 반응은 좋았다.
+        </p>
+
+        <h3>역외 공급 중단</h3>
+        <p>
+          전후 F-KAP은 소련권 이외 시장에 대한 공급을 중단하고 국내 및 동맹국 시장에 집중했다. 그 결과 Go는 진영 내부 시장을 대상으로 하는 모델이 되었다.
+        </p>
+
+        <h2>평가</h2>
+        <p>
+          Go는 익숙한 기반 설계로 대중형 세단을 빠르게 출시하고, F-KAP의 전통적인 겨울철 운용 기술과 단순한 사양 구성을 더한 실용적인 전후 프로젝트로 평가된다. 공장에는 민수 생산 복귀와 동맹국 시장 정착을 상징하는 모델이었다.
+        </p>
+
+        <h2>같이 보기</h2>
+        <ul>
+          <li><a href="f-kap.html">F-KAP</a></li>
+          <li><a href="car-series-fkap.html">F-KAP 자동차 시리즈</a></li>
+          <li><a href="skr.html">키비시 공화국 연방</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>알림:</strong> Neverpedia는 허구의 프로젝트입니다.
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

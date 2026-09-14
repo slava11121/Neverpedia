@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hilino — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{display:flex; gap:16px; padding:16px 12px}
+    .sidebar{width:160px}
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    .lang-block{margin-top:20px; border-top:1px solid #c8ccd1; padding-top:10px}
+    .lang-toggle{cursor:pointer; font-weight:bold; font-size:14px; margin-bottom:6px; user-select:none}
+    .lang-list{display:none}
+    .lang-list a{display:block; margin:4px 0; font-size:14px}
+
+    .content{flex:1}
+    .box{background:#fff; border:1px solid #c8ccd1; padding:16px}
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{padding:8px 10px; border-top:1px solid #e6e6e6}
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,.thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="create.html">创建条目</a>
+        <a href="#">随机条目</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">语言 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../hilino.html">Русский</a>
+          <a href="../en/hilino.html">English</a>
+          <a href="../ksh/hilino.html">Кiвiшский</a>
+          <a href="hilino.html">简体中文</a>
+          <a href="../jpn/hilino.html">日本語</a>
+          <a href="../ko/hilino.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">Hilino</div>
+          <div class="cell">
+            <img src="../136.jpg" alt="Hilino 标志">
+          </div>
+          <div class="cell"><b>类型</b><br>私营科技公司</div>
+          <div class="cell"><b>行业</b><br>电子产品、计算机设备、软件</div>
+          <div class="cell"><b>成立时间</b><br>2023 年 6 月 20 日</div>
+          <div class="cell"><b>创始人</b><br>法齐·哈奇托</div>
+          <div class="cell"><b>所在地</b><br>基维什马尔州塔卡村齐戈沃街 24 号</div>
+          <div class="cell"><b>主要合作伙伴</b><br>Microsoft, Qualcomm, MIKOJI, Sony, Samsung, Taparo</div>
+          <div class="cell"><b>产品</b><br>智能手机电脑（A 系列和 BS 系列）</div>
+          <div class="cell"><b>状态</b><br>运营中</div>
+          <div class="cell"><b>网站</b><br><a href="../Websites/Hilino/index.html" target="_blank" rel="noopener">hilino.ksh</a></div>
+        </aside>
+
+        <h1 class="title">Hilino</h1>
+        <p class="lead">
+          <b>Hilino</b>是一家基维什科技公司，生产电子产品和智能手机电脑。公司于 2023 年由工程师法齐·哈奇托在马尔州塔卡村创立。它放弃 Android 操作系统，转而在移动设备上使用完整的桌面版 Windows 11 ARM，由此享誉全球。</p>
+
+        <p>如今，Hilino 是全球便携式电子产品市场上讨论度最高的品牌之一。其产品结合了国际和基维什制造商的高端硬件，以及独特的架构，使用户能够在口袋大小的设备上运行桌面<code>.exe</code>应用程序。</p>
+
+        <figure class="thumb">
+          <img src="../137.jpg" alt="Hilino A1-W11">
+          <figcaption class="cap">首款测试版智能手机电脑 Hilino A1-W11（2024 年）。</figcaption>
+        </figure>
+
+        <h2>发展历程</h2>
+
+        <h3>2023—2024 年：成立与科拉试售</h3>
+        <p>公司成立之时，多家试图在传统 Android 智能手机市场与 Apple、Samsung 和 Xiaomi 竞争的基维什初创企业接连失败。工程师法齐·哈奇托原本计划与 Google 商谈购买授权，但随后突然改变方向，决定采用 Windows 11 ARM。</p>
+        <p>为了制造首台原型机，公司引入了先进制造商：Qualcomm 提供芯片，日本的<b>MIKOJI</b>负责电路板组装和切割，BOE 提供屏幕，Samsung 提供摄像头，Hynix/Kioxia 提供存储器，而基维什本土工厂<b>Taparo</b>提供玻璃后盖。2024 年，公司在基维什首都科拉推出了首批测试机<b>Hilino A1-W11</b>，共 1000 台，随即被技术爱好者抢购一空。</p>
+        <p>与此同时，法齐·哈奇托向世界各地的知名科技博主寄送样机，覆盖美国、日本、韩国、俄罗斯、中国等国家。大量评测指出了一系列问题：运行大型电脑应用时处理器过热、睡眠模式下耗电过快、Windows 界面不适合 6 英寸屏幕，以及缺少 AI 照片处理功能。</p>
+
+        <h3>2025 年：改进问题与产品线分化</h3>
+        <p>吸取全球用户的批评后，公司推出了<b>Hilino A2-W11</b>。这款机型采用均热板散热（如同 iPhone），将显示屏和摄像头传感器更换为 Samsung 和 Sony 的方案，并开发了支持 HDR 的自有相机应用。Windows 11 也通过软件优化，改善了触控操作。</p>
+        <p>评估成本上升的影响后，管理层决定拆分产品线。A 系列通过重新采用 BOE 屏幕和简单的铜制散热结构降低成本，转入入门市场。这一决定使降价后的智能手机在朝鲜半岛基维什（KKP）和美国 Windows Phone 爱好者中成为绝对的畅销产品。</p>
+
+        <figure class="thumb">
+          <img src="../138.jpg" alt="Hilino BS1-W11">
+          <figcaption class="cap">旗舰机 Hilino BS1-W11（2026 年），运行电脑游戏模拟器测试版。</figcaption>
+        </figure>
+
+        <h3>2026 年：BS1-W11 旗舰机与安全危机</h3>
+        <p>2026 年 2 月，公司推出了追求极致性能的旗舰机<b>Hilino BS1-W11</b>，起售价为 $730。该设备配备 12 GB 内存、MicroSD 插槽、5000 mAh 电池，以及自研测试版模拟器，可运行大型电脑游戏，例如 GTA IV 可达到 43 FPS。该设备对掌上游戏机市场形成了威胁。</p>
+        <p>2026 年 5 月，一场风波爆发：俄罗斯 IT 爱好者在论坛（4PDA）上发现了一个漏洞，可进入启动程序（UEFI），并在 Hilino 上安装任意操作系统，包括 Linux（Ubuntu）和 Android。Hilino 一度保持沉默，这款设备因此获得了“世界上最自由的旗舰机”的传奇地位。</p>
+        <p>然而，到了夏季，在 Microsoft 要求遵守 Windows 安全标准的压力，以及韩国企业界猛烈的负面宣传下，Hilino 发布了补丁。该漏洞在注册表深层被封堵，BIOS 密码则与公司位于基维什的内部封闭服务器绑定。这引发了黑客社群的愤怒，却重新赢得了日本和西方国家企业客户的信任。</p>
+
+        <h2>技术与特色</h2>
+        <ul>
+          <li><b>口袋里的桌面操作系统：</b>使用完整的 Windows 11 ARM，可运行<code>.exe</code>文件。</li>
+          <li><b>自研模拟器：</b>让游戏绕过标准 ARM 指令转换，直接调用处理器性能的软件。</li>
+          <li><b>Taparo 玻璃：</b>公司基础机型采用的坚固基维什玻璃。</li>
+          <li><b>服务器安全机制：</b>每部手机的启动程序（UEFI）分别与 Hilino 的封闭服务器绑定。</li>
+        </ul>
+
+        <h2>对全球市场的影响</h2>
+        <p>Hilino 的推出带动了中国配件市场的繁荣，深圳工厂大批量生产可将手机变为电脑主机的扩展坞。在日本，该品牌因企业级安全性及与 MIKOJI 的合作而受到重视；在俄罗斯，首批采用开放启动程序的设备则成为稀有收藏品。</p>
+
+        <h2>另见</h2>
+        <ul>
+          <li><a href="kivish.html">基维什</a></li>
+          <li><a href="kora.html">科拉</a></li>
+          <li><a href="korean-kivish.html">朝鲜半岛基维什</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意：</strong>Neverpedia 是一个虚构项目。</section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>.ksh — Neverpedia</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:#f6f7f8;
+      color:#202122;
+      font:16px/1.5 Arial, sans-serif;
+    }
+    a{color:#3366cc;text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .page{
+      display:flex;
+      gap:16px;
+      padding:16px 12px;
+    }
+    .sidebar{
+      width:160px;               
+    }
+    .brand{display:block; text-align:center; margin-bottom:16px; color:inherit}
+    .logo{max-width:100%; height:auto; display:block; margin:0 auto}
+    .nav a{display:block; margin:6px 0}
+
+    /* === ЯЗЫКИ (добавлено) === */
+    .lang-block{
+      margin-top:20px;
+      border-top:1px solid #c8ccd1;
+      padding-top:10px;
+    }
+    .lang-toggle{
+      cursor:pointer;
+      font-weight:bold;
+      font-size:14px;
+      margin-bottom:6px;
+      user-select:none;
+    }
+    .lang-list{display:none}
+    .lang-list a{
+      display:block;
+      margin:4px 0;
+      font-size:14px;
+    }
+
+    .content{flex:1}
+    .box{
+      background:#fff;
+      border:1px solid #c8ccd1;
+      padding:16px;
+    }
+
+    .title{margin:0 0 6px 0; font-size:28px; line-height:1.25}
+    .lead{color:#54595d; margin:0 0 12px 0}
+
+    .infobox{
+      float:right;
+      width:280px;
+      background:#fff;
+      border:1px solid #c8ccd1;
+      margin:0 0 12px 12px;  
+      font-size:14px;
+    }
+    .infobox .h{
+      background:#eef3f8;
+      border-bottom:1px solid #c8ccd1;
+      padding:8px 10px;
+      font-weight:bold;
+      text-align:center;
+    }
+    .infobox .cell{
+      padding:8px 10px;
+      border-top:1px solid #e6e6e6;
+    }
+    .infobox img{display:block; max-width:100%; height:auto}
+
+    .thumb{
+      float:right;
+      width:240px;
+      margin:0 0 12px 12px;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      font-size:14px;
+    }
+    .thumb img{display:block; width:100%; height:auto}
+    .thumb .cap{color:#54595d; margin-top:6px}
+
+    .flag-row{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin:12px 0 16px 0;
+      clear:both;
+    }
+    .flag-card{
+      width:260px;
+      margin:0;
+      border:1px solid #c8ccd1;
+      background:#fff;
+      padding:6px;
+      box-sizing:border-box;
+    }
+    .flag-card img{
+      display:block;
+      width:100%;
+      height:auto;
+      border:1px solid #c8ccd1;
+    }
+    .flag-card figcaption{
+      margin-top:6px;
+      color:#54595d;
+      font-size:14px;
+    }
+
+    h2{font-size:22px; margin:16px 0 8px}
+    h3{font-size:18px; margin:14px 0 6px}
+
+    ul{margin:0 0 12px 20px}
+    ol{margin:0 0 12px 20px}
+
+    .notes{font-size:14px; color:#54595d}
+
+    @media(max-width:900px){
+      .page{flex-direction:column}
+      .sidebar{width:auto}
+      .infobox,
+      .thumb{float:none; width:100%; margin:0 0 12px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <img class="logo" src="../logo.png" alt="Neverpedia">
+      </a>
+      <nav class="nav">
+        <a href="index.html">メインページ</a>
+        <a href="create.html">記事を作成</a>
+        <a href="#">おまかせ表示</a>
+      </nav>
+
+      <div class="lang-block">
+        <div class="lang-toggle" onclick="toggleLangMenu()">言語 ▾</div>
+        <div id="langList" class="lang-list">
+          <a href="../domen-ksh.html">Русский</a>
+          <a href="../en/domen-ksh.html">English</a>
+          <a href="../ksh/domen-ksh.html">Кiвiшский</a>
+          <a href="../cn/domen-ksh.html">中文</a>
+          <a href="domen-ksh.html">日本語</a>
+          <a href="../ko/domen-ksh.html">한국어</a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <article class="box">
+
+        <aside class="infobox">
+          <div class="h">.ksh</div>
+          <div class="cell"><img src="../113.jpg" alt="kshドメインのロゴ"></div>
+          <div class="cell"><b>導入</b><br>1991年4月29日</div>
+          <div class="cell"><b>ドメイン種別</b><br>国別コードトップレベルドメイン</div>
+          <div class="cell"><b>状態</b><br>運用中</div>
+          <div class="cell"><b>レジストリ</b><br>Kishinet（2014年から）</div>
+          <div class="cell"><b>旧レジストリ運営者</b><br>ETENKK（1991〜2014年）</div>
+          <div class="cell"><b>想定用途</b><br>キヴィシュに関係するウェブサイト</div>
+          <div class="cell"><b>実際の用途</b><br>キヴィシュの主要な国内ドメイン空間</div>
+          <div class="cell"><b>登録制限</b><br>外国からの登録は禁止。争いがある場合は人による審査を実施</div>
+          <div class="cell"><b>構造</b><br>直接登録が可能。分類別・地域別のセカンドレベルドメインも使用</div>
+          <div class="cell"><b>DNSSEC</b><br>対応</div>
+          <div class="cell"><b>紛争処理方針</b><br>苦情を人手で審査</div>
+        </aside>
+
+        <h1 class="title">.ksh</h1>
+        <p class="lead">
+          <b>.ksh</b> は <a href="kivish.html">キヴィシュ</a>の国別コードトップレベルドメインであり、
+          <b>1991年4月29日</b> に、同国の世界のインターネットへの接続と同時に委任された。国別ドメインの多くが2文字であるのに対し、 <b>.ksh</b>
+          は例外として3文字で設定された。
+        </p>
+
+        <p>
+          キヴィシュの歴史記述では、 <b>.ksh</b> は技術的なドメイン空間であるだけでなく、国家の初期のデジタル主権を象徴するものの一つとされる。導入当初は政府機関や研究機関が利用し、後に企業や一般市民のインターネット利用にも広がった。
+        </p>
+
+        <h2>歴史</h2>
+        <p>
+          1989年に共産主義時代が終わると、キヴィシュは独自の国際ネットワーク基盤の整備を始めた。その成果の一つが、1991年の <b>.ksh</b>
+          ドメインの委任である。
+        </p>
+        <p>
+          このドメイン空間の正式な導入日は <b>1991年4月29日</b>とされる。これにより、キヴィシュは独自のネットワーク上の識別子を得て、他国に依存せず国内のドメイン空間を発展させられるようになった。
+        </p>
+        <p>
+          この <b>.ksh</b> の特徴は、3文字という形式にある。キヴィシュでは、2文字の識別子との混同を避け、国家を識別しやすいデジタル上の名称を早期に確立するためだったと説明されている。
+        </p>
+
+        <h2>レジストリ運営者</h2>
+        <p>
+          <b>1991〜2014年</b> に、 <b>.ksh</b> ドメインのレジストリを運営していたのは <b>ETENKK</b>（<b>キヴィシュ実験技術統一科学委員会</b>）である。初期には、同委員会がドメイン空間の技術保守、最初の登録規則、政府機関や研究機関の初期利用者の接続を担当した。
+        </p>
+        <p>
+          その後、 <b>2014年</b> にレジストリの運営が <b>Kishinet</b>へ移管された。登録件数の増加、企業や一般市民による利用の拡大、そして研究機関や政府中心の段階から広範な利用への移行が背景にあった。
+        </p>
+
+        <h2>登録</h2>
+        <p>
+          ドメイン <b>.ksh</b> では <b>ドメイン名の直接登録</b>が認められており、アドレスは
+          <code>site.ksh</code>という形式になる。
+        </p>
+        <p>
+          外国の個人や組織は、 <b>.ksh</b> のドメイン名を登録できない。通常は所定の登録手続きが適用されるが、苦情、紛争、疑義がある場合は、 <b>人による審査</b>が行われることがある。
+        </p>
+        <p>
+          ドメイン <b>.ksh</b> に相当するキリル文字版や、別の国内言語版は存在しない。
+        </p>
+
+        <h2>セカンドレベルドメイン</h2>
+
+        <h3>用途別ドメイン</h3>
+        <ul>
+          <li><b>gov.ksh</b> — 政府機関</li>
+          <li><b>edu.ksh</b> — 教育機関</li>
+          <li><b>com.ksh</b> — 商業組織</li>
+          <li><b>org.ksh</b> — 社会団体およびその他の組織</li>
+          <li><b>net.ksh</b> — ネットワーク・技術サービス</li>
+          <li><b>mil.ksh</b> — 軍事機関</li>
+        </ul>
+
+        <h3>地域別ドメイン</h3>
+        <ul>
+          <li><b>kora.ksh</b></li>
+          <li><b>miri.ksh</b></li>
+          <li><b>deshka.ksh</b></li>
+          <li><b>malta.ksh</b></li>
+          <li><b>shentakhor.ksh</b></li>
+          <li><b>lamya.ksh</b></li>
+          <li><b>forta.ksh</b></li>
+          <li><b>malo.ksh</b></li>
+          <li><b>miata.ksh</b></li>
+          <li><b>vipo.ksh</b></li>
+          <li><b>gik.ksh</b></li>
+          <li><b>tata.ksh</b></li>
+        </ul>
+
+        <p>
+          地域別のセカンドレベルドメインは、地方行政機関、各種施設、地域の組織、地元のインターネット事業で使われる。
+        </p>
+
+        <h2>利用</h2>
+        <p>
+          初期の <b>.ksh</b> ドメインは、ほぼ政府機関と研究機関だけが利用していた。1990年代を通じて企業部門へ徐々に広がり、その後は一般市民向けサービスにも使われるようになった。
+        </p>
+        <p>
+          1990年代末には、 <b>.ksh</b> で企業サイト、交流プラットフォーム、広告掲載サービス、日常生活向けのインターネット事業が多数登録されるようになった。2000年代と2010年代には、 <b>.ksh</b> がキヴィシュのインターネットにおける主要なドメイン空間として定着した。
+        </p>
+
+        <h2>意義</h2>
+        <p>
+          キヴィシュ国内で、 <b>.ksh</b> ドメインはデジタル上の自立を示す主要な象徴の一つとされる。その意義は、1991年という早い時期の導入、珍しい3文字の形式、科学技術機関から国内最大の通信事業者へと引き継がれた運営、そして直接登録・用途別登録・地域別登録の発展に結び付いている。
+        </p>
+
+        <h2>関連項目</h2>
+        <ul>
+          <li><a href="kivish.html">キヴィシュ</a></li>
+          <li><a href="kishinet.html">Kishinet</a></li>
+          <li><a href="etenkk.html">ETENKK</a></li>
+        </ul>
+
+      </article>
+
+      <section class="box" style="margin-top:16px">
+        <strong>注意：</strong> Neverpediaは架空のプロジェクトです。
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleLangMenu() {
+      const list = document.getElementById("langList");
+      list.style.display = (list.style.display === "block") ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
