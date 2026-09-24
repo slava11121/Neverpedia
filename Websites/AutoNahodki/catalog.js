@@ -94,9 +94,9 @@ const carsBase = [
     generation: '',
     folder: 'F-KAP Chihuahua',
     photos: 3,
-    years: [1979, 1980, 1981, 1982, 1983],
-    engines: ['W12 бензин'],
-    gearboxes: ['механика'],
+    years: [1979, 1980, 1981, 1982, 1983, 1984, 1985, 1986],
+    engines: ['W12 6.0 бензин, 400 л.с.'],
+    gearboxes: ['5-ступ. механика'],
     drives: ['задний'],
     body: 'купе',
     typeOptions: ['private', 'found'],
@@ -109,7 +109,7 @@ const carsBase = [
     generation: 'B202',
     folder: 'F-KAP Fokat B202',
     photos: 3,
-    years: [2011, 2012, 2013],
+    years: [2012, 2013],
     engines: ['3.0 дизель', '3.2 дизель', '3.5 бензин'],
     gearboxes: ['автомат'],
     drives: ['полный'],
@@ -124,9 +124,13 @@ const carsBase = [
     generation: 'Gen1',
     folder: 'F-KAP Gerri 1975',
     photos: 3,
-    years: [1975, 1976, 1977, 1978, 1979],
-    engines: ['1.5 бензин', '1.6 бензин'],
-    gearboxes: ['механика'],
+    years: [
+      1975, 1976, 1977, 1978, 1979,
+      1980, 1981, 1982, 1983, 1984,
+      1985, 1986, 1987, 1988, 1989
+    ],
+    engines: ['рядный 4-цилиндровый бензин, 76 л.с.'],
+    gearboxes: ['4-ступ. механика'],
     drives: ['задний'],
     body: 'седан',
     typeOptions: ['private', 'found'],
@@ -139,9 +143,12 @@ const carsBase = [
     generation: 'Gen2',
     folder: 'F-KAP Gerri 1990',
     photos: 3,
-    years: [1990, 1991, 1992, 1993, 1994],
-    engines: ['1.6 бензин', '1.8 бензин'],
-    gearboxes: ['механика', 'автомат'],
+    years: [
+      1990, 1991, 1992, 1993, 1994,
+      1995, 1996, 1997, 1998, 1999
+    ],
+    engines: ['карбюраторный бензин, 95 л.с.'],
+    gearboxes: ['механика'],
     drives: ['передний'],
     body: 'седан',
     typeOptions: ['private', 'found'],
@@ -154,14 +161,20 @@ const carsBase = [
     generation: 'Gen3',
     folder: 'F-KAP Gerri 2000',
     photos: 3,
-    years: [2000, 2002, 2004, 2005],
-    engines: ['1.8 бензин', '2.0 бензин'],
+    years: [2000, 2001, 2002, 2003, 2004, 2005],
+    engines: ['инжекторный бензин, 120 л.с.'],
     gearboxes: ['механика', 'автомат'],
     drives: ['передний'],
     body: 'седан',
     typeOptions: ['private', 'found'],
     cities: allCities,
-    spawnWeight: 90
+    spawnWeight: 90,
+
+    // Автомат появился только в 2002 году.
+    gearboxByYear: {
+      2000: ['механика'],
+      2001: ['механика']
+    }
   },
   {
     brand: 'F-KAP',
@@ -169,8 +182,12 @@ const carsBase = [
     generation: '',
     folder: 'F-KAP Go',
     photos: 3,
-    years: [1948, 1950, 1952, 1955, 1958],
-    engines: ['4-цилиндровый бензин'],
+    years: [
+      1944, 1945, 1946, 1947, 1948,
+      1949, 1950, 1951, 1952, 1953,
+      1954, 1955, 1956, 1957, 1958
+    ],
+    engines: ['рядный 4-цилиндровый карбюраторный бензин, 56 л.с.'],
     gearboxes: ['механика'],
     drives: ['задний'],
     body: 'седан',
@@ -200,8 +217,8 @@ const carsBase = [
     folder: 'F-KAP Malina 1990',
     photos: 3,
     years: [1989, 1990, 1991, 1992, 1993],
-    engines: ['2.5 бензин', '3.0 бензин'],
-    gearboxes: ['механика', 'автомат'],
+    engines: ['V6 бензин'],
+    gearboxes: ['автомат'],
     drives: ['задний'],
     body: 'купе',
     typeOptions: ['private', 'found'],
@@ -214,8 +231,8 @@ const carsBase = [
     generation: 'Gen5',
     folder: 'F-KAP Malina 2010',
     photos: 3,
-    years: [2009, 2010, 2011, 2012],
-    engines: ['3.0 бензин', '3.5 бензин'],
+    years: [2010, 2011, 2012, 2013],
+    engines: ['турбированный рядный 4-цилиндровый бензин'],
     gearboxes: ['автомат'],
     drives: ['задний', 'полный'],
     body: 'купе',
@@ -225,13 +242,13 @@ const carsBase = [
   },
   {
     brand: 'F-KAP',
-    model: 'Shik',
-    generation: '20',
+    model: 'Shik20',
+    generation: '',
     folder: 'F-KAP Shik 20',
     photos: 3,
-    years: [1960, 1961, 1962, 1963, 1964],
-    engines: ['1.6 бензин'],
-    gearboxes: ['механика'],
+    years: [1960, 1961, 1962],
+    engines: ['V6 бензин'],
+    gearboxes: ['автомат'],
     drives: ['задний'],
     body: 'седан',
     typeOptions: ['private', 'found'],
@@ -244,8 +261,14 @@ const carsBase = [
     generation: 'Gen1',
     folder: 'F-KAP Tref 2000',
     photos: 3,
-    years: [2000, 2001, 2002, 2003],
-    engines: ['1.8 бензин', '2.0 бензин'],
+    years: [
+      2000, 2001, 2002, 2003,
+      2004, 2005, 2006, 2007
+    ],
+    engines: [
+      'рядный 4-цилиндровый бензин',
+      'рядный 4-цилиндровый турбодизель'
+    ],
     gearboxes: ['механика', 'автомат'],
     drives: ['передний', 'полный'],
     body: 'универсал',
@@ -256,11 +279,14 @@ const carsBase = [
   {
     brand: 'F-KAP',
     model: 'Tref',
-    generation: 'Gen5',
+    generation: 'Gen2',
     folder: 'F-KAP Tref 2010',
     photos: 3,
-    years: [2010, 2011, 2012],
-    engines: ['2.0 бензин', '2.2 дизель'],
+    years: [2008, 2009, 2010, 2011, 2012, 2013],
+    engines: [
+      'рядный 4-цилиндровый бензин',
+      'V6 дизель'
+    ],
     gearboxes: ['механика', 'автомат'],
     drives: ['передний', 'полный'],
     body: 'универсал',
@@ -271,13 +297,16 @@ const carsBase = [
   {
     brand: 'F-KAP',
     model: 'Tref',
-    generation: 'Gen11',
+    generation: 'Gen4',
     folder: 'F-KAP Tref 2020',
     photos: 3,
-    years: [2020, 2021, 2022],
-    engines: ['2.0 турбо', '2.2 дизель'],
-    gearboxes: ['автомат'],
-    drives: ['полный'],
+    years: [2019, 2020, 2021, 2022, 2023],
+    engines: [
+      'рядный 4-цилиндровый бензин',
+      'рядный 4-цилиндровый турбодизель'
+    ],
+    gearboxes: ['механика', 'автомат'],
+    drives: ['передний', 'полный'],
     body: 'универсал',
     typeOptions: ['private', 'found'],
     cities: allCities,
@@ -289,9 +318,16 @@ const carsBase = [
     generation: 'Gen1',
     folder: 'F-KAP Vacation 1990',
     photos: 3,
-    years: [1990, 1991, 1992, 1993],
+    years: [
+      1990, 1991, 1992, 1993,
+      1994, 1995, 1996, 1997
+    ],
     engines: ['V6 бензин'],
-    gearboxes: ['механика', 'автомат'],
+
+    // В статье точная схема выбора КПП для Gen1
+    // отдельно не закреплена.
+    gearboxes: ['не указана в каноне'],
+
     drives: ['передний'],
     body: 'хэтчбек',
     typeOptions: ['private', 'found'],
@@ -301,14 +337,14 @@ const carsBase = [
   {
     brand: 'F-KAP',
     model: 'Vacation',
-    generation: 'Gen5',
+    generation: 'Gen4',
     folder: 'F-KAP Vacation 2010',
     photos: 3,
-    years: [2009, 2010, 2011, 2012],
-    engines: ['1.8 бензин', '2.0 бензин', '2.0 гибрид'],
+    years: [2010, 2011, 2012, 2013, 2014],
+    engines: ['V6 бензин'],
     gearboxes: ['механика', 'автомат'],
     drives: ['передний'],
-    body: 'универсал',
+    body: 'хэтчбек',
     typeOptions: ['private', 'found'],
     cities: allCities,
     spawnWeight: 90

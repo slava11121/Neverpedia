@@ -184,21 +184,6 @@ const carsBase = [
     cities: allCities,
     spawnWeight: 45
   },
-  {
-    brand: 'Moskvich',
-    model: '2141',
-    generation: '',
-    folder: 'Moskvich 2141',
-    photos: 3,
-    years: [1991, 1994, 1998, 2001],
-    engines: ['1.6 бензин', '1.7 бензин'],
-    gearboxes: ['механика'],
-    drives: ['передний'],
-    body: 'хэтчбек',
-    typeOptions: ['private', 'found'],
-    cities: allCities,
-    spawnWeight: 40
-  },
 
   // ===== POST-2011 BASE =====
   {
