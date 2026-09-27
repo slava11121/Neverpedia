@@ -283,7 +283,7 @@ const carsBase = [
     generation: '',
     folder: 'Pyeonghwa Samchunri',
     photos: 3,
-    years: [2005, 2007, 2009, 2011, 2013],
+    years: [2005, 2007, 2009, 2011],
     engines: ['2.0 бензин', '2.4 бензин', '2.5 дизель'],
     gearboxes: ['механика'],
     drives: ['задний'],
